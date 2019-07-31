@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/asntest.dir/main.c.o  -o asntest libngaplib.a 

@@ -1,0 +1,5 @@
+/home/lehongnhat/workspace/ngapv2/build/CMakeFiles/edit_cache.dir
+/home/lehongnhat/workspace/ngapv2/build/CMakeFiles/asntest.dir
+/home/lehongnhat/workspace/ngapv2/build/CMakeFiles/NGAP_LIB.dir
+/home/lehongnhat/workspace/ngapv2/build/CMakeFiles/rebuild_cache.dir
+/home/lehongnhat/workspace/ngapv2/build/CMakeFiles/ngaplib.dir
