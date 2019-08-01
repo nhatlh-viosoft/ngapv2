@@ -21,7 +21,7 @@ extern "C" {
 
 /* LocationReport */
 typedef struct LocationReport {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P74_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

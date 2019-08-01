@@ -27,12 +27,12 @@ struct ProtocolExtensionContainer;
 
 /* PDUSessionResourceModifyResponseTransfer */
 typedef struct PDUSessionResourceModifyResponseTransfer {
-	struct UPTransportLayerInformation	*dL_NGU_UP_TNLInformation	/* OPTIONAL */;
-	struct UPTransportLayerInformation	*uL_NGU_UP_TNLInformation	/* OPTIONAL */;
-	struct QosFlowAddOrModifyResponseList	*qosFlowAddOrModifyResponseList	/* OPTIONAL */;
-	struct QosFlowPerTNLInformationList	*additionalDLQosFlowPerTNLInformation	/* OPTIONAL */;
-	struct QosFlowListWithCause	*qosFlowFailedToAddOrModifyList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct UPTransportLayerInformation	*dL_NGU_UP_TNLInformation;	/* OPTIONAL */
+	struct UPTransportLayerInformation	*uL_NGU_UP_TNLInformation;	/* OPTIONAL */
+	struct QosFlowAddOrModifyResponseList	*qosFlowAddOrModifyResponseList;	/* OPTIONAL */
+	struct QosFlowPerTNLInformationList	*additionalDLQosFlowPerTNLInformation;	/* OPTIONAL */
+	struct QosFlowListWithCause	*qosFlowFailedToAddOrModifyList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

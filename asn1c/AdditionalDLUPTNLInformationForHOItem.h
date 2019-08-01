@@ -28,8 +28,8 @@ struct ProtocolExtensionContainer;
 typedef struct AdditionalDLUPTNLInformationForHOItem {
 	UPTransportLayerInformation_t	 additionalDL_NGU_UP_TNLInformation;
 	QosFlowListWithDataForwarding_t	 additionalQosFlowSetupResponseList;
-	struct UPTransportLayerInformation	*additionalDLForwardingUPTNLInformation	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct UPTransportLayerInformation	*additionalDLForwardingUPTNLInformation;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

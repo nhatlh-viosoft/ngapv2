@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct EUTRA_CGI {
 	PLMNIdentity_t	 pLMNIdentity;
 	EUTRACellIdentity_t	 eUTRACellIdentity;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

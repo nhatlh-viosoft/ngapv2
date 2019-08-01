@@ -31,7 +31,7 @@ typedef struct TraceActivation {
 	InterfacesToTrace_t	 interfacesToTrace;
 	TraceDepth_t	 traceDepth;
 	TransportLayerAddress_t	 traceCollectionEntityIPAddress;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -43,6 +43,8 @@ typedef struct TraceActivation {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_TraceActivation;
+extern asn_SEQUENCE_specifics_t asn_SPC_TraceActivation_specs_1;
+extern asn_TYPE_member_t asn_MBR_TraceActivation_1[5];
 
 #ifdef __cplusplus
 }

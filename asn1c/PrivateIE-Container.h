@@ -20,11 +20,11 @@ extern "C" {
 #endif
 
 /* Forward declarations */
-struct PrivateIE_Field;
+struct PrivateMessageIEs;
 
 /* PrivateIE-Container */
 typedef struct PrivateIE_Container_194P0 {
-	A_SEQUENCE_OF(struct PrivateIE_Field) list;
+	A_SEQUENCE_OF(struct PrivateMessageIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;

@@ -29,7 +29,7 @@ typedef struct CriticalityDiagnostics_IE_Item {
 	Criticality_t	 iECriticality;
 	ProtocolIE_ID_t	 iE_ID;
 	TypeOfError_t	 typeOfError;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

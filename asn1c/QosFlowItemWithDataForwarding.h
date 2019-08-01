@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* QosFlowItemWithDataForwarding */
 typedef struct QosFlowItemWithDataForwarding {
 	QosFlowIdentifier_t	 qosFlowIdentifier;
-	DataForwardingAccepted_t	*dataForwardingAccepted	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	DataForwardingAccepted_t	*dataForwardingAccepted;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

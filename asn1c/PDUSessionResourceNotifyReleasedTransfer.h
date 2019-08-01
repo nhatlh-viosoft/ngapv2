@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* PDUSessionResourceNotifyReleasedTransfer */
 typedef struct PDUSessionResourceNotifyReleasedTransfer {
 	Cause_t	 cause;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

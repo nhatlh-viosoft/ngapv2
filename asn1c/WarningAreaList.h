@@ -52,6 +52,9 @@ typedef struct WarningAreaList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_WarningAreaList;
+extern asn_CHOICE_specifics_t asn_SPC_WarningAreaList_specs_1;
+extern asn_TYPE_member_t asn_MBR_WarningAreaList_1[5];
+extern asn_per_constraints_t asn_PER_type_WarningAreaList_constr_1;
 
 #ifdef __cplusplus
 }

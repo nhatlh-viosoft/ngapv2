@@ -22,6 +22,7 @@ extern "C" {
 typedef BIT_STRING_t	 MaskedIMEISV_t;
 
 /* Implementation */
+extern asn_per_constraints_t asn_PER_type_MaskedIMEISV_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_MaskedIMEISV;
 asn_struct_free_f MaskedIMEISV_free;
 asn_struct_print_f MaskedIMEISV_print;
@@ -34,6 +35,8 @@ oer_type_decoder_f MaskedIMEISV_decode_oer;
 oer_type_encoder_f MaskedIMEISV_encode_oer;
 per_type_decoder_f MaskedIMEISV_decode_uper;
 per_type_encoder_f MaskedIMEISV_encode_uper;
+per_type_decoder_f MaskedIMEISV_decode_aper;
+per_type_encoder_f MaskedIMEISV_encode_aper;
 
 #ifdef __cplusplus
 }

@@ -50,7 +50,7 @@ asn_TYPE_member_t asn_MBR_GlobalRANNodeID_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct GlobalRANNodeID, choice.choice_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_SingleContainer_130P0,
+		&asn_DEF_ProtocolIE_SingleContainer_130P8,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

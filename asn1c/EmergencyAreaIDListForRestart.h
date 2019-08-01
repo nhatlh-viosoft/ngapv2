@@ -30,6 +30,9 @@ typedef struct EmergencyAreaIDListForRestart {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_EmergencyAreaIDListForRestart;
+extern asn_SET_OF_specifics_t asn_SPC_EmergencyAreaIDListForRestart_specs_1;
+extern asn_TYPE_member_t asn_MBR_EmergencyAreaIDListForRestart_1[1];
+extern asn_per_constraints_t asn_PER_type_EmergencyAreaIDListForRestart_constr_1;
 
 #ifdef __cplusplus
 }

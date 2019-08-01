@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* AreaOfInterestTAIItem */
 typedef struct AreaOfInterestTAIItem {
 	TAI_t	 tAI;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

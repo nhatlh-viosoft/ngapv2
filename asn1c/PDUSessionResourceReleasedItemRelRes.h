@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct PDUSessionResourceReleasedItemRelRes {
 	PDUSessionID_t	 pDUSessionID;
 	OCTET_STRING_t	 pDUSessionResourceReleaseResponseTransfer;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

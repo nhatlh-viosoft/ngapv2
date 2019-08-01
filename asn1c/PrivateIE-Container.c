@@ -20,7 +20,7 @@ asn_TYPE_member_t asn_MBR_PrivateIE_Container_194P0_1[] = {
 	{ ATF_POINTER, 0, 0,
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
-		&asn_DEF_PrivateIE_Field_197P0,
+		&asn_DEF_PrivateMessageIEs,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

@@ -21,7 +21,7 @@ extern "C" {
 
 /* DownlinkRANStatusTransfer */
 typedef struct DownlinkRANStatusTransfer {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P34_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

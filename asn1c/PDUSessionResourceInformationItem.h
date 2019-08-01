@@ -28,8 +28,8 @@ struct ProtocolExtensionContainer;
 typedef struct PDUSessionResourceInformationItem {
 	PDUSessionID_t	 pDUSessionID;
 	QosFlowInformationList_t	 qosFlowInformationList;
-	struct DRBsToQosFlowsMappingList	*dRBsToQosFlowsMappingList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct DRBsToQosFlowsMappingList	*dRBsToQosFlowsMappingList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

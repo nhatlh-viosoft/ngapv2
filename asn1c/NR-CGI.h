@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct NR_CGI {
 	PLMNIdentity_t	 pLMNIdentity;
 	NRCellIdentity_t	 nRCellIdentity;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

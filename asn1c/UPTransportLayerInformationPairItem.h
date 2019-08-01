@@ -26,7 +26,7 @@ struct ProtocolExtensionContainer;
 typedef struct UPTransportLayerInformationPairItem {
 	UPTransportLayerInformation_t	 uL_NGU_UP_TNLInformation;
 	UPTransportLayerInformation_t	 dL_NGU_UP_TNLInformation;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

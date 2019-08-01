@@ -22,7 +22,7 @@ asn_TYPE_member_t asn_MBR_SONInformationReply_1[] = {
 	{ ATF_POINTER, 1, offsetof(struct SONInformationReply, iE_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P160,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

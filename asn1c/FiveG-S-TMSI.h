@@ -29,7 +29,7 @@ typedef struct FiveG_S_TMSI {
 	AMFSetID_t	 aMFSetID;
 	AMFPointer_t	 aMFPointer;
 	FiveG_TMSI_t	 fiveG_TMSI;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

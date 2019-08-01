@@ -35,8 +35,8 @@ struct ProtocolExtensionContainer;
 /* AssociatedQosFlowItem */
 typedef struct AssociatedQosFlowItem {
 	QosFlowIdentifier_t	 qosFlowIdentifier;
-	long	*qosFlowMappingIndication	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	long	*qosFlowMappingIndication;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

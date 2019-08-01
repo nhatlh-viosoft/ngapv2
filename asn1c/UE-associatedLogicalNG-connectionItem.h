@@ -25,9 +25,9 @@ struct ProtocolExtensionContainer;
 
 /* UE-associatedLogicalNG-connectionItem */
 typedef struct UE_associatedLogicalNG_connectionItem {
-	AMF_UE_NGAP_ID_t	*aMF_UE_NGAP_ID	/* OPTIONAL */;
-	RAN_UE_NGAP_ID_t	*rAN_UE_NGAP_ID	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	AMF_UE_NGAP_ID_t	*aMF_UE_NGAP_ID;	/* OPTIONAL */
+	RAN_UE_NGAP_ID_t	*rAN_UE_NGAP_ID;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -22,6 +22,7 @@ extern "C" {
 typedef long	 NumberOfBroadcastsRequested_t;
 
 /* Implementation */
+extern asn_per_constraints_t asn_PER_type_NumberOfBroadcastsRequested_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_NumberOfBroadcastsRequested;
 asn_struct_free_f NumberOfBroadcastsRequested_free;
 asn_struct_print_f NumberOfBroadcastsRequested_print;
@@ -34,6 +35,8 @@ oer_type_decoder_f NumberOfBroadcastsRequested_decode_oer;
 oer_type_encoder_f NumberOfBroadcastsRequested_encode_oer;
 per_type_decoder_f NumberOfBroadcastsRequested_decode_uper;
 per_type_encoder_f NumberOfBroadcastsRequested_encode_uper;
+per_type_decoder_f NumberOfBroadcastsRequested_decode_aper;
+per_type_encoder_f NumberOfBroadcastsRequested_encode_aper;
 
 #ifdef __cplusplus
 }

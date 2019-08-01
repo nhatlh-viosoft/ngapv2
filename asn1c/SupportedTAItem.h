@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct SupportedTAItem {
 	TAC_t	 tAC;
 	BroadcastPLMNList_t	 broadcastPLMNList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

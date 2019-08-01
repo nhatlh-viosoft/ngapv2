@@ -30,7 +30,9 @@ typedef enum NewSecurityContextInd {
 typedef long	 NewSecurityContextInd_t;
 
 /* Implementation */
+extern asn_per_constraints_t asn_PER_type_NewSecurityContextInd_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_NewSecurityContextInd;
+extern const asn_INTEGER_specifics_t asn_SPC_NewSecurityContextInd_specs_1;
 asn_struct_free_f NewSecurityContextInd_free;
 asn_struct_print_f NewSecurityContextInd_print;
 asn_constr_check_f NewSecurityContextInd_constraint;
@@ -42,6 +44,8 @@ oer_type_decoder_f NewSecurityContextInd_decode_oer;
 oer_type_encoder_f NewSecurityContextInd_encode_oer;
 per_type_decoder_f NewSecurityContextInd_decode_uper;
 per_type_encoder_f NewSecurityContextInd_encode_uper;
+per_type_decoder_f NewSecurityContextInd_decode_aper;
+per_type_encoder_f NewSecurityContextInd_encode_aper;
 
 #ifdef __cplusplus
 }

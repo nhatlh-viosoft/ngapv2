@@ -24,8 +24,8 @@ struct ProtocolExtensionContainer;
 
 /* HandoverRequiredTransfer */
 typedef struct HandoverRequiredTransfer {
-	DirectForwardingPathAvailability_t	*directForwardingPathAvailability	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	DirectForwardingPathAvailability_t	*directForwardingPathAvailability;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

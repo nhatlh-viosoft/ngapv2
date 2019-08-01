@@ -171,7 +171,7 @@
 #include "EmergencyFallbackIndicator.h"
 #include "EmergencyFallbackRequestIndicator.h"
 #include "EmergencyServiceTargetCN.h"
-#include "EN_DCSONConfigurationTransfer.h"
+#include "EN-DCSONConfigurationTransfer.h"
 
 #include "EPS-TAC.h"
 #include "EPS-TAI.h"
@@ -252,7 +252,7 @@
 #include "MessageIdentifier.h"
 #include "MICOModeIndication.h"
 #include "MobilityRestrictionList.h"
-#include "MultipleTNLInformation.h"
+//#include "MultipleTNLInformation.h"
 #include "N3IWF-ID.h"
 #include "NASNonDeliveryIndication.h"
 #include "NAS-PDU.h"
@@ -441,12 +441,12 @@
 #include "QosFlowAddOrModifyRequestList.h"
 #include "QosFlowAddOrModifyResponseItem.h"
 #include "QosFlowAddOrModifyResponseList.h"
-//#include "QosFlowIdentifier.h"
+#include "QosFlowIdentifier.h"
 #include "QosFlowInformationItem.h"
 #include "QosFlowInformationList.h"
-#include "QosFlowItem.h"
+//#include "QosFlowItem.h"
 #include "QosFlowLevelQosParameters.h"
-#include "QosFlowList.h"
+//#include "QosFlowList.h"
 #include "QosFlowModifyConfirmItem.h"
 #include "QosFlowModifyConfirmList.h"
 #include "QosFlowNotifyItem.h"
@@ -454,9 +454,9 @@
 //#include "QosFlowPerTNLInformation.h"
 #include "QosFlowSetupRequestItem.h"
 #include "QosFlowSetupRequestList.h"
-#include "QosFlowSetupResponseItemHOReqAck.h"
+//#include "QosFlowSetupResponseItemHOReqAck.h"
 #include "QosFlowSetupResponseItemSURes.h"
-#include "QosFlowSetupResponseListHOReqAck.h"
+//#include "QosFlowSetupResponseListHOReqAck.h"
 #include "QosFlowSetupResponseListSURes.h"
 #include "QosFlowToBeForwardedItem.h"
 #include "QosFlowToBeForwardedList.h"
@@ -500,7 +500,7 @@
 #include "ServedGUAMIList.h"
 #include "ServiceAreaInformation.h"
 #include "ServiceAreaInformation-Item.h"
-#include "SingleTNLInformation.h"
+//#include "SingleTNLInformation.h"
 //#include "SliceOverloadItem.h"
 //#include "SliceOverloadList.h"
 #include "SliceSupportItem.h"
@@ -548,8 +548,8 @@
 #include "TNLAssociationItem.h"
 #include "TNLAssociationList.h"
 #include "TNLAssociationUsage.h"
-#include "TNLInformationItem.h"
-#include "TNLInformationList.h"
+//#include "TNLInformationItem.h"
+//#include "TNLInformationList.h"
 //#include "TNLMappingItem.h"
 //#include "TNLMappingList.h"
 #include "TraceActivation.h"
@@ -597,7 +597,7 @@
 #include "UplinkRANConfigurationTransfer.h"
 #include "UplinkRANStatusTransfer.h"
 #include "UplinkUEAssociatedNRPPaTransport.h"
-#include "UP-TNLInformation.h"
+//#include "UP-TNLInformation.h"
 #include "UPTransportLayerInformation.h"
 #include "UserLocationInformationEUTRA.h"
 #include "UserLocationInformation.h"
@@ -620,5 +620,241 @@
 #include "XnTLAs.h"
 #include "XnTNLConfigurationInfo.h"
 //#include "ngap_ies_defs.h"
+
+typedef struct NGAP_PDU ngap_message_t;
+
+#define maxPrivateIEs                  65535
+#define maxProtocolExtensions          65535
+#define maxProtocolIEs                 65535
+#define maxnoofAllowedAreas            16
+#define maxnoofAllowedS_NSSAIs         8
+#define maxnoofBPLMNs                  12
+#define maxnoofCellIDforWarning        65535
+#define maxnoofCellinAoI               256
+#define maxnoofCellinEAI               65535
+#define maxnoofCellinTAI               65535
+#define maxnoofCellsingNB              16384
+#define maxnoofCellsinngeNB            256
+#define maxnoofCellsinUEHistoryInfo    16
+#define maxnoofCellsUEMovingTrajectory 16
+#define maxnoofDRBs                    32
+#define maxnoofEmergencyAreaID         65535
+#define maxnoofEAIforRestart           256
+#define maxnoofEPLMNs                  15
+#define maxnoofEPLMNsPlusOne           16
+#define maxnoofE_RABs                  256
+#define maxnoofErrors                  256
+#define maxnoofForbTACs                4096
+#define maxnoofMultiConnectivities     4
+#define maxnoofNGConnectionsToReset    65536
+#define maxnoofPDUSessions             256
+#define maxnoofPLMNs                   12
+#define maxnoofQosFlows                64
+#define maxnoofRANNodeinAoI            64
+#define maxnoofRecommendedCells        16
+#define maxnoofRecommendedRANNodes     16
+#define maxnoofAoI                     64
+#define maxnoofServedGUAMIs            256
+#define maxnoofSliceItems              1024
+#define maxnoofTACs                    256
+#define maxnoofTAIforInactive          16
+#define maxnoofTAIforPaging            16
+#define maxnoofTAIforRestart           2048
+#define maxnoofTAIforWarning           65535
+#define maxnoofTAIinAoI                16
+#define maxnoofTNLAssociations         32
+#define maxnoofXnExtTLAs               2
+#define maxnoofXnGTP_TLAs              16
+#define maxnoofXnTLAs                  16
+
+typedef enum _ProcedureCode_enum {
+	id_AMFConfigurationUpdate					= 0,
+	id_AMFStatusIndication						= 1,
+	id_CellTrafficTrace							= 2,
+	id_DeactivateTrace							= 3,
+	id_DownlinkNASTransport						= 4,
+	id_DownlinkNonUEAssociatedNRPPaTransport	= 5,
+	id_DownlinkRANConfigurationTransfer			= 6,
+	id_DownlinkRANStatusTransfer				= 7,
+	id_DownlinkUEAssociatedNRPPaTransport		= 8,
+	id_ErrorIndication							= 9,
+	id_HandoverCancel							= 10,
+	id_HandoverNotification						= 11,
+	id_HandoverPreparation						= 12,
+	id_HandoverResourceAllocation				= 13,
+	id_InitialContextSetup						= 14,
+	id_InitialUEMessage							= 15,
+	id_LocationReportingControl					= 16,
+	id_LocationReportingFailureIndication		= 17,
+	id_LocationReport							= 18,
+	id_NASNonDeliveryIndication					= 19,
+	id_NGReset									= 20,
+	id_NGSetup									= 21,
+	id_Paging									= 22,
+	id_PathSwitchRequest						= 23,
+	id_PDUSessionResourceModify					= 24,
+	id_PDUSessionResourceModifyIndication		= 25,
+	id_PDUSessionResourceRelease				= 26,
+	id_PDUSessionResourceSetup					= 27,
+	id_PDUSessionResourceNotify					= 28,
+	id_PrivateMessage							= 29,
+	id_PWSCancel								= 30,
+	id_PWSFailureIndication						= 31,
+	id_PWSRestartIndication						= 32,
+	id_RANConfigurationUpdate					= 33,
+	id_RerouteNASRequest						= 34,
+	id_TraceFailureIndication					= 35,
+	id_TraceStart								= 36,
+	id_UECapabilityInfoIndication				= 37,
+	id_UEContextModification					= 38,
+	id_UEContextRelease							= 39,
+	id_UEContextReleaseRequest					= 40,
+	id_UERadioCapabilityCheck					= 41,
+	id_UETNLABindingRelease						= 42,
+	id_UplinkNASTransport						= 43,
+	id_UplinkNonUEAssociatedNRPPaTransport		= 44,
+	id_UplinkRANConfigurationTransfer			= 45,
+	id_UplinkRANStatusTransfer					= 46,
+	id_UplinkUEAssociatedNRPPaTransport			= 47,
+	id_WriteReplaceWarning						= 48,
+} ProcedureCode_enum;
+
+typedef enum _ProtocolIE_ID_enum {
+	id_AllowedNSSAI											= 0,
+	id_AMFName												= 1,
+	id_AMFSetID												= 2,
+	id_AMF_TNLAssociationFailedToSetupList					= 3,
+	id_AMF_TNLAssociationSetupItem							= 4,
+	id_AMF_TNLAssociationSetupList							= 5,
+	id_AMF_TNLAssociationToAddItem							= 6,
+	id_AMF_TNLAssociationToAddList							= 7,
+	id_AMF_TNLAssociationToRemoveItem						= 8,
+	id_AMF_TNLAssociationToRemoveList						= 9,
+	id_AMF_TNLAssociationToUpdateItem						= 10,
+	id_AMF_TNLAssociationToUpdateList						= 11,
+	id_AMF_UE_NGAP_ID										= 12,
+	id_AssistanceDataForPaging								= 13,
+	id_BroadcastCancelledAreaList							= 14,
+	id_BroadcastCompletedAreaList							= 15,
+	id_CancelAllWarningMessages								= 16,
+	id_Cause												= 17,
+	id_CellIDListForRestart									= 18,
+	id_ConcurrentWarningMessageInd							= 19,
+	id_CriticalityDiagnostics								= 20,
+	id_DataCodingScheme										= 21,
+	id_DefaultPagingDRX										= 22,
+	id_DirectForwardingPathAvailability						= 23,
+	id_EmergencyAreaIDListForRestart						= 24,
+	id_EmergencyFallbackIndicator							= 25,
+	id_EUTRA_CGI											= 26,
+	id_FiveG_S_TMSI											= 27,
+	id_GlobalRANNodeID										= 28,
+	id_GUAMI												= 29,
+	id_HandoverType											= 30,
+	id_IMSVoiceSupportIndicator								= 31,
+	id_IndexToRFSP											= 32,
+	id_InfoOnRecommendedCellsAndRANNodesForPaging			= 33,
+	id_KamfChangeInd										= 34,
+	id_LocationReportingRequestType							= 35,
+	id_MaskedIMEISV											= 36,
+	id_MessageIdentifier									= 37,
+	id_MobilityRestrictionList								= 38,
+	id_NASC													= 39,
+	id_NAS_PDU												= 40,
+	id_NewAMF_UE_NGAP_ID									= 41,
+	id_NGAP_Message											= 42,
+	id_NGRAN_CGI											= 43,
+	id_NGRANTraceID											= 44,
+	id_NR_CGI												= 45,
+	id_NRPPa_PDU											= 46,
+	id_NumberOfBroadcastsRequested							= 47,
+	id_OldAMF												= 48,
+	id_PagingDRX											= 49,
+	id_PagingOrigin											= 50,
+	id_PagingPriority										= 51,
+	id_PDUSessionResourceAdmittedItem						= 52,
+	id_PDUSessionResourceAdmittedList						= 53,
+	id_PDUSessionResourceFailedToModifyListModRes			= 54,
+	id_PDUSessionResourceFailedToSetupList					= 55,
+	id_PDUSessionResourceItemHORqd							= 56,
+	id_PDUSessionResourceListHORqd							= 57,
+	id_PDUSessionResourceModifyItemModCfm					= 58,
+	id_PDUSessionResourceModifyItemModInd					= 59,
+	id_PDUSessionResourceModifyItemModReq					= 60,
+	id_PDUSessionResourceModifyItemModRes					= 61,
+	id_PDUSessionResourceModifyListModCfm					= 62,
+	id_PDUSessionResourceModifyListModInd					= 63,
+	id_PDUSessionResourceModifyListModReq					= 64,
+	id_PDUSessionResourceModifyListModRes					= 65,
+	id_PDUSessionResourceNotifyItem							= 66,
+	id_PDUSessionResourceNotifyList							= 67,
+	id_PDUSessionResourceReleasedList						= 68,
+	id_PDUSessionResourceSetupItemCxtReq					= 69,
+	id_PDUSessionResourceSetupItemCxtRes					= 70,
+	id_PDUSessionResourceSetupItemHOReq						= 71,
+	id_PDUSessionResourceSetupItemSUReq						= 72,
+	id_PDUSessionResourceSetupItemSURes						= 73,
+	id_PDUSessionResourceSetupListCxtReq					= 74,
+	id_PDUSessionResourceSetupListCxtRes					= 75,
+	id_PDUSessionResourceSetupListHOReq						= 76,
+	id_PDUSessionResourceSetupListSUReq						= 77,
+	id_PDUSessionResourceSetupListSURes						= 78,
+	id_PDUSessionResourceSubjectToForwardingItem			= 79,
+	id_PDUSessionResourceSubjectToForwardingList			= 80,
+	id_PDUSessionResourceToBeSwitchedDLItem					= 81,
+	id_PDUSessionResourceToBeSwitchedDLList					= 82,
+	id_PDUSessionResourceToBeSwitchedULItem					= 83,
+	id_PDUSessionResourceToBeSwitchedULList					= 84,
+	id_PDUSessionResourceToReleaseList						= 85,
+	id_PLMNSupportList										= 86,
+	id_PWSFailedCellIDList									= 87,
+	id_RANNodeName											= 88,
+	id_RANPagingPriority									= 89,
+	id_RANStatusTransfer_TransparentContainer				= 90,
+	id_RAN_UE_NGAP_ID										= 91,
+	id_RelativeAMFCapacity									= 92,
+	id_RepetitionPeriod										= 93,
+	id_ResetType											= 94,
+	id_RoutingID											= 95,
+	id_RRCEstablishmentCause								= 96,
+	id_RRCInactiveAssistanceInformation						= 97,
+	id_SecurityContext										= 98,
+	id_SecurityKey											= 99,
+	id_SerialNumber											= 100,
+	id_ServedGUAMIList										= 101,
+	id_SliceSupportList										= 102,
+	id_SONConfigurationTransferDL							= 103,
+	id_SONConfigurationTransferUL							= 104,
+	id_SourceAMF_UE_NGAP_ID									= 105,
+	id_SourceToTarget_TransparentContainer					= 106,
+	id_SupportedTAList										= 107,
+	id_TAI													= 108,
+	id_TAIItem												= 109,
+	id_TAIList												= 110,
+	id_TAIListForRestart									= 111,
+	id_TargetID												= 112,
+	id_TargetToSource_TransparentContainer					= 113,
+	id_TimeStamp											= 114,
+	id_TimeToWait											= 115,
+	id_TraceActivation										= 116,
+	id_TraceCollectionEntityIPAddress						= 117,
+	id_UEAggregateMaximumBitRate							= 118,
+	id_UE_associatedLogicalNG_ConnectionItem				= 119,
+	id_UE_associatedLogicalNG_ConnectionListResAck			= 120,
+	id_UEContextRequest										= 121,
+	id_UEIdentityIndexValue									= 122,
+	id_UE_NGAP_IDs											= 123,
+	id_UEPagingIdentity										= 124,
+	id_UEPresenceInAreaOfInterestList						= 125,
+	id_UERadioCapability									= 126,
+	id_UERadioCapabilityForPaging							= 127,
+	id_UESecurityCapabilities								= 128,
+	id_UnavailableGUAMIList									= 129,
+	id_UserLocationInformation								= 130,
+	id_WarningAreaList										= 131,
+	id_WarningMessageContents								= 132,
+	id_WarningSecurityInfo									= 133,
+	id_WarningType											= 134,
+} ProtocolIE_ID_enum;
 
 #endif	//_NGAP_ASN1C_H_

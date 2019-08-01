@@ -25,9 +25,9 @@ struct ProtocolExtensionContainer;
 
 /* PathSwitchRequestAcknowledgeTransfer */
 typedef struct PathSwitchRequestAcknowledgeTransfer {
-	struct UPTransportLayerInformation	*uL_NGU_UP_TNLInformation	/* OPTIONAL */;
-	struct SecurityIndication	*securityIndication	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct UPTransportLayerInformation	*uL_NGU_UP_TNLInformation;	/* OPTIONAL */
+	struct SecurityIndication	*securityIndication;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

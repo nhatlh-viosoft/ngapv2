@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct TargetRANNodeID {
 	GlobalRANNodeID_t	 globalRANNodeID;
 	TAI_t	 selectedTAI;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

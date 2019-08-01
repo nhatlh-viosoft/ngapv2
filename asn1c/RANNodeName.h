@@ -22,6 +22,7 @@ extern "C" {
 typedef PrintableString_t	 RANNodeName_t;
 
 /* Implementation */
+extern asn_per_constraints_t asn_PER_type_RANNodeName_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_RANNodeName;
 asn_struct_free_f RANNodeName_free;
 asn_struct_print_f RANNodeName_print;
@@ -34,6 +35,8 @@ oer_type_decoder_f RANNodeName_decode_oer;
 oer_type_encoder_f RANNodeName_encode_oer;
 per_type_decoder_f RANNodeName_decode_uper;
 per_type_encoder_f RANNodeName_encode_uper;
+per_type_decoder_f RANNodeName_decode_aper;
+per_type_encoder_f RANNodeName_encode_aper;
 
 #ifdef __cplusplus
 }

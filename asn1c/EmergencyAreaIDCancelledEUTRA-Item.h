@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct EmergencyAreaIDCancelledEUTRA_Item {
 	EmergencyAreaID_t	 emergencyAreaID;
 	CancelledCellsInEAI_EUTRA_t	 cancelledCellsInEAI_EUTRA;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

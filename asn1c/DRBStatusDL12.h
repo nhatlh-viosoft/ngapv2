@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* DRBStatusDL12 */
 typedef struct DRBStatusDL12 {
 	COUNTValueForPDCP_SN12_t	 dL_COUNTValue;
-	struct ProtocolExtensionContainer	*iE_Extension	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extension;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -21,7 +21,7 @@ extern "C" {
 
 /* NGSetupFailure */
 typedef struct NGSetupFailure {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P43_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

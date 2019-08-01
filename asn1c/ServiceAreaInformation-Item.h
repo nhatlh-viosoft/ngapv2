@@ -27,9 +27,9 @@ struct ProtocolExtensionContainer;
 /* ServiceAreaInformation-Item */
 typedef struct ServiceAreaInformation_Item {
 	PLMNIdentity_t	 pLMNIdentity;
-	struct AllowedTACs	*allowedTACs	/* OPTIONAL */;
-	struct NotAllowedTACs	*notAllowedTACs	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct AllowedTACs	*allowedTACs;	/* OPTIONAL */
+	struct NotAllowedTACs	*notAllowedTACs;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

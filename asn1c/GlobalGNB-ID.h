@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct GlobalGNB_ID {
 	PLMNIdentity_t	 pLMNIdentity;
 	GNB_ID_t	 gNB_ID;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct GlobalN3IWF_ID {
 	PLMNIdentity_t	 pLMNIdentity;
 	N3IWF_ID_t	 n3IWF_ID;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

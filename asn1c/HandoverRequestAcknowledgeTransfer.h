@@ -30,12 +30,12 @@ struct ProtocolExtensionContainer;
 /* HandoverRequestAcknowledgeTransfer */
 typedef struct HandoverRequestAcknowledgeTransfer {
 	UPTransportLayerInformation_t	 dL_NGU_UP_TNLInformation;
-	struct UPTransportLayerInformation	*dLForwardingUP_TNLInformation	/* OPTIONAL */;
-	struct SecurityResult	*securityResult	/* OPTIONAL */;
+	struct UPTransportLayerInformation	*dLForwardingUP_TNLInformation;	/* OPTIONAL */
+	struct SecurityResult	*securityResult;	/* OPTIONAL */
 	QosFlowListWithDataForwarding_t	 qosFlowSetupResponseList;
-	struct QosFlowListWithCause	*qosFlowFailedToSetupList	/* OPTIONAL */;
-	struct DataForwardingResponseDRBList	*dataForwardingResponseDRBList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct QosFlowListWithCause	*qosFlowFailedToSetupList;	/* OPTIONAL */
+	struct DataForwardingResponseDRBList	*dataForwardingResponseDRBList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

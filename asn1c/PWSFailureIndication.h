@@ -21,7 +21,7 @@ extern "C" {
 
 /* PWSFailureIndication */
 typedef struct PWSFailureIndication {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P63_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

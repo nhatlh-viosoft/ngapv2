@@ -29,7 +29,7 @@ typedef struct VolumeTimedReport_Item {
 	OCTET_STRING_t	 endTimeStamp;
 	INTEGER_t	 usageCountUL;
 	INTEGER_t	 usageCountDL;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

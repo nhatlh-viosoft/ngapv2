@@ -33,11 +33,11 @@ typedef struct Dynamic5QIDescriptor {
 	PriorityLevelQos_t	 priorityLevelQos;
 	PacketDelayBudget_t	 packetDelayBudget;
 	PacketErrorRate_t	 packetErrorRate;
-	FiveQI_t	*fiveQI	/* OPTIONAL */;
-	DelayCritical_t	*delayCritical	/* OPTIONAL */;
-	AveragingWindow_t	*averagingWindow	/* OPTIONAL */;
-	MaximumDataBurstVolume_t	*maximumDataBurstVolume	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	FiveQI_t	*fiveQI;	/* OPTIONAL */
+	DelayCritical_t	*delayCritical;	/* OPTIONAL */
+	AveragingWindow_t	*averagingWindow;	/* OPTIONAL */
+	MaximumDataBurstVolume_t	*maximumDataBurstVolume;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -25,18 +25,18 @@ extern "C" {
 #endif
 
 /* Dependencies */
-typedef enum PrivateIE_Field_197P0__value_PR {
-	PrivateIE_Field_197P0__value_PR_NOTHING,	/* No components present */
+typedef enum PrivateMessageIEs__value_PR {
+	PrivateMessageIEs__value_PR_NOTHING	/* No components present */
 	
-} PrivateIE_Field_197P0__value_PR;
+} PrivateMessageIEs__value_PR;
 
 /* PrivateIE-Field */
-typedef struct PrivateIE_Field_197P0 {
+typedef struct PrivateMessageIEs {
 	PrivateIE_ID_t	 id;
 	Criticality_t	 criticality;
-	struct PrivateIE_Field_197P0__value {
-		PrivateIE_Field_197P0__value_PR present;
-		union PrivateIE_Field_197P0__value_u {
+	struct PrivateMessageIEs__value {
+		PrivateMessageIEs__value_PR present;
+		union PrivateMessageIEs__value_u {
 		} choice;
 		
 		/* Context for parsing across buffer boundaries */
@@ -45,12 +45,12 @@ typedef struct PrivateIE_Field_197P0 {
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
-} PrivateIE_Field_197P0_t;
+} PrivateMessageIEs_t;
 
 /* Implementation */
-extern asn_TYPE_descriptor_t asn_DEF_PrivateIE_Field_197P0;
-extern asn_SEQUENCE_specifics_t asn_SPC_PrivateIE_Field_197P0_specs_1;
-extern asn_TYPE_member_t asn_MBR_PrivateIE_Field_197P0_1[3];
+extern asn_TYPE_descriptor_t asn_DEF_PrivateMessageIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PrivateMessageIEs_specs_1;
+extern asn_TYPE_member_t asn_MBR_PrivateMessageIEs_1[3];
 
 #ifdef __cplusplus
 }

@@ -29,7 +29,7 @@ typedef struct DRBsSubjectToStatusTransferItem {
 	DRB_ID_t	 dRB_ID;
 	DRBStatusUL_t	 dRBStatusUL;
 	DRBStatusDL_t	 dRBStatusDL;
-	struct ProtocolExtensionContainer	*iE_Extension	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extension;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

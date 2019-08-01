@@ -28,8 +28,8 @@ struct ProtocolExtensionContainer;
 typedef struct UserLocationInformationNR {
 	NR_CGI_t	 nR_CGI;
 	TAI_t	 tAI;
-	TimeStamp_t	*timeStamp	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	TimeStamp_t	*timeStamp;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

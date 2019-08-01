@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct PDUSessionResourceModifyItemModInd {
 	PDUSessionID_t	 pDUSessionID;
 	OCTET_STRING_t	 pDUSessionResourceModifyIndicationTransfer;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

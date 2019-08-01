@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct EPS_TAI {
 	PLMNIdentity_t	 pLMNIdentity;
 	EPS_TAC_t	 ePS_TAC;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

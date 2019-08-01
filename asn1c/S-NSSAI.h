@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* S-NSSAI */
 typedef struct S_NSSAI {
 	SST_t	 sST;
-	SD_t	*sD	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	SD_t	*sD;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

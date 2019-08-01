@@ -58,6 +58,9 @@ typedef struct BroadcastCancelledAreaList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_BroadcastCancelledAreaList;
+extern asn_CHOICE_specifics_t asn_SPC_BroadcastCancelledAreaList_specs_1;
+extern asn_TYPE_member_t asn_MBR_BroadcastCancelledAreaList_1[7];
+extern asn_per_constraints_t asn_PER_type_BroadcastCancelledAreaList_constr_1;
 
 #ifdef __cplusplus
 }

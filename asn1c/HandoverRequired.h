@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverRequired */
 typedef struct HandoverRequired {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P21_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

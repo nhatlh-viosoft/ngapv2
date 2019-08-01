@@ -30,12 +30,12 @@ struct ProtocolExtensionContainer;
 /* CoreNetworkAssistanceInformationForInactive */
 typedef struct CoreNetworkAssistanceInformationForInactive {
 	UEIdentityIndexValue_t	 uEIdentityIndexValue;
-	PagingDRX_t	*uESpecificDRX	/* OPTIONAL */;
+	PagingDRX_t	*uESpecificDRX;	/* OPTIONAL */
 	PeriodicRegistrationUpdateTimer_t	 periodicRegistrationUpdateTimer;
-	MICOModeIndication_t	*mICOModeIndication	/* OPTIONAL */;
+	MICOModeIndication_t	*mICOModeIndication;	/* OPTIONAL */
 	TAIListForInactive_t	 tAIListForInactive;
-	struct ExpectedUEBehaviour	*expectedUEBehaviour	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ExpectedUEBehaviour	*expectedUEBehaviour;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -47,6 +47,8 @@ typedef struct CoreNetworkAssistanceInformationForInactive {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_CoreNetworkAssistanceInformationForInactive;
+extern asn_SEQUENCE_specifics_t asn_SPC_CoreNetworkAssistanceInformationForInactive_specs_1;
+extern asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_1[7];
 
 #ifdef __cplusplus
 }

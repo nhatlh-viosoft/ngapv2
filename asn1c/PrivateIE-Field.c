@@ -7,12 +7,6 @@
 
 #include "PrivateIE-Field.h"
 
-static const asn_ioc_cell_t asn_IOS_PrivateMessageIEs_1_rows[] = {
-	
-};
-static const asn_ioc_set_t asn_IOS_PrivateMessageIEs_1[] = {
-	0, 0, asn_IOS_PrivateMessageIEs_1_rows
-};
 static int
 memb_id_constraint_1(const asn_TYPE_descriptor_t *td, const void *sptr,
 			asn_app_constraint_failed_f *ctfailcb, void *app_key) {
@@ -95,10 +89,10 @@ static asn_per_constraints_t asn_PER_memb_value_constr_4 CC_NOTUSED = {
 	0, 0	/* No PER value map */
 };
 static asn_CHOICE_specifics_t asn_SPC_value_specs_4 = {
-	sizeof(struct PrivateIE_Field_197P0__value),
-	offsetof(struct PrivateIE_Field_197P0__value, _asn_ctx),
-	offsetof(struct PrivateIE_Field_197P0__value, present),
-	sizeof(((struct PrivateIE_Field_197P0__value *)0)->present),
+	sizeof(struct PrivateMessageIEs__value),
+	offsetof(struct PrivateMessageIEs__value, _asn_ctx),
+	offsetof(struct PrivateMessageIEs__value, present),
+	sizeof(((struct PrivateMessageIEs__value *)0)->present),
 	0,	/* No top level tags */
 	0,	/* No tags in the map */
 	0, 0,
@@ -118,8 +112,8 @@ asn_TYPE_descriptor_t asn_DEF_value_4 = {
 	&asn_SPC_value_specs_4	/* Additional specs */
 };
 
-asn_TYPE_member_t asn_MBR_PrivateIE_Field_197P0_1[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct PrivateIE_Field_197P0, id),
+asn_TYPE_member_t asn_MBR_PrivateMessageIEs_1[] = {
+	{ ATF_NOFLAGS, 0, offsetof(struct PrivateMessageIEs, id),
 		-1 /* Ambiguous tag (CHOICE?) */,
 		0,
 		&asn_DEF_PrivateIE_ID,
@@ -128,7 +122,7 @@ asn_TYPE_member_t asn_MBR_PrivateIE_Field_197P0_1[] = {
 		0, 0, /* No default value */
 		"id"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct PrivateIE_Field_197P0, criticality),
+	{ ATF_NOFLAGS, 0, offsetof(struct PrivateMessageIEs, criticality),
 		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
 		0,
 		&asn_DEF_Criticality,
@@ -137,7 +131,7 @@ asn_TYPE_member_t asn_MBR_PrivateIE_Field_197P0_1[] = {
 		0, 0, /* No default value */
 		"criticality"
 		},
-	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PrivateIE_Field_197P0, value),
+	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PrivateMessageIEs, value),
 		-1 /* Ambiguous tag (ANY?) */,
 		0,
 		&asn_DEF_value_4,
@@ -147,35 +141,35 @@ asn_TYPE_member_t asn_MBR_PrivateIE_Field_197P0_1[] = {
 		"value"
 		},
 };
-static const ber_tlv_tag_t asn_DEF_PrivateIE_Field_197P0_tags_1[] = {
+static const ber_tlv_tag_t asn_DEF_PrivateMessageIEs_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
-static const asn_TYPE_tag2member_t asn_MAP_PrivateIE_Field_197P0_tag2el_1[] = {
+static const asn_TYPE_tag2member_t asn_MAP_PrivateMessageIEs_tag2el_1[] = {
     { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 }, /* criticality */
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* local */
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 0, 0, 0 } /* global */
 };
-asn_SEQUENCE_specifics_t asn_SPC_PrivateIE_Field_197P0_specs_1 = {
-	sizeof(struct PrivateIE_Field_197P0),
-	offsetof(struct PrivateIE_Field_197P0, _asn_ctx),
-	asn_MAP_PrivateIE_Field_197P0_tag2el_1,
+asn_SEQUENCE_specifics_t asn_SPC_PrivateMessageIEs_specs_1 = {
+	sizeof(struct PrivateMessageIEs),
+	offsetof(struct PrivateMessageIEs, _asn_ctx),
+	asn_MAP_PrivateMessageIEs_tag2el_1,
 	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
-asn_TYPE_descriptor_t asn_DEF_PrivateIE_Field_197P0 = {
-	"PrivateIE-Field",
-	"PrivateIE-Field",
+asn_TYPE_descriptor_t asn_DEF_PrivateMessageIEs = {
+	"PrivateMessageIEs",
+	"PrivateMessageIEs",
 	&asn_OP_SEQUENCE,
-	asn_DEF_PrivateIE_Field_197P0_tags_1,
-	sizeof(asn_DEF_PrivateIE_Field_197P0_tags_1)
-		/sizeof(asn_DEF_PrivateIE_Field_197P0_tags_1[0]), /* 1 */
-	asn_DEF_PrivateIE_Field_197P0_tags_1,	/* Same as above */
-	sizeof(asn_DEF_PrivateIE_Field_197P0_tags_1)
-		/sizeof(asn_DEF_PrivateIE_Field_197P0_tags_1[0]), /* 1 */
+	asn_DEF_PrivateMessageIEs_tags_1,
+	sizeof(asn_DEF_PrivateMessageIEs_tags_1)
+		/sizeof(asn_DEF_PrivateMessageIEs_tags_1[0]), /* 1 */
+	asn_DEF_PrivateMessageIEs_tags_1,	/* Same as above */
+	sizeof(asn_DEF_PrivateMessageIEs_tags_1)
+		/sizeof(asn_DEF_PrivateMessageIEs_tags_1[0]), /* 1 */
 	{ 0, 0, SEQUENCE_constraint },
-	asn_MBR_PrivateIE_Field_197P0_1,
+	asn_MBR_PrivateMessageIEs_1,
 	3,	/* Elements count */
-	&asn_SPC_PrivateIE_Field_197P0_specs_1	/* Additional specs */
+	&asn_SPC_PrivateMessageIEs_specs_1	/* Additional specs */
 };
 

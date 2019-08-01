@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct CancelledCellsInTAI_EUTRA_Item {
 	EUTRA_CGI_t	 eUTRA_CGI;
 	NumberOfBroadcasts_t	 numberOfBroadcasts;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

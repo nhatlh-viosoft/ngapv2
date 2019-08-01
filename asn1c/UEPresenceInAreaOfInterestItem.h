@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct UEPresenceInAreaOfInterestItem {
 	LocationReportingReferenceID_t	 locationReportingReferenceID;
 	UEPresence_t	 uEPresence;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

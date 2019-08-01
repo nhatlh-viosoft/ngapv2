@@ -28,10 +28,10 @@ struct ProtocolExtensionContainer;
 /* PDUSessionResourceSetupItemCxtReq */
 typedef struct PDUSessionResourceSetupItemCxtReq {
 	PDUSessionID_t	 pDUSessionID;
-	NAS_PDU_t	*nAS_PDU	/* OPTIONAL */;
+	NAS_PDU_t	*nAS_PDU;	/* OPTIONAL */
 	S_NSSAI_t	 s_NSSAI;
 	OCTET_STRING_t	 pDUSessionResourceSetupRequestTransfer;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

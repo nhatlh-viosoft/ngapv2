@@ -58,6 +58,9 @@ typedef struct BroadcastCompletedAreaList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_BroadcastCompletedAreaList;
+extern asn_CHOICE_specifics_t asn_SPC_BroadcastCompletedAreaList_specs_1;
+extern asn_TYPE_member_t asn_MBR_BroadcastCompletedAreaList_1[7];
+extern asn_per_constraints_t asn_PER_type_BroadcastCompletedAreaList_constr_1;
 
 #ifdef __cplusplus
 }

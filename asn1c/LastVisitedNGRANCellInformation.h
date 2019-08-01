@@ -31,9 +31,9 @@ typedef struct LastVisitedNGRANCellInformation {
 	NGRAN_CGI_t	 globalCellID;
 	CellType_t	 cellType;
 	TimeUEStayedInCell_t	 timeUEStayedInCell;
-	TimeUEStayedInCellEnhancedGranularity_t	*timeUEStayedInCellEnhancedGranularity	/* OPTIONAL */;
-	struct Cause	*hOCauseValue	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	TimeUEStayedInCellEnhancedGranularity_t	*timeUEStayedInCellEnhancedGranularity;	/* OPTIONAL */
+	struct Cause	*hOCauseValue;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

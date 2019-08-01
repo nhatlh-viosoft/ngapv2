@@ -28,8 +28,8 @@ struct ProtocolExtensionContainer;
 typedef struct QosFlowSetupRequestItem {
 	QosFlowIdentifier_t	 qosFlowIdentifier;
 	QosFlowLevelQosParameters_t	 qosFlowLevelQosParameters;
-	E_RAB_ID_t	*e_RAB_ID	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	E_RAB_ID_t	*e_RAB_ID;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

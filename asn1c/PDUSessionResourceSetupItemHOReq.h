@@ -29,7 +29,7 @@ typedef struct PDUSessionResourceSetupItemHOReq {
 	PDUSessionID_t	 pDUSessionID;
 	S_NSSAI_t	 s_NSSAI;
 	OCTET_STRING_t	 handoverRequestTransfer;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

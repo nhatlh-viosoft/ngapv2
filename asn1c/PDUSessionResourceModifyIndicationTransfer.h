@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* PDUSessionResourceModifyIndicationTransfer */
 typedef struct PDUSessionResourceModifyIndicationTransfer {
 	QosFlowPerTNLInformation_t	 dLQosFlowPerTNLInformation;
-	struct QosFlowPerTNLInformationList	*additionalDLQosFlowPerTNLInformation	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct QosFlowPerTNLInformationList	*additionalDLQosFlowPerTNLInformation;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -26,10 +26,10 @@ struct ProtocolExtensionContainer;
 
 /* ExpectedUEActivityBehaviour */
 typedef struct ExpectedUEActivityBehaviour {
-	ExpectedActivityPeriod_t	*expectedActivityPeriod	/* OPTIONAL */;
-	ExpectedIdlePeriod_t	*expectedIdlePeriod	/* OPTIONAL */;
-	SourceOfUEActivityBehaviourInformation_t	*sourceOfUEActivityBehaviourInformation	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	ExpectedActivityPeriod_t	*expectedActivityPeriod;	/* OPTIONAL */
+	ExpectedIdlePeriod_t	*expectedIdlePeriod;	/* OPTIONAL */
+	SourceOfUEActivityBehaviourInformation_t	*sourceOfUEActivityBehaviourInformation;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -45,6 +45,8 @@ oer_type_decoder_f NextPagingAreaScope_decode_oer;
 oer_type_encoder_f NextPagingAreaScope_encode_oer;
 per_type_decoder_f NextPagingAreaScope_decode_uper;
 per_type_encoder_f NextPagingAreaScope_encode_uper;
+per_type_decoder_f NextPagingAreaScope_decode_aper;
+per_type_encoder_f NextPagingAreaScope_encode_aper;
 
 #ifdef __cplusplus
 }

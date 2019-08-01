@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct TAIBroadcastEUTRA_Item {
 	TAI_t	 tAI;
 	CompletedCellsInTAI_EUTRA_t	 completedCellsInTAI_EUTRA;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

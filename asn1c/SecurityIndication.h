@@ -28,8 +28,8 @@ struct ProtocolExtensionContainer;
 typedef struct SecurityIndication {
 	IntegrityProtectionIndication_t	 integrityProtectionIndication;
 	ConfidentialityProtectionIndication_t	 confidentialityProtectionIndication;
-	MaximumIntegrityProtectedDataRate_t	*maximumIntegrityProtectedDataRate_UL	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	MaximumIntegrityProtectedDataRate_t	*maximumIntegrityProtectedDataRate_UL;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

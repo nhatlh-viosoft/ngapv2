@@ -38,7 +38,7 @@ typedef struct QoSFlowsUsageReport_Item {
 	QosFlowIdentifier_t	 qosFlowIdentifier;
 	long	 rATType;
 	VolumeTimedReportList_t	 qoSFlowsTimedReportList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

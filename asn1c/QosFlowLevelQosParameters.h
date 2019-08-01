@@ -30,10 +30,10 @@ struct ProtocolExtensionContainer;
 typedef struct QosFlowLevelQosParameters {
 	QosCharacteristics_t	 qosCharacteristics;
 	AllocationAndRetentionPriority_t	 allocationAndRetentionPriority;
-	struct GBR_QosInformation	*gBR_QosInformation	/* OPTIONAL */;
-	ReflectiveQosAttribute_t	*reflectiveQosAttribute	/* OPTIONAL */;
-	AdditionalQosFlowInformation_t	*additionalQosFlowInformation	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct GBR_QosInformation	*gBR_QosInformation;	/* OPTIONAL */
+	ReflectiveQosAttribute_t	*reflectiveQosAttribute;	/* OPTIONAL */
+	AdditionalQosFlowInformation_t	*additionalQosFlowInformation;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

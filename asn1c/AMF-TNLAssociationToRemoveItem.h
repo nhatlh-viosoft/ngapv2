@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* AMF-TNLAssociationToRemoveItem */
 typedef struct AMF_TNLAssociationToRemoveItem {
 	CPTransportLayerInformation_t	 aMF_TNLAssociationAddress;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

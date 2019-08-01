@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct SecurityResult {
 	IntegrityProtectionResult_t	 integrityProtectionResult;
 	ConfidentialityProtectionResult_t	 confidentialityProtectionResult;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

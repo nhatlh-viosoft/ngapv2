@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverRequest */
 typedef struct HandoverRequest {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P24_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

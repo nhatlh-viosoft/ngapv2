@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct CancelledCellsInTAI_NR_Item {
 	NR_CGI_t	 nR_CGI;
 	NumberOfBroadcasts_t	 numberOfBroadcasts;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

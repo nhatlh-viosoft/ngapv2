@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct QosFlowPerTNLInformation {
 	UPTransportLayerInformation_t	 uPTransportLayerInformation;
 	AssociatedQosFlowList_t	 associatedQosFlowList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

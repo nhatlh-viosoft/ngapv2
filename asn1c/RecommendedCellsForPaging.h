@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* RecommendedCellsForPaging */
 typedef struct RecommendedCellsForPaging {
 	RecommendedCellList_t	 recommendedCellList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -21,7 +21,7 @@ extern "C" {
 
 /* OverloadStop */
 typedef struct OverloadStop {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P55_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

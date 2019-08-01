@@ -28,10 +28,10 @@ struct ProtocolExtensionContainer;
 /* PDUSessionResourceSetupResponseTransfer */
 typedef struct PDUSessionResourceSetupResponseTransfer {
 	QosFlowPerTNLInformation_t	 dLQosFlowPerTNLInformation;
-	struct QosFlowPerTNLInformationList	*additionalDLQosFlowPerTNLInformation	/* OPTIONAL */;
-	struct SecurityResult	*securityResult	/* OPTIONAL */;
-	struct QosFlowListWithCause	*qosFlowFailedToSetupList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct QosFlowPerTNLInformationList	*additionalDLQosFlowPerTNLInformation;	/* OPTIONAL */
+	struct SecurityResult	*securityResult;	/* OPTIONAL */
+	struct QosFlowListWithCause	*qosFlowFailedToSetupList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

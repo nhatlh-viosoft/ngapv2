@@ -21,7 +21,7 @@ extern "C" {
 
 /* RANConfigurationUpdateFailure */
 typedef struct RANConfigurationUpdateFailure {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P46_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

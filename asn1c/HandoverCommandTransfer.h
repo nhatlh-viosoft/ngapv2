@@ -26,10 +26,10 @@ struct ProtocolExtensionContainer;
 
 /* HandoverCommandTransfer */
 typedef struct HandoverCommandTransfer {
-	struct UPTransportLayerInformation	*dLForwardingUP_TNLInformation	/* OPTIONAL */;
-	struct QosFlowToBeForwardedList	*qosFlowToBeForwardedList	/* OPTIONAL */;
-	struct DataForwardingResponseDRBList	*dataForwardingResponseDRBList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct UPTransportLayerInformation	*dLForwardingUP_TNLInformation;	/* OPTIONAL */
+	struct QosFlowToBeForwardedList	*qosFlowToBeForwardedList;	/* OPTIONAL */
+	struct DataForwardingResponseDRBList	*dataForwardingResponseDRBList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

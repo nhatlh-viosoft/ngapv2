@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* PathSwitchRequestUnsuccessfulTransfer */
 typedef struct PathSwitchRequestUnsuccessfulTransfer {
 	Cause_t	 cause;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

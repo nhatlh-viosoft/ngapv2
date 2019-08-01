@@ -28,10 +28,10 @@ struct ProtocolExtensionContainer;
 /* PathSwitchRequestTransfer */
 typedef struct PathSwitchRequestTransfer {
 	UPTransportLayerInformation_t	 dL_NGU_UP_TNLInformation;
-	DL_NGU_TNLInformationReused_t	*dL_NGU_TNLInformationReused	/* OPTIONAL */;
-	struct UserPlaneSecurityInformation	*userPlaneSecurityInformation	/* OPTIONAL */;
+	DL_NGU_TNLInformationReused_t	*dL_NGU_TNLInformationReused;	/* OPTIONAL */
+	struct UserPlaneSecurityInformation	*userPlaneSecurityInformation;	/* OPTIONAL */
 	QosFlowAcceptedList_t	 qosFlowAcceptedList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

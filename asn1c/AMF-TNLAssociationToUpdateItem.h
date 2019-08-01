@@ -27,9 +27,9 @@ struct ProtocolExtensionContainer;
 /* AMF-TNLAssociationToUpdateItem */
 typedef struct AMF_TNLAssociationToUpdateItem {
 	CPTransportLayerInformation_t	 aMF_TNLAssociationAddress;
-	TNLAssociationUsage_t	*tNLAssociationUsage	/* OPTIONAL */;
-	TNLAddressWeightFactor_t	*tNLAddressWeightFactor	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	TNLAssociationUsage_t	*tNLAssociationUsage;	/* OPTIONAL */
+	TNLAddressWeightFactor_t	*tNLAddressWeightFactor;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

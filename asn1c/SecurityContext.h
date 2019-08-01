@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct SecurityContext {
 	NextHopChainingCount_t	 nextHopChainingCount;
 	SecurityKey_t	 nextHopNH;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -39,6 +39,8 @@ typedef struct SecurityContext {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_SecurityContext;
+extern asn_SEQUENCE_specifics_t asn_SPC_SecurityContext_specs_1;
+extern asn_TYPE_member_t asn_MBR_SecurityContext_1[3];
 
 #ifdef __cplusplus
 }

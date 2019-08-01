@@ -49,6 +49,8 @@ oer_type_decoder_f TraceDepth_decode_oer;
 oer_type_encoder_f TraceDepth_encode_oer;
 per_type_decoder_f TraceDepth_decode_uper;
 per_type_encoder_f TraceDepth_encode_uper;
+per_type_decoder_f TraceDepth_decode_aper;
+per_type_encoder_f TraceDepth_encode_aper;
 
 #ifdef __cplusplus
 }

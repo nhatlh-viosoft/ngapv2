@@ -28,10 +28,10 @@ struct ProtocolExtensionContainer;
 /* NonDynamic5QIDescriptor */
 typedef struct NonDynamic5QIDescriptor {
 	FiveQI_t	 fiveQI;
-	PriorityLevelQos_t	*priorityLevelQos	/* OPTIONAL */;
-	AveragingWindow_t	*averagingWindow	/* OPTIONAL */;
-	MaximumDataBurstVolume_t	*maximumDataBurstVolume	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	PriorityLevelQos_t	*priorityLevelQos;	/* OPTIONAL */
+	AveragingWindow_t	*averagingWindow;	/* OPTIONAL */
+	MaximumDataBurstVolume_t	*maximumDataBurstVolume;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

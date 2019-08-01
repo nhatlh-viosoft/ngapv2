@@ -39,7 +39,7 @@ NumberOfBroadcastsRequested_constraint(const asn_TYPE_descriptor_t *td, const vo
 static asn_oer_constraints_t asn_OER_type_NumberOfBroadcastsRequested_constr_1 CC_NOTUSED = {
 	{ 2, 1 }	/* (0..65535) */,
 	-1};
-static asn_per_constraints_t asn_PER_type_NumberOfBroadcastsRequested_constr_1 CC_NOTUSED = {
+asn_per_constraints_t asn_PER_type_NumberOfBroadcastsRequested_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 16,  16,  0,  65535 }	/* (0..65535) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */

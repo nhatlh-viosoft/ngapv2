@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* CellType */
 typedef struct CellType {
 	CellSize_t	 cellSize;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

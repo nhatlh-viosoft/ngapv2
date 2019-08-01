@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* PDUSessionResourceItemCxtRelCpl */
 typedef struct PDUSessionResourceItemCxtRelCpl {
 	PDUSessionID_t	 pDUSessionID;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

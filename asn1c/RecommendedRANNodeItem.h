@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* RecommendedRANNodeItem */
 typedef struct RecommendedRANNodeItem {
 	AMFPagingTarget_t	 aMFPagingTarget;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

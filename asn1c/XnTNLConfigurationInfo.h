@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* XnTNLConfigurationInfo */
 typedef struct XnTNLConfigurationInfo {
 	XnTLAs_t	 xnTransportLayerAddresses;
-	struct XnExtTLAs	*xnExtendedTransportLayerAddresses	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct XnExtTLAs	*xnExtendedTransportLayerAddresses;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

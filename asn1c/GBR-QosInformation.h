@@ -30,10 +30,10 @@ typedef struct GBR_QosInformation {
 	BitRate_t	 maximumFlowBitRateUL;
 	BitRate_t	 guaranteedFlowBitRateDL;
 	BitRate_t	 guaranteedFlowBitRateUL;
-	NotificationControl_t	*notificationControl	/* OPTIONAL */;
-	PacketLossRate_t	*maximumPacketLossRateDL	/* OPTIONAL */;
-	PacketLossRate_t	*maximumPacketLossRateUL	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	NotificationControl_t	*notificationControl;	/* OPTIONAL */
+	PacketLossRate_t	*maximumPacketLossRateDL;	/* OPTIONAL */
+	PacketLossRate_t	*maximumPacketLossRateUL;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

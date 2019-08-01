@@ -8,7 +8,7 @@
 #include "InfoOnRecommendedCellsAndRANNodesForPaging.h"
 
 #include "ProtocolExtensionContainer.h"
-static asn_TYPE_member_t asn_MBR_InfoOnRecommendedCellsAndRANNodesForPaging_1[] = {
+asn_TYPE_member_t asn_MBR_InfoOnRecommendedCellsAndRANNodesForPaging_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct InfoOnRecommendedCellsAndRANNodesForPaging, recommendedCellsForPaging),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -30,7 +30,7 @@ static asn_TYPE_member_t asn_MBR_InfoOnRecommendedCellsAndRANNodesForPaging_1[] 
 	{ ATF_POINTER, 1, offsetof(struct InfoOnRecommendedCellsAndRANNodesForPaging, iE_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P68,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -46,7 +46,7 @@ static const asn_TYPE_tag2member_t asn_MAP_InfoOnRecommendedCellsAndRANNodesForP
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* recommendRANNodesForPaging */
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* iE-Extensions */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_InfoOnRecommendedCellsAndRANNodesForPaging_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_InfoOnRecommendedCellsAndRANNodesForPaging_specs_1 = {
 	sizeof(struct InfoOnRecommendedCellsAndRANNodesForPaging),
 	offsetof(struct InfoOnRecommendedCellsAndRANNodesForPaging, _asn_ctx),
 	asn_MAP_InfoOnRecommendedCellsAndRANNodesForPaging_tag2el_1,

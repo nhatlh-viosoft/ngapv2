@@ -21,7 +21,7 @@ extern "C" {
 
 /* PDUSessionResourceReleaseResponse */
 typedef struct PDUSessionResourceReleaseResponse {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P5_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

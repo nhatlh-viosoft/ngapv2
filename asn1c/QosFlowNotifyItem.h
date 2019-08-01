@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct QosFlowNotifyItem {
 	QosFlowIdentifier_t	 qosFlowIdentifier;
 	NotificationCause_t	 notificationCause;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

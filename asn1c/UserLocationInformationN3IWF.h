@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct UserLocationInformationN3IWF {
 	TransportLayerAddress_t	 iPAddress;
 	PortNumber_t	 portNumber;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

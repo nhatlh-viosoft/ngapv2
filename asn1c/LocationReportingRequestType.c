@@ -9,7 +9,7 @@
 
 #include "AreaOfInterestList.h"
 #include "ProtocolExtensionContainer.h"
-static asn_TYPE_member_t asn_MBR_LocationReportingRequestType_1[] = {
+asn_TYPE_member_t asn_MBR_LocationReportingRequestType_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct LocationReportingRequestType, eventType),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -49,7 +49,7 @@ static asn_TYPE_member_t asn_MBR_LocationReportingRequestType_1[] = {
 	{ ATF_POINTER, 1, offsetof(struct LocationReportingRequestType, iE_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (4 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P71,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -67,7 +67,7 @@ static const asn_TYPE_tag2member_t asn_MAP_LocationReportingRequestType_tag2el_1
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 }, /* locationReportingReferenceIDToBeCancelled */
     { (ASN_TAG_CLASS_CONTEXT | (4 << 2)), 4, 0, 0 } /* iE-Extensions */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_LocationReportingRequestType_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_LocationReportingRequestType_specs_1 = {
 	sizeof(struct LocationReportingRequestType),
 	offsetof(struct LocationReportingRequestType, _asn_ctx),
 	asn_MAP_LocationReportingRequestType_tag2el_1,

@@ -9,7 +9,7 @@
 
 #include "ExpectedUEBehaviour.h"
 #include "ProtocolExtensionContainer.h"
-static asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_1[] = {
+asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CoreNetworkAssistanceInformationForInactive, uEIdentityIndexValue),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		+1,	/* EXPLICIT tag at current level */
@@ -67,7 +67,7 @@ static asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_1[]
 	{ ATF_POINTER, 1, offsetof(struct CoreNetworkAssistanceInformationForInactive, iE_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (6 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P31,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -87,7 +87,7 @@ static const asn_TYPE_tag2member_t asn_MAP_CoreNetworkAssistanceInformationForIn
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 5, 0, 0 }, /* expectedUEBehaviour */
     { (ASN_TAG_CLASS_CONTEXT | (6 << 2)), 6, 0, 0 } /* iE-Extensions */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_CoreNetworkAssistanceInformationForInactive_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_CoreNetworkAssistanceInformationForInactive_specs_1 = {
 	sizeof(struct CoreNetworkAssistanceInformationForInactive),
 	offsetof(struct CoreNetworkAssistanceInformationForInactive, _asn_ctx),
 	asn_MAP_CoreNetworkAssistanceInformationForInactive_tag2el_1,

@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* CompletedCellsInTAI-EUTRA-Item */
 typedef struct CompletedCellsInTAI_EUTRA_Item {
 	EUTRA_CGI_t	 eUTRA_CGI;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

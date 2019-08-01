@@ -17,12 +17,12 @@
 static asn_oer_constraints_t asn_OER_type_BroadcastCompletedAreaList_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
-static asn_per_constraints_t asn_PER_type_BroadcastCompletedAreaList_constr_1 CC_NOTUSED = {
+asn_per_constraints_t asn_PER_type_BroadcastCompletedAreaList_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 3,  3,  0,  6 }	/* (0..6) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
-static asn_TYPE_member_t asn_MBR_BroadcastCompletedAreaList_1[] = {
+asn_TYPE_member_t asn_MBR_BroadcastCompletedAreaList_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct BroadcastCompletedAreaList, choice.cellIDBroadcastEUTRA),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -80,7 +80,7 @@ static asn_TYPE_member_t asn_MBR_BroadcastCompletedAreaList_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct BroadcastCompletedAreaList, choice.choice_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (6 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_SingleContainer_130P0,
+		&asn_DEF_ProtocolIE_SingleContainer_130P2,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -96,7 +96,7 @@ static const asn_TYPE_tag2member_t asn_MAP_BroadcastCompletedAreaList_tag2el_1[]
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 5, 0, 0 }, /* emergencyAreaIDBroadcastNR */
     { (ASN_TAG_CLASS_CONTEXT | (6 << 2)), 6, 0, 0 } /* choice-Extensions */
 };
-static asn_CHOICE_specifics_t asn_SPC_BroadcastCompletedAreaList_specs_1 = {
+asn_CHOICE_specifics_t asn_SPC_BroadcastCompletedAreaList_specs_1 = {
 	sizeof(struct BroadcastCompletedAreaList),
 	offsetof(struct BroadcastCompletedAreaList, _asn_ctx),
 	offsetof(struct BroadcastCompletedAreaList, present),

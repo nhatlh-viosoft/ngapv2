@@ -21,7 +21,7 @@ extern "C" {
 
 /* NGReset */
 typedef struct NGReset {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P51_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

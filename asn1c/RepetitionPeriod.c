@@ -39,7 +39,7 @@ RepetitionPeriod_constraint(const asn_TYPE_descriptor_t *td, const void *sptr,
 static asn_oer_constraints_t asn_OER_type_RepetitionPeriod_constr_1 CC_NOTUSED = {
 	{ 4, 1 }	/* (0..131071) */,
 	-1};
-static asn_per_constraints_t asn_PER_type_RepetitionPeriod_constr_1 CC_NOTUSED = {
+asn_per_constraints_t asn_PER_type_RepetitionPeriod_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 17, -1,  0,  131071 }	/* (0..131071) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */

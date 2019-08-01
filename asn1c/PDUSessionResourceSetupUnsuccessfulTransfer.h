@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* PDUSessionResourceSetupUnsuccessfulTransfer */
 typedef struct PDUSessionResourceSetupUnsuccessfulTransfer {
 	Cause_t	 cause;
-	struct CriticalityDiagnostics	*criticalityDiagnostics	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct CriticalityDiagnostics	*criticalityDiagnostics;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

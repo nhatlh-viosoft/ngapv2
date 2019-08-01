@@ -25,9 +25,9 @@ struct ProtocolExtensionContainer;
 
 /* SecondaryRATUsageInformation */
 typedef struct SecondaryRATUsageInformation {
-	struct PDUSessionUsageReport	*pDUSessionUsageReport	/* OPTIONAL */;
-	struct QoSFlowsUsageReportList	*qosFlowsUsageReportList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extension	/* OPTIONAL */;
+	struct PDUSessionUsageReport	*pDUSessionUsageReport;	/* OPTIONAL */
+	struct QoSFlowsUsageReportList	*qosFlowsUsageReportList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extension;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

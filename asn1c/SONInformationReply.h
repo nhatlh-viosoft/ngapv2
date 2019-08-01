@@ -24,8 +24,8 @@ struct ProtocolExtensionContainer;
 
 /* SONInformationReply */
 typedef struct SONInformationReply {
-	struct XnTNLConfigurationInfo	*xnTNLConfigurationInfo	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct XnTNLConfigurationInfo	*xnTNLConfigurationInfo;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -36,6 +36,8 @@ oer_type_decoder_f RAN_UE_NGAP_ID_decode_oer;
 oer_type_encoder_f RAN_UE_NGAP_ID_encode_oer;
 per_type_decoder_f RAN_UE_NGAP_ID_decode_uper;
 per_type_encoder_f RAN_UE_NGAP_ID_encode_uper;
+per_type_decoder_f RAN_UE_NGAP_ID_decode_aper;
+per_type_encoder_f RAN_UE_NGAP_ID_encode_aper;
 
 #ifdef __cplusplus
 }

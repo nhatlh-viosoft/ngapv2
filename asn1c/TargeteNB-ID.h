@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct TargeteNB_ID {
 	GlobalNgENB_ID_t	 globalENB_ID;
 	EPS_TAI_t	 selected_EPS_TAI;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct AreaOfInterestItem {
 	AreaOfInterest_t	 areaOfInterest;
 	LocationReportingReferenceID_t	 locationReportingReferenceID;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

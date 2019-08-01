@@ -11,7 +11,7 @@ static asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyRequest_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyRequest, protocolIEs),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_Container_127P0,
+		&asn_DEF_ProtocolIE_Container_127P6,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

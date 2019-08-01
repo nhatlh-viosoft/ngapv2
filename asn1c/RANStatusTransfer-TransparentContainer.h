@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* RANStatusTransfer-TransparentContainer */
 typedef struct RANStatusTransfer_TransparentContainer {
 	DRBsSubjectToStatusTransferList_t	 dRBsSubjectToStatusTransferList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -37,6 +37,8 @@ typedef struct RANStatusTransfer_TransparentContainer {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_RANStatusTransfer_TransparentContainer;
+extern asn_SEQUENCE_specifics_t asn_SPC_RANStatusTransfer_TransparentContainer_specs_1;
+extern asn_TYPE_member_t asn_MBR_RANStatusTransfer_TransparentContainer_1[2];
 
 #ifdef __cplusplus
 }

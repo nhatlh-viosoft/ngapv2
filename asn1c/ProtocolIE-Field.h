@@ -19,24 +19,892 @@
 #include <OPEN_TYPE.h>
 #include <constr_CHOICE.h>
 #include <constr_SEQUENCE.h>
+#include "PDUSessionAggregateMaximumBitRate.h"
+#include "Presence.h"
+#include "UL-NGU-UP-TNLModifyList.h"
+#include "NetworkInstance.h"
+#include "QosFlowAddOrModifyRequestList.h"
+#include "QosFlowListWithCause.h"
+#include "UPTransportLayerInformationList.h"
+#include "CommonNetworkInstance.h"
+#include "UPTransportLayerInformation.h"
+#include "DataForwardingNotPossible.h"
+#include "PDUSessionType.h"
+#include "SecurityIndication.h"
+#include "QosFlowSetupRequestList.h"
+#include "AMF-UE-NGAP-ID.h"
+#include "RAN-UE-NGAP-ID.h"
+#include "RANPagingPriority.h"
+#include "NAS-PDU.h"
+#include "PDUSessionResourceSetupListSUReq.h"
+#include "UEAggregateMaximumBitRate.h"
+#include "PDUSessionResourceSetupListSURes.h"
+#include "PDUSessionResourceFailedToSetupListSURes.h"
+#include "CriticalityDiagnostics.h"
+#include "PDUSessionResourceToReleaseListRelCmd.h"
+#include "PDUSessionResourceReleasedListRelRes.h"
+#include "UserLocationInformation.h"
+#include "PDUSessionResourceModifyListModReq.h"
+#include "PDUSessionResourceModifyListModRes.h"
+#include "PDUSessionResourceFailedToModifyListModRes.h"
+#include "PDUSessionResourceNotifyList.h"
+#include "PDUSessionResourceReleasedListNot.h"
+#include "PDUSessionResourceModifyListModInd.h"
+#include "PDUSessionResourceModifyListModCfm.h"
+#include "PDUSessionResourceFailedToModifyListModCfm.h"
+#include "AMFName.h"
+#include "CoreNetworkAssistanceInformationForInactive.h"
+#include "GUAMI.h"
+#include "PDUSessionResourceSetupListCxtReq.h"
+#include "AllowedNSSAI.h"
+#include "UESecurityCapabilities.h"
+#include "SecurityKey.h"
+#include "TraceActivation.h"
+#include "MobilityRestrictionList.h"
+#include "UERadioCapability.h"
+#include "IndexToRFSP.h"
+#include "MaskedIMEISV.h"
+#include "EmergencyFallbackIndicator.h"
+#include "RRCInactiveTransitionReportRequest.h"
+#include "UERadioCapabilityForPaging.h"
+#include "RedirectionVoiceFallback.h"
+#include "LocationReportingRequestType.h"
+#include "CNAssistedRANTuning.h"
+#include "PDUSessionResourceSetupListCxtRes.h"
+#include "PDUSessionResourceFailedToSetupListCxtRes.h"
+#include "PDUSessionResourceFailedToSetupListCxtFail.h"
+#include "Cause.h"
+#include "PDUSessionResourceListCxtRelReq.h"
+#include "UE-NGAP-IDs.h"
+#include "InfoOnRecommendedCellsAndRANNodesForPaging.h"
+#include "PDUSessionResourceListCxtRelCpl.h"
+#include "RRCState.h"
+#include "HandoverType.h"
+#include "TargetID.h"
+#include "DirectForwardingPathAvailability.h"
+#include "PDUSessionResourceListHORqd.h"
+#include "SourceToTarget-TransparentContainer.h"
+#include "NASSecurityParametersFromNGRAN.h"
+#include "PDUSessionResourceHandoverList.h"
+#include "PDUSessionResourceToReleaseListHOCmd.h"
+#include "TargetToSource-TransparentContainer.h"
+#include "SecurityContext.h"
+#include "NewSecurityContextInd.h"
+#include "PDUSessionResourceSetupListHOReq.h"
+#include "PDUSessionResourceAdmittedList.h"
+#include "PDUSessionResourceFailedToSetupListHOAck.h"
+#include "PDUSessionResourceToBeSwitchedDLList.h"
+#include "PDUSessionResourceFailedToSetupListPSReq.h"
+#include "PDUSessionResourceSwitchedList.h"
+#include "PDUSessionResourceReleasedListPSAck.h"
+#include "PDUSessionResourceReleasedListPSFail.h"
+#include "RANStatusTransfer-TransparentContainer.h"
+#include "UEPagingIdentity.h"
+#include "PagingDRX.h"
+#include "TAIListForPaging.h"
+#include "PagingPriority.h"
+#include "PagingOrigin.h"
+#include "AssistanceDataForPaging.h"
+#include "RRCEstablishmentCause.h"
+#include "FiveG-S-TMSI.h"
+#include "AMFSetID.h"
+#include "UEContextRequest.h"
+#include <OCTET_STRING.h>
+#include "GlobalRANNodeID.h"
+#include "RANNodeName.h"
+#include "SupportedTAList.h"
+#include "UERetentionInformation.h"
+#include "ServedGUAMIList.h"
+#include "RelativeAMFCapacity.h"
+#include "PLMNSupportList.h"
+#include "TimeToWait.h"
+#include "AMF-TNLAssociationToAddList.h"
+#include "AMF-TNLAssociationToRemoveList.h"
+#include "AMF-TNLAssociationToUpdateList.h"
+#include "AMF-TNLAssociationSetupList.h"
+#include "TNLAssociationList.h"
+#include "UnavailableGUAMIList.h"
+#include "ResetType.h"
+#include "UE-associatedLogicalNG-connectionList.h"
+#include "OverloadResponse.h"
+#include "TrafficLoadReductionIndication.h"
+#include "OverloadStartNSSAIList.h"
+#include "SONConfigurationTransfer.h"
+#include "EN-DCSONConfigurationTransfer.h"
+#include "MessageIdentifier.h"
+#include "SerialNumber.h"
+#include "WarningAreaList.h"
+#include "RepetitionPeriod.h"
+#include "NumberOfBroadcastsRequested.h"
+#include "WarningType.h"
+#include "WarningSecurityInfo.h"
+#include "DataCodingScheme.h"
+#include "WarningMessageContents.h"
+#include "ConcurrentWarningMessageInd.h"
+#include "WarningAreaCoordinates.h"
+#include "BroadcastCompletedAreaList.h"
+#include "CancelAllWarningMessages.h"
+#include "BroadcastCancelledAreaList.h"
+#include "CellIDListForRestart.h"
+#include "TAIListForRestart.h"
+#include "EmergencyAreaIDListForRestart.h"
+#include "PWSFailedCellIDList.h"
+#include "RoutingID.h"
+#include "NRPPa-PDU.h"
+#include "NGRANTraceID.h"
+#include "NGRAN-CGI.h"
+#include "TransportLayerAddress.h"
+#include "UEPresenceInAreaOfInterestList.h"
+#include "IMSVoiceSupportIndicator.h"
+#include "PDUSessionResourceSecondaryRATUsageList.h"
+#include "HandoverFlag.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* Dependencies */
-typedef enum ProtocolIE_Field_133P0__value_PR {
-	ProtocolIE_Field_133P0__value_PR_NOTHING,	/* No components present */
+typedef enum AMFPagingTarget_ExtIEs__value_PR {
+	AMFPagingTarget_ExtIEs__value_PR_NOTHING	/* No components present */
 	
-} ProtocolIE_Field_133P0__value_PR;
+} AMFPagingTarget_ExtIEs__value_PR;
+typedef enum BroadcastCancelledAreaList_ExtIEs__value_PR {
+	BroadcastCancelledAreaList_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} BroadcastCancelledAreaList_ExtIEs__value_PR;
+typedef enum BroadcastCompletedAreaList_ExtIEs__value_PR {
+	BroadcastCompletedAreaList_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} BroadcastCompletedAreaList_ExtIEs__value_PR;
+typedef enum Cause_ExtIEs__value_PR {
+	Cause_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} Cause_ExtIEs__value_PR;
+typedef enum CellIDListForRestart_ExtIEs__value_PR {
+	CellIDListForRestart_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} CellIDListForRestart_ExtIEs__value_PR;
+typedef enum CPTransportLayerInformation_ExtIEs__value_PR {
+	CPTransportLayerInformation_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} CPTransportLayerInformation_ExtIEs__value_PR;
+typedef enum DRBStatusDL_ExtIEs__value_PR {
+	DRBStatusDL_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} DRBStatusDL_ExtIEs__value_PR;
+typedef enum DRBStatusUL_ExtIEs__value_PR {
+	DRBStatusUL_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} DRBStatusUL_ExtIEs__value_PR;
+typedef enum GlobalRANNodeID_ExtIEs__value_PR {
+	GlobalRANNodeID_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} GlobalRANNodeID_ExtIEs__value_PR;
+typedef enum GNB_ID_ExtIEs__value_PR {
+	GNB_ID_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} GNB_ID_ExtIEs__value_PR;
+typedef enum LastVisitedCellInformation_ExtIEs__value_PR {
+	LastVisitedCellInformation_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} LastVisitedCellInformation_ExtIEs__value_PR;
+typedef enum N3IWF_ID_ExtIEs__value_PR {
+	N3IWF_ID_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} N3IWF_ID_ExtIEs__value_PR;
+typedef enum NgENB_ID_ExtIEs__value_PR {
+	NgENB_ID_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} NgENB_ID_ExtIEs__value_PR;
+typedef enum NGRAN_CGI_ExtIEs__value_PR {
+	NGRAN_CGI_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} NGRAN_CGI_ExtIEs__value_PR;
+typedef enum OverloadResponse_ExtIEs__value_PR {
+	OverloadResponse_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} OverloadResponse_ExtIEs__value_PR;
+typedef enum PWSFailedCellIDList_ExtIEs__value_PR {
+	PWSFailedCellIDList_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} PWSFailedCellIDList_ExtIEs__value_PR;
+typedef enum QosCharacteristics_ExtIEs__value_PR {
+	QosCharacteristics_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} QosCharacteristics_ExtIEs__value_PR;
+typedef enum ResetType_ExtIEs__value_PR {
+	ResetType_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} ResetType_ExtIEs__value_PR;
+typedef enum SONInformation_ExtIEs__value_PR {
+	SONInformation_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} SONInformation_ExtIEs__value_PR;
+typedef enum TargetID_ExtIEs__value_PR {
+	TargetID_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} TargetID_ExtIEs__value_PR;
+typedef enum UEIdentityIndexValue_ExtIEs__value_PR {
+	UEIdentityIndexValue_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} UEIdentityIndexValue_ExtIEs__value_PR;
+typedef enum UE_NGAP_IDs_ExtIEs__value_PR {
+	UE_NGAP_IDs_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} UE_NGAP_IDs_ExtIEs__value_PR;
+typedef enum UEPagingIdentity_ExtIEs__value_PR {
+	UEPagingIdentity_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} UEPagingIdentity_ExtIEs__value_PR;
+typedef enum UPTransportLayerInformation_ExtIEs__value_PR {
+	UPTransportLayerInformation_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} UPTransportLayerInformation_ExtIEs__value_PR;
+typedef enum UserLocationInformation_ExtIEs__value_PR {
+	UserLocationInformation_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} UserLocationInformation_ExtIEs__value_PR;
+typedef enum WarningAreaList_ExtIEs__value_PR {
+	WarningAreaList_ExtIEs__value_PR_NOTHING	/* No components present */
+	
+} WarningAreaList_ExtIEs__value_PR;
+typedef enum PDUSessionResourceModifyRequestTransferIEs__value_PR {
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_PDUSessionAggregateMaximumBitRate,
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_UL_NGU_UP_TNLModifyList,
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_NetworkInstance,
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_QosFlowAddOrModifyRequestList,
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_QosFlowListWithCause,
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_UPTransportLayerInformationList,
+	PDUSessionResourceModifyRequestTransferIEs__value_PR_CommonNetworkInstance
+} PDUSessionResourceModifyRequestTransferIEs__value_PR;
+typedef enum PDUSessionResourceSetupRequestTransferIEs__value_PR {
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_PDUSessionAggregateMaximumBitRate,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_UPTransportLayerInformation,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_UPTransportLayerInformationList,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_DataForwardingNotPossible,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_PDUSessionType,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_SecurityIndication,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_NetworkInstance,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_QosFlowSetupRequestList,
+	PDUSessionResourceSetupRequestTransferIEs__value_PR_CommonNetworkInstance
+} PDUSessionResourceSetupRequestTransferIEs__value_PR;
+typedef enum PDUSessionResourceSetupRequestIEs__value_PR {
+	PDUSessionResourceSetupRequestIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceSetupRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceSetupRequestIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceSetupRequestIEs__value_PR_RANPagingPriority,
+	PDUSessionResourceSetupRequestIEs__value_PR_NAS_PDU,
+	PDUSessionResourceSetupRequestIEs__value_PR_PDUSessionResourceSetupListSUReq,
+	PDUSessionResourceSetupRequestIEs__value_PR_UEAggregateMaximumBitRate
+} PDUSessionResourceSetupRequestIEs__value_PR;
+typedef enum PDUSessionResourceSetupResponseIEs__value_PR {
+	PDUSessionResourceSetupResponseIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceSetupResponseIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceSetupResponseIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceSetupResponseIEs__value_PR_PDUSessionResourceSetupListSURes,
+	PDUSessionResourceSetupResponseIEs__value_PR_PDUSessionResourceFailedToSetupListSURes,
+	PDUSessionResourceSetupResponseIEs__value_PR_CriticalityDiagnostics
+} PDUSessionResourceSetupResponseIEs__value_PR;
+typedef enum PDUSessionResourceReleaseCommandIEs__value_PR {
+	PDUSessionResourceReleaseCommandIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceReleaseCommandIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceReleaseCommandIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceReleaseCommandIEs__value_PR_RANPagingPriority,
+	PDUSessionResourceReleaseCommandIEs__value_PR_NAS_PDU,
+	PDUSessionResourceReleaseCommandIEs__value_PR_PDUSessionResourceToReleaseListRelCmd
+} PDUSessionResourceReleaseCommandIEs__value_PR;
+typedef enum PDUSessionResourceReleaseResponseIEs__value_PR {
+	PDUSessionResourceReleaseResponseIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceReleaseResponseIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceReleaseResponseIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceReleaseResponseIEs__value_PR_PDUSessionResourceReleasedListRelRes,
+	PDUSessionResourceReleaseResponseIEs__value_PR_UserLocationInformation,
+	PDUSessionResourceReleaseResponseIEs__value_PR_CriticalityDiagnostics
+} PDUSessionResourceReleaseResponseIEs__value_PR;
+typedef enum PDUSessionResourceModifyRequestIEs__value_PR {
+	PDUSessionResourceModifyRequestIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceModifyRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceModifyRequestIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceModifyRequestIEs__value_PR_RANPagingPriority,
+	PDUSessionResourceModifyRequestIEs__value_PR_PDUSessionResourceModifyListModReq
+} PDUSessionResourceModifyRequestIEs__value_PR;
+typedef enum PDUSessionResourceModifyResponseIEs__value_PR {
+	PDUSessionResourceModifyResponseIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceModifyResponseIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceModifyResponseIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceModifyResponseIEs__value_PR_PDUSessionResourceModifyListModRes,
+	PDUSessionResourceModifyResponseIEs__value_PR_PDUSessionResourceFailedToModifyListModRes,
+	PDUSessionResourceModifyResponseIEs__value_PR_UserLocationInformation,
+	PDUSessionResourceModifyResponseIEs__value_PR_CriticalityDiagnostics
+} PDUSessionResourceModifyResponseIEs__value_PR;
+typedef enum PDUSessionResourceNotifyIEs__value_PR {
+	PDUSessionResourceNotifyIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceNotifyIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceNotifyIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceNotifyIEs__value_PR_PDUSessionResourceNotifyList,
+	PDUSessionResourceNotifyIEs__value_PR_PDUSessionResourceReleasedListNot,
+	PDUSessionResourceNotifyIEs__value_PR_UserLocationInformation
+} PDUSessionResourceNotifyIEs__value_PR;
+typedef enum PDUSessionResourceModifyIndicationIEs__value_PR {
+	PDUSessionResourceModifyIndicationIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceModifyIndicationIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceModifyIndicationIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceModifyIndicationIEs__value_PR_PDUSessionResourceModifyListModInd
+} PDUSessionResourceModifyIndicationIEs__value_PR;
+typedef enum PDUSessionResourceModifyConfirmIEs__value_PR {
+	PDUSessionResourceModifyConfirmIEs__value_PR_NOTHING,	/* No components present */
+	PDUSessionResourceModifyConfirmIEs__value_PR_AMF_UE_NGAP_ID,
+	PDUSessionResourceModifyConfirmIEs__value_PR_RAN_UE_NGAP_ID,
+	PDUSessionResourceModifyConfirmIEs__value_PR_PDUSessionResourceModifyListModCfm,
+	PDUSessionResourceModifyConfirmIEs__value_PR_PDUSessionResourceFailedToModifyListModCfm,
+	PDUSessionResourceModifyConfirmIEs__value_PR_CriticalityDiagnostics
+} PDUSessionResourceModifyConfirmIEs__value_PR;
+typedef enum InitialContextSetupRequestIEs__value_PR {
+	InitialContextSetupRequestIEs__value_PR_NOTHING,	/* No components present */
+	InitialContextSetupRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	InitialContextSetupRequestIEs__value_PR_RAN_UE_NGAP_ID,
+	InitialContextSetupRequestIEs__value_PR_AMFName,
+	InitialContextSetupRequestIEs__value_PR_UEAggregateMaximumBitRate,
+	InitialContextSetupRequestIEs__value_PR_CoreNetworkAssistanceInformationForInactive,
+	InitialContextSetupRequestIEs__value_PR_GUAMI,
+	InitialContextSetupRequestIEs__value_PR_PDUSessionResourceSetupListCxtReq,
+	InitialContextSetupRequestIEs__value_PR_AllowedNSSAI,
+	InitialContextSetupRequestIEs__value_PR_UESecurityCapabilities,
+	InitialContextSetupRequestIEs__value_PR_SecurityKey,
+	InitialContextSetupRequestIEs__value_PR_TraceActivation,
+	InitialContextSetupRequestIEs__value_PR_MobilityRestrictionList,
+	InitialContextSetupRequestIEs__value_PR_UERadioCapability,
+	InitialContextSetupRequestIEs__value_PR_IndexToRFSP,
+	InitialContextSetupRequestIEs__value_PR_MaskedIMEISV,
+	InitialContextSetupRequestIEs__value_PR_NAS_PDU,
+	InitialContextSetupRequestIEs__value_PR_EmergencyFallbackIndicator,
+	InitialContextSetupRequestIEs__value_PR_RRCInactiveTransitionReportRequest,
+	InitialContextSetupRequestIEs__value_PR_UERadioCapabilityForPaging,
+	InitialContextSetupRequestIEs__value_PR_RedirectionVoiceFallback,
+	InitialContextSetupRequestIEs__value_PR_LocationReportingRequestType,
+	InitialContextSetupRequestIEs__value_PR_CNAssistedRANTuning
+} InitialContextSetupRequestIEs__value_PR;
+typedef enum InitialContextSetupResponseIEs__value_PR {
+	InitialContextSetupResponseIEs__value_PR_NOTHING,	/* No components present */
+	InitialContextSetupResponseIEs__value_PR_AMF_UE_NGAP_ID,
+	InitialContextSetupResponseIEs__value_PR_RAN_UE_NGAP_ID,
+	InitialContextSetupResponseIEs__value_PR_PDUSessionResourceSetupListCxtRes,
+	InitialContextSetupResponseIEs__value_PR_PDUSessionResourceFailedToSetupListCxtRes,
+	InitialContextSetupResponseIEs__value_PR_CriticalityDiagnostics
+} InitialContextSetupResponseIEs__value_PR;
+typedef enum InitialContextSetupFailureIEs__value_PR {
+	InitialContextSetupFailureIEs__value_PR_NOTHING,	/* No components present */
+	InitialContextSetupFailureIEs__value_PR_AMF_UE_NGAP_ID,
+	InitialContextSetupFailureIEs__value_PR_RAN_UE_NGAP_ID,
+	InitialContextSetupFailureIEs__value_PR_PDUSessionResourceFailedToSetupListCxtFail,
+	InitialContextSetupFailureIEs__value_PR_Cause,
+	InitialContextSetupFailureIEs__value_PR_CriticalityDiagnostics
+} InitialContextSetupFailureIEs__value_PR;
+typedef enum UEContextReleaseRequest_IEs__value_PR {
+	UEContextReleaseRequest_IEs__value_PR_NOTHING,	/* No components present */
+	UEContextReleaseRequest_IEs__value_PR_AMF_UE_NGAP_ID,
+	UEContextReleaseRequest_IEs__value_PR_RAN_UE_NGAP_ID,
+	UEContextReleaseRequest_IEs__value_PR_PDUSessionResourceListCxtRelReq,
+	UEContextReleaseRequest_IEs__value_PR_Cause
+} UEContextReleaseRequest_IEs__value_PR;
+typedef enum UEContextReleaseCommand_IEs__value_PR {
+	UEContextReleaseCommand_IEs__value_PR_NOTHING,	/* No components present */
+	UEContextReleaseCommand_IEs__value_PR_UE_NGAP_IDs,
+	UEContextReleaseCommand_IEs__value_PR_Cause
+} UEContextReleaseCommand_IEs__value_PR;
+typedef enum UEContextReleaseComplete_IEs__value_PR {
+	UEContextReleaseComplete_IEs__value_PR_NOTHING,	/* No components present */
+	UEContextReleaseComplete_IEs__value_PR_AMF_UE_NGAP_ID,
+	UEContextReleaseComplete_IEs__value_PR_RAN_UE_NGAP_ID,
+	UEContextReleaseComplete_IEs__value_PR_UserLocationInformation,
+	UEContextReleaseComplete_IEs__value_PR_InfoOnRecommendedCellsAndRANNodesForPaging,
+	UEContextReleaseComplete_IEs__value_PR_PDUSessionResourceListCxtRelCpl,
+	UEContextReleaseComplete_IEs__value_PR_CriticalityDiagnostics
+} UEContextReleaseComplete_IEs__value_PR;
+typedef enum UEContextModificationRequestIEs__value_PR {
+	UEContextModificationRequestIEs__value_PR_NOTHING,	/* No components present */
+	UEContextModificationRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	UEContextModificationRequestIEs__value_PR_RAN_UE_NGAP_ID,
+	UEContextModificationRequestIEs__value_PR_RANPagingPriority,
+	UEContextModificationRequestIEs__value_PR_SecurityKey,
+	UEContextModificationRequestIEs__value_PR_IndexToRFSP,
+	UEContextModificationRequestIEs__value_PR_UEAggregateMaximumBitRate,
+	UEContextModificationRequestIEs__value_PR_UESecurityCapabilities,
+	UEContextModificationRequestIEs__value_PR_CoreNetworkAssistanceInformationForInactive,
+	UEContextModificationRequestIEs__value_PR_EmergencyFallbackIndicator,
+	UEContextModificationRequestIEs__value_PR_RRCInactiveTransitionReportRequest,
+	UEContextModificationRequestIEs__value_PR_GUAMI,
+	UEContextModificationRequestIEs__value_PR_CNAssistedRANTuning
+} UEContextModificationRequestIEs__value_PR;
+typedef enum UEContextModificationResponseIEs__value_PR {
+	UEContextModificationResponseIEs__value_PR_NOTHING,	/* No components present */
+	UEContextModificationResponseIEs__value_PR_AMF_UE_NGAP_ID,
+	UEContextModificationResponseIEs__value_PR_RAN_UE_NGAP_ID,
+	UEContextModificationResponseIEs__value_PR_RRCState,
+	UEContextModificationResponseIEs__value_PR_UserLocationInformation,
+	UEContextModificationResponseIEs__value_PR_CriticalityDiagnostics
+} UEContextModificationResponseIEs__value_PR;
+typedef enum UEContextModificationFailureIEs__value_PR {
+	UEContextModificationFailureIEs__value_PR_NOTHING,	/* No components present */
+	UEContextModificationFailureIEs__value_PR_AMF_UE_NGAP_ID,
+	UEContextModificationFailureIEs__value_PR_RAN_UE_NGAP_ID,
+	UEContextModificationFailureIEs__value_PR_Cause,
+	UEContextModificationFailureIEs__value_PR_CriticalityDiagnostics
+} UEContextModificationFailureIEs__value_PR;
+typedef enum RRCInactiveTransitionReportIEs__value_PR {
+	RRCInactiveTransitionReportIEs__value_PR_NOTHING,	/* No components present */
+	RRCInactiveTransitionReportIEs__value_PR_AMF_UE_NGAP_ID,
+	RRCInactiveTransitionReportIEs__value_PR_RAN_UE_NGAP_ID,
+	RRCInactiveTransitionReportIEs__value_PR_RRCState,
+	RRCInactiveTransitionReportIEs__value_PR_UserLocationInformation
+} RRCInactiveTransitionReportIEs__value_PR;
+typedef enum HandoverRequiredIEs__value_PR {
+	HandoverRequiredIEs__value_PR_NOTHING,	/* No components present */
+	HandoverRequiredIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverRequiredIEs__value_PR_RAN_UE_NGAP_ID,
+	HandoverRequiredIEs__value_PR_HandoverType,
+	HandoverRequiredIEs__value_PR_Cause,
+	HandoverRequiredIEs__value_PR_TargetID,
+	HandoverRequiredIEs__value_PR_DirectForwardingPathAvailability,
+	HandoverRequiredIEs__value_PR_PDUSessionResourceListHORqd,
+	HandoverRequiredIEs__value_PR_SourceToTarget_TransparentContainer
+} HandoverRequiredIEs__value_PR;
+typedef enum HandoverCommandIEs__value_PR {
+	HandoverCommandIEs__value_PR_NOTHING,	/* No components present */
+	HandoverCommandIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverCommandIEs__value_PR_RAN_UE_NGAP_ID,
+	HandoverCommandIEs__value_PR_HandoverType,
+	HandoverCommandIEs__value_PR_NASSecurityParametersFromNGRAN,
+	HandoverCommandIEs__value_PR_PDUSessionResourceHandoverList,
+	HandoverCommandIEs__value_PR_PDUSessionResourceToReleaseListHOCmd,
+	HandoverCommandIEs__value_PR_TargetToSource_TransparentContainer,
+	HandoverCommandIEs__value_PR_CriticalityDiagnostics
+} HandoverCommandIEs__value_PR;
+typedef enum HandoverPreparationFailureIEs__value_PR {
+	HandoverPreparationFailureIEs__value_PR_NOTHING,	/* No components present */
+	HandoverPreparationFailureIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverPreparationFailureIEs__value_PR_RAN_UE_NGAP_ID,
+	HandoverPreparationFailureIEs__value_PR_Cause,
+	HandoverPreparationFailureIEs__value_PR_CriticalityDiagnostics
+} HandoverPreparationFailureIEs__value_PR;
+typedef enum HandoverRequestIEs__value_PR {
+	HandoverRequestIEs__value_PR_NOTHING,	/* No components present */
+	HandoverRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverRequestIEs__value_PR_HandoverType,
+	HandoverRequestIEs__value_PR_Cause,
+	HandoverRequestIEs__value_PR_UEAggregateMaximumBitRate,
+	HandoverRequestIEs__value_PR_CoreNetworkAssistanceInformationForInactive,
+	HandoverRequestIEs__value_PR_UESecurityCapabilities,
+	HandoverRequestIEs__value_PR_SecurityContext,
+	HandoverRequestIEs__value_PR_NewSecurityContextInd,
+	HandoverRequestIEs__value_PR_NAS_PDU,
+	HandoverRequestIEs__value_PR_PDUSessionResourceSetupListHOReq,
+	HandoverRequestIEs__value_PR_AllowedNSSAI,
+	HandoverRequestIEs__value_PR_TraceActivation,
+	HandoverRequestIEs__value_PR_MaskedIMEISV,
+	HandoverRequestIEs__value_PR_SourceToTarget_TransparentContainer,
+	HandoverRequestIEs__value_PR_MobilityRestrictionList,
+	HandoverRequestIEs__value_PR_LocationReportingRequestType,
+	HandoverRequestIEs__value_PR_RRCInactiveTransitionReportRequest,
+	HandoverRequestIEs__value_PR_GUAMI,
+	HandoverRequestIEs__value_PR_RedirectionVoiceFallback,
+	HandoverRequestIEs__value_PR_CNAssistedRANTuning
+} HandoverRequestIEs__value_PR;
+typedef enum HandoverRequestAcknowledgeIEs__value_PR {
+	HandoverRequestAcknowledgeIEs__value_PR_NOTHING,	/* No components present */
+	HandoverRequestAcknowledgeIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverRequestAcknowledgeIEs__value_PR_RAN_UE_NGAP_ID,
+	HandoverRequestAcknowledgeIEs__value_PR_PDUSessionResourceAdmittedList,
+	HandoverRequestAcknowledgeIEs__value_PR_PDUSessionResourceFailedToSetupListHOAck,
+	HandoverRequestAcknowledgeIEs__value_PR_TargetToSource_TransparentContainer,
+	HandoverRequestAcknowledgeIEs__value_PR_CriticalityDiagnostics
+} HandoverRequestAcknowledgeIEs__value_PR;
+typedef enum HandoverFailureIEs__value_PR {
+	HandoverFailureIEs__value_PR_NOTHING,	/* No components present */
+	HandoverFailureIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverFailureIEs__value_PR_Cause,
+	HandoverFailureIEs__value_PR_CriticalityDiagnostics
+} HandoverFailureIEs__value_PR;
+typedef enum HandoverNotifyIEs__value_PR {
+	HandoverNotifyIEs__value_PR_NOTHING,	/* No components present */
+	HandoverNotifyIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverNotifyIEs__value_PR_RAN_UE_NGAP_ID,
+	HandoverNotifyIEs__value_PR_UserLocationInformation
+} HandoverNotifyIEs__value_PR;
+typedef enum PathSwitchRequestIEs__value_PR {
+	PathSwitchRequestIEs__value_PR_NOTHING,	/* No components present */
+	PathSwitchRequestIEs__value_PR_RAN_UE_NGAP_ID,
+	PathSwitchRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	PathSwitchRequestIEs__value_PR_UserLocationInformation,
+	PathSwitchRequestIEs__value_PR_UESecurityCapabilities,
+	PathSwitchRequestIEs__value_PR_PDUSessionResourceToBeSwitchedDLList,
+	PathSwitchRequestIEs__value_PR_PDUSessionResourceFailedToSetupListPSReq
+} PathSwitchRequestIEs__value_PR;
+typedef enum PathSwitchRequestAcknowledgeIEs__value_PR {
+	PathSwitchRequestAcknowledgeIEs__value_PR_NOTHING,	/* No components present */
+	PathSwitchRequestAcknowledgeIEs__value_PR_AMF_UE_NGAP_ID,
+	PathSwitchRequestAcknowledgeIEs__value_PR_RAN_UE_NGAP_ID,
+	PathSwitchRequestAcknowledgeIEs__value_PR_UESecurityCapabilities,
+	PathSwitchRequestAcknowledgeIEs__value_PR_SecurityContext,
+	PathSwitchRequestAcknowledgeIEs__value_PR_NewSecurityContextInd,
+	PathSwitchRequestAcknowledgeIEs__value_PR_PDUSessionResourceSwitchedList,
+	PathSwitchRequestAcknowledgeIEs__value_PR_PDUSessionResourceReleasedListPSAck,
+	PathSwitchRequestAcknowledgeIEs__value_PR_AllowedNSSAI,
+	PathSwitchRequestAcknowledgeIEs__value_PR_CoreNetworkAssistanceInformationForInactive,
+	PathSwitchRequestAcknowledgeIEs__value_PR_RRCInactiveTransitionReportRequest,
+	PathSwitchRequestAcknowledgeIEs__value_PR_CriticalityDiagnostics,
+	PathSwitchRequestAcknowledgeIEs__value_PR_RedirectionVoiceFallback,
+	PathSwitchRequestAcknowledgeIEs__value_PR_CNAssistedRANTuning
+} PathSwitchRequestAcknowledgeIEs__value_PR;
+typedef enum PathSwitchRequestFailureIEs__value_PR {
+	PathSwitchRequestFailureIEs__value_PR_NOTHING,	/* No components present */
+	PathSwitchRequestFailureIEs__value_PR_AMF_UE_NGAP_ID,
+	PathSwitchRequestFailureIEs__value_PR_RAN_UE_NGAP_ID,
+	PathSwitchRequestFailureIEs__value_PR_PDUSessionResourceReleasedListPSFail,
+	PathSwitchRequestFailureIEs__value_PR_CriticalityDiagnostics
+} PathSwitchRequestFailureIEs__value_PR;
+typedef enum HandoverCancelIEs__value_PR {
+	HandoverCancelIEs__value_PR_NOTHING,	/* No components present */
+	HandoverCancelIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverCancelIEs__value_PR_RAN_UE_NGAP_ID,
+	HandoverCancelIEs__value_PR_Cause
+} HandoverCancelIEs__value_PR;
+typedef enum HandoverCancelAcknowledgeIEs__value_PR {
+	HandoverCancelAcknowledgeIEs__value_PR_NOTHING,	/* No components present */
+	HandoverCancelAcknowledgeIEs__value_PR_AMF_UE_NGAP_ID,
+	HandoverCancelAcknowledgeIEs__value_PR_RAN_UE_NGAP_ID,
+	HandoverCancelAcknowledgeIEs__value_PR_CriticalityDiagnostics
+} HandoverCancelAcknowledgeIEs__value_PR;
+typedef enum UplinkRANStatusTransferIEs__value_PR {
+	UplinkRANStatusTransferIEs__value_PR_NOTHING,	/* No components present */
+	UplinkRANStatusTransferIEs__value_PR_AMF_UE_NGAP_ID,
+	UplinkRANStatusTransferIEs__value_PR_RAN_UE_NGAP_ID,
+	UplinkRANStatusTransferIEs__value_PR_RANStatusTransfer_TransparentContainer
+} UplinkRANStatusTransferIEs__value_PR;
+typedef enum DownlinkRANStatusTransferIEs__value_PR {
+	DownlinkRANStatusTransferIEs__value_PR_NOTHING,	/* No components present */
+	DownlinkRANStatusTransferIEs__value_PR_AMF_UE_NGAP_ID,
+	DownlinkRANStatusTransferIEs__value_PR_RAN_UE_NGAP_ID,
+	DownlinkRANStatusTransferIEs__value_PR_RANStatusTransfer_TransparentContainer
+} DownlinkRANStatusTransferIEs__value_PR;
+typedef enum PagingIEs__value_PR {
+	PagingIEs__value_PR_NOTHING,	/* No components present */
+	PagingIEs__value_PR_UEPagingIdentity,
+	PagingIEs__value_PR_PagingDRX,
+	PagingIEs__value_PR_TAIListForPaging,
+	PagingIEs__value_PR_PagingPriority,
+	PagingIEs__value_PR_UERadioCapabilityForPaging,
+	PagingIEs__value_PR_PagingOrigin,
+	PagingIEs__value_PR_AssistanceDataForPaging
+} PagingIEs__value_PR;
+typedef enum InitialUEMessage_IEs__value_PR {
+	InitialUEMessage_IEs__value_PR_NOTHING,	/* No components present */
+	InitialUEMessage_IEs__value_PR_RAN_UE_NGAP_ID,
+	InitialUEMessage_IEs__value_PR_NAS_PDU,
+	InitialUEMessage_IEs__value_PR_UserLocationInformation,
+	InitialUEMessage_IEs__value_PR_RRCEstablishmentCause,
+	InitialUEMessage_IEs__value_PR_FiveG_S_TMSI,
+	InitialUEMessage_IEs__value_PR_AMFSetID,
+	InitialUEMessage_IEs__value_PR_UEContextRequest,
+	InitialUEMessage_IEs__value_PR_AllowedNSSAI
+} InitialUEMessage_IEs__value_PR;
+typedef enum DownlinkNASTransport_IEs__value_PR {
+	DownlinkNASTransport_IEs__value_PR_NOTHING,	/* No components present */
+	DownlinkNASTransport_IEs__value_PR_AMF_UE_NGAP_ID,
+	DownlinkNASTransport_IEs__value_PR_RAN_UE_NGAP_ID,
+	DownlinkNASTransport_IEs__value_PR_AMFName,
+	DownlinkNASTransport_IEs__value_PR_RANPagingPriority,
+	DownlinkNASTransport_IEs__value_PR_NAS_PDU,
+	DownlinkNASTransport_IEs__value_PR_MobilityRestrictionList,
+	DownlinkNASTransport_IEs__value_PR_IndexToRFSP,
+	DownlinkNASTransport_IEs__value_PR_UEAggregateMaximumBitRate,
+	DownlinkNASTransport_IEs__value_PR_AllowedNSSAI
+} DownlinkNASTransport_IEs__value_PR;
+typedef enum UplinkNASTransport_IEs__value_PR {
+	UplinkNASTransport_IEs__value_PR_NOTHING,	/* No components present */
+	UplinkNASTransport_IEs__value_PR_AMF_UE_NGAP_ID,
+	UplinkNASTransport_IEs__value_PR_RAN_UE_NGAP_ID,
+	UplinkNASTransport_IEs__value_PR_NAS_PDU,
+	UplinkNASTransport_IEs__value_PR_UserLocationInformation
+} UplinkNASTransport_IEs__value_PR;
+typedef enum NASNonDeliveryIndication_IEs__value_PR {
+	NASNonDeliveryIndication_IEs__value_PR_NOTHING,	/* No components present */
+	NASNonDeliveryIndication_IEs__value_PR_AMF_UE_NGAP_ID,
+	NASNonDeliveryIndication_IEs__value_PR_RAN_UE_NGAP_ID,
+	NASNonDeliveryIndication_IEs__value_PR_NAS_PDU,
+	NASNonDeliveryIndication_IEs__value_PR_Cause
+} NASNonDeliveryIndication_IEs__value_PR;
+typedef enum RerouteNASRequest_IEs__value_PR {
+	RerouteNASRequest_IEs__value_PR_NOTHING,	/* No components present */
+	RerouteNASRequest_IEs__value_PR_RAN_UE_NGAP_ID,
+	RerouteNASRequest_IEs__value_PR_AMF_UE_NGAP_ID,
+	RerouteNASRequest_IEs__value_PR_OCTET_STRING,
+	RerouteNASRequest_IEs__value_PR_AMFSetID,
+	RerouteNASRequest_IEs__value_PR_AllowedNSSAI
+} RerouteNASRequest_IEs__value_PR;
+typedef enum NGSetupRequestIEs__value_PR {
+	NGSetupRequestIEs__value_PR_NOTHING,	/* No components present */
+	NGSetupRequestIEs__value_PR_GlobalRANNodeID,
+	NGSetupRequestIEs__value_PR_RANNodeName,
+	NGSetupRequestIEs__value_PR_SupportedTAList,
+	NGSetupRequestIEs__value_PR_PagingDRX,
+	NGSetupRequestIEs__value_PR_UERetentionInformation
+} NGSetupRequestIEs__value_PR;
+typedef enum NGSetupResponseIEs__value_PR {
+	NGSetupResponseIEs__value_PR_NOTHING,	/* No components present */
+	NGSetupResponseIEs__value_PR_AMFName,
+	NGSetupResponseIEs__value_PR_ServedGUAMIList,
+	NGSetupResponseIEs__value_PR_RelativeAMFCapacity,
+	NGSetupResponseIEs__value_PR_PLMNSupportList,
+	NGSetupResponseIEs__value_PR_CriticalityDiagnostics,
+	NGSetupResponseIEs__value_PR_UERetentionInformation
+} NGSetupResponseIEs__value_PR;
+typedef enum NGSetupFailureIEs__value_PR {
+	NGSetupFailureIEs__value_PR_NOTHING,	/* No components present */
+	NGSetupFailureIEs__value_PR_Cause,
+	NGSetupFailureIEs__value_PR_TimeToWait,
+	NGSetupFailureIEs__value_PR_CriticalityDiagnostics
+} NGSetupFailureIEs__value_PR;
+typedef enum RANConfigurationUpdateIEs__value_PR {
+	RANConfigurationUpdateIEs__value_PR_NOTHING,	/* No components present */
+	RANConfigurationUpdateIEs__value_PR_RANNodeName,
+	RANConfigurationUpdateIEs__value_PR_SupportedTAList,
+	RANConfigurationUpdateIEs__value_PR_PagingDRX,
+	RANConfigurationUpdateIEs__value_PR_GlobalRANNodeID
+} RANConfigurationUpdateIEs__value_PR;
+typedef enum RANConfigurationUpdateAcknowledgeIEs__value_PR {
+	RANConfigurationUpdateAcknowledgeIEs__value_PR_NOTHING,	/* No components present */
+	RANConfigurationUpdateAcknowledgeIEs__value_PR_CriticalityDiagnostics
+} RANConfigurationUpdateAcknowledgeIEs__value_PR;
+typedef enum RANConfigurationUpdateFailureIEs__value_PR {
+	RANConfigurationUpdateFailureIEs__value_PR_NOTHING,	/* No components present */
+	RANConfigurationUpdateFailureIEs__value_PR_Cause,
+	RANConfigurationUpdateFailureIEs__value_PR_TimeToWait,
+	RANConfigurationUpdateFailureIEs__value_PR_CriticalityDiagnostics
+} RANConfigurationUpdateFailureIEs__value_PR;
+typedef enum AMFConfigurationUpdateIEs__value_PR {
+	AMFConfigurationUpdateIEs__value_PR_NOTHING,	/* No components present */
+	AMFConfigurationUpdateIEs__value_PR_AMFName,
+	AMFConfigurationUpdateIEs__value_PR_ServedGUAMIList,
+	AMFConfigurationUpdateIEs__value_PR_RelativeAMFCapacity,
+	AMFConfigurationUpdateIEs__value_PR_PLMNSupportList,
+	AMFConfigurationUpdateIEs__value_PR_AMF_TNLAssociationToAddList,
+	AMFConfigurationUpdateIEs__value_PR_AMF_TNLAssociationToRemoveList,
+	AMFConfigurationUpdateIEs__value_PR_AMF_TNLAssociationToUpdateList
+} AMFConfigurationUpdateIEs__value_PR;
+typedef enum AMFConfigurationUpdateAcknowledgeIEs__value_PR {
+	AMFConfigurationUpdateAcknowledgeIEs__value_PR_NOTHING,	/* No components present */
+	AMFConfigurationUpdateAcknowledgeIEs__value_PR_AMF_TNLAssociationSetupList,
+	AMFConfigurationUpdateAcknowledgeIEs__value_PR_TNLAssociationList,
+	AMFConfigurationUpdateAcknowledgeIEs__value_PR_CriticalityDiagnostics
+} AMFConfigurationUpdateAcknowledgeIEs__value_PR;
+typedef enum AMFConfigurationUpdateFailureIEs__value_PR {
+	AMFConfigurationUpdateFailureIEs__value_PR_NOTHING,	/* No components present */
+	AMFConfigurationUpdateFailureIEs__value_PR_Cause,
+	AMFConfigurationUpdateFailureIEs__value_PR_TimeToWait,
+	AMFConfigurationUpdateFailureIEs__value_PR_CriticalityDiagnostics
+} AMFConfigurationUpdateFailureIEs__value_PR;
+typedef enum AMFStatusIndicationIEs__value_PR {
+	AMFStatusIndicationIEs__value_PR_NOTHING,	/* No components present */
+	AMFStatusIndicationIEs__value_PR_UnavailableGUAMIList
+} AMFStatusIndicationIEs__value_PR;
+typedef enum NGResetIEs__value_PR {
+	NGResetIEs__value_PR_NOTHING,	/* No components present */
+	NGResetIEs__value_PR_Cause,
+	NGResetIEs__value_PR_ResetType
+} NGResetIEs__value_PR;
+typedef enum NGResetAcknowledgeIEs__value_PR {
+	NGResetAcknowledgeIEs__value_PR_NOTHING,	/* No components present */
+	NGResetAcknowledgeIEs__value_PR_UE_associatedLogicalNG_connectionList,
+	NGResetAcknowledgeIEs__value_PR_CriticalityDiagnostics
+} NGResetAcknowledgeIEs__value_PR;
+typedef enum ErrorIndicationIEs__value_PR {
+	ErrorIndicationIEs__value_PR_NOTHING,	/* No components present */
+	ErrorIndicationIEs__value_PR_AMF_UE_NGAP_ID,
+	ErrorIndicationIEs__value_PR_RAN_UE_NGAP_ID,
+	ErrorIndicationIEs__value_PR_Cause,
+	ErrorIndicationIEs__value_PR_CriticalityDiagnostics
+} ErrorIndicationIEs__value_PR;
+typedef enum OverloadStartIEs__value_PR {
+	OverloadStartIEs__value_PR_NOTHING,	/* No components present */
+	OverloadStartIEs__value_PR_OverloadResponse,
+	OverloadStartIEs__value_PR_TrafficLoadReductionIndication,
+	OverloadStartIEs__value_PR_OverloadStartNSSAIList
+} OverloadStartIEs__value_PR;
+typedef enum OverloadStopIEs__value_PR {
+	OverloadStopIEs__value_PR_NOTHING	/* No components present */
+	
+} OverloadStopIEs__value_PR;
+typedef enum UplinkRANConfigurationTransferIEs__value_PR {
+	UplinkRANConfigurationTransferIEs__value_PR_NOTHING,	/* No components present */
+	UplinkRANConfigurationTransferIEs__value_PR_SONConfigurationTransfer,
+	UplinkRANConfigurationTransferIEs__value_PR_EN_DCSONConfigurationTransfer
+} UplinkRANConfigurationTransferIEs__value_PR;
+typedef enum DownlinkRANConfigurationTransferIEs__value_PR {
+	DownlinkRANConfigurationTransferIEs__value_PR_NOTHING,	/* No components present */
+	DownlinkRANConfigurationTransferIEs__value_PR_SONConfigurationTransfer,
+	DownlinkRANConfigurationTransferIEs__value_PR_EN_DCSONConfigurationTransfer
+} DownlinkRANConfigurationTransferIEs__value_PR;
+typedef enum WriteReplaceWarningRequestIEs__value_PR {
+	WriteReplaceWarningRequestIEs__value_PR_NOTHING,	/* No components present */
+	WriteReplaceWarningRequestIEs__value_PR_MessageIdentifier,
+	WriteReplaceWarningRequestIEs__value_PR_SerialNumber,
+	WriteReplaceWarningRequestIEs__value_PR_WarningAreaList,
+	WriteReplaceWarningRequestIEs__value_PR_RepetitionPeriod,
+	WriteReplaceWarningRequestIEs__value_PR_NumberOfBroadcastsRequested,
+	WriteReplaceWarningRequestIEs__value_PR_WarningType,
+	WriteReplaceWarningRequestIEs__value_PR_WarningSecurityInfo,
+	WriteReplaceWarningRequestIEs__value_PR_DataCodingScheme,
+	WriteReplaceWarningRequestIEs__value_PR_WarningMessageContents,
+	WriteReplaceWarningRequestIEs__value_PR_ConcurrentWarningMessageInd,
+	WriteReplaceWarningRequestIEs__value_PR_WarningAreaCoordinates
+} WriteReplaceWarningRequestIEs__value_PR;
+typedef enum WriteReplaceWarningResponseIEs__value_PR {
+	WriteReplaceWarningResponseIEs__value_PR_NOTHING,	/* No components present */
+	WriteReplaceWarningResponseIEs__value_PR_MessageIdentifier,
+	WriteReplaceWarningResponseIEs__value_PR_SerialNumber,
+	WriteReplaceWarningResponseIEs__value_PR_BroadcastCompletedAreaList,
+	WriteReplaceWarningResponseIEs__value_PR_CriticalityDiagnostics
+} WriteReplaceWarningResponseIEs__value_PR;
+typedef enum PWSCancelRequestIEs__value_PR {
+	PWSCancelRequestIEs__value_PR_NOTHING,	/* No components present */
+	PWSCancelRequestIEs__value_PR_MessageIdentifier,
+	PWSCancelRequestIEs__value_PR_SerialNumber,
+	PWSCancelRequestIEs__value_PR_WarningAreaList,
+	PWSCancelRequestIEs__value_PR_CancelAllWarningMessages
+} PWSCancelRequestIEs__value_PR;
+typedef enum PWSCancelResponseIEs__value_PR {
+	PWSCancelResponseIEs__value_PR_NOTHING,	/* No components present */
+	PWSCancelResponseIEs__value_PR_MessageIdentifier,
+	PWSCancelResponseIEs__value_PR_SerialNumber,
+	PWSCancelResponseIEs__value_PR_BroadcastCancelledAreaList,
+	PWSCancelResponseIEs__value_PR_CriticalityDiagnostics
+} PWSCancelResponseIEs__value_PR;
+typedef enum PWSRestartIndicationIEs__value_PR {
+	PWSRestartIndicationIEs__value_PR_NOTHING,	/* No components present */
+	PWSRestartIndicationIEs__value_PR_CellIDListForRestart,
+	PWSRestartIndicationIEs__value_PR_GlobalRANNodeID,
+	PWSRestartIndicationIEs__value_PR_TAIListForRestart,
+	PWSRestartIndicationIEs__value_PR_EmergencyAreaIDListForRestart
+} PWSRestartIndicationIEs__value_PR;
+typedef enum PWSFailureIndicationIEs__value_PR {
+	PWSFailureIndicationIEs__value_PR_NOTHING,	/* No components present */
+	PWSFailureIndicationIEs__value_PR_PWSFailedCellIDList,
+	PWSFailureIndicationIEs__value_PR_GlobalRANNodeID
+} PWSFailureIndicationIEs__value_PR;
+typedef enum DownlinkUEAssociatedNRPPaTransportIEs__value_PR {
+	DownlinkUEAssociatedNRPPaTransportIEs__value_PR_NOTHING,	/* No components present */
+	DownlinkUEAssociatedNRPPaTransportIEs__value_PR_AMF_UE_NGAP_ID,
+	DownlinkUEAssociatedNRPPaTransportIEs__value_PR_RAN_UE_NGAP_ID,
+	DownlinkUEAssociatedNRPPaTransportIEs__value_PR_RoutingID,
+	DownlinkUEAssociatedNRPPaTransportIEs__value_PR_NRPPa_PDU
+} DownlinkUEAssociatedNRPPaTransportIEs__value_PR;
+typedef enum UplinkUEAssociatedNRPPaTransportIEs__value_PR {
+	UplinkUEAssociatedNRPPaTransportIEs__value_PR_NOTHING,	/* No components present */
+	UplinkUEAssociatedNRPPaTransportIEs__value_PR_AMF_UE_NGAP_ID,
+	UplinkUEAssociatedNRPPaTransportIEs__value_PR_RAN_UE_NGAP_ID,
+	UplinkUEAssociatedNRPPaTransportIEs__value_PR_RoutingID,
+	UplinkUEAssociatedNRPPaTransportIEs__value_PR_NRPPa_PDU
+} UplinkUEAssociatedNRPPaTransportIEs__value_PR;
+typedef enum DownlinkNonUEAssociatedNRPPaTransportIEs__value_PR {
+	DownlinkNonUEAssociatedNRPPaTransportIEs__value_PR_NOTHING,	/* No components present */
+	DownlinkNonUEAssociatedNRPPaTransportIEs__value_PR_RoutingID,
+	DownlinkNonUEAssociatedNRPPaTransportIEs__value_PR_NRPPa_PDU
+} DownlinkNonUEAssociatedNRPPaTransportIEs__value_PR;
+typedef enum UplinkNonUEAssociatedNRPPaTransportIEs__value_PR {
+	UplinkNonUEAssociatedNRPPaTransportIEs__value_PR_NOTHING,	/* No components present */
+	UplinkNonUEAssociatedNRPPaTransportIEs__value_PR_RoutingID,
+	UplinkNonUEAssociatedNRPPaTransportIEs__value_PR_NRPPa_PDU
+} UplinkNonUEAssociatedNRPPaTransportIEs__value_PR;
+typedef enum TraceStartIEs__value_PR {
+	TraceStartIEs__value_PR_NOTHING,	/* No components present */
+	TraceStartIEs__value_PR_AMF_UE_NGAP_ID,
+	TraceStartIEs__value_PR_RAN_UE_NGAP_ID,
+	TraceStartIEs__value_PR_TraceActivation
+} TraceStartIEs__value_PR;
+typedef enum TraceFailureIndicationIEs__value_PR {
+	TraceFailureIndicationIEs__value_PR_NOTHING,	/* No components present */
+	TraceFailureIndicationIEs__value_PR_AMF_UE_NGAP_ID,
+	TraceFailureIndicationIEs__value_PR_RAN_UE_NGAP_ID,
+	TraceFailureIndicationIEs__value_PR_NGRANTraceID,
+	TraceFailureIndicationIEs__value_PR_Cause
+} TraceFailureIndicationIEs__value_PR;
+typedef enum DeactivateTraceIEs__value_PR {
+	DeactivateTraceIEs__value_PR_NOTHING,	/* No components present */
+	DeactivateTraceIEs__value_PR_AMF_UE_NGAP_ID,
+	DeactivateTraceIEs__value_PR_RAN_UE_NGAP_ID,
+	DeactivateTraceIEs__value_PR_NGRANTraceID
+} DeactivateTraceIEs__value_PR;
+typedef enum CellTrafficTraceIEs__value_PR {
+	CellTrafficTraceIEs__value_PR_NOTHING,	/* No components present */
+	CellTrafficTraceIEs__value_PR_AMF_UE_NGAP_ID,
+	CellTrafficTraceIEs__value_PR_RAN_UE_NGAP_ID,
+	CellTrafficTraceIEs__value_PR_NGRANTraceID,
+	CellTrafficTraceIEs__value_PR_NGRAN_CGI,
+	CellTrafficTraceIEs__value_PR_TransportLayerAddress
+} CellTrafficTraceIEs__value_PR;
+typedef enum LocationReportingControlIEs__value_PR {
+	LocationReportingControlIEs__value_PR_NOTHING,	/* No components present */
+	LocationReportingControlIEs__value_PR_AMF_UE_NGAP_ID,
+	LocationReportingControlIEs__value_PR_RAN_UE_NGAP_ID,
+	LocationReportingControlIEs__value_PR_LocationReportingRequestType
+} LocationReportingControlIEs__value_PR;
+typedef enum LocationReportingFailureIndicationIEs__value_PR {
+	LocationReportingFailureIndicationIEs__value_PR_NOTHING,	/* No components present */
+	LocationReportingFailureIndicationIEs__value_PR_AMF_UE_NGAP_ID,
+	LocationReportingFailureIndicationIEs__value_PR_RAN_UE_NGAP_ID,
+	LocationReportingFailureIndicationIEs__value_PR_Cause
+} LocationReportingFailureIndicationIEs__value_PR;
+typedef enum LocationReportIEs__value_PR {
+	LocationReportIEs__value_PR_NOTHING,	/* No components present */
+	LocationReportIEs__value_PR_AMF_UE_NGAP_ID,
+	LocationReportIEs__value_PR_RAN_UE_NGAP_ID,
+	LocationReportIEs__value_PR_UserLocationInformation,
+	LocationReportIEs__value_PR_UEPresenceInAreaOfInterestList,
+	LocationReportIEs__value_PR_LocationReportingRequestType
+} LocationReportIEs__value_PR;
+typedef enum UETNLABindingReleaseRequestIEs__value_PR {
+	UETNLABindingReleaseRequestIEs__value_PR_NOTHING,	/* No components present */
+	UETNLABindingReleaseRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	UETNLABindingReleaseRequestIEs__value_PR_RAN_UE_NGAP_ID
+} UETNLABindingReleaseRequestIEs__value_PR;
+typedef enum UERadioCapabilityInfoIndicationIEs__value_PR {
+	UERadioCapabilityInfoIndicationIEs__value_PR_NOTHING,	/* No components present */
+	UERadioCapabilityInfoIndicationIEs__value_PR_AMF_UE_NGAP_ID,
+	UERadioCapabilityInfoIndicationIEs__value_PR_RAN_UE_NGAP_ID,
+	UERadioCapabilityInfoIndicationIEs__value_PR_UERadioCapability,
+	UERadioCapabilityInfoIndicationIEs__value_PR_UERadioCapabilityForPaging
+} UERadioCapabilityInfoIndicationIEs__value_PR;
+typedef enum UERadioCapabilityCheckRequestIEs__value_PR {
+	UERadioCapabilityCheckRequestIEs__value_PR_NOTHING,	/* No components present */
+	UERadioCapabilityCheckRequestIEs__value_PR_AMF_UE_NGAP_ID,
+	UERadioCapabilityCheckRequestIEs__value_PR_RAN_UE_NGAP_ID,
+	UERadioCapabilityCheckRequestIEs__value_PR_UERadioCapability
+} UERadioCapabilityCheckRequestIEs__value_PR;
+typedef enum UERadioCapabilityCheckResponseIEs__value_PR {
+	UERadioCapabilityCheckResponseIEs__value_PR_NOTHING,	/* No components present */
+	UERadioCapabilityCheckResponseIEs__value_PR_AMF_UE_NGAP_ID,
+	UERadioCapabilityCheckResponseIEs__value_PR_RAN_UE_NGAP_ID,
+	UERadioCapabilityCheckResponseIEs__value_PR_IMSVoiceSupportIndicator,
+	UERadioCapabilityCheckResponseIEs__value_PR_CriticalityDiagnostics
+} UERadioCapabilityCheckResponseIEs__value_PR;
+typedef enum SecondaryRATDataUsageReportIEs__value_PR {
+	SecondaryRATDataUsageReportIEs__value_PR_NOTHING,	/* No components present */
+	SecondaryRATDataUsageReportIEs__value_PR_AMF_UE_NGAP_ID,
+	SecondaryRATDataUsageReportIEs__value_PR_RAN_UE_NGAP_ID,
+	SecondaryRATDataUsageReportIEs__value_PR_PDUSessionResourceSecondaryRATUsageList,
+	SecondaryRATDataUsageReportIEs__value_PR_HandoverFlag
+} SecondaryRATDataUsageReportIEs__value_PR;
 
 /* ProtocolIE-Field */
-typedef struct ProtocolIE_Field_133P0 {
+typedef struct AMFPagingTarget_ExtIEs {
 	ProtocolIE_ID_t	 id;
 	Criticality_t	 criticality;
-	struct ProtocolIE_Field_133P0__value {
-		ProtocolIE_Field_133P0__value_PR present;
-		union ProtocolIE_Field_133P0__value_u {
+	struct AMFPagingTarget_ExtIEs__value {
+		AMFPagingTarget_ExtIEs__value_PR present;
+		union AMFPagingTarget_ExtIEs__value_u {
 		} choice;
 		
 		/* Context for parsing across buffer boundaries */
@@ -45,12 +913,2290 @@ typedef struct ProtocolIE_Field_133P0 {
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
-} ProtocolIE_Field_133P0_t;
+} AMFPagingTarget_ExtIEs_t;
+typedef struct BroadcastCancelledAreaList_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct BroadcastCancelledAreaList_ExtIEs__value {
+		BroadcastCancelledAreaList_ExtIEs__value_PR present;
+		union BroadcastCancelledAreaList_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} BroadcastCancelledAreaList_ExtIEs_t;
+typedef struct BroadcastCompletedAreaList_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct BroadcastCompletedAreaList_ExtIEs__value {
+		BroadcastCompletedAreaList_ExtIEs__value_PR present;
+		union BroadcastCompletedAreaList_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} BroadcastCompletedAreaList_ExtIEs_t;
+typedef struct Cause_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct Cause_ExtIEs__value {
+		Cause_ExtIEs__value_PR present;
+		union Cause_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} Cause_ExtIEs_t;
+typedef struct CellIDListForRestart_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct CellIDListForRestart_ExtIEs__value {
+		CellIDListForRestart_ExtIEs__value_PR present;
+		union CellIDListForRestart_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} CellIDListForRestart_ExtIEs_t;
+typedef struct CPTransportLayerInformation_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct CPTransportLayerInformation_ExtIEs__value {
+		CPTransportLayerInformation_ExtIEs__value_PR present;
+		union CPTransportLayerInformation_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} CPTransportLayerInformation_ExtIEs_t;
+typedef struct DRBStatusDL_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DRBStatusDL_ExtIEs__value {
+		DRBStatusDL_ExtIEs__value_PR present;
+		union DRBStatusDL_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DRBStatusDL_ExtIEs_t;
+typedef struct DRBStatusUL_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DRBStatusUL_ExtIEs__value {
+		DRBStatusUL_ExtIEs__value_PR present;
+		union DRBStatusUL_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DRBStatusUL_ExtIEs_t;
+typedef struct GlobalRANNodeID_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct GlobalRANNodeID_ExtIEs__value {
+		GlobalRANNodeID_ExtIEs__value_PR present;
+		union GlobalRANNodeID_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} GlobalRANNodeID_ExtIEs_t;
+typedef struct GNB_ID_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct GNB_ID_ExtIEs__value {
+		GNB_ID_ExtIEs__value_PR present;
+		union GNB_ID_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} GNB_ID_ExtIEs_t;
+typedef struct LastVisitedCellInformation_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct LastVisitedCellInformation_ExtIEs__value {
+		LastVisitedCellInformation_ExtIEs__value_PR present;
+		union LastVisitedCellInformation_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} LastVisitedCellInformation_ExtIEs_t;
+typedef struct N3IWF_ID_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct N3IWF_ID_ExtIEs__value {
+		N3IWF_ID_ExtIEs__value_PR present;
+		union N3IWF_ID_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} N3IWF_ID_ExtIEs_t;
+typedef struct NgENB_ID_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NgENB_ID_ExtIEs__value {
+		NgENB_ID_ExtIEs__value_PR present;
+		union NgENB_ID_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NgENB_ID_ExtIEs_t;
+typedef struct NGRAN_CGI_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NGRAN_CGI_ExtIEs__value {
+		NGRAN_CGI_ExtIEs__value_PR present;
+		union NGRAN_CGI_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NGRAN_CGI_ExtIEs_t;
+typedef struct OverloadResponse_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct OverloadResponse_ExtIEs__value {
+		OverloadResponse_ExtIEs__value_PR present;
+		union OverloadResponse_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} OverloadResponse_ExtIEs_t;
+typedef struct PWSFailedCellIDList_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PWSFailedCellIDList_ExtIEs__value {
+		PWSFailedCellIDList_ExtIEs__value_PR present;
+		union PWSFailedCellIDList_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PWSFailedCellIDList_ExtIEs_t;
+typedef struct QosCharacteristics_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct QosCharacteristics_ExtIEs__value {
+		QosCharacteristics_ExtIEs__value_PR present;
+		union QosCharacteristics_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} QosCharacteristics_ExtIEs_t;
+typedef struct ResetType_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct ResetType_ExtIEs__value {
+		ResetType_ExtIEs__value_PR present;
+		union ResetType_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} ResetType_ExtIEs_t;
+typedef struct SONInformation_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct SONInformation_ExtIEs__value {
+		SONInformation_ExtIEs__value_PR present;
+		union SONInformation_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} SONInformation_ExtIEs_t;
+typedef struct TargetID_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct TargetID_ExtIEs__value {
+		TargetID_ExtIEs__value_PR present;
+		union TargetID_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} TargetID_ExtIEs_t;
+typedef struct UEIdentityIndexValue_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEIdentityIndexValue_ExtIEs__value {
+		UEIdentityIndexValue_ExtIEs__value_PR present;
+		union UEIdentityIndexValue_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEIdentityIndexValue_ExtIEs_t;
+typedef struct UE_NGAP_IDs_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UE_NGAP_IDs_ExtIEs__value {
+		UE_NGAP_IDs_ExtIEs__value_PR present;
+		union UE_NGAP_IDs_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UE_NGAP_IDs_ExtIEs_t;
+typedef struct UEPagingIdentity_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEPagingIdentity_ExtIEs__value {
+		UEPagingIdentity_ExtIEs__value_PR present;
+		union UEPagingIdentity_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEPagingIdentity_ExtIEs_t;
+typedef struct UPTransportLayerInformation_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UPTransportLayerInformation_ExtIEs__value {
+		UPTransportLayerInformation_ExtIEs__value_PR present;
+		union UPTransportLayerInformation_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UPTransportLayerInformation_ExtIEs_t;
+typedef struct UserLocationInformation_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UserLocationInformation_ExtIEs__value {
+		UserLocationInformation_ExtIEs__value_PR present;
+		union UserLocationInformation_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UserLocationInformation_ExtIEs_t;
+typedef struct WarningAreaList_ExtIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct WarningAreaList_ExtIEs__value {
+		WarningAreaList_ExtIEs__value_PR present;
+		union WarningAreaList_ExtIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} WarningAreaList_ExtIEs_t;
+typedef struct PDUSessionResourceModifyRequestTransferIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceModifyRequestTransferIEs__value {
+		PDUSessionResourceModifyRequestTransferIEs__value_PR present;
+		union PDUSessionResourceModifyRequestTransferIEs__value_u {
+			PDUSessionAggregateMaximumBitRate_t	 PDUSessionAggregateMaximumBitRate;
+			UL_NGU_UP_TNLModifyList_t	 UL_NGU_UP_TNLModifyList;
+			NetworkInstance_t	 NetworkInstance;
+			QosFlowAddOrModifyRequestList_t	 QosFlowAddOrModifyRequestList;
+			QosFlowListWithCause_t	 QosFlowListWithCause;
+			UPTransportLayerInformationList_t	 UPTransportLayerInformationList;
+			CommonNetworkInstance_t	 CommonNetworkInstance;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceModifyRequestTransferIEs_t;
+typedef struct PDUSessionResourceSetupRequestTransferIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceSetupRequestTransferIEs__value {
+		PDUSessionResourceSetupRequestTransferIEs__value_PR present;
+		union PDUSessionResourceSetupRequestTransferIEs__value_u {
+			PDUSessionAggregateMaximumBitRate_t	 PDUSessionAggregateMaximumBitRate;
+			UPTransportLayerInformation_t	 UPTransportLayerInformation;
+			UPTransportLayerInformationList_t	 UPTransportLayerInformationList;
+			DataForwardingNotPossible_t	 DataForwardingNotPossible;
+			PDUSessionType_t	 PDUSessionType;
+			SecurityIndication_t	 SecurityIndication;
+			NetworkInstance_t	 NetworkInstance;
+			QosFlowSetupRequestList_t	 QosFlowSetupRequestList;
+			CommonNetworkInstance_t	 CommonNetworkInstance;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceSetupRequestTransferIEs_t;
+typedef struct PDUSessionResourceSetupRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceSetupRequestIEs__value {
+		PDUSessionResourceSetupRequestIEs__value_PR present;
+		union PDUSessionResourceSetupRequestIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RANPagingPriority_t	 RANPagingPriority;
+			NAS_PDU_t	 NAS_PDU;
+			PDUSessionResourceSetupListSUReq_t	 PDUSessionResourceSetupListSUReq;
+			UEAggregateMaximumBitRate_t	 UEAggregateMaximumBitRate;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceSetupRequestIEs_t;
+typedef struct PDUSessionResourceSetupResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceSetupResponseIEs__value {
+		PDUSessionResourceSetupResponseIEs__value_PR present;
+		union PDUSessionResourceSetupResponseIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceSetupListSURes_t	 PDUSessionResourceSetupListSURes;
+			PDUSessionResourceFailedToSetupListSURes_t	 PDUSessionResourceFailedToSetupListSURes;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceSetupResponseIEs_t;
+typedef struct PDUSessionResourceReleaseCommandIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceReleaseCommandIEs__value {
+		PDUSessionResourceReleaseCommandIEs__value_PR present;
+		union PDUSessionResourceReleaseCommandIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RANPagingPriority_t	 RANPagingPriority;
+			NAS_PDU_t	 NAS_PDU;
+			PDUSessionResourceToReleaseListRelCmd_t	 PDUSessionResourceToReleaseListRelCmd;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceReleaseCommandIEs_t;
+typedef struct PDUSessionResourceReleaseResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceReleaseResponseIEs__value {
+		PDUSessionResourceReleaseResponseIEs__value_PR present;
+		union PDUSessionResourceReleaseResponseIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceReleasedListRelRes_t	 PDUSessionResourceReleasedListRelRes;
+			UserLocationInformation_t	 UserLocationInformation;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceReleaseResponseIEs_t;
+typedef struct PDUSessionResourceModifyRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceModifyRequestIEs__value {
+		PDUSessionResourceModifyRequestIEs__value_PR present;
+		union PDUSessionResourceModifyRequestIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RANPagingPriority_t	 RANPagingPriority;
+			PDUSessionResourceModifyListModReq_t	 PDUSessionResourceModifyListModReq;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceModifyRequestIEs_t;
+typedef struct PDUSessionResourceModifyResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceModifyResponseIEs__value {
+		PDUSessionResourceModifyResponseIEs__value_PR present;
+		union PDUSessionResourceModifyResponseIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceModifyListModRes_t	 PDUSessionResourceModifyListModRes;
+			PDUSessionResourceFailedToModifyListModRes_t	 PDUSessionResourceFailedToModifyListModRes;
+			UserLocationInformation_t	 UserLocationInformation;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceModifyResponseIEs_t;
+typedef struct PDUSessionResourceNotifyIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceNotifyIEs__value {
+		PDUSessionResourceNotifyIEs__value_PR present;
+		union PDUSessionResourceNotifyIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceNotifyList_t	 PDUSessionResourceNotifyList;
+			PDUSessionResourceReleasedListNot_t	 PDUSessionResourceReleasedListNot;
+			UserLocationInformation_t	 UserLocationInformation;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceNotifyIEs_t;
+typedef struct PDUSessionResourceModifyIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceModifyIndicationIEs__value {
+		PDUSessionResourceModifyIndicationIEs__value_PR present;
+		union PDUSessionResourceModifyIndicationIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceModifyListModInd_t	 PDUSessionResourceModifyListModInd;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceModifyIndicationIEs_t;
+typedef struct PDUSessionResourceModifyConfirmIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PDUSessionResourceModifyConfirmIEs__value {
+		PDUSessionResourceModifyConfirmIEs__value_PR present;
+		union PDUSessionResourceModifyConfirmIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceModifyListModCfm_t	 PDUSessionResourceModifyListModCfm;
+			PDUSessionResourceFailedToModifyListModCfm_t	 PDUSessionResourceFailedToModifyListModCfm;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PDUSessionResourceModifyConfirmIEs_t;
+typedef struct InitialContextSetupRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct InitialContextSetupRequestIEs__value {
+		InitialContextSetupRequestIEs__value_PR present;
+		union InitialContextSetupRequestIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			AMFName_t	 AMFName;
+			UEAggregateMaximumBitRate_t	 UEAggregateMaximumBitRate;
+			CoreNetworkAssistanceInformationForInactive_t	 CoreNetworkAssistanceInformationForInactive;
+			GUAMI_t	 GUAMI;
+			PDUSessionResourceSetupListCxtReq_t	 PDUSessionResourceSetupListCxtReq;
+			AllowedNSSAI_t	 AllowedNSSAI;
+			UESecurityCapabilities_t	 UESecurityCapabilities;
+			SecurityKey_t	 SecurityKey;
+			TraceActivation_t	 TraceActivation;
+			MobilityRestrictionList_t	 MobilityRestrictionList;
+			UERadioCapability_t	 UERadioCapability;
+			IndexToRFSP_t	 IndexToRFSP;
+			MaskedIMEISV_t	 MaskedIMEISV;
+			NAS_PDU_t	 NAS_PDU;
+			EmergencyFallbackIndicator_t	 EmergencyFallbackIndicator;
+			RRCInactiveTransitionReportRequest_t	 RRCInactiveTransitionReportRequest;
+			UERadioCapabilityForPaging_t	 UERadioCapabilityForPaging;
+			RedirectionVoiceFallback_t	 RedirectionVoiceFallback;
+			LocationReportingRequestType_t	 LocationReportingRequestType;
+			CNAssistedRANTuning_t	 CNAssistedRANTuning;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} InitialContextSetupRequestIEs_t;
+typedef struct InitialContextSetupResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct InitialContextSetupResponseIEs__value {
+		InitialContextSetupResponseIEs__value_PR present;
+		union InitialContextSetupResponseIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceSetupListCxtRes_t	 PDUSessionResourceSetupListCxtRes;
+			PDUSessionResourceFailedToSetupListCxtRes_t	 PDUSessionResourceFailedToSetupListCxtRes;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} InitialContextSetupResponseIEs_t;
+typedef struct InitialContextSetupFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct InitialContextSetupFailureIEs__value {
+		InitialContextSetupFailureIEs__value_PR present;
+		union InitialContextSetupFailureIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceFailedToSetupListCxtFail_t	 PDUSessionResourceFailedToSetupListCxtFail;
+			Cause_t	 Cause;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} InitialContextSetupFailureIEs_t;
+typedef struct UEContextReleaseRequest_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEContextReleaseRequest_IEs__value {
+		UEContextReleaseRequest_IEs__value_PR present;
+		union UEContextReleaseRequest_IEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceListCxtRelReq_t	 PDUSessionResourceListCxtRelReq;
+			Cause_t	 Cause;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEContextReleaseRequest_IEs_t;
+typedef struct UEContextReleaseCommand_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEContextReleaseCommand_IEs__value {
+		UEContextReleaseCommand_IEs__value_PR present;
+		union UEContextReleaseCommand_IEs__value_u {
+			UE_NGAP_IDs_t	 UE_NGAP_IDs;
+			Cause_t	 Cause;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEContextReleaseCommand_IEs_t;
+typedef struct UEContextReleaseComplete_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEContextReleaseComplete_IEs__value {
+		UEContextReleaseComplete_IEs__value_PR present;
+		union UEContextReleaseComplete_IEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			UserLocationInformation_t	 UserLocationInformation;
+			InfoOnRecommendedCellsAndRANNodesForPaging_t	 InfoOnRecommendedCellsAndRANNodesForPaging;
+			PDUSessionResourceListCxtRelCpl_t	 PDUSessionResourceListCxtRelCpl;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEContextReleaseComplete_IEs_t;
+typedef struct UEContextModificationRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEContextModificationRequestIEs__value {
+		UEContextModificationRequestIEs__value_PR present;
+		union UEContextModificationRequestIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RANPagingPriority_t	 RANPagingPriority;
+			SecurityKey_t	 SecurityKey;
+			IndexToRFSP_t	 IndexToRFSP;
+			UEAggregateMaximumBitRate_t	 UEAggregateMaximumBitRate;
+			UESecurityCapabilities_t	 UESecurityCapabilities;
+			CoreNetworkAssistanceInformationForInactive_t	 CoreNetworkAssistanceInformationForInactive;
+			EmergencyFallbackIndicator_t	 EmergencyFallbackIndicator;
+			RRCInactiveTransitionReportRequest_t	 RRCInactiveTransitionReportRequest;
+			GUAMI_t	 GUAMI;
+			CNAssistedRANTuning_t	 CNAssistedRANTuning;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEContextModificationRequestIEs_t;
+typedef struct UEContextModificationResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEContextModificationResponseIEs__value {
+		UEContextModificationResponseIEs__value_PR present;
+		union UEContextModificationResponseIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RRCState_t	 RRCState;
+			UserLocationInformation_t	 UserLocationInformation;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEContextModificationResponseIEs_t;
+typedef struct UEContextModificationFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UEContextModificationFailureIEs__value {
+		UEContextModificationFailureIEs__value_PR present;
+		union UEContextModificationFailureIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			Cause_t	 Cause;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UEContextModificationFailureIEs_t;
+typedef struct RRCInactiveTransitionReportIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct RRCInactiveTransitionReportIEs__value {
+		RRCInactiveTransitionReportIEs__value_PR present;
+		union RRCInactiveTransitionReportIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RRCState_t	 RRCState;
+			UserLocationInformation_t	 UserLocationInformation;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} RRCInactiveTransitionReportIEs_t;
+typedef struct HandoverRequiredIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverRequiredIEs__value {
+		HandoverRequiredIEs__value_PR present;
+		union HandoverRequiredIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			HandoverType_t	 HandoverType;
+			Cause_t	 Cause;
+			TargetID_t	 TargetID;
+			DirectForwardingPathAvailability_t	 DirectForwardingPathAvailability;
+			PDUSessionResourceListHORqd_t	 PDUSessionResourceListHORqd;
+			SourceToTarget_TransparentContainer_t	 SourceToTarget_TransparentContainer;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverRequiredIEs_t;
+typedef struct HandoverCommandIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverCommandIEs__value {
+		HandoverCommandIEs__value_PR present;
+		union HandoverCommandIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			HandoverType_t	 HandoverType;
+			NASSecurityParametersFromNGRAN_t	 NASSecurityParametersFromNGRAN;
+			PDUSessionResourceHandoverList_t	 PDUSessionResourceHandoverList;
+			PDUSessionResourceToReleaseListHOCmd_t	 PDUSessionResourceToReleaseListHOCmd;
+			TargetToSource_TransparentContainer_t	 TargetToSource_TransparentContainer;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverCommandIEs_t;
+typedef struct HandoverPreparationFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverPreparationFailureIEs__value {
+		HandoverPreparationFailureIEs__value_PR present;
+		union HandoverPreparationFailureIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			Cause_t	 Cause;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverPreparationFailureIEs_t;
+typedef struct HandoverRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverRequestIEs__value {
+		HandoverRequestIEs__value_PR present;
+		union HandoverRequestIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			HandoverType_t	 HandoverType;
+			Cause_t	 Cause;
+			UEAggregateMaximumBitRate_t	 UEAggregateMaximumBitRate;
+			CoreNetworkAssistanceInformationForInactive_t	 CoreNetworkAssistanceInformationForInactive;
+			UESecurityCapabilities_t	 UESecurityCapabilities;
+			SecurityContext_t	 SecurityContext;
+			NewSecurityContextInd_t	 NewSecurityContextInd;
+			NAS_PDU_t	 NAS_PDU;
+			PDUSessionResourceSetupListHOReq_t	 PDUSessionResourceSetupListHOReq;
+			AllowedNSSAI_t	 AllowedNSSAI;
+			TraceActivation_t	 TraceActivation;
+			MaskedIMEISV_t	 MaskedIMEISV;
+			SourceToTarget_TransparentContainer_t	 SourceToTarget_TransparentContainer;
+			MobilityRestrictionList_t	 MobilityRestrictionList;
+			LocationReportingRequestType_t	 LocationReportingRequestType;
+			RRCInactiveTransitionReportRequest_t	 RRCInactiveTransitionReportRequest;
+			GUAMI_t	 GUAMI;
+			RedirectionVoiceFallback_t	 RedirectionVoiceFallback;
+			CNAssistedRANTuning_t	 CNAssistedRANTuning;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverRequestIEs_t;
+typedef struct HandoverRequestAcknowledgeIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverRequestAcknowledgeIEs__value {
+		HandoverRequestAcknowledgeIEs__value_PR present;
+		union HandoverRequestAcknowledgeIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceAdmittedList_t	 PDUSessionResourceAdmittedList;
+			PDUSessionResourceFailedToSetupListHOAck_t	 PDUSessionResourceFailedToSetupListHOAck;
+			TargetToSource_TransparentContainer_t	 TargetToSource_TransparentContainer;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverRequestAcknowledgeIEs_t;
+typedef struct HandoverFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverFailureIEs__value {
+		HandoverFailureIEs__value_PR present;
+		union HandoverFailureIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			Cause_t	 Cause;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverFailureIEs_t;
+typedef struct HandoverNotifyIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverNotifyIEs__value {
+		HandoverNotifyIEs__value_PR present;
+		union HandoverNotifyIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			UserLocationInformation_t	 UserLocationInformation;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverNotifyIEs_t;
+typedef struct PathSwitchRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PathSwitchRequestIEs__value {
+		PathSwitchRequestIEs__value_PR present;
+		union PathSwitchRequestIEs__value_u {
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			UserLocationInformation_t	 UserLocationInformation;
+			UESecurityCapabilities_t	 UESecurityCapabilities;
+			PDUSessionResourceToBeSwitchedDLList_t	 PDUSessionResourceToBeSwitchedDLList;
+			PDUSessionResourceFailedToSetupListPSReq_t	 PDUSessionResourceFailedToSetupListPSReq;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PathSwitchRequestIEs_t;
+typedef struct PathSwitchRequestAcknowledgeIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PathSwitchRequestAcknowledgeIEs__value {
+		PathSwitchRequestAcknowledgeIEs__value_PR present;
+		union PathSwitchRequestAcknowledgeIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			UESecurityCapabilities_t	 UESecurityCapabilities;
+			SecurityContext_t	 SecurityContext;
+			NewSecurityContextInd_t	 NewSecurityContextInd;
+			PDUSessionResourceSwitchedList_t	 PDUSessionResourceSwitchedList;
+			PDUSessionResourceReleasedListPSAck_t	 PDUSessionResourceReleasedListPSAck;
+			AllowedNSSAI_t	 AllowedNSSAI;
+			CoreNetworkAssistanceInformationForInactive_t	 CoreNetworkAssistanceInformationForInactive;
+			RRCInactiveTransitionReportRequest_t	 RRCInactiveTransitionReportRequest;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+			RedirectionVoiceFallback_t	 RedirectionVoiceFallback;
+			CNAssistedRANTuning_t	 CNAssistedRANTuning;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PathSwitchRequestAcknowledgeIEs_t;
+typedef struct PathSwitchRequestFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PathSwitchRequestFailureIEs__value {
+		PathSwitchRequestFailureIEs__value_PR present;
+		union PathSwitchRequestFailureIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceReleasedListPSFail_t	 PDUSessionResourceReleasedListPSFail;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PathSwitchRequestFailureIEs_t;
+typedef struct HandoverCancelIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverCancelIEs__value {
+		HandoverCancelIEs__value_PR present;
+		union HandoverCancelIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			Cause_t	 Cause;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverCancelIEs_t;
+typedef struct HandoverCancelAcknowledgeIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct HandoverCancelAcknowledgeIEs__value {
+		HandoverCancelAcknowledgeIEs__value_PR present;
+		union HandoverCancelAcknowledgeIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} HandoverCancelAcknowledgeIEs_t;
+typedef struct UplinkRANStatusTransferIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UplinkRANStatusTransferIEs__value {
+		UplinkRANStatusTransferIEs__value_PR present;
+		union UplinkRANStatusTransferIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RANStatusTransfer_TransparentContainer_t	 RANStatusTransfer_TransparentContainer;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UplinkRANStatusTransferIEs_t;
+typedef struct DownlinkRANStatusTransferIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DownlinkRANStatusTransferIEs__value {
+		DownlinkRANStatusTransferIEs__value_PR present;
+		union DownlinkRANStatusTransferIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RANStatusTransfer_TransparentContainer_t	 RANStatusTransfer_TransparentContainer;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DownlinkRANStatusTransferIEs_t;
+typedef struct PagingIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PagingIEs__value {
+		PagingIEs__value_PR present;
+		union PagingIEs__value_u {
+			UEPagingIdentity_t	 UEPagingIdentity;
+			PagingDRX_t	 PagingDRX;
+			TAIListForPaging_t	 TAIListForPaging;
+			PagingPriority_t	 PagingPriority;
+			UERadioCapabilityForPaging_t	 UERadioCapabilityForPaging;
+			PagingOrigin_t	 PagingOrigin;
+			AssistanceDataForPaging_t	 AssistanceDataForPaging;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PagingIEs_t;
+typedef struct InitialUEMessage_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct InitialUEMessage_IEs__value {
+		InitialUEMessage_IEs__value_PR present;
+		union InitialUEMessage_IEs__value_u {
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			NAS_PDU_t	 NAS_PDU;
+			UserLocationInformation_t	 UserLocationInformation;
+			RRCEstablishmentCause_t	 RRCEstablishmentCause;
+			FiveG_S_TMSI_t	 FiveG_S_TMSI;
+			AMFSetID_t	 AMFSetID;
+			UEContextRequest_t	 UEContextRequest;
+			AllowedNSSAI_t	 AllowedNSSAI;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} InitialUEMessage_IEs_t;
+typedef struct DownlinkNASTransport_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DownlinkNASTransport_IEs__value {
+		DownlinkNASTransport_IEs__value_PR present;
+		union DownlinkNASTransport_IEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			AMFName_t	 AMFName;
+			RANPagingPriority_t	 RANPagingPriority;
+			NAS_PDU_t	 NAS_PDU;
+			MobilityRestrictionList_t	 MobilityRestrictionList;
+			IndexToRFSP_t	 IndexToRFSP;
+			UEAggregateMaximumBitRate_t	 UEAggregateMaximumBitRate;
+			AllowedNSSAI_t	 AllowedNSSAI;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DownlinkNASTransport_IEs_t;
+typedef struct UplinkNASTransport_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UplinkNASTransport_IEs__value {
+		UplinkNASTransport_IEs__value_PR present;
+		union UplinkNASTransport_IEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			NAS_PDU_t	 NAS_PDU;
+			UserLocationInformation_t	 UserLocationInformation;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UplinkNASTransport_IEs_t;
+typedef struct NASNonDeliveryIndication_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NASNonDeliveryIndication_IEs__value {
+		NASNonDeliveryIndication_IEs__value_PR present;
+		union NASNonDeliveryIndication_IEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			NAS_PDU_t	 NAS_PDU;
+			Cause_t	 Cause;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NASNonDeliveryIndication_IEs_t;
+typedef struct RerouteNASRequest_IEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct RerouteNASRequest_IEs__value {
+		RerouteNASRequest_IEs__value_PR present;
+		union RerouteNASRequest_IEs__value_u {
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			OCTET_STRING_t	 OCTET_STRING;
+			AMFSetID_t	 AMFSetID;
+			AllowedNSSAI_t	 AllowedNSSAI;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} RerouteNASRequest_IEs_t;
+typedef struct NGSetupRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NGSetupRequestIEs__value {
+		NGSetupRequestIEs__value_PR present;
+		union NGSetupRequestIEs__value_u {
+			GlobalRANNodeID_t	 GlobalRANNodeID;
+			RANNodeName_t	 RANNodeName;
+			SupportedTAList_t	 SupportedTAList;
+			PagingDRX_t	 PagingDRX;
+			UERetentionInformation_t	 UERetentionInformation;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NGSetupRequestIEs_t;
+typedef struct NGSetupResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NGSetupResponseIEs__value {
+		NGSetupResponseIEs__value_PR present;
+		union NGSetupResponseIEs__value_u {
+			AMFName_t	 AMFName;
+			ServedGUAMIList_t	 ServedGUAMIList;
+			RelativeAMFCapacity_t	 RelativeAMFCapacity;
+			PLMNSupportList_t	 PLMNSupportList;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+			UERetentionInformation_t	 UERetentionInformation;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NGSetupResponseIEs_t;
+typedef struct NGSetupFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NGSetupFailureIEs__value {
+		NGSetupFailureIEs__value_PR present;
+		union NGSetupFailureIEs__value_u {
+			Cause_t	 Cause;
+			TimeToWait_t	 TimeToWait;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NGSetupFailureIEs_t;
+typedef struct RANConfigurationUpdateIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct RANConfigurationUpdateIEs__value {
+		RANConfigurationUpdateIEs__value_PR present;
+		union RANConfigurationUpdateIEs__value_u {
+			RANNodeName_t	 RANNodeName;
+			SupportedTAList_t	 SupportedTAList;
+			PagingDRX_t	 PagingDRX;
+			GlobalRANNodeID_t	 GlobalRANNodeID;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} RANConfigurationUpdateIEs_t;
+typedef struct RANConfigurationUpdateAcknowledgeIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct RANConfigurationUpdateAcknowledgeIEs__value {
+		RANConfigurationUpdateAcknowledgeIEs__value_PR present;
+		union RANConfigurationUpdateAcknowledgeIEs__value_u {
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} RANConfigurationUpdateAcknowledgeIEs_t;
+typedef struct RANConfigurationUpdateFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct RANConfigurationUpdateFailureIEs__value {
+		RANConfigurationUpdateFailureIEs__value_PR present;
+		union RANConfigurationUpdateFailureIEs__value_u {
+			Cause_t	 Cause;
+			TimeToWait_t	 TimeToWait;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} RANConfigurationUpdateFailureIEs_t;
+typedef struct AMFConfigurationUpdateIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct AMFConfigurationUpdateIEs__value {
+		AMFConfigurationUpdateIEs__value_PR present;
+		union AMFConfigurationUpdateIEs__value_u {
+			AMFName_t	 AMFName;
+			ServedGUAMIList_t	 ServedGUAMIList;
+			RelativeAMFCapacity_t	 RelativeAMFCapacity;
+			PLMNSupportList_t	 PLMNSupportList;
+			AMF_TNLAssociationToAddList_t	 AMF_TNLAssociationToAddList;
+			AMF_TNLAssociationToRemoveList_t	 AMF_TNLAssociationToRemoveList;
+			AMF_TNLAssociationToUpdateList_t	 AMF_TNLAssociationToUpdateList;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} AMFConfigurationUpdateIEs_t;
+typedef struct AMFConfigurationUpdateAcknowledgeIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct AMFConfigurationUpdateAcknowledgeIEs__value {
+		AMFConfigurationUpdateAcknowledgeIEs__value_PR present;
+		union AMFConfigurationUpdateAcknowledgeIEs__value_u {
+			AMF_TNLAssociationSetupList_t	 AMF_TNLAssociationSetupList;
+			TNLAssociationList_t	 TNLAssociationList;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} AMFConfigurationUpdateAcknowledgeIEs_t;
+typedef struct AMFConfigurationUpdateFailureIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct AMFConfigurationUpdateFailureIEs__value {
+		AMFConfigurationUpdateFailureIEs__value_PR present;
+		union AMFConfigurationUpdateFailureIEs__value_u {
+			Cause_t	 Cause;
+			TimeToWait_t	 TimeToWait;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} AMFConfigurationUpdateFailureIEs_t;
+typedef struct AMFStatusIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct AMFStatusIndicationIEs__value {
+		AMFStatusIndicationIEs__value_PR present;
+		union AMFStatusIndicationIEs__value_u {
+			UnavailableGUAMIList_t	 UnavailableGUAMIList;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} AMFStatusIndicationIEs_t;
+typedef struct NGResetIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NGResetIEs__value {
+		NGResetIEs__value_PR present;
+		union NGResetIEs__value_u {
+			Cause_t	 Cause;
+			ResetType_t	 ResetType;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NGResetIEs_t;
+typedef struct NGResetAcknowledgeIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct NGResetAcknowledgeIEs__value {
+		NGResetAcknowledgeIEs__value_PR present;
+		union NGResetAcknowledgeIEs__value_u {
+			UE_associatedLogicalNG_connectionList_t	 UE_associatedLogicalNG_connectionList;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} NGResetAcknowledgeIEs_t;
+typedef struct ErrorIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct ErrorIndicationIEs__value {
+		ErrorIndicationIEs__value_PR present;
+		union ErrorIndicationIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			Cause_t	 Cause;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} ErrorIndicationIEs_t;
+typedef struct OverloadStartIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct OverloadStartIEs__value {
+		OverloadStartIEs__value_PR present;
+		union OverloadStartIEs__value_u {
+			OverloadResponse_t	 OverloadResponse;
+			TrafficLoadReductionIndication_t	 TrafficLoadReductionIndication;
+			OverloadStartNSSAIList_t	 OverloadStartNSSAIList;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} OverloadStartIEs_t;
+typedef struct OverloadStopIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct OverloadStopIEs__value {
+		OverloadStopIEs__value_PR present;
+		union OverloadStopIEs__value_u {
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} OverloadStopIEs_t;
+typedef struct UplinkRANConfigurationTransferIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UplinkRANConfigurationTransferIEs__value {
+		UplinkRANConfigurationTransferIEs__value_PR present;
+		union UplinkRANConfigurationTransferIEs__value_u {
+			SONConfigurationTransfer_t	 SONConfigurationTransfer;
+			EN_DCSONConfigurationTransfer_t	 EN_DCSONConfigurationTransfer;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UplinkRANConfigurationTransferIEs_t;
+typedef struct DownlinkRANConfigurationTransferIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DownlinkRANConfigurationTransferIEs__value {
+		DownlinkRANConfigurationTransferIEs__value_PR present;
+		union DownlinkRANConfigurationTransferIEs__value_u {
+			SONConfigurationTransfer_t	 SONConfigurationTransfer;
+			EN_DCSONConfigurationTransfer_t	 EN_DCSONConfigurationTransfer;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DownlinkRANConfigurationTransferIEs_t;
+typedef struct WriteReplaceWarningRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct WriteReplaceWarningRequestIEs__value {
+		WriteReplaceWarningRequestIEs__value_PR present;
+		union WriteReplaceWarningRequestIEs__value_u {
+			MessageIdentifier_t	 MessageIdentifier;
+			SerialNumber_t	 SerialNumber;
+			WarningAreaList_t	 WarningAreaList;
+			RepetitionPeriod_t	 RepetitionPeriod;
+			NumberOfBroadcastsRequested_t	 NumberOfBroadcastsRequested;
+			WarningType_t	 WarningType;
+			WarningSecurityInfo_t	 WarningSecurityInfo;
+			DataCodingScheme_t	 DataCodingScheme;
+			WarningMessageContents_t	 WarningMessageContents;
+			ConcurrentWarningMessageInd_t	 ConcurrentWarningMessageInd;
+			WarningAreaCoordinates_t	 WarningAreaCoordinates;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} WriteReplaceWarningRequestIEs_t;
+typedef struct WriteReplaceWarningResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct WriteReplaceWarningResponseIEs__value {
+		WriteReplaceWarningResponseIEs__value_PR present;
+		union WriteReplaceWarningResponseIEs__value_u {
+			MessageIdentifier_t	 MessageIdentifier;
+			SerialNumber_t	 SerialNumber;
+			BroadcastCompletedAreaList_t	 BroadcastCompletedAreaList;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} WriteReplaceWarningResponseIEs_t;
+typedef struct PWSCancelRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PWSCancelRequestIEs__value {
+		PWSCancelRequestIEs__value_PR present;
+		union PWSCancelRequestIEs__value_u {
+			MessageIdentifier_t	 MessageIdentifier;
+			SerialNumber_t	 SerialNumber;
+			WarningAreaList_t	 WarningAreaList;
+			CancelAllWarningMessages_t	 CancelAllWarningMessages;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PWSCancelRequestIEs_t;
+typedef struct PWSCancelResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PWSCancelResponseIEs__value {
+		PWSCancelResponseIEs__value_PR present;
+		union PWSCancelResponseIEs__value_u {
+			MessageIdentifier_t	 MessageIdentifier;
+			SerialNumber_t	 SerialNumber;
+			BroadcastCancelledAreaList_t	 BroadcastCancelledAreaList;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PWSCancelResponseIEs_t;
+typedef struct PWSRestartIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PWSRestartIndicationIEs__value {
+		PWSRestartIndicationIEs__value_PR present;
+		union PWSRestartIndicationIEs__value_u {
+			CellIDListForRestart_t	 CellIDListForRestart;
+			GlobalRANNodeID_t	 GlobalRANNodeID;
+			TAIListForRestart_t	 TAIListForRestart;
+			EmergencyAreaIDListForRestart_t	 EmergencyAreaIDListForRestart;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PWSRestartIndicationIEs_t;
+typedef struct PWSFailureIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct PWSFailureIndicationIEs__value {
+		PWSFailureIndicationIEs__value_PR present;
+		union PWSFailureIndicationIEs__value_u {
+			PWSFailedCellIDList_t	 PWSFailedCellIDList;
+			GlobalRANNodeID_t	 GlobalRANNodeID;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} PWSFailureIndicationIEs_t;
+typedef struct DownlinkUEAssociatedNRPPaTransportIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DownlinkUEAssociatedNRPPaTransportIEs__value {
+		DownlinkUEAssociatedNRPPaTransportIEs__value_PR present;
+		union DownlinkUEAssociatedNRPPaTransportIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RoutingID_t	 RoutingID;
+			NRPPa_PDU_t	 NRPPa_PDU;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DownlinkUEAssociatedNRPPaTransportIEs_t;
+typedef struct UplinkUEAssociatedNRPPaTransportIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UplinkUEAssociatedNRPPaTransportIEs__value {
+		UplinkUEAssociatedNRPPaTransportIEs__value_PR present;
+		union UplinkUEAssociatedNRPPaTransportIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			RoutingID_t	 RoutingID;
+			NRPPa_PDU_t	 NRPPa_PDU;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UplinkUEAssociatedNRPPaTransportIEs_t;
+typedef struct DownlinkNonUEAssociatedNRPPaTransportIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DownlinkNonUEAssociatedNRPPaTransportIEs__value {
+		DownlinkNonUEAssociatedNRPPaTransportIEs__value_PR present;
+		union DownlinkNonUEAssociatedNRPPaTransportIEs__value_u {
+			RoutingID_t	 RoutingID;
+			NRPPa_PDU_t	 NRPPa_PDU;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DownlinkNonUEAssociatedNRPPaTransportIEs_t;
+typedef struct UplinkNonUEAssociatedNRPPaTransportIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UplinkNonUEAssociatedNRPPaTransportIEs__value {
+		UplinkNonUEAssociatedNRPPaTransportIEs__value_PR present;
+		union UplinkNonUEAssociatedNRPPaTransportIEs__value_u {
+			RoutingID_t	 RoutingID;
+			NRPPa_PDU_t	 NRPPa_PDU;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UplinkNonUEAssociatedNRPPaTransportIEs_t;
+typedef struct TraceStartIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct TraceStartIEs__value {
+		TraceStartIEs__value_PR present;
+		union TraceStartIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			TraceActivation_t	 TraceActivation;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} TraceStartIEs_t;
+typedef struct TraceFailureIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct TraceFailureIndicationIEs__value {
+		TraceFailureIndicationIEs__value_PR present;
+		union TraceFailureIndicationIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			NGRANTraceID_t	 NGRANTraceID;
+			Cause_t	 Cause;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} TraceFailureIndicationIEs_t;
+typedef struct DeactivateTraceIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct DeactivateTraceIEs__value {
+		DeactivateTraceIEs__value_PR present;
+		union DeactivateTraceIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			NGRANTraceID_t	 NGRANTraceID;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} DeactivateTraceIEs_t;
+typedef struct CellTrafficTraceIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct CellTrafficTraceIEs__value {
+		CellTrafficTraceIEs__value_PR present;
+		union CellTrafficTraceIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			NGRANTraceID_t	 NGRANTraceID;
+			NGRAN_CGI_t	 NGRAN_CGI;
+			TransportLayerAddress_t	 TransportLayerAddress;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} CellTrafficTraceIEs_t;
+typedef struct LocationReportingControlIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct LocationReportingControlIEs__value {
+		LocationReportingControlIEs__value_PR present;
+		union LocationReportingControlIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			LocationReportingRequestType_t	 LocationReportingRequestType;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} LocationReportingControlIEs_t;
+typedef struct LocationReportingFailureIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct LocationReportingFailureIndicationIEs__value {
+		LocationReportingFailureIndicationIEs__value_PR present;
+		union LocationReportingFailureIndicationIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			Cause_t	 Cause;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} LocationReportingFailureIndicationIEs_t;
+typedef struct LocationReportIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct LocationReportIEs__value {
+		LocationReportIEs__value_PR present;
+		union LocationReportIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			UserLocationInformation_t	 UserLocationInformation;
+			UEPresenceInAreaOfInterestList_t	 UEPresenceInAreaOfInterestList;
+			LocationReportingRequestType_t	 LocationReportingRequestType;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} LocationReportIEs_t;
+typedef struct UETNLABindingReleaseRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UETNLABindingReleaseRequestIEs__value {
+		UETNLABindingReleaseRequestIEs__value_PR present;
+		union UETNLABindingReleaseRequestIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UETNLABindingReleaseRequestIEs_t;
+typedef struct UERadioCapabilityInfoIndicationIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UERadioCapabilityInfoIndicationIEs__value {
+		UERadioCapabilityInfoIndicationIEs__value_PR present;
+		union UERadioCapabilityInfoIndicationIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			UERadioCapability_t	 UERadioCapability;
+			UERadioCapabilityForPaging_t	 UERadioCapabilityForPaging;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UERadioCapabilityInfoIndicationIEs_t;
+typedef struct UERadioCapabilityCheckRequestIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UERadioCapabilityCheckRequestIEs__value {
+		UERadioCapabilityCheckRequestIEs__value_PR present;
+		union UERadioCapabilityCheckRequestIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			UERadioCapability_t	 UERadioCapability;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UERadioCapabilityCheckRequestIEs_t;
+typedef struct UERadioCapabilityCheckResponseIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct UERadioCapabilityCheckResponseIEs__value {
+		UERadioCapabilityCheckResponseIEs__value_PR present;
+		union UERadioCapabilityCheckResponseIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			IMSVoiceSupportIndicator_t	 IMSVoiceSupportIndicator;
+			CriticalityDiagnostics_t	 CriticalityDiagnostics;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} UERadioCapabilityCheckResponseIEs_t;
+typedef struct SecondaryRATDataUsageReportIEs {
+	ProtocolIE_ID_t	 id;
+	Criticality_t	 criticality;
+	struct SecondaryRATDataUsageReportIEs__value {
+		SecondaryRATDataUsageReportIEs__value_PR present;
+		union SecondaryRATDataUsageReportIEs__value_u {
+			AMF_UE_NGAP_ID_t	 AMF_UE_NGAP_ID;
+			RAN_UE_NGAP_ID_t	 RAN_UE_NGAP_ID;
+			PDUSessionResourceSecondaryRATUsageList_t	 PDUSessionResourceSecondaryRATUsageList;
+			HandoverFlag_t	 HandoverFlag;
+		} choice;
+		
+		/* Context for parsing across buffer boundaries */
+		asn_struct_ctx_t _asn_ctx;
+	} value;
+	
+	/* Context for parsing across buffer boundaries */
+	asn_struct_ctx_t _asn_ctx;
+} SecondaryRATDataUsageReportIEs_t;
 
 /* Implementation */
-extern asn_TYPE_descriptor_t asn_DEF_ProtocolIE_Field_133P0;
-extern asn_SEQUENCE_specifics_t asn_SPC_ProtocolIE_Field_133P0_specs_1;
-extern asn_TYPE_member_t asn_MBR_ProtocolIE_Field_133P0_1[3];
+extern asn_TYPE_descriptor_t asn_DEF_AMFPagingTarget_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFPagingTarget_ExtIEs_specs_1;
+extern asn_TYPE_member_t asn_MBR_AMFPagingTarget_ExtIEs_1[3];
+extern asn_TYPE_descriptor_t asn_DEF_BroadcastCancelledAreaList_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_BroadcastCancelledAreaList_ExtIEs_specs_5;
+extern asn_TYPE_member_t asn_MBR_BroadcastCancelledAreaList_ExtIEs_5[3];
+extern asn_TYPE_descriptor_t asn_DEF_BroadcastCompletedAreaList_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_BroadcastCompletedAreaList_ExtIEs_specs_9;
+extern asn_TYPE_member_t asn_MBR_BroadcastCompletedAreaList_ExtIEs_9[3];
+extern asn_TYPE_descriptor_t asn_DEF_Cause_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_Cause_ExtIEs_specs_13;
+extern asn_TYPE_member_t asn_MBR_Cause_ExtIEs_13[3];
+extern asn_TYPE_descriptor_t asn_DEF_CellIDListForRestart_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_CellIDListForRestart_ExtIEs_specs_17;
+extern asn_TYPE_member_t asn_MBR_CellIDListForRestart_ExtIEs_17[3];
+extern asn_TYPE_descriptor_t asn_DEF_CPTransportLayerInformation_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_CPTransportLayerInformation_ExtIEs_specs_21;
+extern asn_TYPE_member_t asn_MBR_CPTransportLayerInformation_ExtIEs_21[3];
+extern asn_TYPE_descriptor_t asn_DEF_DRBStatusDL_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DRBStatusDL_ExtIEs_specs_25;
+extern asn_TYPE_member_t asn_MBR_DRBStatusDL_ExtIEs_25[3];
+extern asn_TYPE_descriptor_t asn_DEF_DRBStatusUL_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DRBStatusUL_ExtIEs_specs_29;
+extern asn_TYPE_member_t asn_MBR_DRBStatusUL_ExtIEs_29[3];
+extern asn_TYPE_descriptor_t asn_DEF_GlobalRANNodeID_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_GlobalRANNodeID_ExtIEs_specs_33;
+extern asn_TYPE_member_t asn_MBR_GlobalRANNodeID_ExtIEs_33[3];
+extern asn_TYPE_descriptor_t asn_DEF_GNB_ID_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_GNB_ID_ExtIEs_specs_37;
+extern asn_TYPE_member_t asn_MBR_GNB_ID_ExtIEs_37[3];
+extern asn_TYPE_descriptor_t asn_DEF_LastVisitedCellInformation_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_LastVisitedCellInformation_ExtIEs_specs_41;
+extern asn_TYPE_member_t asn_MBR_LastVisitedCellInformation_ExtIEs_41[3];
+extern asn_TYPE_descriptor_t asn_DEF_N3IWF_ID_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_N3IWF_ID_ExtIEs_specs_45;
+extern asn_TYPE_member_t asn_MBR_N3IWF_ID_ExtIEs_45[3];
+extern asn_TYPE_descriptor_t asn_DEF_NgENB_ID_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NgENB_ID_ExtIEs_specs_49;
+extern asn_TYPE_member_t asn_MBR_NgENB_ID_ExtIEs_49[3];
+extern asn_TYPE_descriptor_t asn_DEF_NGRAN_CGI_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGRAN_CGI_ExtIEs_specs_53;
+extern asn_TYPE_member_t asn_MBR_NGRAN_CGI_ExtIEs_53[3];
+extern asn_TYPE_descriptor_t asn_DEF_OverloadResponse_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_OverloadResponse_ExtIEs_specs_57;
+extern asn_TYPE_member_t asn_MBR_OverloadResponse_ExtIEs_57[3];
+extern asn_TYPE_descriptor_t asn_DEF_PWSFailedCellIDList_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PWSFailedCellIDList_ExtIEs_specs_61;
+extern asn_TYPE_member_t asn_MBR_PWSFailedCellIDList_ExtIEs_61[3];
+extern asn_TYPE_descriptor_t asn_DEF_QosCharacteristics_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_QosCharacteristics_ExtIEs_specs_65;
+extern asn_TYPE_member_t asn_MBR_QosCharacteristics_ExtIEs_65[3];
+extern asn_TYPE_descriptor_t asn_DEF_ResetType_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_ResetType_ExtIEs_specs_69;
+extern asn_TYPE_member_t asn_MBR_ResetType_ExtIEs_69[3];
+extern asn_TYPE_descriptor_t asn_DEF_SONInformation_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_SONInformation_ExtIEs_specs_73;
+extern asn_TYPE_member_t asn_MBR_SONInformation_ExtIEs_73[3];
+extern asn_TYPE_descriptor_t asn_DEF_TargetID_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_TargetID_ExtIEs_specs_77;
+extern asn_TYPE_member_t asn_MBR_TargetID_ExtIEs_77[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEIdentityIndexValue_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEIdentityIndexValue_ExtIEs_specs_81;
+extern asn_TYPE_member_t asn_MBR_UEIdentityIndexValue_ExtIEs_81[3];
+extern asn_TYPE_descriptor_t asn_DEF_UE_NGAP_IDs_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UE_NGAP_IDs_ExtIEs_specs_85;
+extern asn_TYPE_member_t asn_MBR_UE_NGAP_IDs_ExtIEs_85[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEPagingIdentity_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEPagingIdentity_ExtIEs_specs_89;
+extern asn_TYPE_member_t asn_MBR_UEPagingIdentity_ExtIEs_89[3];
+extern asn_TYPE_descriptor_t asn_DEF_UPTransportLayerInformation_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UPTransportLayerInformation_ExtIEs_specs_93;
+extern asn_TYPE_member_t asn_MBR_UPTransportLayerInformation_ExtIEs_93[3];
+extern asn_TYPE_descriptor_t asn_DEF_UserLocationInformation_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UserLocationInformation_ExtIEs_specs_97;
+extern asn_TYPE_member_t asn_MBR_UserLocationInformation_ExtIEs_97[3];
+extern asn_TYPE_descriptor_t asn_DEF_WarningAreaList_ExtIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_WarningAreaList_ExtIEs_specs_101;
+extern asn_TYPE_member_t asn_MBR_WarningAreaList_ExtIEs_101[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceModifyRequestTransferIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyRequestTransferIEs_specs_105;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyRequestTransferIEs_105[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceSetupRequestTransferIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupRequestTransferIEs_specs_109;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupRequestTransferIEs_109[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceSetupRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupRequestIEs_specs_113;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupRequestIEs_113[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceSetupResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupResponseIEs_specs_117;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupResponseIEs_117[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceReleaseCommandIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleaseCommandIEs_specs_121;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseCommandIEs_121[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceReleaseResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleaseResponseIEs_specs_125;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseResponseIEs_125[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceModifyRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyRequestIEs_specs_129;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyRequestIEs_129[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceModifyResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyResponseIEs_specs_133;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyResponseIEs_133[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceNotifyIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceNotifyIEs_specs_137;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyIEs_137[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceModifyIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyIndicationIEs_specs_141;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndicationIEs_141[3];
+extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceModifyConfirmIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyConfirmIEs_specs_145;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyConfirmIEs_145[3];
+extern asn_TYPE_descriptor_t asn_DEF_InitialContextSetupRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_InitialContextSetupRequestIEs_specs_149;
+extern asn_TYPE_member_t asn_MBR_InitialContextSetupRequestIEs_149[3];
+extern asn_TYPE_descriptor_t asn_DEF_InitialContextSetupResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_InitialContextSetupResponseIEs_specs_153;
+extern asn_TYPE_member_t asn_MBR_InitialContextSetupResponseIEs_153[3];
+extern asn_TYPE_descriptor_t asn_DEF_InitialContextSetupFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_InitialContextSetupFailureIEs_specs_157;
+extern asn_TYPE_member_t asn_MBR_InitialContextSetupFailureIEs_157[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEContextReleaseRequest_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextReleaseRequest_IEs_specs_161;
+extern asn_TYPE_member_t asn_MBR_UEContextReleaseRequest_IEs_161[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEContextReleaseCommand_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextReleaseCommand_IEs_specs_165;
+extern asn_TYPE_member_t asn_MBR_UEContextReleaseCommand_IEs_165[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEContextReleaseComplete_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextReleaseComplete_IEs_specs_169;
+extern asn_TYPE_member_t asn_MBR_UEContextReleaseComplete_IEs_169[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEContextModificationRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextModificationRequestIEs_specs_173;
+extern asn_TYPE_member_t asn_MBR_UEContextModificationRequestIEs_173[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEContextModificationResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextModificationResponseIEs_specs_177;
+extern asn_TYPE_member_t asn_MBR_UEContextModificationResponseIEs_177[3];
+extern asn_TYPE_descriptor_t asn_DEF_UEContextModificationFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextModificationFailureIEs_specs_181;
+extern asn_TYPE_member_t asn_MBR_UEContextModificationFailureIEs_181[3];
+extern asn_TYPE_descriptor_t asn_DEF_RRCInactiveTransitionReportIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_RRCInactiveTransitionReportIEs_specs_185;
+extern asn_TYPE_member_t asn_MBR_RRCInactiveTransitionReportIEs_185[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverRequiredIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverRequiredIEs_specs_189;
+extern asn_TYPE_member_t asn_MBR_HandoverRequiredIEs_189[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverCommandIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverCommandIEs_specs_193;
+extern asn_TYPE_member_t asn_MBR_HandoverCommandIEs_193[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverPreparationFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverPreparationFailureIEs_specs_197;
+extern asn_TYPE_member_t asn_MBR_HandoverPreparationFailureIEs_197[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverRequestIEs_specs_201;
+extern asn_TYPE_member_t asn_MBR_HandoverRequestIEs_201[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverRequestAcknowledgeIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverRequestAcknowledgeIEs_specs_205;
+extern asn_TYPE_member_t asn_MBR_HandoverRequestAcknowledgeIEs_205[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverFailureIEs_specs_209;
+extern asn_TYPE_member_t asn_MBR_HandoverFailureIEs_209[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverNotifyIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverNotifyIEs_specs_213;
+extern asn_TYPE_member_t asn_MBR_HandoverNotifyIEs_213[3];
+extern asn_TYPE_descriptor_t asn_DEF_PathSwitchRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestIEs_specs_217;
+extern asn_TYPE_member_t asn_MBR_PathSwitchRequestIEs_217[3];
+extern asn_TYPE_descriptor_t asn_DEF_PathSwitchRequestAcknowledgeIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestAcknowledgeIEs_specs_221;
+extern asn_TYPE_member_t asn_MBR_PathSwitchRequestAcknowledgeIEs_221[3];
+extern asn_TYPE_descriptor_t asn_DEF_PathSwitchRequestFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestFailureIEs_specs_225;
+extern asn_TYPE_member_t asn_MBR_PathSwitchRequestFailureIEs_225[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverCancelIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverCancelIEs_specs_229;
+extern asn_TYPE_member_t asn_MBR_HandoverCancelIEs_229[3];
+extern asn_TYPE_descriptor_t asn_DEF_HandoverCancelAcknowledgeIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverCancelAcknowledgeIEs_specs_233;
+extern asn_TYPE_member_t asn_MBR_HandoverCancelAcknowledgeIEs_233[3];
+extern asn_TYPE_descriptor_t asn_DEF_UplinkRANStatusTransferIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkRANStatusTransferIEs_specs_237;
+extern asn_TYPE_member_t asn_MBR_UplinkRANStatusTransferIEs_237[3];
+extern asn_TYPE_descriptor_t asn_DEF_DownlinkRANStatusTransferIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DownlinkRANStatusTransferIEs_specs_241;
+extern asn_TYPE_member_t asn_MBR_DownlinkRANStatusTransferIEs_241[3];
+extern asn_TYPE_descriptor_t asn_DEF_PagingIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PagingIEs_specs_245;
+extern asn_TYPE_member_t asn_MBR_PagingIEs_245[3];
+extern asn_TYPE_descriptor_t asn_DEF_InitialUEMessage_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_InitialUEMessage_IEs_specs_249;
+extern asn_TYPE_member_t asn_MBR_InitialUEMessage_IEs_249[3];
+extern asn_TYPE_descriptor_t asn_DEF_DownlinkNASTransport_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DownlinkNASTransport_IEs_specs_253;
+extern asn_TYPE_member_t asn_MBR_DownlinkNASTransport_IEs_253[3];
+extern asn_TYPE_descriptor_t asn_DEF_UplinkNASTransport_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkNASTransport_IEs_specs_257;
+extern asn_TYPE_member_t asn_MBR_UplinkNASTransport_IEs_257[3];
+extern asn_TYPE_descriptor_t asn_DEF_NASNonDeliveryIndication_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NASNonDeliveryIndication_IEs_specs_261;
+extern asn_TYPE_member_t asn_MBR_NASNonDeliveryIndication_IEs_261[3];
+extern asn_TYPE_descriptor_t asn_DEF_RerouteNASRequest_IEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_RerouteNASRequest_IEs_specs_265;
+extern asn_TYPE_member_t asn_MBR_RerouteNASRequest_IEs_265[3];
+extern asn_TYPE_descriptor_t asn_DEF_NGSetupRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGSetupRequestIEs_specs_269;
+extern asn_TYPE_member_t asn_MBR_NGSetupRequestIEs_269[3];
+extern asn_TYPE_descriptor_t asn_DEF_NGSetupResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGSetupResponseIEs_specs_273;
+extern asn_TYPE_member_t asn_MBR_NGSetupResponseIEs_273[3];
+extern asn_TYPE_descriptor_t asn_DEF_NGSetupFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGSetupFailureIEs_specs_277;
+extern asn_TYPE_member_t asn_MBR_NGSetupFailureIEs_277[3];
+extern asn_TYPE_descriptor_t asn_DEF_RANConfigurationUpdateIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_RANConfigurationUpdateIEs_specs_281;
+extern asn_TYPE_member_t asn_MBR_RANConfigurationUpdateIEs_281[3];
+extern asn_TYPE_descriptor_t asn_DEF_RANConfigurationUpdateAcknowledgeIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_RANConfigurationUpdateAcknowledgeIEs_specs_285;
+extern asn_TYPE_member_t asn_MBR_RANConfigurationUpdateAcknowledgeIEs_285[3];
+extern asn_TYPE_descriptor_t asn_DEF_RANConfigurationUpdateFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_RANConfigurationUpdateFailureIEs_specs_289;
+extern asn_TYPE_member_t asn_MBR_RANConfigurationUpdateFailureIEs_289[3];
+extern asn_TYPE_descriptor_t asn_DEF_AMFConfigurationUpdateIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFConfigurationUpdateIEs_specs_293;
+extern asn_TYPE_member_t asn_MBR_AMFConfigurationUpdateIEs_293[3];
+extern asn_TYPE_descriptor_t asn_DEF_AMFConfigurationUpdateAcknowledgeIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFConfigurationUpdateAcknowledgeIEs_specs_297;
+extern asn_TYPE_member_t asn_MBR_AMFConfigurationUpdateAcknowledgeIEs_297[3];
+extern asn_TYPE_descriptor_t asn_DEF_AMFConfigurationUpdateFailureIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFConfigurationUpdateFailureIEs_specs_301;
+extern asn_TYPE_member_t asn_MBR_AMFConfigurationUpdateFailureIEs_301[3];
+extern asn_TYPE_descriptor_t asn_DEF_AMFStatusIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFStatusIndicationIEs_specs_305;
+extern asn_TYPE_member_t asn_MBR_AMFStatusIndicationIEs_305[3];
+extern asn_TYPE_descriptor_t asn_DEF_NGResetIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGResetIEs_specs_309;
+extern asn_TYPE_member_t asn_MBR_NGResetIEs_309[3];
+extern asn_TYPE_descriptor_t asn_DEF_NGResetAcknowledgeIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGResetAcknowledgeIEs_specs_313;
+extern asn_TYPE_member_t asn_MBR_NGResetAcknowledgeIEs_313[3];
+extern asn_TYPE_descriptor_t asn_DEF_ErrorIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_ErrorIndicationIEs_specs_317;
+extern asn_TYPE_member_t asn_MBR_ErrorIndicationIEs_317[3];
+extern asn_TYPE_descriptor_t asn_DEF_OverloadStartIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_OverloadStartIEs_specs_321;
+extern asn_TYPE_member_t asn_MBR_OverloadStartIEs_321[3];
+extern asn_TYPE_descriptor_t asn_DEF_OverloadStopIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_OverloadStopIEs_specs_325;
+extern asn_TYPE_member_t asn_MBR_OverloadStopIEs_325[3];
+extern asn_TYPE_descriptor_t asn_DEF_UplinkRANConfigurationTransferIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkRANConfigurationTransferIEs_specs_329;
+extern asn_TYPE_member_t asn_MBR_UplinkRANConfigurationTransferIEs_329[3];
+extern asn_TYPE_descriptor_t asn_DEF_DownlinkRANConfigurationTransferIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DownlinkRANConfigurationTransferIEs_specs_333;
+extern asn_TYPE_member_t asn_MBR_DownlinkRANConfigurationTransferIEs_333[3];
+extern asn_TYPE_descriptor_t asn_DEF_WriteReplaceWarningRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_WriteReplaceWarningRequestIEs_specs_337;
+extern asn_TYPE_member_t asn_MBR_WriteReplaceWarningRequestIEs_337[3];
+extern asn_TYPE_descriptor_t asn_DEF_WriteReplaceWarningResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_WriteReplaceWarningResponseIEs_specs_341;
+extern asn_TYPE_member_t asn_MBR_WriteReplaceWarningResponseIEs_341[3];
+extern asn_TYPE_descriptor_t asn_DEF_PWSCancelRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PWSCancelRequestIEs_specs_345;
+extern asn_TYPE_member_t asn_MBR_PWSCancelRequestIEs_345[3];
+extern asn_TYPE_descriptor_t asn_DEF_PWSCancelResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PWSCancelResponseIEs_specs_349;
+extern asn_TYPE_member_t asn_MBR_PWSCancelResponseIEs_349[3];
+extern asn_TYPE_descriptor_t asn_DEF_PWSRestartIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PWSRestartIndicationIEs_specs_353;
+extern asn_TYPE_member_t asn_MBR_PWSRestartIndicationIEs_353[3];
+extern asn_TYPE_descriptor_t asn_DEF_PWSFailureIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_PWSFailureIndicationIEs_specs_357;
+extern asn_TYPE_member_t asn_MBR_PWSFailureIndicationIEs_357[3];
+extern asn_TYPE_descriptor_t asn_DEF_DownlinkUEAssociatedNRPPaTransportIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DownlinkUEAssociatedNRPPaTransportIEs_specs_361;
+extern asn_TYPE_member_t asn_MBR_DownlinkUEAssociatedNRPPaTransportIEs_361[3];
+extern asn_TYPE_descriptor_t asn_DEF_UplinkUEAssociatedNRPPaTransportIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkUEAssociatedNRPPaTransportIEs_specs_365;
+extern asn_TYPE_member_t asn_MBR_UplinkUEAssociatedNRPPaTransportIEs_365[3];
+extern asn_TYPE_descriptor_t asn_DEF_DownlinkNonUEAssociatedNRPPaTransportIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DownlinkNonUEAssociatedNRPPaTransportIEs_specs_369;
+extern asn_TYPE_member_t asn_MBR_DownlinkNonUEAssociatedNRPPaTransportIEs_369[3];
+extern asn_TYPE_descriptor_t asn_DEF_UplinkNonUEAssociatedNRPPaTransportIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkNonUEAssociatedNRPPaTransportIEs_specs_373;
+extern asn_TYPE_member_t asn_MBR_UplinkNonUEAssociatedNRPPaTransportIEs_373[3];
+extern asn_TYPE_descriptor_t asn_DEF_TraceStartIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_TraceStartIEs_specs_377;
+extern asn_TYPE_member_t asn_MBR_TraceStartIEs_377[3];
+extern asn_TYPE_descriptor_t asn_DEF_TraceFailureIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_TraceFailureIndicationIEs_specs_381;
+extern asn_TYPE_member_t asn_MBR_TraceFailureIndicationIEs_381[3];
+extern asn_TYPE_descriptor_t asn_DEF_DeactivateTraceIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_DeactivateTraceIEs_specs_385;
+extern asn_TYPE_member_t asn_MBR_DeactivateTraceIEs_385[3];
+extern asn_TYPE_descriptor_t asn_DEF_CellTrafficTraceIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_CellTrafficTraceIEs_specs_389;
+extern asn_TYPE_member_t asn_MBR_CellTrafficTraceIEs_389[3];
+extern asn_TYPE_descriptor_t asn_DEF_LocationReportingControlIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_LocationReportingControlIEs_specs_393;
+extern asn_TYPE_member_t asn_MBR_LocationReportingControlIEs_393[3];
+extern asn_TYPE_descriptor_t asn_DEF_LocationReportingFailureIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_LocationReportingFailureIndicationIEs_specs_397;
+extern asn_TYPE_member_t asn_MBR_LocationReportingFailureIndicationIEs_397[3];
+extern asn_TYPE_descriptor_t asn_DEF_LocationReportIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_LocationReportIEs_specs_401;
+extern asn_TYPE_member_t asn_MBR_LocationReportIEs_401[3];
+extern asn_TYPE_descriptor_t asn_DEF_UETNLABindingReleaseRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UETNLABindingReleaseRequestIEs_specs_405;
+extern asn_TYPE_member_t asn_MBR_UETNLABindingReleaseRequestIEs_405[3];
+extern asn_TYPE_descriptor_t asn_DEF_UERadioCapabilityInfoIndicationIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UERadioCapabilityInfoIndicationIEs_specs_409;
+extern asn_TYPE_member_t asn_MBR_UERadioCapabilityInfoIndicationIEs_409[3];
+extern asn_TYPE_descriptor_t asn_DEF_UERadioCapabilityCheckRequestIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UERadioCapabilityCheckRequestIEs_specs_413;
+extern asn_TYPE_member_t asn_MBR_UERadioCapabilityCheckRequestIEs_413[3];
+extern asn_TYPE_descriptor_t asn_DEF_UERadioCapabilityCheckResponseIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_UERadioCapabilityCheckResponseIEs_specs_417;
+extern asn_TYPE_member_t asn_MBR_UERadioCapabilityCheckResponseIEs_417[3];
+extern asn_TYPE_descriptor_t asn_DEF_SecondaryRATDataUsageReportIEs;
+extern asn_SEQUENCE_specifics_t asn_SPC_SecondaryRATDataUsageReportIEs_specs_421;
+extern asn_TYPE_member_t asn_MBR_SecondaryRATDataUsageReportIEs_421[3];
 
 #ifdef __cplusplus
 }

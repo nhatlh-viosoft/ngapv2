@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct GTPTunnel {
 	TransportLayerAddress_t	 transportLayerAddress;
 	GTP_TEID_t	 gTP_TEID;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

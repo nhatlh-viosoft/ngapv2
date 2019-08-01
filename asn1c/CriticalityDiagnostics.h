@@ -27,11 +27,11 @@ struct ProtocolExtensionContainer;
 
 /* CriticalityDiagnostics */
 typedef struct CriticalityDiagnostics {
-	ProcedureCode_t	*procedureCode	/* OPTIONAL */;
-	TriggeringMessage_t	*triggeringMessage	/* OPTIONAL */;
-	Criticality_t	*procedureCriticality	/* OPTIONAL */;
-	struct CriticalityDiagnostics_IE_List	*iEsCriticalityDiagnostics	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	ProcedureCode_t	*procedureCode;	/* OPTIONAL */
+	TriggeringMessage_t	*triggeringMessage;	/* OPTIONAL */
+	Criticality_t	*procedureCriticality;	/* OPTIONAL */
+	struct CriticalityDiagnostics_IE_List	*iEsCriticalityDiagnostics;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

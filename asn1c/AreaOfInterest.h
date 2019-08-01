@@ -26,10 +26,10 @@ struct ProtocolExtensionContainer;
 
 /* AreaOfInterest */
 typedef struct AreaOfInterest {
-	struct AreaOfInterestTAIList	*areaOfInterestTAIList	/* OPTIONAL */;
-	struct AreaOfInterestCellList	*areaOfInterestCellList	/* OPTIONAL */;
-	struct AreaOfInterestRANNodeList	*areaOfInterestRANNodeList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct AreaOfInterestTAIList	*areaOfInterestTAIList;	/* OPTIONAL */
+	struct AreaOfInterestCellList	*areaOfInterestCellList;	/* OPTIONAL */
+	struct AreaOfInterestRANNodeList	*areaOfInterestRANNodeList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

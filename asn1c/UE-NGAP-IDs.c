@@ -12,12 +12,12 @@
 static asn_oer_constraints_t asn_OER_type_UE_NGAP_IDs_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
-static asn_per_constraints_t asn_PER_type_UE_NGAP_IDs_constr_1 CC_NOTUSED = {
+asn_per_constraints_t asn_PER_type_UE_NGAP_IDs_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
-static asn_TYPE_member_t asn_MBR_UE_NGAP_IDs_1[] = {
+asn_TYPE_member_t asn_MBR_UE_NGAP_IDs_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct UE_NGAP_IDs, choice.uE_NGAP_ID_pair),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -39,7 +39,7 @@ static asn_TYPE_member_t asn_MBR_UE_NGAP_IDs_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct UE_NGAP_IDs, choice.choice_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_SingleContainer_130P0,
+		&asn_DEF_ProtocolIE_SingleContainer_130P21,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -51,7 +51,7 @@ static const asn_TYPE_tag2member_t asn_MAP_UE_NGAP_IDs_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* aMF-UE-NGAP-ID */
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
-static asn_CHOICE_specifics_t asn_SPC_UE_NGAP_IDs_specs_1 = {
+asn_CHOICE_specifics_t asn_SPC_UE_NGAP_IDs_specs_1 = {
 	sizeof(struct UE_NGAP_IDs),
 	offsetof(struct UE_NGAP_IDs, _asn_ctx),
 	offsetof(struct UE_NGAP_IDs, present),

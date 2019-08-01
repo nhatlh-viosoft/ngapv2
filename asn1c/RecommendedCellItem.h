@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* RecommendedCellItem */
 typedef struct RecommendedCellItem {
 	NGRAN_CGI_t	 nGRAN_CGI;
-	long	*timeStayedInCell	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	long	*timeStayedInCell;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

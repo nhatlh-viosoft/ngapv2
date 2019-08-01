@@ -22,6 +22,7 @@ extern "C" {
 typedef long	 RANPagingPriority_t;
 
 /* Implementation */
+extern asn_per_constraints_t asn_PER_type_RANPagingPriority_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_RANPagingPriority;
 asn_struct_free_f RANPagingPriority_free;
 asn_struct_print_f RANPagingPriority_print;
@@ -34,6 +35,8 @@ oer_type_decoder_f RANPagingPriority_decode_oer;
 oer_type_encoder_f RANPagingPriority_encode_oer;
 per_type_decoder_f RANPagingPriority_decode_uper;
 per_type_encoder_f RANPagingPriority_encode_uper;
+per_type_decoder_f RANPagingPriority_decode_aper;
+per_type_encoder_f RANPagingPriority_encode_aper;
 
 #ifdef __cplusplus
 }

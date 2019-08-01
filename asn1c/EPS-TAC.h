@@ -35,6 +35,8 @@ oer_type_decoder_f EPS_TAC_decode_oer;
 oer_type_encoder_f EPS_TAC_encode_oer;
 per_type_decoder_f EPS_TAC_decode_uper;
 per_type_encoder_f EPS_TAC_encode_uper;
+per_type_decoder_f EPS_TAC_decode_aper;
+per_type_encoder_f EPS_TAC_encode_aper;
 
 #ifdef __cplusplus
 }

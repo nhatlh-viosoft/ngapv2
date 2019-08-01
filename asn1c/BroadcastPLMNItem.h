@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct BroadcastPLMNItem {
 	PLMNIdentity_t	 pLMNIdentity;
 	SliceSupportList_t	 tAISliceSupportList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

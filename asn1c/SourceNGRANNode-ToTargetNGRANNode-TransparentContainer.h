@@ -30,12 +30,12 @@ struct ProtocolExtensionContainer;
 /* SourceNGRANNode-ToTargetNGRANNode-TransparentContainer */
 typedef struct SourceNGRANNode_ToTargetNGRANNode_TransparentContainer {
 	RRCContainer_t	 rRCContainer;
-	struct PDUSessionResourceInformationList	*pDUSessionResourceInformationList	/* OPTIONAL */;
-	struct E_RABInformationList	*e_RABInformationList	/* OPTIONAL */;
+	struct PDUSessionResourceInformationList	*pDUSessionResourceInformationList;	/* OPTIONAL */
+	struct E_RABInformationList	*e_RABInformationList;	/* OPTIONAL */
 	NGRAN_CGI_t	 targetCell_ID;
-	IndexToRFSP_t	*indexToRFSP	/* OPTIONAL */;
+	IndexToRFSP_t	*indexToRFSP;	/* OPTIONAL */
 	UEHistoryInformation_t	 uEHistoryInformation;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

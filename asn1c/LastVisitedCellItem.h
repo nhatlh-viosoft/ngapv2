@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* LastVisitedCellItem */
 typedef struct LastVisitedCellItem {
 	LastVisitedCellInformation_t	 lastVisitedCellInformation;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -25,9 +25,9 @@ struct ProtocolExtensionContainer;
 
 /* UERadioCapabilityForPaging */
 typedef struct UERadioCapabilityForPaging {
-	UERadioCapabilityForPagingOfNR_t	*uERadioCapabilityForPagingOfNR	/* OPTIONAL */;
-	UERadioCapabilityForPagingOfEUTRA_t	*uERadioCapabilityForPagingOfEUTRA	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	UERadioCapabilityForPagingOfNR_t	*uERadioCapabilityForPagingOfNR;	/* OPTIONAL */
+	UERadioCapabilityForPagingOfEUTRA_t	*uERadioCapabilityForPagingOfEUTRA;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -39,6 +39,8 @@ typedef struct UERadioCapabilityForPaging {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UERadioCapabilityForPaging;
+extern asn_SEQUENCE_specifics_t asn_SPC_UERadioCapabilityForPaging_specs_1;
+extern asn_TYPE_member_t asn_MBR_UERadioCapabilityForPaging_1[3];
 
 #ifdef __cplusplus
 }

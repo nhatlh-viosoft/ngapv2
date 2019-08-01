@@ -29,11 +29,11 @@ struct ProtocolExtensionContainer;
 /* MobilityRestrictionList */
 typedef struct MobilityRestrictionList {
 	PLMNIdentity_t	 servingPLMN;
-	struct EquivalentPLMNs	*equivalentPLMNs	/* OPTIONAL */;
-	struct RATRestrictions	*rATRestrictions	/* OPTIONAL */;
-	struct ForbiddenAreaInformation	*forbiddenAreaInformation	/* OPTIONAL */;
-	struct ServiceAreaInformation	*serviceAreaInformation	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct EquivalentPLMNs	*equivalentPLMNs;	/* OPTIONAL */
+	struct RATRestrictions	*rATRestrictions;	/* OPTIONAL */
+	struct ForbiddenAreaInformation	*forbiddenAreaInformation;	/* OPTIONAL */
+	struct ServiceAreaInformation	*serviceAreaInformation;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -45,6 +45,8 @@ typedef struct MobilityRestrictionList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_MobilityRestrictionList;
+extern asn_SEQUENCE_specifics_t asn_SPC_MobilityRestrictionList_specs_1;
+extern asn_TYPE_member_t asn_MBR_MobilityRestrictionList_1[6];
 
 #ifdef __cplusplus
 }

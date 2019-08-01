@@ -8,7 +8,7 @@
 #include "RANStatusTransfer-TransparentContainer.h"
 
 #include "ProtocolExtensionContainer.h"
-static asn_TYPE_member_t asn_MBR_RANStatusTransfer_TransparentContainer_1[] = {
+asn_TYPE_member_t asn_MBR_RANStatusTransfer_TransparentContainer_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct RANStatusTransfer_TransparentContainer, dRBsSubjectToStatusTransferList),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -21,7 +21,7 @@ static asn_TYPE_member_t asn_MBR_RANStatusTransfer_TransparentContainer_1[] = {
 	{ ATF_POINTER, 1, offsetof(struct RANStatusTransfer_TransparentContainer, iE_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P143,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -36,7 +36,7 @@ static const asn_TYPE_tag2member_t asn_MAP_RANStatusTransfer_TransparentContaine
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* dRBsSubjectToStatusTransferList */
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* iE-Extensions */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_RANStatusTransfer_TransparentContainer_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_RANStatusTransfer_TransparentContainer_specs_1 = {
 	sizeof(struct RANStatusTransfer_TransparentContainer),
 	offsetof(struct RANStatusTransfer_TransparentContainer, _asn_ctx),
 	asn_MAP_RANStatusTransfer_TransparentContainer_tag2el_1,

@@ -32,7 +32,7 @@ asn_TYPE_member_t asn_MBR_SecondaryRATUsageInformation_1[] = {
 	{ ATF_POINTER, 1, offsetof(struct SecondaryRATUsageInformation, iE_Extension),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P149,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

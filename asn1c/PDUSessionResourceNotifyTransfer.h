@@ -25,9 +25,9 @@ struct ProtocolExtensionContainer;
 
 /* PDUSessionResourceNotifyTransfer */
 typedef struct PDUSessionResourceNotifyTransfer {
-	struct QosFlowNotifyList	*qosFlowNotifyList	/* OPTIONAL */;
-	struct QosFlowListWithCause	*qosFlowReleasedList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct QosFlowNotifyList	*qosFlowNotifyList;	/* OPTIONAL */
+	struct QosFlowListWithCause	*qosFlowReleasedList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

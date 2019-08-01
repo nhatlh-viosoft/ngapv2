@@ -26,9 +26,9 @@ struct ProtocolExtensionContainer;
 /* DataForwardingResponseDRBItem */
 typedef struct DataForwardingResponseDRBItem {
 	DRB_ID_t	 dRB_ID;
-	struct UPTransportLayerInformation	*dLForwardingUP_TNLInformation	/* OPTIONAL */;
-	struct UPTransportLayerInformation	*uLForwardingUP_TNLInformation	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct UPTransportLayerInformation	*dLForwardingUP_TNLInformation;	/* OPTIONAL */
+	struct UPTransportLayerInformation	*uLForwardingUP_TNLInformation;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

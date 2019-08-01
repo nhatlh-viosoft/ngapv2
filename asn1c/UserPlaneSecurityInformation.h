@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct UserPlaneSecurityInformation {
 	SecurityResult_t	 securityResult;
 	SecurityIndication_t	 securityIndication;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

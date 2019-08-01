@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* HandoverResourceAllocationUnsuccessfulTransfer */
 typedef struct HandoverResourceAllocationUnsuccessfulTransfer {
 	Cause_t	 cause;
-	struct CriticalityDiagnostics	*criticalityDiagnostics	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct CriticalityDiagnostics	*criticalityDiagnostics;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

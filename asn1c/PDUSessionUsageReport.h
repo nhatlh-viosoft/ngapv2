@@ -36,7 +36,7 @@ struct ProtocolExtensionContainer;
 typedef struct PDUSessionUsageReport {
 	long	 rATType;
 	VolumeTimedReportList_t	 pDUSessionTimedReportList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

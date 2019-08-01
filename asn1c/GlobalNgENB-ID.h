@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct GlobalNgENB_ID {
 	PLMNIdentity_t	 pLMNIdentity;
 	NgENB_ID_t	 ngENB_ID;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

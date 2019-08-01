@@ -29,9 +29,9 @@ struct ProtocolExtensionContainer;
 typedef struct PDUSessionResourceModifyConfirmTransfer {
 	QosFlowModifyConfirmList_t	 qosFlowModifyConfirmList;
 	UPTransportLayerInformation_t	 uLNGU_UP_TNLInformation;
-	struct UPTransportLayerInformationPairList	*additionalNG_UUPTNLInformation	/* OPTIONAL */;
-	struct QosFlowListWithCause	*qosFlowFailedToModifyList	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct UPTransportLayerInformationPairList	*additionalNG_UUPTNLInformation;	/* OPTIONAL */
+	struct QosFlowListWithCause	*qosFlowFailedToModifyList;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

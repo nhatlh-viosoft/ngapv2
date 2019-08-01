@@ -31,7 +31,9 @@ typedef enum RRCState {
 typedef long	 RRCState_t;
 
 /* Implementation */
+extern asn_per_constraints_t asn_PER_type_RRCState_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_RRCState;
+extern const asn_INTEGER_specifics_t asn_SPC_RRCState_specs_1;
 asn_struct_free_f RRCState_free;
 asn_struct_print_f RRCState_print;
 asn_constr_check_f RRCState_constraint;
@@ -43,6 +45,8 @@ oer_type_decoder_f RRCState_decode_oer;
 oer_type_encoder_f RRCState_encode_oer;
 per_type_decoder_f RRCState_decode_uper;
 per_type_encoder_f RRCState_encode_uper;
+per_type_decoder_f RRCState_decode_aper;
+per_type_encoder_f RRCState_encode_aper;
 
 #ifdef __cplusplus
 }

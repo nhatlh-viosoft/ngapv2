@@ -27,9 +27,9 @@ struct ProtocolExtensionContainer;
 /* OverloadStartNSSAIItem */
 typedef struct OverloadStartNSSAIItem {
 	SliceOverloadList_t	 sliceOverloadList;
-	struct OverloadResponse	*sliceOverloadResponse	/* OPTIONAL */;
-	TrafficLoadReductionIndication_t	*sliceTrafficLoadReductionIndication	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct OverloadResponse	*sliceOverloadResponse;	/* OPTIONAL */
+	TrafficLoadReductionIndication_t	*sliceTrafficLoadReductionIndication;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

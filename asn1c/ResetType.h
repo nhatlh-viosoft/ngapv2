@@ -46,6 +46,9 @@ typedef struct ResetType {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_ResetType;
+extern asn_CHOICE_specifics_t asn_SPC_ResetType_specs_1;
+extern asn_TYPE_member_t asn_MBR_ResetType_1[3];
+extern asn_per_constraints_t asn_PER_type_ResetType_constr_1;
 
 #ifdef __cplusplus
 }

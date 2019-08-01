@@ -14,12 +14,12 @@
 static asn_oer_constraints_t asn_OER_type_UserLocationInformation_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
-static asn_per_constraints_t asn_PER_type_UserLocationInformation_constr_1 CC_NOTUSED = {
+asn_per_constraints_t asn_PER_type_UserLocationInformation_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 2,  2,  0,  3 }	/* (0..3) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
-static asn_TYPE_member_t asn_MBR_UserLocationInformation_1[] = {
+asn_TYPE_member_t asn_MBR_UserLocationInformation_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct UserLocationInformation, choice.userLocationInformationEUTRA),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -50,7 +50,7 @@ static asn_TYPE_member_t asn_MBR_UserLocationInformation_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct UserLocationInformation, choice.choice_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_SingleContainer_130P0,
+		&asn_DEF_ProtocolIE_SingleContainer_130P24,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -63,7 +63,7 @@ static const asn_TYPE_tag2member_t asn_MAP_UserLocationInformation_tag2el_1[] = 
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 }, /* userLocationInformationN3IWF */
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 } /* choice-Extensions */
 };
-static asn_CHOICE_specifics_t asn_SPC_UserLocationInformation_specs_1 = {
+asn_CHOICE_specifics_t asn_SPC_UserLocationInformation_specs_1 = {
 	sizeof(struct UserLocationInformation),
 	offsetof(struct UserLocationInformation, _asn_ctx),
 	offsetof(struct UserLocationInformation, present),

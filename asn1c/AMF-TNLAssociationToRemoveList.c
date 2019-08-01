@@ -11,12 +11,12 @@
 static asn_oer_constraints_t asn_OER_type_AMF_TNLAssociationToRemoveList_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1	/* (SIZE(1..32)) */};
-static asn_per_constraints_t asn_PER_type_AMF_TNLAssociationToRemoveList_constr_1 CC_NOTUSED = {
+asn_per_constraints_t asn_PER_type_AMF_TNLAssociationToRemoveList_constr_1 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 5,  5,  1,  32 }	/* (SIZE(1..32)) */,
 	0, 0	/* No PER value map */
 };
-static asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToRemoveList_1[] = {
+asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToRemoveList_1[] = {
 	{ ATF_POINTER, 0, 0,
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
@@ -30,7 +30,7 @@ static asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToRemoveList_1[] = {
 static const ber_tlv_tag_t asn_DEF_AMF_TNLAssociationToRemoveList_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
-static asn_SET_OF_specifics_t asn_SPC_AMF_TNLAssociationToRemoveList_specs_1 = {
+asn_SET_OF_specifics_t asn_SPC_AMF_TNLAssociationToRemoveList_specs_1 = {
 	sizeof(struct AMF_TNLAssociationToRemoveList),
 	offsetof(struct AMF_TNLAssociationToRemoveList, _asn_ctx),
 	0,	/* XER encoding is XMLDelimitedItemList */

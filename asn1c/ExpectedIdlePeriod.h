@@ -35,6 +35,8 @@ oer_type_decoder_f ExpectedIdlePeriod_decode_oer;
 oer_type_encoder_f ExpectedIdlePeriod_encode_oer;
 per_type_decoder_f ExpectedIdlePeriod_decode_uper;
 per_type_encoder_f ExpectedIdlePeriod_encode_uper;
+per_type_decoder_f ExpectedIdlePeriod_decode_aper;
+per_type_encoder_f ExpectedIdlePeriod_encode_aper;
 
 #ifdef __cplusplus
 }

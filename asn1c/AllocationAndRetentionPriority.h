@@ -29,7 +29,7 @@ typedef struct AllocationAndRetentionPriority {
 	PriorityLevelARP_t	 priorityLevelARP;
 	Pre_emptionCapability_t	 pre_emptionCapability;
 	Pre_emptionVulnerability_t	 pre_emptionVulnerability;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

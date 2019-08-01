@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* E-RABInformationItem */
 typedef struct E_RABInformationItem {
 	E_RAB_ID_t	 e_RAB_ID;
-	DLForwarding_t	*dLForwarding	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	DLForwarding_t	*dLForwarding;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

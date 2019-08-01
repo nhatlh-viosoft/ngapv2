@@ -21,7 +21,7 @@ extern "C" {
 
 /* LocationReportingFailureIndication */
 typedef struct LocationReportingFailureIndication {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P73_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

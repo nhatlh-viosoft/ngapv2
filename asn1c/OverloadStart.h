@@ -21,7 +21,7 @@ extern "C" {
 
 /* OverloadStart */
 typedef struct OverloadStart {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P54_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

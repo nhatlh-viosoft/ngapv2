@@ -69,7 +69,7 @@ asn_TYPE_member_t asn_MBR_DRBStatusUL12_1[] = {
 	{ ATF_POINTER, 1, offsetof(struct DRBStatusUL12, iE_Extension),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P40,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

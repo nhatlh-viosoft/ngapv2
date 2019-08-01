@@ -32,6 +32,9 @@ typedef struct UL_NGU_UP_TNLModifyList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UL_NGU_UP_TNLModifyList;
+extern asn_SET_OF_specifics_t asn_SPC_UL_NGU_UP_TNLModifyList_specs_1;
+extern asn_TYPE_member_t asn_MBR_UL_NGU_UP_TNLModifyList_1[1];
+extern asn_per_constraints_t asn_PER_type_UL_NGU_UP_TNLModifyList_constr_1;
 
 #ifdef __cplusplus
 }

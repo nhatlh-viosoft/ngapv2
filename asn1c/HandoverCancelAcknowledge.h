@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverCancelAcknowledge */
 typedef struct HandoverCancelAcknowledge {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P32_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

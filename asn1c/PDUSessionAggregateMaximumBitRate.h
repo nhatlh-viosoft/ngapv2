@@ -26,7 +26,7 @@ struct ProtocolExtensionContainer;
 typedef struct PDUSessionAggregateMaximumBitRate {
 	BitRate_t	 pDUSessionAggregateMaximumBitRateDL;
 	BitRate_t	 pDUSessionAggregateMaximumBitRateUL;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -38,6 +38,8 @@ typedef struct PDUSessionAggregateMaximumBitRate {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionAggregateMaximumBitRate;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionAggregateMaximumBitRate_specs_1;
+extern asn_TYPE_member_t asn_MBR_PDUSessionAggregateMaximumBitRate_1[3];
 
 #ifdef __cplusplus
 }

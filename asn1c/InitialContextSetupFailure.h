@@ -21,7 +21,7 @@ extern "C" {
 
 /* InitialContextSetupFailure */
 typedef struct InitialContextSetupFailure {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P13_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

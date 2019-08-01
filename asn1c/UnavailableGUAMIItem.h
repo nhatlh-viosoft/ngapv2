@@ -27,9 +27,9 @@ struct ProtocolExtensionContainer;
 /* UnavailableGUAMIItem */
 typedef struct UnavailableGUAMIItem {
 	GUAMI_t	 gUAMI;
-	TimerApproachForGUAMIRemoval_t	*timerApproachForGUAMIRemoval	/* OPTIONAL */;
-	AMFName_t	*backupAMFName	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	TimerApproachForGUAMIRemoval_t	*timerApproachForGUAMIRemoval;	/* OPTIONAL */
+	AMFName_t	*backupAMFName;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

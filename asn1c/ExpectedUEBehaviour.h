@@ -27,11 +27,11 @@ struct ProtocolExtensionContainer;
 
 /* ExpectedUEBehaviour */
 typedef struct ExpectedUEBehaviour {
-	struct ExpectedUEActivityBehaviour	*expectedUEActivityBehaviour	/* OPTIONAL */;
-	ExpectedHOInterval_t	*expectedHOInterval	/* OPTIONAL */;
-	ExpectedUEMobility_t	*expectedUEMobility	/* OPTIONAL */;
-	struct ExpectedUEMovingTrajectory	*expectedUEMovingTrajectory	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ExpectedUEActivityBehaviour	*expectedUEActivityBehaviour;	/* OPTIONAL */
+	ExpectedHOInterval_t	*expectedHOInterval;	/* OPTIONAL */
+	ExpectedUEMobility_t	*expectedUEMobility;	/* OPTIONAL */
+	struct ExpectedUEMovingTrajectory	*expectedUEMovingTrajectory;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

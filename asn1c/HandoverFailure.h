@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverFailure */
 typedef struct HandoverFailure {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P26_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

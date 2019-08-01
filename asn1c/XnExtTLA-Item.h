@@ -25,9 +25,9 @@ struct ProtocolExtensionContainer;
 
 /* XnExtTLA-Item */
 typedef struct XnExtTLA_Item {
-	TransportLayerAddress_t	*iPsecTLA	/* OPTIONAL */;
-	struct XnGTP_TLAs	*gTP_TLAs	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	TransportLayerAddress_t	*iPsecTLA;	/* OPTIONAL */
+	struct XnGTP_TLAs	*gTP_TLAs;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

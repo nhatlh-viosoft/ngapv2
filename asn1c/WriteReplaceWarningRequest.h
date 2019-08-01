@@ -21,7 +21,7 @@ extern "C" {
 
 /* WriteReplaceWarningRequest */
 typedef struct WriteReplaceWarningRequest {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P58_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

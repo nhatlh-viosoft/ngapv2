@@ -1,11 +1,22 @@
 #ifndef __TYPES_H__
 #define __TYPES_H__
 
-#include "core_list.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
+
+typedef  char                   c_int8_t;
+typedef  unsigned char          c_uint8_t;
+
+typedef  short                  c_int16_t;
+typedef  unsigned short         c_uint16_t;
+
+typedef  int                    c_int32_t;
+typedef  unsigned int           c_uint32_t;
+
+typedef  long                   c_int64_t;
+typedef  unsigned long          c_uint64_t;    
 
 #define S1AP_SCTP_PORT              36412
 #define NGAP_SCTP_PORT              38412
@@ -72,6 +83,15 @@ extern "C" {
 #define TIME_TO_BCD(x) \
     (((((x) % 10) << 4) & 0xf0) | (((x) / 10) & 0x0f))
 
+
+#define ED2(x1, x2) x1 x2
+#define ED3(x1, x2, x3) x1 x2 x3
+#define ED4(x1, x2, x3, x4) x1 x2 x3 x4
+#define ED5(x1, x2, x3, x4, x5) x1 x2 x3 x4 x5
+#define ED6(x1, x2, x3, x4, x5, x6) x1 x2 x3 x4 x5 x6
+#define ED7(x1, x2, x3, x4, x5, x6, x7) x1 x2 x3 x4 x5 x6 x7
+#define ED8(x1, x2, x3, x4, x5, x6, x7, x8) x1 x2 x3 x4 x5 x6 x7 x8    
+
 /**********************************
  * PLMN_ID Structure             */
 typedef struct _plmn_id_t {
@@ -83,11 +103,11 @@ ED2(c_uint8_t mnc3:4;,
     c_uint8_t mnc2:4;)
 } __attribute__ ((packed)) plmn_id_t;
 
-CORE_DECLARE(c_uint16_t) plmn_id_mcc(plmn_id_t *plmn_id);
-CORE_DECLARE(c_uint16_t) plmn_id_mnc(plmn_id_t *plmn_id);
-CORE_DECLARE(c_uint16_t) plmn_id_mnc_len(plmn_id_t *plmn_id);
+c_uint16_t plmn_id_mcc(plmn_id_t *plmn_id);
+c_uint16_t plmn_id_mnc(plmn_id_t *plmn_id);
+c_uint16_t plmn_id_mnc_len(plmn_id_t *plmn_id);
 
-CORE_DECLARE(void *) plmn_id_build(plmn_id_t *plmn_id, 
+void * plmn_id_build(plmn_id_t *plmn_id, 
         c_uint16_t mcc, c_uint16_t mnc, c_uint16_t mnc_len);
 
 #define MAX_NUM_OF_TAI              16
@@ -247,15 +267,15 @@ typedef struct _flow_t {
     c_int8_t *description;
 } flow_t;
 
-#define FLOW_FREE(__fLOW) \
-    do { \
-        if ((__fLOW)->description) \
-        { \
-            CORE_FREE((__fLOW)->description); \
-        } \
-        else \
-            d_assert(0,, "Null param"); \
-    } while(0)
+// #define FLOW_FREE(__fLOW) \
+//     do { \
+//         if ((__fLOW)->description) \
+//         { \
+//             CORE_FREE((__fLOW)->description); \
+//         } \
+//         else \
+//             d_assert(0,, "Null param"); \
+//     } while(0)
 
 /**********************************
  * PCC Rule Structure            */
@@ -281,23 +301,23 @@ typedef struct _pcc_rule_t {
     qos_t  qos;
 } pcc_rule_t;
 
-#define PCC_RULE_FREE(__pCCrULE) \
-    do { \
-        int __pCCrULE_iNDEX; \
-        d_assert((__pCCrULE), break,); \
-        if ((__pCCrULE)->name) \
-        { \
-            CORE_FREE((__pCCrULE)->name); \
-        } \
-        else \
-            d_assert(0,, "Null param"); \
-        for (__pCCrULE_iNDEX = 0; \
-            __pCCrULE_iNDEX < (__pCCrULE)->num_of_flow; __pCCrULE_iNDEX++) \
-        { \
-            FLOW_FREE(&((__pCCrULE)->flow[__pCCrULE_iNDEX])); \
-        } \
-        (__pCCrULE)->num_of_flow = 0; \
-    } while(0)
+// #define PCC_RULE_FREE(__pCCrULE) \
+//     do { \
+//         int __pCCrULE_iNDEX; \
+//         d_assert((__pCCrULE), break,); \
+//         if ((__pCCrULE)->name) \
+//         { \
+//             CORE_FREE((__pCCrULE)->name); \
+//         } \
+//         else \
+//             d_assert(0,, "Null param"); \
+//         for (__pCCrULE_iNDEX = 0; \
+//             __pCCrULE_iNDEX < (__pCCrULE)->num_of_flow; __pCCrULE_iNDEX++) \
+//         { \
+//             FLOW_FREE(&((__pCCrULE)->flow[__pCCrULE_iNDEX])); \
+//         } \
+//         (__pCCrULE)->num_of_flow = 0; \
+//     } while(0)
 
 /**********************************
  * PDN Structure                 */
@@ -317,8 +337,8 @@ typedef struct _pdn_t {
     ip_t            pgw_ip;
 } pdn_t;
 
-CORE_DECLARE(c_int16_t) apn_build(c_int8_t *dst, c_int8_t *src, c_int16_t len);
-CORE_DECLARE(c_int16_t) apn_parse(c_int8_t *dst, c_int8_t *src, c_int16_t len);
+c_int16_t apn_build(c_int8_t *dst, c_int8_t *src, c_int16_t len);
+c_int16_t apn_parse(c_int8_t *dst, c_int8_t *src, c_int16_t len);
 
 /**************************************************
  * Protocol Configuration Options Structure
@@ -365,8 +385,8 @@ ED3(c_uint8_t ext:1;,
     pco_id_t ids[MAX_NUM_OF_PROTOCOL_OR_CONTAINER_ID];
 } pco_t;
 
-CORE_DECLARE(c_int16_t) pco_parse(pco_t *pco, void *data, int data_len);
-CORE_DECLARE(c_int16_t) pco_build(void *data, int data_len, pco_t *pco);
+c_int16_t pco_parse(pco_t *pco, void *data, int data_len);
+c_int16_t pco_build(void *data, int data_len, pco_t *pco);
 
 #ifdef __cplusplus
 }

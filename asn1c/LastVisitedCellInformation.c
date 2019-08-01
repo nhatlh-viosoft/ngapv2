@@ -57,7 +57,7 @@ asn_TYPE_member_t asn_MBR_LastVisitedCellInformation_1[] = {
 	{ ATF_POINTER, 0, offsetof(struct LastVisitedCellInformation, choice.choice_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (4 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_SingleContainer_130P0,
+		&asn_DEF_ProtocolIE_SingleContainer_130P10,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

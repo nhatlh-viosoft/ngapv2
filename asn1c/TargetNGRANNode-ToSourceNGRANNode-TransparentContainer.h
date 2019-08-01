@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* TargetNGRANNode-ToSourceNGRANNode-TransparentContainer */
 typedef struct TargetNGRANNode_ToSourceNGRANNode_TransparentContainer {
 	RRCContainer_t	 rRCContainer;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

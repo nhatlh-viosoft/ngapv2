@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct DRBsToQosFlowsMappingItem {
 	DRB_ID_t	 dRB_ID;
 	AssociatedQosFlowList_t	 associatedQosFlowList;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

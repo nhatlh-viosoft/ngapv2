@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct ForbiddenAreaInformation_Item {
 	PLMNIdentity_t	 pLMNIdentity;
 	ForbiddenTACs_t	 forbiddenTACs;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -26,7 +26,7 @@ struct ProtocolExtensionContainer;
 typedef struct COUNTValueForPDCP_SN18 {
 	long	 pDCP_SN18;
 	long	 hFN_PDCP_SN18;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

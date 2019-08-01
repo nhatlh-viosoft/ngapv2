@@ -26,8 +26,8 @@ struct ProtocolExtensionContainer;
 /* ServedGUAMIItem */
 typedef struct ServedGUAMIItem {
 	GUAMI_t	 gUAMI;
-	AMFName_t	*backupAMFName	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	AMFName_t	*backupAMFName;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

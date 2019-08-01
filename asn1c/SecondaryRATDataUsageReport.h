@@ -21,7 +21,7 @@ extern "C" {
 
 /* SecondaryRATDataUsageReport */
 typedef struct SecondaryRATDataUsageReport {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P79_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

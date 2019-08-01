@@ -28,8 +28,8 @@ struct ProtocolExtensionContainer;
 typedef struct PagingAttemptInformation {
 	PagingAttemptCount_t	 pagingAttemptCount;
 	IntendedNumberOfPagingAttempts_t	 intendedNumberOfPagingAttempts;
-	NextPagingAreaScope_t	*nextPagingAreaScope	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	NextPagingAreaScope_t	*nextPagingAreaScope;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

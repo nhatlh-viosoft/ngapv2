@@ -68,7 +68,7 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModReq_1[] = {
 	{ ATF_POINTER, 1, offsetof(struct PDUSessionResourceModifyItemModReq, iE_Extensions),
 		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolExtensionContainer_178P0,
+		&asn_DEF_ProtocolExtensionContainer_178P102,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */

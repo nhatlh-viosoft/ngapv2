@@ -24,8 +24,8 @@ struct ProtocolExtensionContainer;
 
 /* SecondaryRATDataUsageReportTransfer */
 typedef struct SecondaryRATDataUsageReportTransfer {
-	struct SecondaryRATUsageInformation	*secondaryRATUsageInformation	/* OPTIONAL */;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct SecondaryRATUsageInformation	*secondaryRATUsageInformation;	/* OPTIONAL */
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

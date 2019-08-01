@@ -21,7 +21,7 @@ extern "C" {
 
 /* PWSCancelResponse */
 typedef struct PWSCancelResponse {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P61_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

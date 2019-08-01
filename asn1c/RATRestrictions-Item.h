@@ -27,7 +27,7 @@ struct ProtocolExtensionContainer;
 typedef struct RATRestrictions_Item {
 	PLMNIdentity_t	 pLMNIdentity;
 	RATRestrictionInformation_t	 rATRestrictionInformation;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

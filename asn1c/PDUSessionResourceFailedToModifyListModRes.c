@@ -11,12 +11,12 @@
 static asn_oer_constraints_t asn_OER_type_PDUSessionResourceFailedToModifyListModRes_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1	/* (SIZE(1..256)) */};
-static asn_per_constraints_t asn_PER_type_PDUSessionResourceFailedToModifyListModRes_constr_1 CC_NOTUSED = {
+asn_per_constraints_t asn_PER_type_PDUSessionResourceFailedToModifyListModRes_constr_1 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 8,  8,  1,  256 }	/* (SIZE(1..256)) */,
 	0, 0	/* No PER value map */
 };
-static asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyListModRes_1[] = {
+asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyListModRes_1[] = {
 	{ ATF_POINTER, 0, 0,
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
@@ -30,7 +30,7 @@ static asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyListModRes_1[] 
 static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToModifyListModRes_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
-static asn_SET_OF_specifics_t asn_SPC_PDUSessionResourceFailedToModifyListModRes_specs_1 = {
+asn_SET_OF_specifics_t asn_SPC_PDUSessionResourceFailedToModifyListModRes_specs_1 = {
 	sizeof(struct PDUSessionResourceFailedToModifyListModRes),
 	offsetof(struct PDUSessionResourceFailedToModifyListModRes, _asn_ctx),
 	0,	/* XER encoding is XMLDelimitedItemList */

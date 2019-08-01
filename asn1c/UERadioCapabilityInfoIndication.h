@@ -21,7 +21,7 @@ extern "C" {
 
 /* UERadioCapabilityInfoIndication */
 typedef struct UERadioCapabilityInfoIndication {
-	ProtocolIE_Container_127P0_t	 protocolIEs;
+	ProtocolIE_Container_127P76_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

@@ -25,7 +25,7 @@ struct ProtocolExtensionContainer;
 /* AreaOfInterestCellItem */
 typedef struct AreaOfInterestCellItem {
 	NGRAN_CGI_t	 nGRAN_CGI;
-	struct ProtocolExtensionContainer	*iE_Extensions	/* OPTIONAL */;
+	struct ProtocolExtensionContainer	*iE_Extensions;	/* OPTIONAL */
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
