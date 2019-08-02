@@ -1,57 +1,10 @@
-#include <stdint.h>
 #include <unistd.h>
 #include "ngap_asn1c.h"
 #include "amf_context.h"
 #include "3gpp_types.h"
-
-
-/**
- * Cluster buffer structre */
-typedef struct _clbuf_t {
-
-    /**
-     * reference count */
-    c_uint16_t ref;
-
-    /**
-     * pointer to cluster */
-    void *cluster;
-
-    /**
-     * the size of cluster */
-    c_uint16_t size;
-
-} clbuf_t;
-
-/**
- * Packet buffer structure */
-typedef struct _pkbuf_t {
-
-    /** next pkbuf in singly linked pkbuf chain */
-    struct _pkbuf_t *next;
-
-    /** pointer to cluster */
-    clbuf_t *clbuf;
-
-    /** this buffer */
-    void *payload;
-
-    /**
-     * total length of this buffer and all next buffers in chain
-     * belonging to the same packet.
-     *
-     * For non-queue packet chains this is the invariant:
-     * p->tot_len == p->len + (p->next? p->next->tot_len: 0)
-     */
-    c_uint16_t tot_len;
-
-    /** length of this buffer */
-    c_uint16_t len;  
-
-    /** misc flags */
-    c_uint8_t flags;
-
-} pkbuf_t;
+#include "core.h"
+#include "pkbuf.h"
+#include "tool/debug.h"
 
 
 
@@ -70,9 +23,9 @@ int ngap_decode_pdu(ngap_message_t *message, pkbuf_t *pkbuf)
 {
 	asn_dec_rval_t dec_ret = {0};
 
-    // d_assert(message, return CORE_ERROR,);
-    // d_assert(pkbuf, return CORE_ERROR,);
-    // d_assert(pkbuf->payload, return CORE_ERROR,);
+    d_assert(message, return -1, " ");
+    d_assert(pkbuf, return -1, " ");
+    d_assert(pkbuf->payload, return -1, " ");
 
     memset((void *)message, 0, sizeof(ngap_message_t));
     dec_ret = aper_decode(NULL, &asn_DEF_NGAP_PDU, (void **)&message, 
@@ -81,12 +34,13 @@ int ngap_decode_pdu(ngap_message_t *message, pkbuf_t *pkbuf)
     if (dec_ret.code != RC_OK) 
     {
         // d_error("Failed to decode NGAP-PDU[%d]", dec_ret.code);
-        // return CORE_ERROR;
+        // return -1;
         printf("Failed to decode NGAP-PDU[%d]", dec_ret.code);
         return -1;
     }
 
     // if (g_trace_mask && TRACE_MODULE >= 25)
+        printf("***************Output Message***************\n");
         asn_fprint(stdout, &asn_DEF_NGAP_PDU, message);
 
     // return CORE_OK;
@@ -97,21 +51,22 @@ int ngap_encode_pdu(pkbuf_t **pkbuf, ngap_message_t *message)
 {
 	asn_enc_rval_t enc_ret = {0};
 
-    // d_assert(message, return CORE_ERROR,);
+     d_assert(message, return -1, " ");
 
     // if (g_trace_mask && TRACE_MODULE >= 25)
+    	printf("***************Input Message***************\n");
         asn_fprint(stdout, &asn_DEF_NGAP_PDU, message);
 
     *pkbuf = pkbuf_alloc(0, MAX_SDU_LEN);
-    // d_assert(*pkbuf, return CORE_ERROR,);
+     d_assert(*pkbuf, return -1, "");
 
     enc_ret = aper_encode_to_buffer(&asn_DEF_NGAP_PDU, NULL,
                     message, (*pkbuf)->payload, MAX_SDU_LEN);
     if (enc_ret.encoded < 0)
     {
         // d_error("Failed to encoded NGAP-PDU[%d]", enc_ret.encoded);
-        // pkbuf_free(*pkbuf);
-        // return CORE_ERROR;
+        pkbuf_free(*pkbuf);
+        // return -1;
         printf("Failed to encoded NGAP-PDU[%ld]", enc_ret.encoded);
         return -1;
     }
@@ -124,7 +79,7 @@ int ngap_encode_pdu(pkbuf_t **pkbuf, ngap_message_t *message)
 
 int ngap_free_pdu(ngap_message_t *message)
 {
-	// d_assert(message, return CORE_ERROR,);
+	// d_assert(message, return -1,);
 
     ASN_STRUCT_FREE_CONTENTS_ONLY(asn_DEF_NGAP_PDU, message);
 
@@ -148,51 +103,6 @@ void amf_context_init()
 	amf.relative_capacity = 0xff;
 }
 
-/**
-****************	3gpp_types.h functions	*********************
-**/
-
-
-#define PLMN_ID_DIGIT1(x) (((x) / 100) % 10)
-#define PLMN_ID_DIGIT2(x) (((x) / 10) % 10)
-#define PLMN_ID_DIGIT3(x) ((x) % 10)
-
-c_uint16_t plmn_id_mcc(plmn_id_t *plmn_id)
-{
-    return plmn_id->mcc1 * 100 + plmn_id->mcc2 * 10 + plmn_id->mcc3;
-}
-c_uint16_t plmn_id_mnc(plmn_id_t *plmn_id)
-{
-    return plmn_id->mnc1 == 0xf ? plmn_id->mnc2 * 10 + plmn_id->mnc3 :
-        plmn_id->mnc1 * 100 + plmn_id->mnc2 * 10 + plmn_id->mnc3;
-}
-c_uint16_t plmn_id_mnc_len(plmn_id_t *plmn_id)
-{
-    return plmn_id->mnc1 == 0xf ? 2 : 3;
-}
-
-void *plmn_id_build(plmn_id_t *plmn_id, 
-        c_uint16_t mcc, c_uint16_t mnc, c_uint16_t mnc_len)
-{
-    plmn_id->mcc1 = PLMN_ID_DIGIT1(mcc);
-    plmn_id->mcc2 = PLMN_ID_DIGIT2(mcc);
-    plmn_id->mcc3 = PLMN_ID_DIGIT3(mcc);
-
-    if (mnc_len == 2)
-        plmn_id->mnc1 = 0xf;
-    else
-        plmn_id->mnc1 = PLMN_ID_DIGIT1(mnc);
-
-    plmn_id->mnc2 = PLMN_ID_DIGIT2(mnc);
-    plmn_id->mnc3 = PLMN_ID_DIGIT3(mnc);
-
-    return plmn_id;
-}
-
-/**
-****************END OF	3gpp_types.h functions	*********************
-**/
-
 
 /** 
  *  Direction AMF -> NG-RAN Node
@@ -206,7 +116,7 @@ int ngap_build_setup_rsp(pkbuf_t **pkbuf)
 
     NGAP_PDU_t pdu;
     SuccessfulOutcome_t *successfulOutcome = NULL;
-    NGSetupResponse_t *NGSetupResponse = NULL;
+    NGSetupResponse_t *NGSetupResponse = calloc(1, sizeof(NGSetupResponse_t));//NULL;
         NGSetupResponseIEs_t *ie = NULL;
         AMFName_t *AMFName = NULL;
         ServedGUAMIList_t *ServedGUAMIList = NULL;
@@ -225,7 +135,6 @@ int ngap_build_setup_rsp(pkbuf_t **pkbuf)
         SuccessfulOutcome__value_PR_NGSetupResponse;
 
     NGSetupResponse = &successfulOutcome->value.choice.NGSetupResponse;
-    printf("NGSetupResponse=%d",NGSetupResponse);
 
     ie = calloc(1, sizeof(NGSetupResponseIEs_t));
     ASN_SEQUENCE_ADD(&NGSetupResponse->protocolIEs, ie);
@@ -319,7 +228,6 @@ int ngap_build_setup_rsp(pkbuf_t **pkbuf)
            
            ASN_SEQUENCE_ADD(&PLMNSupportItem->sliceSupportList.list, SliceSupportItem);
         }
-        ASN_SEQUENCE_ADD(&PLMNSupportList->list, PLMNSupportItem);
     }
 
     rv = ngap_encode_pdu(pkbuf, &pdu);

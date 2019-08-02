@@ -37,9 +37,7 @@ typedef enum PagingPriority {
 typedef long	 PagingPriority_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_PagingPriority_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_PagingPriority;
-extern const asn_INTEGER_specifics_t asn_SPC_PagingPriority_specs_1;
 asn_struct_free_f PagingPriority_free;
 asn_struct_print_f PagingPriority_print;
 asn_constr_check_f PagingPriority_constraint;

@@ -30,9 +30,7 @@ typedef enum ULForwarding {
 typedef long	 ULForwarding_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_ULForwarding_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_ULForwarding;
-extern const asn_INTEGER_specifics_t asn_SPC_ULForwarding_specs_1;
 asn_struct_free_f ULForwarding_free;
 asn_struct_print_f ULForwarding_print;
 asn_constr_check_f ULForwarding_constraint;

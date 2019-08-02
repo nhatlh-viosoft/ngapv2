@@ -21,7 +21,7 @@ extern "C" {
 
 /* UEContextReleaseRequest */
 typedef struct UEContextReleaseRequest {
-	ProtocolIE_Container_127P14_t	 protocolIEs;
+	ProtocolIE_Container_127P12_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UEContextReleaseRequest {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UEContextReleaseRequest;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextReleaseRequest_specs_1;
+extern asn_TYPE_member_t asn_MBR_UEContextReleaseRequest_1[1];
 
 #ifdef __cplusplus
 }

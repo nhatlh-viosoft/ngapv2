@@ -32,9 +32,6 @@ typedef struct PDUSessionResourceSecondaryRATUsageList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceSecondaryRATUsageList;
-extern asn_SET_OF_specifics_t asn_SPC_PDUSessionResourceSecondaryRATUsageList_specs_1;
-extern asn_TYPE_member_t asn_MBR_PDUSessionResourceSecondaryRATUsageList_1[1];
-extern asn_per_constraints_t asn_PER_type_PDUSessionResourceSecondaryRATUsageList_constr_1;
 
 #ifdef __cplusplus
 }

@@ -21,7 +21,7 @@ extern "C" {
 
 /* InitialContextSetupResponse */
 typedef struct InitialContextSetupResponse {
-	ProtocolIE_Container_127P12_t	 protocolIEs;
+	ProtocolIE_Container_127P10_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct InitialContextSetupResponse {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_InitialContextSetupResponse;
+extern asn_SEQUENCE_specifics_t asn_SPC_InitialContextSetupResponse_specs_1;
+extern asn_TYPE_member_t asn_MBR_InitialContextSetupResponse_1[1];
 
 #ifdef __cplusplus
 }

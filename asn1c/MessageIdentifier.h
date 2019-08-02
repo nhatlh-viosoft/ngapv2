@@ -22,7 +22,6 @@ extern "C" {
 typedef BIT_STRING_t	 MessageIdentifier_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_MessageIdentifier_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_MessageIdentifier;
 asn_struct_free_f MessageIdentifier_free;
 asn_struct_print_f MessageIdentifier_print;

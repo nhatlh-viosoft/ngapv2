@@ -7,6 +7,7 @@
  * 
  * cc -DPDU=MyCustomType -o myDecoder.o -c converter-example.c
  */
+#if 0
 #ifdef    HAVE_CONFIG_H
 #include <config.h>
 #endif
@@ -1028,5 +1029,7 @@ junk_bytes_with_probability(uint8_t *buf, size_t size, double prob) {
         }
     }
 }
-#endif    /* JUNKTEST */
 
+
+#endif    /* JUNKTEST */
+#endif

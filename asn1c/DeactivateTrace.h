@@ -21,7 +21,7 @@ extern "C" {
 
 /* DeactivateTrace */
 typedef struct DeactivateTrace {
-	ProtocolIE_Container_127P70_t	 protocolIEs;
+	ProtocolIE_Container_127P68_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct DeactivateTrace {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_DeactivateTrace;
+extern asn_SEQUENCE_specifics_t asn_SPC_DeactivateTrace_specs_1;
+extern asn_TYPE_member_t asn_MBR_DeactivateTrace_1[1];
 
 #ifdef __cplusplus
 }

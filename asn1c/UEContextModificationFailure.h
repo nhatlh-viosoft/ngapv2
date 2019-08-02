@@ -21,7 +21,7 @@ extern "C" {
 
 /* UEContextModificationFailure */
 typedef struct UEContextModificationFailure {
-	ProtocolIE_Container_127P19_t	 protocolIEs;
+	ProtocolIE_Container_127P17_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UEContextModificationFailure {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UEContextModificationFailure;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextModificationFailure_specs_1;
+extern asn_TYPE_member_t asn_MBR_UEContextModificationFailure_1[1];
 
 #ifdef __cplusplus
 }

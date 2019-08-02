@@ -8,7 +8,7 @@
 #include "UEAggregateMaximumBitRate.h"
 
 #include "ProtocolExtensionContainer.h"
-asn_TYPE_member_t asn_MBR_UEAggregateMaximumBitRate_1[] = {
+static asn_TYPE_member_t asn_MBR_UEAggregateMaximumBitRate_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UEAggregateMaximumBitRate, uEAggregateMaximumBitRateDL),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -46,7 +46,7 @@ static const asn_TYPE_tag2member_t asn_MAP_UEAggregateMaximumBitRate_tag2el_1[] 
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* uEAggregateMaximumBitRateUL */
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* iE-Extensions */
 };
-asn_SEQUENCE_specifics_t asn_SPC_UEAggregateMaximumBitRate_specs_1 = {
+static asn_SEQUENCE_specifics_t asn_SPC_UEAggregateMaximumBitRate_specs_1 = {
 	sizeof(struct UEAggregateMaximumBitRate),
 	offsetof(struct UEAggregateMaximumBitRate, _asn_ctx),
 	asn_MAP_UEAggregateMaximumBitRate_tag2el_1,

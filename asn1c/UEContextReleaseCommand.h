@@ -21,7 +21,7 @@ extern "C" {
 
 /* UEContextReleaseCommand */
 typedef struct UEContextReleaseCommand {
-	ProtocolIE_Container_127P15_t	 protocolIEs;
+	ProtocolIE_Container_127P13_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UEContextReleaseCommand {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UEContextReleaseCommand;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextReleaseCommand_specs_1;
+extern asn_TYPE_member_t asn_MBR_UEContextReleaseCommand_1[1];
 
 #ifdef __cplusplus
 }

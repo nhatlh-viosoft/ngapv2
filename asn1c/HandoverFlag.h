@@ -30,9 +30,7 @@ typedef enum HandoverFlag {
 typedef long	 HandoverFlag_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_HandoverFlag_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_HandoverFlag;
-extern const asn_INTEGER_specifics_t asn_SPC_HandoverFlag_specs_1;
 asn_struct_free_f HandoverFlag_free;
 asn_struct_print_f HandoverFlag_print;
 asn_constr_check_f HandoverFlag_constraint;

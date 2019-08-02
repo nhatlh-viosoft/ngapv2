@@ -21,7 +21,7 @@ extern "C" {
 
 /* TraceStart */
 typedef struct TraceStart {
-	ProtocolIE_Container_127P68_t	 protocolIEs;
+	ProtocolIE_Container_127P66_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct TraceStart {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_TraceStart;
+extern asn_SEQUENCE_specifics_t asn_SPC_TraceStart_specs_1;
+extern asn_TYPE_member_t asn_MBR_TraceStart_1[1];
 
 #ifdef __cplusplus
 }

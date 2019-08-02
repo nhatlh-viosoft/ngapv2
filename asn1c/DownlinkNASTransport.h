@@ -21,7 +21,7 @@ extern "C" {
 
 /* DownlinkNASTransport */
 typedef struct DownlinkNASTransport {
-	ProtocolIE_Container_127P37_t	 protocolIEs;
+	ProtocolIE_Container_127P35_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct DownlinkNASTransport {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_DownlinkNASTransport;
+extern asn_SEQUENCE_specifics_t asn_SPC_DownlinkNASTransport_specs_1;
+extern asn_TYPE_member_t asn_MBR_DownlinkNASTransport_1[1];
 
 #ifdef __cplusplus
 }

@@ -30,9 +30,7 @@ typedef enum PagingOrigin {
 typedef long	 PagingOrigin_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_PagingOrigin_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_PagingOrigin;
-extern const asn_INTEGER_specifics_t asn_SPC_PagingOrigin_specs_1;
 asn_struct_free_f PagingOrigin_free;
 asn_struct_print_f PagingOrigin_print;
 asn_constr_check_f PagingOrigin_constraint;

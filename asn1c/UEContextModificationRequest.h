@@ -21,7 +21,7 @@ extern "C" {
 
 /* UEContextModificationRequest */
 typedef struct UEContextModificationRequest {
-	ProtocolIE_Container_127P17_t	 protocolIEs;
+	ProtocolIE_Container_127P15_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UEContextModificationRequest {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UEContextModificationRequest;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextModificationRequest_specs_1;
+extern asn_TYPE_member_t asn_MBR_UEContextModificationRequest_1[1];
 
 #ifdef __cplusplus
 }

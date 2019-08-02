@@ -21,7 +21,7 @@ extern "C" {
 
 /* PDUSessionResourceNotify */
 typedef struct PDUSessionResourceNotify {
-	ProtocolIE_Container_127P8_t	 protocolIEs;
+	ProtocolIE_Container_127P6_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct PDUSessionResourceNotify {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceNotify;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceNotify_specs_1;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceNotify_1[1];
 
 #ifdef __cplusplus
 }

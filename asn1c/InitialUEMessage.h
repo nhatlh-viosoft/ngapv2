@@ -21,7 +21,7 @@ extern "C" {
 
 /* InitialUEMessage */
 typedef struct InitialUEMessage {
-	ProtocolIE_Container_127P36_t	 protocolIEs;
+	ProtocolIE_Container_127P34_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct InitialUEMessage {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_InitialUEMessage;
+extern asn_SEQUENCE_specifics_t asn_SPC_InitialUEMessage_specs_1;
+extern asn_TYPE_member_t asn_MBR_InitialUEMessage_1[1];
 
 #ifdef __cplusplus
 }

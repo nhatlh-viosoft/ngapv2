@@ -22,7 +22,6 @@ extern "C" {
 typedef long	 RelativeAMFCapacity_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_RelativeAMFCapacity_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_RelativeAMFCapacity;
 asn_struct_free_f RelativeAMFCapacity_free;
 asn_struct_print_f RelativeAMFCapacity_print;

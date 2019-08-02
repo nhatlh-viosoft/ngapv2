@@ -8,7 +8,7 @@
 #include "TraceActivation.h"
 
 #include "ProtocolExtensionContainer.h"
-asn_TYPE_member_t asn_MBR_TraceActivation_1[] = {
+static asn_TYPE_member_t asn_MBR_TraceActivation_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TraceActivation, nGRANTraceID),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -66,7 +66,7 @@ static const asn_TYPE_tag2member_t asn_MAP_TraceActivation_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 }, /* traceCollectionEntityIPAddress */
     { (ASN_TAG_CLASS_CONTEXT | (4 << 2)), 4, 0, 0 } /* iE-Extensions */
 };
-asn_SEQUENCE_specifics_t asn_SPC_TraceActivation_specs_1 = {
+static asn_SEQUENCE_specifics_t asn_SPC_TraceActivation_specs_1 = {
 	sizeof(struct TraceActivation),
 	offsetof(struct TraceActivation, _asn_ctx),
 	asn_MAP_TraceActivation_tag2el_1,

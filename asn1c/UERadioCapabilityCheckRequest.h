@@ -21,7 +21,7 @@ extern "C" {
 
 /* UERadioCapabilityCheckRequest */
 typedef struct UERadioCapabilityCheckRequest {
-	ProtocolIE_Container_127P77_t	 protocolIEs;
+	ProtocolIE_Container_127P75_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UERadioCapabilityCheckRequest {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UERadioCapabilityCheckRequest;
+extern asn_SEQUENCE_specifics_t asn_SPC_UERadioCapabilityCheckRequest_specs_1;
+extern asn_TYPE_member_t asn_MBR_UERadioCapabilityCheckRequest_1[1];
 
 #ifdef __cplusplus
 }

@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverPreparationFailure */
 typedef struct HandoverPreparationFailure {
-	ProtocolIE_Container_127P23_t	 protocolIEs;
+	ProtocolIE_Container_127P21_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct HandoverPreparationFailure {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_HandoverPreparationFailure;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverPreparationFailure_specs_1;
+extern asn_TYPE_member_t asn_MBR_HandoverPreparationFailure_1[1];
 
 #ifdef __cplusplus
 }

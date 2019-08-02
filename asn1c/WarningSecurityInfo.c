@@ -40,7 +40,7 @@ WarningSecurityInfo_constraint(const asn_TYPE_descriptor_t *td, const void *sptr
 static asn_oer_constraints_t asn_OER_type_WarningSecurityInfo_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	50	/* (SIZE(50..50)) */};
-asn_per_constraints_t asn_PER_type_WarningSecurityInfo_constr_1 CC_NOTUSED = {
+static asn_per_constraints_t asn_PER_type_WarningSecurityInfo_constr_1 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 0,  0,  50,  50 }	/* (SIZE(50..50)) */,
 	0, 0	/* No PER value map */

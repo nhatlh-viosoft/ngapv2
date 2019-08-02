@@ -49,9 +49,6 @@ typedef struct UserLocationInformation {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UserLocationInformation;
-extern asn_CHOICE_specifics_t asn_SPC_UserLocationInformation_specs_1;
-extern asn_TYPE_member_t asn_MBR_UserLocationInformation_1[4];
-extern asn_per_constraints_t asn_PER_type_UserLocationInformation_constr_1;
 
 #ifdef __cplusplus
 }

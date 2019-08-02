@@ -21,7 +21,7 @@ extern "C" {
 
 /* RerouteNASRequest */
 typedef struct RerouteNASRequest {
-	ProtocolIE_Container_127P40_t	 protocolIEs;
+	ProtocolIE_Container_127P38_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct RerouteNASRequest {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_RerouteNASRequest;
+extern asn_SEQUENCE_specifics_t asn_SPC_RerouteNASRequest_specs_1;
+extern asn_TYPE_member_t asn_MBR_RerouteNASRequest_1[1];
 
 #ifdef __cplusplus
 }

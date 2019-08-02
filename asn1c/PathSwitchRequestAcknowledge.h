@@ -21,7 +21,7 @@ extern "C" {
 
 /* PathSwitchRequestAcknowledge */
 typedef struct PathSwitchRequestAcknowledge {
-	ProtocolIE_Container_127P29_t	 protocolIEs;
+	ProtocolIE_Container_127P27_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct PathSwitchRequestAcknowledge {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PathSwitchRequestAcknowledge;
+extern asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestAcknowledge_specs_1;
+extern asn_TYPE_member_t asn_MBR_PathSwitchRequestAcknowledge_1[1];
 
 #ifdef __cplusplus
 }

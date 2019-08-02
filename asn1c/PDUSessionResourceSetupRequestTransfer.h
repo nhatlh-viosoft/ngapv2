@@ -21,7 +21,7 @@ extern "C" {
 
 /* PDUSessionResourceSetupRequestTransfer */
 typedef struct PDUSessionResourceSetupRequestTransfer {
-	ProtocolIE_Container_127P1_t	 protocolIEs;
+	ProtocolIE_Container_127P79_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

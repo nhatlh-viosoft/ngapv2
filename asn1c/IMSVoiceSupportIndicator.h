@@ -31,9 +31,7 @@ typedef enum IMSVoiceSupportIndicator {
 typedef long	 IMSVoiceSupportIndicator_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_IMSVoiceSupportIndicator_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_IMSVoiceSupportIndicator;
-extern const asn_INTEGER_specifics_t asn_SPC_IMSVoiceSupportIndicator_specs_1;
 asn_struct_free_f IMSVoiceSupportIndicator_free;
 asn_struct_print_f IMSVoiceSupportIndicator_print;
 asn_constr_check_f IMSVoiceSupportIndicator_constraint;

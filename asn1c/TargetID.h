@@ -46,9 +46,6 @@ typedef struct TargetID {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_TargetID;
-extern asn_CHOICE_specifics_t asn_SPC_TargetID_specs_1;
-extern asn_TYPE_member_t asn_MBR_TargetID_1[3];
-extern asn_per_constraints_t asn_PER_type_TargetID_constr_1;
 
 #ifdef __cplusplus
 }

@@ -32,9 +32,6 @@ typedef struct PDUSessionResourceNotifyList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceNotifyList;
-extern asn_SET_OF_specifics_t asn_SPC_PDUSessionResourceNotifyList_specs_1;
-extern asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyList_1[1];
-extern asn_per_constraints_t asn_PER_type_PDUSessionResourceNotifyList_constr_1;
 
 #ifdef __cplusplus
 }

@@ -21,7 +21,7 @@ extern "C" {
 
 /* AMFConfigurationUpdateFailure */
 typedef struct AMFConfigurationUpdateFailure {
-	ProtocolIE_Container_127P49_t	 protocolIEs;
+	ProtocolIE_Container_127P47_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct AMFConfigurationUpdateFailure {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_AMFConfigurationUpdateFailure;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFConfigurationUpdateFailure_specs_1;
+extern asn_TYPE_member_t asn_MBR_AMFConfigurationUpdateFailure_1[1];
 
 #ifdef __cplusplus
 }

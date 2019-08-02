@@ -43,8 +43,6 @@ typedef struct UESecurityCapabilities {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UESecurityCapabilities;
-extern asn_SEQUENCE_specifics_t asn_SPC_UESecurityCapabilities_specs_1;
-extern asn_TYPE_member_t asn_MBR_UESecurityCapabilities_1[5];
 
 #ifdef __cplusplus
 }

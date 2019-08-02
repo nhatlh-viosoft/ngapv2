@@ -7,11 +7,11 @@
 
 #include "PathSwitchRequestAcknowledge.h"
 
-static asn_TYPE_member_t asn_MBR_PathSwitchRequestAcknowledge_1[] = {
+asn_TYPE_member_t asn_MBR_PathSwitchRequestAcknowledge_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestAcknowledge, protocolIEs),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_Container_127P29,
+		&asn_DEF_ProtocolIE_Container_127P27,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -24,7 +24,7 @@ static const ber_tlv_tag_t asn_DEF_PathSwitchRequestAcknowledge_tags_1[] = {
 static const asn_TYPE_tag2member_t asn_MAP_PathSwitchRequestAcknowledge_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 } /* protocolIEs */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestAcknowledge_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestAcknowledge_specs_1 = {
 	sizeof(struct PathSwitchRequestAcknowledge),
 	offsetof(struct PathSwitchRequestAcknowledge, _asn_ctx),
 	asn_MAP_PathSwitchRequestAcknowledge_tag2el_1,

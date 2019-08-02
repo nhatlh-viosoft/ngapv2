@@ -12,12 +12,12 @@
 static asn_oer_constraints_t asn_OER_type_ResetType_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1};
-asn_per_constraints_t asn_PER_type_ResetType_constr_1 CC_NOTUSED = {
+static asn_per_constraints_t asn_PER_type_ResetType_constr_1 CC_NOTUSED = {
 	{ APC_CONSTRAINED,	 2,  2,  0,  2 }	/* (0..2) */,
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	0, 0	/* No PER value map */
 };
-asn_TYPE_member_t asn_MBR_ResetType_1[] = {
+static asn_TYPE_member_t asn_MBR_ResetType_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ResetType, choice.nG_Interface),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -51,7 +51,7 @@ static const asn_TYPE_tag2member_t asn_MAP_ResetType_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* partOfNG-Interface */
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* choice-Extensions */
 };
-asn_CHOICE_specifics_t asn_SPC_ResetType_specs_1 = {
+static asn_CHOICE_specifics_t asn_SPC_ResetType_specs_1 = {
 	sizeof(struct ResetType),
 	offsetof(struct ResetType, _asn_ctx),
 	offsetof(struct ResetType, present),

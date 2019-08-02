@@ -39,8 +39,6 @@ typedef struct AssistanceDataForPaging {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_AssistanceDataForPaging;
-extern asn_SEQUENCE_specifics_t asn_SPC_AssistanceDataForPaging_specs_1;
-extern asn_TYPE_member_t asn_MBR_AssistanceDataForPaging_1[3];
 
 #ifdef __cplusplus
 }

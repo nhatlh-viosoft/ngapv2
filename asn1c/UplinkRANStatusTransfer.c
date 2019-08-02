@@ -7,11 +7,11 @@
 
 #include "UplinkRANStatusTransfer.h"
 
-static asn_TYPE_member_t asn_MBR_UplinkRANStatusTransfer_1[] = {
+asn_TYPE_member_t asn_MBR_UplinkRANStatusTransfer_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UplinkRANStatusTransfer, protocolIEs),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_Container_127P33,
+		&asn_DEF_ProtocolIE_Container_127P31,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -24,7 +24,7 @@ static const ber_tlv_tag_t asn_DEF_UplinkRANStatusTransfer_tags_1[] = {
 static const asn_TYPE_tag2member_t asn_MAP_UplinkRANStatusTransfer_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 } /* protocolIEs */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_UplinkRANStatusTransfer_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_UplinkRANStatusTransfer_specs_1 = {
 	sizeof(struct UplinkRANStatusTransfer),
 	offsetof(struct UplinkRANStatusTransfer, _asn_ctx),
 	asn_MAP_UplinkRANStatusTransfer_tag2el_1,

@@ -21,7 +21,7 @@ extern "C" {
 
 /* AMFConfigurationUpdateAcknowledge */
 typedef struct AMFConfigurationUpdateAcknowledge {
-	ProtocolIE_Container_127P48_t	 protocolIEs;
+	ProtocolIE_Container_127P46_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct AMFConfigurationUpdateAcknowledge {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_AMFConfigurationUpdateAcknowledge;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFConfigurationUpdateAcknowledge_specs_1;
+extern asn_TYPE_member_t asn_MBR_AMFConfigurationUpdateAcknowledge_1[1];
 
 #ifdef __cplusplus
 }

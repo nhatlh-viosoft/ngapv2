@@ -7,7 +7,7 @@
 
 #include "PrivateMessage.h"
 
-static asn_TYPE_member_t asn_MBR_PrivateMessage_1[] = {
+asn_TYPE_member_t asn_MBR_PrivateMessage_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PrivateMessage, privateIEs),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -24,7 +24,7 @@ static const ber_tlv_tag_t asn_DEF_PrivateMessage_tags_1[] = {
 static const asn_TYPE_tag2member_t asn_MAP_PrivateMessage_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 } /* privateIEs */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_PrivateMessage_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_PrivateMessage_specs_1 = {
 	sizeof(struct PrivateMessage),
 	offsetof(struct PrivateMessage, _asn_ctx),
 	asn_MAP_PrivateMessage_tag2el_1,

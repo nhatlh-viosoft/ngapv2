@@ -21,7 +21,7 @@ extern "C" {
 
 /* SecondaryRATDataUsageReport */
 typedef struct SecondaryRATDataUsageReport {
-	ProtocolIE_Container_127P79_t	 protocolIEs;
+	ProtocolIE_Container_127P77_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct SecondaryRATDataUsageReport {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_SecondaryRATDataUsageReport;
+extern asn_SEQUENCE_specifics_t asn_SPC_SecondaryRATDataUsageReport_specs_1;
+extern asn_TYPE_member_t asn_MBR_SecondaryRATDataUsageReport_1[1];
 
 #ifdef __cplusplus
 }

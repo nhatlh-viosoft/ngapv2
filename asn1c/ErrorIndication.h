@@ -21,7 +21,7 @@ extern "C" {
 
 /* ErrorIndication */
 typedef struct ErrorIndication {
-	ProtocolIE_Container_127P53_t	 protocolIEs;
+	ProtocolIE_Container_127P51_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct ErrorIndication {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_ErrorIndication;
+extern asn_SEQUENCE_specifics_t asn_SPC_ErrorIndication_specs_1;
+extern asn_TYPE_member_t asn_MBR_ErrorIndication_1[1];
 
 #ifdef __cplusplus
 }

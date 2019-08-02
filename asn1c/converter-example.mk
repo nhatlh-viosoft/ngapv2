@@ -29,5 +29,5 @@ clean:
 regen: regenerate-from-asn1-source
 
 regenerate-from-asn1-source:
-	asn1c -pdu=all -fcompound-names -findirect-choice -fno-include-deps ../NGAP-CommonDataTypes.asn ../NGAP-Constants.asn ../NGAP-Containers.asn ../NGAP-IEs.asn ../NGAP-PDU-Contents.asn ../NGAP-PDU-Descriptions.asn
+	asn1c -pdu=all -fcompound-names -findirect-choice -fno-include-deps ../NGAP-PDU-Descriptions.asn ../NGAP-PDU-Contents.asn ../NGAP-IEs.asn ../NGAP-CommonDataTypes.asn ../NGAP-Constants.asn ../NGAP-Containers.asn
 

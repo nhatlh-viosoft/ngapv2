@@ -32,9 +32,6 @@ typedef struct PDUSessionResourceReleasedListNot {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceReleasedListNot;
-extern asn_SET_OF_specifics_t asn_SPC_PDUSessionResourceReleasedListNot_specs_1;
-extern asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedListNot_1[1];
-extern asn_per_constraints_t asn_PER_type_PDUSessionResourceReleasedListNot_constr_1;
 
 #ifdef __cplusplus
 }

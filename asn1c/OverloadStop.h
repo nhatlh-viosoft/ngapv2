@@ -21,7 +21,7 @@ extern "C" {
 
 /* OverloadStop */
 typedef struct OverloadStop {
-	ProtocolIE_Container_127P55_t	 protocolIEs;
+	ProtocolIE_Container_127P53_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct OverloadStop {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_OverloadStop;
+extern asn_SEQUENCE_specifics_t asn_SPC_OverloadStop_specs_1;
+extern asn_TYPE_member_t asn_MBR_OverloadStop_1[1];
 
 #ifdef __cplusplus
 }

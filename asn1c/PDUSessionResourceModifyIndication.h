@@ -21,7 +21,7 @@ extern "C" {
 
 /* PDUSessionResourceModifyIndication */
 typedef struct PDUSessionResourceModifyIndication {
-	ProtocolIE_Container_127P9_t	 protocolIEs;
+	ProtocolIE_Container_127P7_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct PDUSessionResourceModifyIndication {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceModifyIndication;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyIndication_specs_1;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndication_1[1];
 
 #ifdef __cplusplus
 }

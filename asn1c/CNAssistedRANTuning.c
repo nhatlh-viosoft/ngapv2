@@ -9,7 +9,7 @@
 
 #include "ExpectedUEBehaviour.h"
 #include "ProtocolExtensionContainer.h"
-asn_TYPE_member_t asn_MBR_CNAssistedRANTuning_1[] = {
+static asn_TYPE_member_t asn_MBR_CNAssistedRANTuning_1[] = {
 	{ ATF_POINTER, 2, offsetof(struct CNAssistedRANTuning, expectedUEBehaviour),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
@@ -37,7 +37,7 @@ static const asn_TYPE_tag2member_t asn_MAP_CNAssistedRANTuning_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* expectedUEBehaviour */
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* iE-Extensions */
 };
-asn_SEQUENCE_specifics_t asn_SPC_CNAssistedRANTuning_specs_1 = {
+static asn_SEQUENCE_specifics_t asn_SPC_CNAssistedRANTuning_specs_1 = {
 	sizeof(struct CNAssistedRANTuning),
 	offsetof(struct CNAssistedRANTuning, _asn_ctx),
 	asn_MAP_CNAssistedRANTuning_tag2el_1,

@@ -21,7 +21,7 @@ extern "C" {
 
 /* WriteReplaceWarningResponse */
 typedef struct WriteReplaceWarningResponse {
-	ProtocolIE_Container_127P59_t	 protocolIEs;
+	ProtocolIE_Container_127P57_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct WriteReplaceWarningResponse {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_WriteReplaceWarningResponse;
+extern asn_SEQUENCE_specifics_t asn_SPC_WriteReplaceWarningResponse_specs_1;
+extern asn_TYPE_member_t asn_MBR_WriteReplaceWarningResponse_1[1];
 
 #ifdef __cplusplus
 }

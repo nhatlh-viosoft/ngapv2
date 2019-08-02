@@ -21,7 +21,7 @@ extern "C" {
 
 /* NGSetupResponse */
 typedef struct NGSetupResponse {
-	ProtocolIE_Container_127P42_t	 protocolIEs;
+	ProtocolIE_Container_127P40_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct NGSetupResponse {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_NGSetupResponse;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGSetupResponse_specs_1;
+extern asn_TYPE_member_t asn_MBR_NGSetupResponse_1[1];
 
 #ifdef __cplusplus
 }

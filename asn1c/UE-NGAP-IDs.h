@@ -46,9 +46,6 @@ typedef struct UE_NGAP_IDs {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UE_NGAP_IDs;
-extern asn_CHOICE_specifics_t asn_SPC_UE_NGAP_IDs_specs_1;
-extern asn_TYPE_member_t asn_MBR_UE_NGAP_IDs_1[3];
-extern asn_per_constraints_t asn_PER_type_UE_NGAP_IDs_constr_1;
 
 #ifdef __cplusplus
 }

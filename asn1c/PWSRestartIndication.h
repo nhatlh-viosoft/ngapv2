@@ -21,7 +21,7 @@ extern "C" {
 
 /* PWSRestartIndication */
 typedef struct PWSRestartIndication {
-	ProtocolIE_Container_127P62_t	 protocolIEs;
+	ProtocolIE_Container_127P60_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct PWSRestartIndication {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PWSRestartIndication;
+extern asn_SEQUENCE_specifics_t asn_SPC_PWSRestartIndication_specs_1;
+extern asn_TYPE_member_t asn_MBR_PWSRestartIndication_1[1];
 
 #ifdef __cplusplus
 }

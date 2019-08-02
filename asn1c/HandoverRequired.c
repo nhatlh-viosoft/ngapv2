@@ -7,11 +7,11 @@
 
 #include "HandoverRequired.h"
 
-static asn_TYPE_member_t asn_MBR_HandoverRequired_1[] = {
+asn_TYPE_member_t asn_MBR_HandoverRequired_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverRequired, protocolIEs),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_Container_127P21,
+		&asn_DEF_ProtocolIE_Container_127P19,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -24,7 +24,7 @@ static const ber_tlv_tag_t asn_DEF_HandoverRequired_tags_1[] = {
 static const asn_TYPE_tag2member_t asn_MAP_HandoverRequired_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 } /* protocolIEs */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_HandoverRequired_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_HandoverRequired_specs_1 = {
 	sizeof(struct HandoverRequired),
 	offsetof(struct HandoverRequired, _asn_ctx),
 	asn_MAP_HandoverRequired_tag2el_1,

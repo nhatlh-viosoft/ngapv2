@@ -30,9 +30,7 @@ typedef enum ConcurrentWarningMessageInd {
 typedef long	 ConcurrentWarningMessageInd_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_ConcurrentWarningMessageInd_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_ConcurrentWarningMessageInd;
-extern const asn_INTEGER_specifics_t asn_SPC_ConcurrentWarningMessageInd_specs_1;
 asn_struct_free_f ConcurrentWarningMessageInd_free;
 asn_struct_print_f ConcurrentWarningMessageInd_print;
 asn_constr_check_f ConcurrentWarningMessageInd_constraint;

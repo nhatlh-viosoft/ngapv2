@@ -21,7 +21,7 @@ extern "C" {
 
 /* AMFStatusIndication */
 typedef struct AMFStatusIndication {
-	ProtocolIE_Container_127P50_t	 protocolIEs;
+	ProtocolIE_Container_127P48_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct AMFStatusIndication {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_AMFStatusIndication;
+extern asn_SEQUENCE_specifics_t asn_SPC_AMFStatusIndication_specs_1;
+extern asn_TYPE_member_t asn_MBR_AMFStatusIndication_1[1];
 
 #ifdef __cplusplus
 }

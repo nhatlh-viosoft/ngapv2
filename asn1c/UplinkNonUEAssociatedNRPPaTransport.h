@@ -21,7 +21,7 @@ extern "C" {
 
 /* UplinkNonUEAssociatedNRPPaTransport */
 typedef struct UplinkNonUEAssociatedNRPPaTransport {
-	ProtocolIE_Container_127P67_t	 protocolIEs;
+	ProtocolIE_Container_127P65_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UplinkNonUEAssociatedNRPPaTransport {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UplinkNonUEAssociatedNRPPaTransport;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkNonUEAssociatedNRPPaTransport_specs_1;
+extern asn_TYPE_member_t asn_MBR_UplinkNonUEAssociatedNRPPaTransport_1[1];
 
 #ifdef __cplusplus
 }

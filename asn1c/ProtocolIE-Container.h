@@ -20,8 +20,6 @@ extern "C" {
 #endif
 
 /* Forward declarations */
-struct PDUSessionResourceModifyRequestTransferIEs;
-struct PDUSessionResourceSetupRequestTransferIEs;
 struct PDUSessionResourceSetupRequestIEs;
 struct PDUSessionResourceSetupResponseIEs;
 struct PDUSessionResourceReleaseCommandIEs;
@@ -100,484 +98,486 @@ struct UERadioCapabilityInfoIndicationIEs;
 struct UERadioCapabilityCheckRequestIEs;
 struct UERadioCapabilityCheckResponseIEs;
 struct SecondaryRATDataUsageReportIEs;
+struct PDUSessionResourceModifyRequestTransferIEs;
+struct PDUSessionResourceSetupRequestTransferIEs;
 
 /* ProtocolIE-Container */
 typedef struct ProtocolIE_Container_127P0 {
-	A_SEQUENCE_OF(struct PDUSessionResourceModifyRequestTransferIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceSetupRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P0_t;
 typedef struct ProtocolIE_Container_127P1 {
-	A_SEQUENCE_OF(struct PDUSessionResourceSetupRequestTransferIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceSetupResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P1_t;
 typedef struct ProtocolIE_Container_127P2 {
-	A_SEQUENCE_OF(struct PDUSessionResourceSetupRequestIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceReleaseCommandIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P2_t;
 typedef struct ProtocolIE_Container_127P3 {
-	A_SEQUENCE_OF(struct PDUSessionResourceSetupResponseIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceReleaseResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P3_t;
 typedef struct ProtocolIE_Container_127P4 {
-	A_SEQUENCE_OF(struct PDUSessionResourceReleaseCommandIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceModifyRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P4_t;
 typedef struct ProtocolIE_Container_127P5 {
-	A_SEQUENCE_OF(struct PDUSessionResourceReleaseResponseIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceModifyResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P5_t;
 typedef struct ProtocolIE_Container_127P6 {
-	A_SEQUENCE_OF(struct PDUSessionResourceModifyRequestIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceNotifyIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P6_t;
 typedef struct ProtocolIE_Container_127P7 {
-	A_SEQUENCE_OF(struct PDUSessionResourceModifyResponseIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceModifyIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P7_t;
 typedef struct ProtocolIE_Container_127P8 {
-	A_SEQUENCE_OF(struct PDUSessionResourceNotifyIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceModifyConfirmIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P8_t;
 typedef struct ProtocolIE_Container_127P9 {
-	A_SEQUENCE_OF(struct PDUSessionResourceModifyIndicationIEs) list;
+	A_SEQUENCE_OF(struct InitialContextSetupRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P9_t;
 typedef struct ProtocolIE_Container_127P10 {
-	A_SEQUENCE_OF(struct PDUSessionResourceModifyConfirmIEs) list;
+	A_SEQUENCE_OF(struct InitialContextSetupResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P10_t;
 typedef struct ProtocolIE_Container_127P11 {
-	A_SEQUENCE_OF(struct InitialContextSetupRequestIEs) list;
+	A_SEQUENCE_OF(struct InitialContextSetupFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P11_t;
 typedef struct ProtocolIE_Container_127P12 {
-	A_SEQUENCE_OF(struct InitialContextSetupResponseIEs) list;
+	A_SEQUENCE_OF(struct UEContextReleaseRequest_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P12_t;
 typedef struct ProtocolIE_Container_127P13 {
-	A_SEQUENCE_OF(struct InitialContextSetupFailureIEs) list;
+	A_SEQUENCE_OF(struct UEContextReleaseCommand_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P13_t;
 typedef struct ProtocolIE_Container_127P14 {
-	A_SEQUENCE_OF(struct UEContextReleaseRequest_IEs) list;
+	A_SEQUENCE_OF(struct UEContextReleaseComplete_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P14_t;
 typedef struct ProtocolIE_Container_127P15 {
-	A_SEQUENCE_OF(struct UEContextReleaseCommand_IEs) list;
+	A_SEQUENCE_OF(struct UEContextModificationRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P15_t;
 typedef struct ProtocolIE_Container_127P16 {
-	A_SEQUENCE_OF(struct UEContextReleaseComplete_IEs) list;
+	A_SEQUENCE_OF(struct UEContextModificationResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P16_t;
 typedef struct ProtocolIE_Container_127P17 {
-	A_SEQUENCE_OF(struct UEContextModificationRequestIEs) list;
+	A_SEQUENCE_OF(struct UEContextModificationFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P17_t;
 typedef struct ProtocolIE_Container_127P18 {
-	A_SEQUENCE_OF(struct UEContextModificationResponseIEs) list;
+	A_SEQUENCE_OF(struct RRCInactiveTransitionReportIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P18_t;
 typedef struct ProtocolIE_Container_127P19 {
-	A_SEQUENCE_OF(struct UEContextModificationFailureIEs) list;
+	A_SEQUENCE_OF(struct HandoverRequiredIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P19_t;
 typedef struct ProtocolIE_Container_127P20 {
-	A_SEQUENCE_OF(struct RRCInactiveTransitionReportIEs) list;
+	A_SEQUENCE_OF(struct HandoverCommandIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P20_t;
 typedef struct ProtocolIE_Container_127P21 {
-	A_SEQUENCE_OF(struct HandoverRequiredIEs) list;
+	A_SEQUENCE_OF(struct HandoverPreparationFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P21_t;
 typedef struct ProtocolIE_Container_127P22 {
-	A_SEQUENCE_OF(struct HandoverCommandIEs) list;
+	A_SEQUENCE_OF(struct HandoverRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P22_t;
 typedef struct ProtocolIE_Container_127P23 {
-	A_SEQUENCE_OF(struct HandoverPreparationFailureIEs) list;
+	A_SEQUENCE_OF(struct HandoverRequestAcknowledgeIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P23_t;
 typedef struct ProtocolIE_Container_127P24 {
-	A_SEQUENCE_OF(struct HandoverRequestIEs) list;
+	A_SEQUENCE_OF(struct HandoverFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P24_t;
 typedef struct ProtocolIE_Container_127P25 {
-	A_SEQUENCE_OF(struct HandoverRequestAcknowledgeIEs) list;
+	A_SEQUENCE_OF(struct HandoverNotifyIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P25_t;
 typedef struct ProtocolIE_Container_127P26 {
-	A_SEQUENCE_OF(struct HandoverFailureIEs) list;
+	A_SEQUENCE_OF(struct PathSwitchRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P26_t;
 typedef struct ProtocolIE_Container_127P27 {
-	A_SEQUENCE_OF(struct HandoverNotifyIEs) list;
+	A_SEQUENCE_OF(struct PathSwitchRequestAcknowledgeIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P27_t;
 typedef struct ProtocolIE_Container_127P28 {
-	A_SEQUENCE_OF(struct PathSwitchRequestIEs) list;
+	A_SEQUENCE_OF(struct PathSwitchRequestFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P28_t;
 typedef struct ProtocolIE_Container_127P29 {
-	A_SEQUENCE_OF(struct PathSwitchRequestAcknowledgeIEs) list;
+	A_SEQUENCE_OF(struct HandoverCancelIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P29_t;
 typedef struct ProtocolIE_Container_127P30 {
-	A_SEQUENCE_OF(struct PathSwitchRequestFailureIEs) list;
+	A_SEQUENCE_OF(struct HandoverCancelAcknowledgeIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P30_t;
 typedef struct ProtocolIE_Container_127P31 {
-	A_SEQUENCE_OF(struct HandoverCancelIEs) list;
+	A_SEQUENCE_OF(struct UplinkRANStatusTransferIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P31_t;
 typedef struct ProtocolIE_Container_127P32 {
-	A_SEQUENCE_OF(struct HandoverCancelAcknowledgeIEs) list;
+	A_SEQUENCE_OF(struct DownlinkRANStatusTransferIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P32_t;
 typedef struct ProtocolIE_Container_127P33 {
-	A_SEQUENCE_OF(struct UplinkRANStatusTransferIEs) list;
+	A_SEQUENCE_OF(struct PagingIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P33_t;
 typedef struct ProtocolIE_Container_127P34 {
-	A_SEQUENCE_OF(struct DownlinkRANStatusTransferIEs) list;
+	A_SEQUENCE_OF(struct InitialUEMessage_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P34_t;
 typedef struct ProtocolIE_Container_127P35 {
-	A_SEQUENCE_OF(struct PagingIEs) list;
+	A_SEQUENCE_OF(struct DownlinkNASTransport_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P35_t;
 typedef struct ProtocolIE_Container_127P36 {
-	A_SEQUENCE_OF(struct InitialUEMessage_IEs) list;
+	A_SEQUENCE_OF(struct UplinkNASTransport_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P36_t;
 typedef struct ProtocolIE_Container_127P37 {
-	A_SEQUENCE_OF(struct DownlinkNASTransport_IEs) list;
+	A_SEQUENCE_OF(struct NASNonDeliveryIndication_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P37_t;
 typedef struct ProtocolIE_Container_127P38 {
-	A_SEQUENCE_OF(struct UplinkNASTransport_IEs) list;
+	A_SEQUENCE_OF(struct RerouteNASRequest_IEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P38_t;
 typedef struct ProtocolIE_Container_127P39 {
-	A_SEQUENCE_OF(struct NASNonDeliveryIndication_IEs) list;
+	A_SEQUENCE_OF(struct NGSetupRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P39_t;
 typedef struct ProtocolIE_Container_127P40 {
-	A_SEQUENCE_OF(struct RerouteNASRequest_IEs) list;
+	A_SEQUENCE_OF(struct NGSetupResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P40_t;
 typedef struct ProtocolIE_Container_127P41 {
-	A_SEQUENCE_OF(struct NGSetupRequestIEs) list;
+	A_SEQUENCE_OF(struct NGSetupFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P41_t;
 typedef struct ProtocolIE_Container_127P42 {
-	A_SEQUENCE_OF(struct NGSetupResponseIEs) list;
+	A_SEQUENCE_OF(struct RANConfigurationUpdateIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P42_t;
 typedef struct ProtocolIE_Container_127P43 {
-	A_SEQUENCE_OF(struct NGSetupFailureIEs) list;
+	A_SEQUENCE_OF(struct RANConfigurationUpdateAcknowledgeIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P43_t;
 typedef struct ProtocolIE_Container_127P44 {
-	A_SEQUENCE_OF(struct RANConfigurationUpdateIEs) list;
+	A_SEQUENCE_OF(struct RANConfigurationUpdateFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P44_t;
 typedef struct ProtocolIE_Container_127P45 {
-	A_SEQUENCE_OF(struct RANConfigurationUpdateAcknowledgeIEs) list;
+	A_SEQUENCE_OF(struct AMFConfigurationUpdateIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P45_t;
 typedef struct ProtocolIE_Container_127P46 {
-	A_SEQUENCE_OF(struct RANConfigurationUpdateFailureIEs) list;
+	A_SEQUENCE_OF(struct AMFConfigurationUpdateAcknowledgeIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P46_t;
 typedef struct ProtocolIE_Container_127P47 {
-	A_SEQUENCE_OF(struct AMFConfigurationUpdateIEs) list;
+	A_SEQUENCE_OF(struct AMFConfigurationUpdateFailureIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P47_t;
 typedef struct ProtocolIE_Container_127P48 {
-	A_SEQUENCE_OF(struct AMFConfigurationUpdateAcknowledgeIEs) list;
+	A_SEQUENCE_OF(struct AMFStatusIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P48_t;
 typedef struct ProtocolIE_Container_127P49 {
-	A_SEQUENCE_OF(struct AMFConfigurationUpdateFailureIEs) list;
+	A_SEQUENCE_OF(struct NGResetIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P49_t;
 typedef struct ProtocolIE_Container_127P50 {
-	A_SEQUENCE_OF(struct AMFStatusIndicationIEs) list;
+	A_SEQUENCE_OF(struct NGResetAcknowledgeIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P50_t;
 typedef struct ProtocolIE_Container_127P51 {
-	A_SEQUENCE_OF(struct NGResetIEs) list;
+	A_SEQUENCE_OF(struct ErrorIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P51_t;
 typedef struct ProtocolIE_Container_127P52 {
-	A_SEQUENCE_OF(struct NGResetAcknowledgeIEs) list;
+	A_SEQUENCE_OF(struct OverloadStartIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P52_t;
 typedef struct ProtocolIE_Container_127P53 {
-	A_SEQUENCE_OF(struct ErrorIndicationIEs) list;
+	A_SEQUENCE_OF(struct OverloadStopIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P53_t;
 typedef struct ProtocolIE_Container_127P54 {
-	A_SEQUENCE_OF(struct OverloadStartIEs) list;
+	A_SEQUENCE_OF(struct UplinkRANConfigurationTransferIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P54_t;
 typedef struct ProtocolIE_Container_127P55 {
-	A_SEQUENCE_OF(struct OverloadStopIEs) list;
+	A_SEQUENCE_OF(struct DownlinkRANConfigurationTransferIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P55_t;
 typedef struct ProtocolIE_Container_127P56 {
-	A_SEQUENCE_OF(struct UplinkRANConfigurationTransferIEs) list;
+	A_SEQUENCE_OF(struct WriteReplaceWarningRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P56_t;
 typedef struct ProtocolIE_Container_127P57 {
-	A_SEQUENCE_OF(struct DownlinkRANConfigurationTransferIEs) list;
+	A_SEQUENCE_OF(struct WriteReplaceWarningResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P57_t;
 typedef struct ProtocolIE_Container_127P58 {
-	A_SEQUENCE_OF(struct WriteReplaceWarningRequestIEs) list;
+	A_SEQUENCE_OF(struct PWSCancelRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P58_t;
 typedef struct ProtocolIE_Container_127P59 {
-	A_SEQUENCE_OF(struct WriteReplaceWarningResponseIEs) list;
+	A_SEQUENCE_OF(struct PWSCancelResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P59_t;
 typedef struct ProtocolIE_Container_127P60 {
-	A_SEQUENCE_OF(struct PWSCancelRequestIEs) list;
+	A_SEQUENCE_OF(struct PWSRestartIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P60_t;
 typedef struct ProtocolIE_Container_127P61 {
-	A_SEQUENCE_OF(struct PWSCancelResponseIEs) list;
+	A_SEQUENCE_OF(struct PWSFailureIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P61_t;
 typedef struct ProtocolIE_Container_127P62 {
-	A_SEQUENCE_OF(struct PWSRestartIndicationIEs) list;
+	A_SEQUENCE_OF(struct DownlinkUEAssociatedNRPPaTransportIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P62_t;
 typedef struct ProtocolIE_Container_127P63 {
-	A_SEQUENCE_OF(struct PWSFailureIndicationIEs) list;
+	A_SEQUENCE_OF(struct UplinkUEAssociatedNRPPaTransportIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P63_t;
 typedef struct ProtocolIE_Container_127P64 {
-	A_SEQUENCE_OF(struct DownlinkUEAssociatedNRPPaTransportIEs) list;
+	A_SEQUENCE_OF(struct DownlinkNonUEAssociatedNRPPaTransportIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P64_t;
 typedef struct ProtocolIE_Container_127P65 {
-	A_SEQUENCE_OF(struct UplinkUEAssociatedNRPPaTransportIEs) list;
+	A_SEQUENCE_OF(struct UplinkNonUEAssociatedNRPPaTransportIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P65_t;
 typedef struct ProtocolIE_Container_127P66 {
-	A_SEQUENCE_OF(struct DownlinkNonUEAssociatedNRPPaTransportIEs) list;
+	A_SEQUENCE_OF(struct TraceStartIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P66_t;
 typedef struct ProtocolIE_Container_127P67 {
-	A_SEQUENCE_OF(struct UplinkNonUEAssociatedNRPPaTransportIEs) list;
+	A_SEQUENCE_OF(struct TraceFailureIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P67_t;
 typedef struct ProtocolIE_Container_127P68 {
-	A_SEQUENCE_OF(struct TraceStartIEs) list;
+	A_SEQUENCE_OF(struct DeactivateTraceIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P68_t;
 typedef struct ProtocolIE_Container_127P69 {
-	A_SEQUENCE_OF(struct TraceFailureIndicationIEs) list;
+	A_SEQUENCE_OF(struct CellTrafficTraceIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P69_t;
 typedef struct ProtocolIE_Container_127P70 {
-	A_SEQUENCE_OF(struct DeactivateTraceIEs) list;
+	A_SEQUENCE_OF(struct LocationReportingControlIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P70_t;
 typedef struct ProtocolIE_Container_127P71 {
-	A_SEQUENCE_OF(struct CellTrafficTraceIEs) list;
+	A_SEQUENCE_OF(struct LocationReportingFailureIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P71_t;
 typedef struct ProtocolIE_Container_127P72 {
-	A_SEQUENCE_OF(struct LocationReportingControlIEs) list;
+	A_SEQUENCE_OF(struct LocationReportIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P72_t;
 typedef struct ProtocolIE_Container_127P73 {
-	A_SEQUENCE_OF(struct LocationReportingFailureIndicationIEs) list;
+	A_SEQUENCE_OF(struct UETNLABindingReleaseRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P73_t;
 typedef struct ProtocolIE_Container_127P74 {
-	A_SEQUENCE_OF(struct LocationReportIEs) list;
+	A_SEQUENCE_OF(struct UERadioCapabilityInfoIndicationIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P74_t;
 typedef struct ProtocolIE_Container_127P75 {
-	A_SEQUENCE_OF(struct UETNLABindingReleaseRequestIEs) list;
+	A_SEQUENCE_OF(struct UERadioCapabilityCheckRequestIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P75_t;
 typedef struct ProtocolIE_Container_127P76 {
-	A_SEQUENCE_OF(struct UERadioCapabilityInfoIndicationIEs) list;
+	A_SEQUENCE_OF(struct UERadioCapabilityCheckResponseIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P76_t;
 typedef struct ProtocolIE_Container_127P77 {
-	A_SEQUENCE_OF(struct UERadioCapabilityCheckRequestIEs) list;
+	A_SEQUENCE_OF(struct SecondaryRATDataUsageReportIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P77_t;
 typedef struct ProtocolIE_Container_127P78 {
-	A_SEQUENCE_OF(struct UERadioCapabilityCheckResponseIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceModifyRequestTransferIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
 } ProtocolIE_Container_127P78_t;
 typedef struct ProtocolIE_Container_127P79 {
-	A_SEQUENCE_OF(struct SecondaryRATDataUsageReportIEs) list;
+	A_SEQUENCE_OF(struct PDUSessionResourceSetupRequestTransferIEs) list;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;

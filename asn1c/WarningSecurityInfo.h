@@ -22,7 +22,6 @@ extern "C" {
 typedef OCTET_STRING_t	 WarningSecurityInfo_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_WarningSecurityInfo_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_WarningSecurityInfo;
 asn_struct_free_f WarningSecurityInfo_free;
 asn_struct_print_f WarningSecurityInfo_print;

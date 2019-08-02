@@ -11,12 +11,12 @@
 static asn_oer_constraints_t asn_OER_type_PLMNSupportList_constr_1 CC_NOTUSED = {
 	{ 0, 0 },
 	-1	/* (SIZE(1..12)) */};
-asn_per_constraints_t asn_PER_type_PLMNSupportList_constr_1 CC_NOTUSED = {
+static asn_per_constraints_t asn_PER_type_PLMNSupportList_constr_1 CC_NOTUSED = {
 	{ APC_UNCONSTRAINED,	-1, -1,  0,  0 },
 	{ APC_CONSTRAINED,	 4,  4,  1,  12 }	/* (SIZE(1..12)) */,
 	0, 0	/* No PER value map */
 };
-asn_TYPE_member_t asn_MBR_PLMNSupportList_1[] = {
+static asn_TYPE_member_t asn_MBR_PLMNSupportList_1[] = {
 	{ ATF_POINTER, 0, 0,
 		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
@@ -30,7 +30,7 @@ asn_TYPE_member_t asn_MBR_PLMNSupportList_1[] = {
 static const ber_tlv_tag_t asn_DEF_PLMNSupportList_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
-asn_SET_OF_specifics_t asn_SPC_PLMNSupportList_specs_1 = {
+static asn_SET_OF_specifics_t asn_SPC_PLMNSupportList_specs_1 = {
 	sizeof(struct PLMNSupportList),
 	offsetof(struct PLMNSupportList, _asn_ctx),
 	0,	/* XER encoding is XMLDelimitedItemList */

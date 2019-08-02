@@ -21,7 +21,7 @@ extern "C" {
 
 /* NASNonDeliveryIndication */
 typedef struct NASNonDeliveryIndication {
-	ProtocolIE_Container_127P39_t	 protocolIEs;
+	ProtocolIE_Container_127P37_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct NASNonDeliveryIndication {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_NASNonDeliveryIndication;
+extern asn_SEQUENCE_specifics_t asn_SPC_NASNonDeliveryIndication_specs_1;
+extern asn_TYPE_member_t asn_MBR_NASNonDeliveryIndication_1[1];
 
 #ifdef __cplusplus
 }

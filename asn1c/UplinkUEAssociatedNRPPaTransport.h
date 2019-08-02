@@ -21,7 +21,7 @@ extern "C" {
 
 /* UplinkUEAssociatedNRPPaTransport */
 typedef struct UplinkUEAssociatedNRPPaTransport {
-	ProtocolIE_Container_127P65_t	 protocolIEs;
+	ProtocolIE_Container_127P63_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UplinkUEAssociatedNRPPaTransport {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UplinkUEAssociatedNRPPaTransport;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkUEAssociatedNRPPaTransport_specs_1;
+extern asn_TYPE_member_t asn_MBR_UplinkUEAssociatedNRPPaTransport_1[1];
 
 #ifdef __cplusplus
 }

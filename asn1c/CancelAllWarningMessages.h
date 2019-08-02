@@ -30,9 +30,7 @@ typedef enum CancelAllWarningMessages {
 typedef long	 CancelAllWarningMessages_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_CancelAllWarningMessages_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_CancelAllWarningMessages;
-extern const asn_INTEGER_specifics_t asn_SPC_CancelAllWarningMessages_specs_1;
 asn_struct_free_f CancelAllWarningMessages_free;
 asn_struct_print_f CancelAllWarningMessages_print;
 asn_constr_check_f CancelAllWarningMessages_constraint;

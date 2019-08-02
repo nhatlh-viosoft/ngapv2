@@ -32,9 +32,6 @@ typedef struct PDUSessionResourceSetupListSURes {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceSetupListSURes;
-extern asn_SET_OF_specifics_t asn_SPC_PDUSessionResourceSetupListSURes_specs_1;
-extern asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupListSURes_1[1];
-extern asn_per_constraints_t asn_PER_type_PDUSessionResourceSetupListSURes_constr_1;
 
 #ifdef __cplusplus
 }

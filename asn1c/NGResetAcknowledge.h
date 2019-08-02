@@ -21,7 +21,7 @@ extern "C" {
 
 /* NGResetAcknowledge */
 typedef struct NGResetAcknowledge {
-	ProtocolIE_Container_127P52_t	 protocolIEs;
+	ProtocolIE_Container_127P50_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct NGResetAcknowledge {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_NGResetAcknowledge;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGResetAcknowledge_specs_1;
+extern asn_TYPE_member_t asn_MBR_NGResetAcknowledge_1[1];
 
 #ifdef __cplusplus
 }

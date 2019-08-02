@@ -21,7 +21,7 @@ extern "C" {
 
 /* DownlinkUEAssociatedNRPPaTransport */
 typedef struct DownlinkUEAssociatedNRPPaTransport {
-	ProtocolIE_Container_127P64_t	 protocolIEs;
+	ProtocolIE_Container_127P62_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct DownlinkUEAssociatedNRPPaTransport {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_DownlinkUEAssociatedNRPPaTransport;
+extern asn_SEQUENCE_specifics_t asn_SPC_DownlinkUEAssociatedNRPPaTransport_specs_1;
+extern asn_TYPE_member_t asn_MBR_DownlinkUEAssociatedNRPPaTransport_1[1];
 
 #ifdef __cplusplus
 }

@@ -21,7 +21,7 @@ extern "C" {
 
 /* UEContextModificationResponse */
 typedef struct UEContextModificationResponse {
-	ProtocolIE_Container_127P18_t	 protocolIEs;
+	ProtocolIE_Container_127P16_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UEContextModificationResponse {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UEContextModificationResponse;
+extern asn_SEQUENCE_specifics_t asn_SPC_UEContextModificationResponse_specs_1;
+extern asn_TYPE_member_t asn_MBR_UEContextModificationResponse_1[1];
 
 #ifdef __cplusplus
 }

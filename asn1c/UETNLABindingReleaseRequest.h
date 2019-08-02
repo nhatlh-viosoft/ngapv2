@@ -21,7 +21,7 @@ extern "C" {
 
 /* UETNLABindingReleaseRequest */
 typedef struct UETNLABindingReleaseRequest {
-	ProtocolIE_Container_127P75_t	 protocolIEs;
+	ProtocolIE_Container_127P73_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UETNLABindingReleaseRequest {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UETNLABindingReleaseRequest;
+extern asn_SEQUENCE_specifics_t asn_SPC_UETNLABindingReleaseRequest_specs_1;
+extern asn_TYPE_member_t asn_MBR_UETNLABindingReleaseRequest_1[1];
 
 #ifdef __cplusplus
 }

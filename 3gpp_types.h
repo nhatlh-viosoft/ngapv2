@@ -6,17 +6,7 @@
 extern "C" {
 #endif /* __cplusplus */
 
-typedef  char                   c_int8_t;
-typedef  unsigned char          c_uint8_t;
-
-typedef  short                  c_int16_t;
-typedef  unsigned short         c_uint16_t;
-
-typedef  int                    c_int32_t;
-typedef  unsigned int           c_uint32_t;
-
-typedef  long                   c_int64_t;
-typedef  unsigned long          c_uint64_t;    
+#include "core.h"
 
 #define S1AP_SCTP_PORT              36412
 #define NGAP_SCTP_PORT              38412
@@ -83,14 +73,6 @@ typedef  unsigned long          c_uint64_t;
 #define TIME_TO_BCD(x) \
     (((((x) % 10) << 4) & 0xf0) | (((x) / 10) & 0x0f))
 
-
-#define ED2(x1, x2) x1 x2
-#define ED3(x1, x2, x3) x1 x2 x3
-#define ED4(x1, x2, x3, x4) x1 x2 x3 x4
-#define ED5(x1, x2, x3, x4, x5) x1 x2 x3 x4 x5
-#define ED6(x1, x2, x3, x4, x5, x6) x1 x2 x3 x4 x5 x6
-#define ED7(x1, x2, x3, x4, x5, x6, x7) x1 x2 x3 x4 x5 x6 x7
-#define ED8(x1, x2, x3, x4, x5, x6, x7, x8) x1 x2 x3 x4 x5 x6 x7 x8    
 
 /**********************************
  * PLMN_ID Structure             */

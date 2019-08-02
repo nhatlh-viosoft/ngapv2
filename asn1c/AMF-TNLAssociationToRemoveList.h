@@ -32,9 +32,6 @@ typedef struct AMF_TNLAssociationToRemoveList {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_AMF_TNLAssociationToRemoveList;
-extern asn_SET_OF_specifics_t asn_SPC_AMF_TNLAssociationToRemoveList_specs_1;
-extern asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToRemoveList_1[1];
-extern asn_per_constraints_t asn_PER_type_AMF_TNLAssociationToRemoveList_constr_1;
 
 #ifdef __cplusplus
 }

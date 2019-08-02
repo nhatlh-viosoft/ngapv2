@@ -21,7 +21,7 @@ extern "C" {
 
 /* UplinkRANConfigurationTransfer */
 typedef struct UplinkRANConfigurationTransfer {
-	ProtocolIE_Container_127P56_t	 protocolIEs;
+	ProtocolIE_Container_127P54_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UplinkRANConfigurationTransfer {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UplinkRANConfigurationTransfer;
+extern asn_SEQUENCE_specifics_t asn_SPC_UplinkRANConfigurationTransfer_specs_1;
+extern asn_TYPE_member_t asn_MBR_UplinkRANConfigurationTransfer_1[1];
 
 #ifdef __cplusplus
 }

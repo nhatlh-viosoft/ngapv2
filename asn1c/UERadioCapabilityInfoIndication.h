@@ -21,7 +21,7 @@ extern "C" {
 
 /* UERadioCapabilityInfoIndication */
 typedef struct UERadioCapabilityInfoIndication {
-	ProtocolIE_Container_127P76_t	 protocolIEs;
+	ProtocolIE_Container_127P74_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct UERadioCapabilityInfoIndication {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_UERadioCapabilityInfoIndication;
+extern asn_SEQUENCE_specifics_t asn_SPC_UERadioCapabilityInfoIndication_specs_1;
+extern asn_TYPE_member_t asn_MBR_UERadioCapabilityInfoIndication_1[1];
 
 #ifdef __cplusplus
 }

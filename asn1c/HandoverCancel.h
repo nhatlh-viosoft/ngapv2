@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverCancel */
 typedef struct HandoverCancel {
-	ProtocolIE_Container_127P31_t	 protocolIEs;
+	ProtocolIE_Container_127P29_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct HandoverCancel {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_HandoverCancel;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverCancel_specs_1;
+extern asn_TYPE_member_t asn_MBR_HandoverCancel_1[1];
 
 #ifdef __cplusplus
 }

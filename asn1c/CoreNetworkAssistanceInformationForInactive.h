@@ -47,8 +47,6 @@ typedef struct CoreNetworkAssistanceInformationForInactive {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_CoreNetworkAssistanceInformationForInactive;
-extern asn_SEQUENCE_specifics_t asn_SPC_CoreNetworkAssistanceInformationForInactive_specs_1;
-extern asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_1[7];
 
 #ifdef __cplusplus
 }

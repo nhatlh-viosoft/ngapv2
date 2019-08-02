@@ -1,26 +1,13 @@
-IDIR = asn1c
-CC=gcc
-CFLAGS=-I$(IDIR)
+SOURCE = ngap_test.c 3gpp_types.c asn1c/*.c tool/*.c
 
-ODIR=./
-#LDIR =../lib
-
-#LIBS=-lm
-
-_DEPS = 3gpp_types.h amf_context.h ngap_asn1c.h
-DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
-
-_OBJ = ngap_test.o 
-OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
-
-
-$(ODIR)/%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-ngap_test: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
+CC = gcc
+CFLAGS = -I asn1c -I tool
 
 .PHONY: clean
+all: ngap_test
+
+ngap_test: $(SOURCE)
+	$(CC) -Wall -g -ggdb -o ngap_test $(SOURCE) $(CFLAGS)
 
 clean:
-	rm -f $(ODIR)/*.o 
+	rm *.o

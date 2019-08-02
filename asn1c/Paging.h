@@ -21,7 +21,7 @@ extern "C" {
 
 /* Paging */
 typedef struct Paging {
-	ProtocolIE_Container_127P35_t	 protocolIEs;
+	ProtocolIE_Container_127P33_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct Paging {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_Paging;
+extern asn_SEQUENCE_specifics_t asn_SPC_Paging_specs_1;
+extern asn_TYPE_member_t asn_MBR_Paging_1[1];
 
 #ifdef __cplusplus
 }

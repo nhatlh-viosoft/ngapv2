@@ -21,7 +21,7 @@ extern "C" {
 
 /* PDUSessionResourceSetupRequest */
 typedef struct PDUSessionResourceSetupRequest {
-	ProtocolIE_Container_127P2_t	 protocolIEs;
+	ProtocolIE_Container_127P0_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct PDUSessionResourceSetupRequest {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceSetupRequest;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupRequest_specs_1;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupRequest_1[1];
 
 #ifdef __cplusplus
 }

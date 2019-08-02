@@ -34,9 +34,7 @@ typedef enum PDUSessionType {
 typedef long	 PDUSessionType_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_PDUSessionType_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionType;
-extern const asn_INTEGER_specifics_t asn_SPC_PDUSessionType_specs_1;
 asn_struct_free_f PDUSessionType_free;
 asn_struct_print_f PDUSessionType_print;
 asn_constr_check_f PDUSessionType_constraint;

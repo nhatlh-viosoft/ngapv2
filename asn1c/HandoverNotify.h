@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverNotify */
 typedef struct HandoverNotify {
-	ProtocolIE_Container_127P27_t	 protocolIEs;
+	ProtocolIE_Container_127P25_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct HandoverNotify {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_HandoverNotify;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverNotify_specs_1;
+extern asn_TYPE_member_t asn_MBR_HandoverNotify_1[1];
 
 #ifdef __cplusplus
 }

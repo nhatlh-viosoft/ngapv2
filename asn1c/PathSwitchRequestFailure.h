@@ -21,7 +21,7 @@ extern "C" {
 
 /* PathSwitchRequestFailure */
 typedef struct PathSwitchRequestFailure {
-	ProtocolIE_Container_127P30_t	 protocolIEs;
+	ProtocolIE_Container_127P28_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct PathSwitchRequestFailure {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PathSwitchRequestFailure;
+extern asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestFailure_specs_1;
+extern asn_TYPE_member_t asn_MBR_PathSwitchRequestFailure_1[1];
 
 #ifdef __cplusplus
 }

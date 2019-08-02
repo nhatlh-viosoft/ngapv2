@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverRequired */
 typedef struct HandoverRequired {
-	ProtocolIE_Container_127P21_t	 protocolIEs;
+	ProtocolIE_Container_127P19_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct HandoverRequired {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_HandoverRequired;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverRequired_specs_1;
+extern asn_TYPE_member_t asn_MBR_HandoverRequired_1[1];
 
 #ifdef __cplusplus
 }

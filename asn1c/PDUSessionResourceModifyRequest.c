@@ -7,11 +7,11 @@
 
 #include "PDUSessionResourceModifyRequest.h"
 
-static asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyRequest_1[] = {
+asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyRequest_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyRequest, protocolIEs),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_ProtocolIE_Container_127P6,
+		&asn_DEF_ProtocolIE_Container_127P4,
 		0,
 		{ 0, 0, 0 },
 		0, 0, /* No default value */
@@ -24,7 +24,7 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyRequest_tags_1[] = {
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyRequest_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 } /* protocolIEs */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyRequest_specs_1 = {
+asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyRequest_specs_1 = {
 	sizeof(struct PDUSessionResourceModifyRequest),
 	offsetof(struct PDUSessionResourceModifyRequest, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyRequest_tag2el_1,

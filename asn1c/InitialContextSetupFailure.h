@@ -21,7 +21,7 @@ extern "C" {
 
 /* InitialContextSetupFailure */
 typedef struct InitialContextSetupFailure {
-	ProtocolIE_Container_127P13_t	 protocolIEs;
+	ProtocolIE_Container_127P11_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct InitialContextSetupFailure {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_InitialContextSetupFailure;
+extern asn_SEQUENCE_specifics_t asn_SPC_InitialContextSetupFailure_specs_1;
+extern asn_TYPE_member_t asn_MBR_InitialContextSetupFailure_1[1];
 
 #ifdef __cplusplus
 }

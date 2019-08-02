@@ -21,7 +21,7 @@ extern "C" {
 
 /* RANConfigurationUpdateAcknowledge */
 typedef struct RANConfigurationUpdateAcknowledge {
-	ProtocolIE_Container_127P45_t	 protocolIEs;
+	ProtocolIE_Container_127P43_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct RANConfigurationUpdateAcknowledge {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_RANConfigurationUpdateAcknowledge;
+extern asn_SEQUENCE_specifics_t asn_SPC_RANConfigurationUpdateAcknowledge_specs_1;
+extern asn_TYPE_member_t asn_MBR_RANConfigurationUpdateAcknowledge_1[1];
 
 #ifdef __cplusplus
 }

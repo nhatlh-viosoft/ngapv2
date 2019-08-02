@@ -114,8 +114,8 @@ asn_TYPE_descriptor_t asn_DEF_value_4 = {
 
 asn_TYPE_member_t asn_MBR_PrivateMessageIEs_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PrivateMessageIEs, id),
-		-1 /* Ambiguous tag (CHOICE?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_PrivateIE_ID,
 		0,
 		{ &asn_OER_memb_id_constr_2, &asn_PER_memb_id_constr_2,  memb_id_constraint_1 },
@@ -123,8 +123,8 @@ asn_TYPE_member_t asn_MBR_PrivateMessageIEs_1[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PrivateMessageIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_3, &asn_PER_memb_criticality_constr_3,  memb_criticality_constraint_1 },
@@ -132,8 +132,8 @@ asn_TYPE_member_t asn_MBR_PrivateMessageIEs_1[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PrivateMessageIEs, value),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_value_4,
 		0,
 		{ &asn_OER_memb_value_constr_4, &asn_PER_memb_value_constr_4,  memb_value_constraint_1 },
@@ -145,9 +145,9 @@ static const ber_tlv_tag_t asn_DEF_PrivateMessageIEs_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PrivateMessageIEs_tag2el_1[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 }, /* criticality */
-    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* local */
-    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 0, 0, 0 } /* global */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* value */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PrivateMessageIEs_specs_1 = {
 	sizeof(struct PrivateMessageIEs),

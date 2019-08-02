@@ -22,7 +22,6 @@ extern "C" {
 typedef BIT_STRING_t	 DataCodingScheme_t;
 
 /* Implementation */
-extern asn_per_constraints_t asn_PER_type_DataCodingScheme_constr_1;
 extern asn_TYPE_descriptor_t asn_DEF_DataCodingScheme;
 asn_struct_free_f DataCodingScheme_free;
 asn_struct_print_f DataCodingScheme_print;

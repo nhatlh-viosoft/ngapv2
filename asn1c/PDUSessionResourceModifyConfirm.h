@@ -21,7 +21,7 @@ extern "C" {
 
 /* PDUSessionResourceModifyConfirm */
 typedef struct PDUSessionResourceModifyConfirm {
-	ProtocolIE_Container_127P10_t	 protocolIEs;
+	ProtocolIE_Container_127P8_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct PDUSessionResourceModifyConfirm {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceModifyConfirm;
+extern asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyConfirm_specs_1;
+extern asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyConfirm_1[1];
 
 #ifdef __cplusplus
 }

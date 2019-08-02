@@ -17987,8 +17987,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_4 = {
 
 asn_TYPE_member_t asn_MBR_AdditionalDLUPTNLInformationForHOItem_ExtIEs_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AdditionalDLUPTNLInformationForHOItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_2, &asn_PER_memb_id_constr_2,  memb_id_constraint_1 },
@@ -17996,8 +17996,8 @@ asn_TYPE_member_t asn_MBR_AdditionalDLUPTNLInformationForHOItem_ExtIEs_1[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AdditionalDLUPTNLInformationForHOItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_3, &asn_PER_memb_criticality_constr_3,  memb_criticality_constraint_1 },
@@ -18005,8 +18005,8 @@ asn_TYPE_member_t asn_MBR_AdditionalDLUPTNLInformationForHOItem_ExtIEs_1[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AdditionalDLUPTNLInformationForHOItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_4,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_4, &asn_PER_memb_extensionValue_constr_4,  memb_extensionValue_constraint_1 },
@@ -18018,14 +18018,15 @@ static const ber_tlv_tag_t asn_DEF_AdditionalDLUPTNLInformationForHOItem_ExtIEs_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs_tag2el_1[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AdditionalDLUPTNLInformationForHOItem_ExtIEs_specs_1 = {
 	sizeof(struct AdditionalDLUPTNLInformationForHOItem_ExtIEs),
 	offsetof(struct AdditionalDLUPTNLInformationForHOItem_ExtIEs, _asn_ctx),
 	asn_MAP_AdditionalDLUPTNLInformationForHOItem_ExtIEs_tag2el_1,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18071,8 +18072,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_8 = {
 
 asn_TYPE_member_t asn_MBR_AllocationAndRetentionPriority_ExtIEs_5[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AllocationAndRetentionPriority_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_6, &asn_PER_memb_id_constr_6,  memb_id_constraint_5 },
@@ -18080,8 +18081,8 @@ asn_TYPE_member_t asn_MBR_AllocationAndRetentionPriority_ExtIEs_5[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AllocationAndRetentionPriority_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_7, &asn_PER_memb_criticality_constr_7,  memb_criticality_constraint_5 },
@@ -18089,8 +18090,8 @@ asn_TYPE_member_t asn_MBR_AllocationAndRetentionPriority_ExtIEs_5[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AllocationAndRetentionPriority_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_8,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_8, &asn_PER_memb_extensionValue_constr_8,  memb_extensionValue_constraint_5 },
@@ -18102,14 +18103,15 @@ static const ber_tlv_tag_t asn_DEF_AllocationAndRetentionPriority_ExtIEs_tags_5[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AllocationAndRetentionPriority_ExtIEs_tag2el_5[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AllocationAndRetentionPriority_ExtIEs_specs_5 = {
 	sizeof(struct AllocationAndRetentionPriority_ExtIEs),
 	offsetof(struct AllocationAndRetentionPriority_ExtIEs, _asn_ctx),
 	asn_MAP_AllocationAndRetentionPriority_ExtIEs_tag2el_5,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18155,8 +18157,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_12 = {
 
 asn_TYPE_member_t asn_MBR_AllowedNSSAI_Item_ExtIEs_9[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AllowedNSSAI_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_10, &asn_PER_memb_id_constr_10,  memb_id_constraint_9 },
@@ -18164,8 +18166,8 @@ asn_TYPE_member_t asn_MBR_AllowedNSSAI_Item_ExtIEs_9[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AllowedNSSAI_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_11, &asn_PER_memb_criticality_constr_11,  memb_criticality_constraint_9 },
@@ -18173,8 +18175,8 @@ asn_TYPE_member_t asn_MBR_AllowedNSSAI_Item_ExtIEs_9[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AllowedNSSAI_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_12,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_12, &asn_PER_memb_extensionValue_constr_12,  memb_extensionValue_constraint_9 },
@@ -18186,14 +18188,15 @@ static const ber_tlv_tag_t asn_DEF_AllowedNSSAI_Item_ExtIEs_tags_9[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AllowedNSSAI_Item_ExtIEs_tag2el_9[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AllowedNSSAI_Item_ExtIEs_specs_9 = {
 	sizeof(struct AllowedNSSAI_Item_ExtIEs),
 	offsetof(struct AllowedNSSAI_Item_ExtIEs, _asn_ctx),
 	asn_MAP_AllowedNSSAI_Item_ExtIEs_tag2el_9,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18239,8 +18242,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_16 = {
 
 asn_TYPE_member_t asn_MBR_AMF_TNLAssociationSetupItem_ExtIEs_13[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationSetupItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_14, &asn_PER_memb_id_constr_14,  memb_id_constraint_13 },
@@ -18248,8 +18251,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationSetupItem_ExtIEs_13[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationSetupItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_15, &asn_PER_memb_criticality_constr_15,  memb_criticality_constraint_13 },
@@ -18257,8 +18260,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationSetupItem_ExtIEs_13[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationSetupItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_16,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_16, &asn_PER_memb_extensionValue_constr_16,  memb_extensionValue_constraint_13 },
@@ -18270,14 +18273,15 @@ static const ber_tlv_tag_t asn_DEF_AMF_TNLAssociationSetupItem_ExtIEs_tags_13[] 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AMF_TNLAssociationSetupItem_ExtIEs_tag2el_13[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AMF_TNLAssociationSetupItem_ExtIEs_specs_13 = {
 	sizeof(struct AMF_TNLAssociationSetupItem_ExtIEs),
 	offsetof(struct AMF_TNLAssociationSetupItem_ExtIEs, _asn_ctx),
 	asn_MAP_AMF_TNLAssociationSetupItem_ExtIEs_tag2el_13,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18323,8 +18327,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_20 = {
 
 asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToAddItem_ExtIEs_17[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToAddItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_18, &asn_PER_memb_id_constr_18,  memb_id_constraint_17 },
@@ -18332,8 +18336,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToAddItem_ExtIEs_17[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToAddItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_19, &asn_PER_memb_criticality_constr_19,  memb_criticality_constraint_17 },
@@ -18341,8 +18345,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToAddItem_ExtIEs_17[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToAddItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_20,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_20, &asn_PER_memb_extensionValue_constr_20,  memb_extensionValue_constraint_17 },
@@ -18354,14 +18358,15 @@ static const ber_tlv_tag_t asn_DEF_AMF_TNLAssociationToAddItem_ExtIEs_tags_17[] 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AMF_TNLAssociationToAddItem_ExtIEs_tag2el_17[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AMF_TNLAssociationToAddItem_ExtIEs_specs_17 = {
 	sizeof(struct AMF_TNLAssociationToAddItem_ExtIEs),
 	offsetof(struct AMF_TNLAssociationToAddItem_ExtIEs, _asn_ctx),
 	asn_MAP_AMF_TNLAssociationToAddItem_ExtIEs_tag2el_17,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18407,8 +18412,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_24 = {
 
 asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToRemoveItem_ExtIEs_21[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToRemoveItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_22, &asn_PER_memb_id_constr_22,  memb_id_constraint_21 },
@@ -18416,8 +18421,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToRemoveItem_ExtIEs_21[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToRemoveItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_23, &asn_PER_memb_criticality_constr_23,  memb_criticality_constraint_21 },
@@ -18425,8 +18430,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToRemoveItem_ExtIEs_21[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToRemoveItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_24,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_24, &asn_PER_memb_extensionValue_constr_24,  memb_extensionValue_constraint_21 },
@@ -18438,14 +18443,15 @@ static const ber_tlv_tag_t asn_DEF_AMF_TNLAssociationToRemoveItem_ExtIEs_tags_21
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AMF_TNLAssociationToRemoveItem_ExtIEs_tag2el_21[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AMF_TNLAssociationToRemoveItem_ExtIEs_specs_21 = {
 	sizeof(struct AMF_TNLAssociationToRemoveItem_ExtIEs),
 	offsetof(struct AMF_TNLAssociationToRemoveItem_ExtIEs, _asn_ctx),
 	asn_MAP_AMF_TNLAssociationToRemoveItem_ExtIEs_tag2el_21,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18491,8 +18497,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_28 = {
 
 asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToUpdateItem_ExtIEs_25[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToUpdateItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_26, &asn_PER_memb_id_constr_26,  memb_id_constraint_25 },
@@ -18500,8 +18506,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToUpdateItem_ExtIEs_25[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToUpdateItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_27, &asn_PER_memb_criticality_constr_27,  memb_criticality_constraint_25 },
@@ -18509,8 +18515,8 @@ asn_TYPE_member_t asn_MBR_AMF_TNLAssociationToUpdateItem_ExtIEs_25[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AMF_TNLAssociationToUpdateItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_28,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_28, &asn_PER_memb_extensionValue_constr_28,  memb_extensionValue_constraint_25 },
@@ -18522,14 +18528,15 @@ static const ber_tlv_tag_t asn_DEF_AMF_TNLAssociationToUpdateItem_ExtIEs_tags_25
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AMF_TNLAssociationToUpdateItem_ExtIEs_tag2el_25[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AMF_TNLAssociationToUpdateItem_ExtIEs_specs_25 = {
 	sizeof(struct AMF_TNLAssociationToUpdateItem_ExtIEs),
 	offsetof(struct AMF_TNLAssociationToUpdateItem_ExtIEs, _asn_ctx),
 	asn_MAP_AMF_TNLAssociationToUpdateItem_ExtIEs_tag2el_25,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18575,8 +18582,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_32 = {
 
 asn_TYPE_member_t asn_MBR_AreaOfInterest_ExtIEs_29[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterest_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_30, &asn_PER_memb_id_constr_30,  memb_id_constraint_29 },
@@ -18584,8 +18591,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterest_ExtIEs_29[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterest_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_31, &asn_PER_memb_criticality_constr_31,  memb_criticality_constraint_29 },
@@ -18593,8 +18600,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterest_ExtIEs_29[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AreaOfInterest_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_32,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_32, &asn_PER_memb_extensionValue_constr_32,  memb_extensionValue_constraint_29 },
@@ -18606,14 +18613,15 @@ static const ber_tlv_tag_t asn_DEF_AreaOfInterest_ExtIEs_tags_29[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AreaOfInterest_ExtIEs_tag2el_29[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AreaOfInterest_ExtIEs_specs_29 = {
 	sizeof(struct AreaOfInterest_ExtIEs),
 	offsetof(struct AreaOfInterest_ExtIEs, _asn_ctx),
 	asn_MAP_AreaOfInterest_ExtIEs_tag2el_29,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18659,8 +18667,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_36 = {
 
 asn_TYPE_member_t asn_MBR_AreaOfInterestCellItem_ExtIEs_33[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestCellItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_34, &asn_PER_memb_id_constr_34,  memb_id_constraint_33 },
@@ -18668,8 +18676,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestCellItem_ExtIEs_33[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestCellItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_35, &asn_PER_memb_criticality_constr_35,  memb_criticality_constraint_33 },
@@ -18677,8 +18685,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestCellItem_ExtIEs_33[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestCellItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_36,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_36, &asn_PER_memb_extensionValue_constr_36,  memb_extensionValue_constraint_33 },
@@ -18690,14 +18698,15 @@ static const ber_tlv_tag_t asn_DEF_AreaOfInterestCellItem_ExtIEs_tags_33[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AreaOfInterestCellItem_ExtIEs_tag2el_33[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AreaOfInterestCellItem_ExtIEs_specs_33 = {
 	sizeof(struct AreaOfInterestCellItem_ExtIEs),
 	offsetof(struct AreaOfInterestCellItem_ExtIEs, _asn_ctx),
 	asn_MAP_AreaOfInterestCellItem_ExtIEs_tag2el_33,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18743,8 +18752,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_40 = {
 
 asn_TYPE_member_t asn_MBR_AreaOfInterestItem_ExtIEs_37[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_38, &asn_PER_memb_id_constr_38,  memb_id_constraint_37 },
@@ -18752,8 +18761,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestItem_ExtIEs_37[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_39, &asn_PER_memb_criticality_constr_39,  memb_criticality_constraint_37 },
@@ -18761,8 +18770,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestItem_ExtIEs_37[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_40,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_40, &asn_PER_memb_extensionValue_constr_40,  memb_extensionValue_constraint_37 },
@@ -18774,14 +18783,15 @@ static const ber_tlv_tag_t asn_DEF_AreaOfInterestItem_ExtIEs_tags_37[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AreaOfInterestItem_ExtIEs_tag2el_37[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AreaOfInterestItem_ExtIEs_specs_37 = {
 	sizeof(struct AreaOfInterestItem_ExtIEs),
 	offsetof(struct AreaOfInterestItem_ExtIEs, _asn_ctx),
 	asn_MAP_AreaOfInterestItem_ExtIEs_tag2el_37,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18827,8 +18837,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_44 = {
 
 asn_TYPE_member_t asn_MBR_AreaOfInterestRANNodeItem_ExtIEs_41[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestRANNodeItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_42, &asn_PER_memb_id_constr_42,  memb_id_constraint_41 },
@@ -18836,8 +18846,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestRANNodeItem_ExtIEs_41[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestRANNodeItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_43, &asn_PER_memb_criticality_constr_43,  memb_criticality_constraint_41 },
@@ -18845,8 +18855,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestRANNodeItem_ExtIEs_41[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestRANNodeItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_44,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_44, &asn_PER_memb_extensionValue_constr_44,  memb_extensionValue_constraint_41 },
@@ -18858,14 +18868,15 @@ static const ber_tlv_tag_t asn_DEF_AreaOfInterestRANNodeItem_ExtIEs_tags_41[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AreaOfInterestRANNodeItem_ExtIEs_tag2el_41[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AreaOfInterestRANNodeItem_ExtIEs_specs_41 = {
 	sizeof(struct AreaOfInterestRANNodeItem_ExtIEs),
 	offsetof(struct AreaOfInterestRANNodeItem_ExtIEs, _asn_ctx),
 	asn_MAP_AreaOfInterestRANNodeItem_ExtIEs_tag2el_41,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18911,8 +18922,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_48 = {
 
 asn_TYPE_member_t asn_MBR_AreaOfInterestTAIItem_ExtIEs_45[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestTAIItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_46, &asn_PER_memb_id_constr_46,  memb_id_constraint_45 },
@@ -18920,8 +18931,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestTAIItem_ExtIEs_45[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestTAIItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_47, &asn_PER_memb_criticality_constr_47,  memb_criticality_constraint_45 },
@@ -18929,8 +18940,8 @@ asn_TYPE_member_t asn_MBR_AreaOfInterestTAIItem_ExtIEs_45[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AreaOfInterestTAIItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_48,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_48, &asn_PER_memb_extensionValue_constr_48,  memb_extensionValue_constraint_45 },
@@ -18942,14 +18953,15 @@ static const ber_tlv_tag_t asn_DEF_AreaOfInterestTAIItem_ExtIEs_tags_45[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AreaOfInterestTAIItem_ExtIEs_tag2el_45[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AreaOfInterestTAIItem_ExtIEs_specs_45 = {
 	sizeof(struct AreaOfInterestTAIItem_ExtIEs),
 	offsetof(struct AreaOfInterestTAIItem_ExtIEs, _asn_ctx),
 	asn_MAP_AreaOfInterestTAIItem_ExtIEs_tag2el_45,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -18995,8 +19007,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_52 = {
 
 asn_TYPE_member_t asn_MBR_AssistanceDataForPaging_ExtIEs_49[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AssistanceDataForPaging_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_50, &asn_PER_memb_id_constr_50,  memb_id_constraint_49 },
@@ -19004,8 +19016,8 @@ asn_TYPE_member_t asn_MBR_AssistanceDataForPaging_ExtIEs_49[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AssistanceDataForPaging_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_51, &asn_PER_memb_criticality_constr_51,  memb_criticality_constraint_49 },
@@ -19013,8 +19025,8 @@ asn_TYPE_member_t asn_MBR_AssistanceDataForPaging_ExtIEs_49[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AssistanceDataForPaging_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_52,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_52, &asn_PER_memb_extensionValue_constr_52,  memb_extensionValue_constraint_49 },
@@ -19026,14 +19038,15 @@ static const ber_tlv_tag_t asn_DEF_AssistanceDataForPaging_ExtIEs_tags_49[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AssistanceDataForPaging_ExtIEs_tag2el_49[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AssistanceDataForPaging_ExtIEs_specs_49 = {
 	sizeof(struct AssistanceDataForPaging_ExtIEs),
 	offsetof(struct AssistanceDataForPaging_ExtIEs, _asn_ctx),
 	asn_MAP_AssistanceDataForPaging_ExtIEs_tag2el_49,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19079,8 +19092,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_56 = {
 
 asn_TYPE_member_t asn_MBR_AssistanceDataForRecommendedCells_ExtIEs_53[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AssistanceDataForRecommendedCells_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_54, &asn_PER_memb_id_constr_54,  memb_id_constraint_53 },
@@ -19088,8 +19101,8 @@ asn_TYPE_member_t asn_MBR_AssistanceDataForRecommendedCells_ExtIEs_53[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AssistanceDataForRecommendedCells_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_55, &asn_PER_memb_criticality_constr_55,  memb_criticality_constraint_53 },
@@ -19097,8 +19110,8 @@ asn_TYPE_member_t asn_MBR_AssistanceDataForRecommendedCells_ExtIEs_53[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AssistanceDataForRecommendedCells_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_56,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_56, &asn_PER_memb_extensionValue_constr_56,  memb_extensionValue_constraint_53 },
@@ -19110,14 +19123,15 @@ static const ber_tlv_tag_t asn_DEF_AssistanceDataForRecommendedCells_ExtIEs_tags
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AssistanceDataForRecommendedCells_ExtIEs_tag2el_53[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AssistanceDataForRecommendedCells_ExtIEs_specs_53 = {
 	sizeof(struct AssistanceDataForRecommendedCells_ExtIEs),
 	offsetof(struct AssistanceDataForRecommendedCells_ExtIEs, _asn_ctx),
 	asn_MAP_AssistanceDataForRecommendedCells_ExtIEs_tag2el_53,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19163,8 +19177,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_60 = {
 
 asn_TYPE_member_t asn_MBR_AssociatedQosFlowItem_ExtIEs_57[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct AssociatedQosFlowItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_58, &asn_PER_memb_id_constr_58,  memb_id_constraint_57 },
@@ -19172,8 +19186,8 @@ asn_TYPE_member_t asn_MBR_AssociatedQosFlowItem_ExtIEs_57[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct AssociatedQosFlowItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_59, &asn_PER_memb_criticality_constr_59,  memb_criticality_constraint_57 },
@@ -19181,8 +19195,8 @@ asn_TYPE_member_t asn_MBR_AssociatedQosFlowItem_ExtIEs_57[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct AssociatedQosFlowItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_60,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_60, &asn_PER_memb_extensionValue_constr_60,  memb_extensionValue_constraint_57 },
@@ -19194,14 +19208,15 @@ static const ber_tlv_tag_t asn_DEF_AssociatedQosFlowItem_ExtIEs_tags_57[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_AssociatedQosFlowItem_ExtIEs_tag2el_57[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_AssociatedQosFlowItem_ExtIEs_specs_57 = {
 	sizeof(struct AssociatedQosFlowItem_ExtIEs),
 	offsetof(struct AssociatedQosFlowItem_ExtIEs, _asn_ctx),
 	asn_MAP_AssociatedQosFlowItem_ExtIEs_tag2el_57,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19247,8 +19262,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_64 = {
 
 asn_TYPE_member_t asn_MBR_BroadcastPLMNItem_ExtIEs_61[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct BroadcastPLMNItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_62, &asn_PER_memb_id_constr_62,  memb_id_constraint_61 },
@@ -19256,8 +19271,8 @@ asn_TYPE_member_t asn_MBR_BroadcastPLMNItem_ExtIEs_61[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct BroadcastPLMNItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_63, &asn_PER_memb_criticality_constr_63,  memb_criticality_constraint_61 },
@@ -19265,8 +19280,8 @@ asn_TYPE_member_t asn_MBR_BroadcastPLMNItem_ExtIEs_61[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct BroadcastPLMNItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_64,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_64, &asn_PER_memb_extensionValue_constr_64,  memb_extensionValue_constraint_61 },
@@ -19278,14 +19293,15 @@ static const ber_tlv_tag_t asn_DEF_BroadcastPLMNItem_ExtIEs_tags_61[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_BroadcastPLMNItem_ExtIEs_tag2el_61[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_BroadcastPLMNItem_ExtIEs_specs_61 = {
 	sizeof(struct BroadcastPLMNItem_ExtIEs),
 	offsetof(struct BroadcastPLMNItem_ExtIEs, _asn_ctx),
 	asn_MAP_BroadcastPLMNItem_ExtIEs_tag2el_61,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19331,8 +19347,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_68 = {
 
 asn_TYPE_member_t asn_MBR_CancelledCellsInEAI_EUTRA_Item_ExtIEs_65[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInEAI_EUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_66, &asn_PER_memb_id_constr_66,  memb_id_constraint_65 },
@@ -19340,8 +19356,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInEAI_EUTRA_Item_ExtIEs_65[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInEAI_EUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_67, &asn_PER_memb_criticality_constr_67,  memb_criticality_constraint_65 },
@@ -19349,8 +19365,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInEAI_EUTRA_Item_ExtIEs_65[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInEAI_EUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_68,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_68, &asn_PER_memb_extensionValue_constr_68,  memb_extensionValue_constraint_65 },
@@ -19362,14 +19378,15 @@ static const ber_tlv_tag_t asn_DEF_CancelledCellsInEAI_EUTRA_Item_ExtIEs_tags_65
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs_tag2el_65[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CancelledCellsInEAI_EUTRA_Item_ExtIEs_specs_65 = {
 	sizeof(struct CancelledCellsInEAI_EUTRA_Item_ExtIEs),
 	offsetof(struct CancelledCellsInEAI_EUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CancelledCellsInEAI_EUTRA_Item_ExtIEs_tag2el_65,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19415,8 +19432,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_72 = {
 
 asn_TYPE_member_t asn_MBR_CancelledCellsInEAI_NR_Item_ExtIEs_69[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInEAI_NR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_70, &asn_PER_memb_id_constr_70,  memb_id_constraint_69 },
@@ -19424,8 +19441,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInEAI_NR_Item_ExtIEs_69[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInEAI_NR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_71, &asn_PER_memb_criticality_constr_71,  memb_criticality_constraint_69 },
@@ -19433,8 +19450,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInEAI_NR_Item_ExtIEs_69[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInEAI_NR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_72,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_72, &asn_PER_memb_extensionValue_constr_72,  memb_extensionValue_constraint_69 },
@@ -19446,14 +19463,15 @@ static const ber_tlv_tag_t asn_DEF_CancelledCellsInEAI_NR_Item_ExtIEs_tags_69[] 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CancelledCellsInEAI_NR_Item_ExtIEs_tag2el_69[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CancelledCellsInEAI_NR_Item_ExtIEs_specs_69 = {
 	sizeof(struct CancelledCellsInEAI_NR_Item_ExtIEs),
 	offsetof(struct CancelledCellsInEAI_NR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CancelledCellsInEAI_NR_Item_ExtIEs_tag2el_69,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19499,8 +19517,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_76 = {
 
 asn_TYPE_member_t asn_MBR_CancelledCellsInTAI_EUTRA_Item_ExtIEs_73[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInTAI_EUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_74, &asn_PER_memb_id_constr_74,  memb_id_constraint_73 },
@@ -19508,8 +19526,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInTAI_EUTRA_Item_ExtIEs_73[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInTAI_EUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_75, &asn_PER_memb_criticality_constr_75,  memb_criticality_constraint_73 },
@@ -19517,8 +19535,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInTAI_EUTRA_Item_ExtIEs_73[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInTAI_EUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_76,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_76, &asn_PER_memb_extensionValue_constr_76,  memb_extensionValue_constraint_73 },
@@ -19530,14 +19548,15 @@ static const ber_tlv_tag_t asn_DEF_CancelledCellsInTAI_EUTRA_Item_ExtIEs_tags_73
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs_tag2el_73[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CancelledCellsInTAI_EUTRA_Item_ExtIEs_specs_73 = {
 	sizeof(struct CancelledCellsInTAI_EUTRA_Item_ExtIEs),
 	offsetof(struct CancelledCellsInTAI_EUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CancelledCellsInTAI_EUTRA_Item_ExtIEs_tag2el_73,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19583,8 +19602,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_80 = {
 
 asn_TYPE_member_t asn_MBR_CancelledCellsInTAI_NR_Item_ExtIEs_77[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInTAI_NR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_78, &asn_PER_memb_id_constr_78,  memb_id_constraint_77 },
@@ -19592,8 +19611,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInTAI_NR_Item_ExtIEs_77[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInTAI_NR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_79, &asn_PER_memb_criticality_constr_79,  memb_criticality_constraint_77 },
@@ -19601,8 +19620,8 @@ asn_TYPE_member_t asn_MBR_CancelledCellsInTAI_NR_Item_ExtIEs_77[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CancelledCellsInTAI_NR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_80,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_80, &asn_PER_memb_extensionValue_constr_80,  memb_extensionValue_constraint_77 },
@@ -19614,14 +19633,15 @@ static const ber_tlv_tag_t asn_DEF_CancelledCellsInTAI_NR_Item_ExtIEs_tags_77[] 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CancelledCellsInTAI_NR_Item_ExtIEs_tag2el_77[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CancelledCellsInTAI_NR_Item_ExtIEs_specs_77 = {
 	sizeof(struct CancelledCellsInTAI_NR_Item_ExtIEs),
 	offsetof(struct CancelledCellsInTAI_NR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CancelledCellsInTAI_NR_Item_ExtIEs_tag2el_77,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19667,8 +19687,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_84 = {
 
 asn_TYPE_member_t asn_MBR_CellIDBroadcastEUTRA_Item_ExtIEs_81[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDBroadcastEUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_82, &asn_PER_memb_id_constr_82,  memb_id_constraint_81 },
@@ -19676,8 +19696,8 @@ asn_TYPE_member_t asn_MBR_CellIDBroadcastEUTRA_Item_ExtIEs_81[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDBroadcastEUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_83, &asn_PER_memb_criticality_constr_83,  memb_criticality_constraint_81 },
@@ -19685,8 +19705,8 @@ asn_TYPE_member_t asn_MBR_CellIDBroadcastEUTRA_Item_ExtIEs_81[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CellIDBroadcastEUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_84,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_84, &asn_PER_memb_extensionValue_constr_84,  memb_extensionValue_constraint_81 },
@@ -19698,14 +19718,15 @@ static const ber_tlv_tag_t asn_DEF_CellIDBroadcastEUTRA_Item_ExtIEs_tags_81[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CellIDBroadcastEUTRA_Item_ExtIEs_tag2el_81[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CellIDBroadcastEUTRA_Item_ExtIEs_specs_81 = {
 	sizeof(struct CellIDBroadcastEUTRA_Item_ExtIEs),
 	offsetof(struct CellIDBroadcastEUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CellIDBroadcastEUTRA_Item_ExtIEs_tag2el_81,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19751,8 +19772,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_88 = {
 
 asn_TYPE_member_t asn_MBR_CellIDBroadcastNR_Item_ExtIEs_85[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDBroadcastNR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_86, &asn_PER_memb_id_constr_86,  memb_id_constraint_85 },
@@ -19760,8 +19781,8 @@ asn_TYPE_member_t asn_MBR_CellIDBroadcastNR_Item_ExtIEs_85[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDBroadcastNR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_87, &asn_PER_memb_criticality_constr_87,  memb_criticality_constraint_85 },
@@ -19769,8 +19790,8 @@ asn_TYPE_member_t asn_MBR_CellIDBroadcastNR_Item_ExtIEs_85[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CellIDBroadcastNR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_88,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_88, &asn_PER_memb_extensionValue_constr_88,  memb_extensionValue_constraint_85 },
@@ -19782,14 +19803,15 @@ static const ber_tlv_tag_t asn_DEF_CellIDBroadcastNR_Item_ExtIEs_tags_85[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CellIDBroadcastNR_Item_ExtIEs_tag2el_85[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CellIDBroadcastNR_Item_ExtIEs_specs_85 = {
 	sizeof(struct CellIDBroadcastNR_Item_ExtIEs),
 	offsetof(struct CellIDBroadcastNR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CellIDBroadcastNR_Item_ExtIEs_tag2el_85,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19835,8 +19857,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_92 = {
 
 asn_TYPE_member_t asn_MBR_CellIDCancelledEUTRA_Item_ExtIEs_89[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDCancelledEUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_90, &asn_PER_memb_id_constr_90,  memb_id_constraint_89 },
@@ -19844,8 +19866,8 @@ asn_TYPE_member_t asn_MBR_CellIDCancelledEUTRA_Item_ExtIEs_89[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDCancelledEUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_91, &asn_PER_memb_criticality_constr_91,  memb_criticality_constraint_89 },
@@ -19853,8 +19875,8 @@ asn_TYPE_member_t asn_MBR_CellIDCancelledEUTRA_Item_ExtIEs_89[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CellIDCancelledEUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_92,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_92, &asn_PER_memb_extensionValue_constr_92,  memb_extensionValue_constraint_89 },
@@ -19866,14 +19888,15 @@ static const ber_tlv_tag_t asn_DEF_CellIDCancelledEUTRA_Item_ExtIEs_tags_89[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CellIDCancelledEUTRA_Item_ExtIEs_tag2el_89[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CellIDCancelledEUTRA_Item_ExtIEs_specs_89 = {
 	sizeof(struct CellIDCancelledEUTRA_Item_ExtIEs),
 	offsetof(struct CellIDCancelledEUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CellIDCancelledEUTRA_Item_ExtIEs_tag2el_89,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -19919,8 +19942,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_96 = {
 
 asn_TYPE_member_t asn_MBR_CellIDCancelledNR_Item_ExtIEs_93[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDCancelledNR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_94, &asn_PER_memb_id_constr_94,  memb_id_constraint_93 },
@@ -19928,8 +19951,8 @@ asn_TYPE_member_t asn_MBR_CellIDCancelledNR_Item_ExtIEs_93[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CellIDCancelledNR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_95, &asn_PER_memb_criticality_constr_95,  memb_criticality_constraint_93 },
@@ -19937,8 +19960,8 @@ asn_TYPE_member_t asn_MBR_CellIDCancelledNR_Item_ExtIEs_93[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CellIDCancelledNR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_96,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_96, &asn_PER_memb_extensionValue_constr_96,  memb_extensionValue_constraint_93 },
@@ -19950,14 +19973,15 @@ static const ber_tlv_tag_t asn_DEF_CellIDCancelledNR_Item_ExtIEs_tags_93[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CellIDCancelledNR_Item_ExtIEs_tag2el_93[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CellIDCancelledNR_Item_ExtIEs_specs_93 = {
 	sizeof(struct CellIDCancelledNR_Item_ExtIEs),
 	offsetof(struct CellIDCancelledNR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CellIDCancelledNR_Item_ExtIEs_tag2el_93,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20003,8 +20027,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_100 = {
 
 asn_TYPE_member_t asn_MBR_CellType_ExtIEs_97[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CellType_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_98, &asn_PER_memb_id_constr_98,  memb_id_constraint_97 },
@@ -20012,8 +20036,8 @@ asn_TYPE_member_t asn_MBR_CellType_ExtIEs_97[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CellType_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_99, &asn_PER_memb_criticality_constr_99,  memb_criticality_constraint_97 },
@@ -20021,8 +20045,8 @@ asn_TYPE_member_t asn_MBR_CellType_ExtIEs_97[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CellType_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_100,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_100, &asn_PER_memb_extensionValue_constr_100,  memb_extensionValue_constraint_97 },
@@ -20034,14 +20058,15 @@ static const ber_tlv_tag_t asn_DEF_CellType_ExtIEs_tags_97[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CellType_ExtIEs_tag2el_97[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CellType_ExtIEs_specs_97 = {
 	sizeof(struct CellType_ExtIEs),
 	offsetof(struct CellType_ExtIEs, _asn_ctx),
 	asn_MAP_CellType_ExtIEs_tag2el_97,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20087,8 +20112,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_104 = {
 
 asn_TYPE_member_t asn_MBR_CNAssistedRANTuning_ExtIEs_101[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CNAssistedRANTuning_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_102, &asn_PER_memb_id_constr_102,  memb_id_constraint_101 },
@@ -20096,8 +20121,8 @@ asn_TYPE_member_t asn_MBR_CNAssistedRANTuning_ExtIEs_101[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CNAssistedRANTuning_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_103, &asn_PER_memb_criticality_constr_103,  memb_criticality_constraint_101 },
@@ -20105,8 +20130,8 @@ asn_TYPE_member_t asn_MBR_CNAssistedRANTuning_ExtIEs_101[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CNAssistedRANTuning_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_104,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_104, &asn_PER_memb_extensionValue_constr_104,  memb_extensionValue_constraint_101 },
@@ -20118,14 +20143,15 @@ static const ber_tlv_tag_t asn_DEF_CNAssistedRANTuning_ExtIEs_tags_101[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CNAssistedRANTuning_ExtIEs_tag2el_101[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CNAssistedRANTuning_ExtIEs_specs_101 = {
 	sizeof(struct CNAssistedRANTuning_ExtIEs),
 	offsetof(struct CNAssistedRANTuning_ExtIEs, _asn_ctx),
 	asn_MAP_CNAssistedRANTuning_ExtIEs_tag2el_101,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20171,8 +20197,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_108 = {
 
 asn_TYPE_member_t asn_MBR_CNTypeRestrictionsForEquivalentItem_ExtIEs_105[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CNTypeRestrictionsForEquivalentItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_106, &asn_PER_memb_id_constr_106,  memb_id_constraint_105 },
@@ -20180,8 +20206,8 @@ asn_TYPE_member_t asn_MBR_CNTypeRestrictionsForEquivalentItem_ExtIEs_105[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CNTypeRestrictionsForEquivalentItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_107, &asn_PER_memb_criticality_constr_107,  memb_criticality_constraint_105 },
@@ -20189,8 +20215,8 @@ asn_TYPE_member_t asn_MBR_CNTypeRestrictionsForEquivalentItem_ExtIEs_105[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CNTypeRestrictionsForEquivalentItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_108,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_108, &asn_PER_memb_extensionValue_constr_108,  memb_extensionValue_constraint_105 },
@@ -20202,14 +20228,15 @@ static const ber_tlv_tag_t asn_DEF_CNTypeRestrictionsForEquivalentItem_ExtIEs_ta
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CNTypeRestrictionsForEquivalentItem_ExtIEs_tag2el_105[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CNTypeRestrictionsForEquivalentItem_ExtIEs_specs_105 = {
 	sizeof(struct CNTypeRestrictionsForEquivalentItem_ExtIEs),
 	offsetof(struct CNTypeRestrictionsForEquivalentItem_ExtIEs, _asn_ctx),
 	asn_MAP_CNTypeRestrictionsForEquivalentItem_ExtIEs_tag2el_105,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20255,8 +20282,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_112 = {
 
 asn_TYPE_member_t asn_MBR_CompletedCellsInEAI_EUTRA_Item_ExtIEs_109[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInEAI_EUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_110, &asn_PER_memb_id_constr_110,  memb_id_constraint_109 },
@@ -20264,8 +20291,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInEAI_EUTRA_Item_ExtIEs_109[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInEAI_EUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_111, &asn_PER_memb_criticality_constr_111,  memb_criticality_constraint_109 },
@@ -20273,8 +20300,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInEAI_EUTRA_Item_ExtIEs_109[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInEAI_EUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_112,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_112, &asn_PER_memb_extensionValue_constr_112,  memb_extensionValue_constraint_109 },
@@ -20286,14 +20313,15 @@ static const ber_tlv_tag_t asn_DEF_CompletedCellsInEAI_EUTRA_Item_ExtIEs_tags_10
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs_tag2el_109[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CompletedCellsInEAI_EUTRA_Item_ExtIEs_specs_109 = {
 	sizeof(struct CompletedCellsInEAI_EUTRA_Item_ExtIEs),
 	offsetof(struct CompletedCellsInEAI_EUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CompletedCellsInEAI_EUTRA_Item_ExtIEs_tag2el_109,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20339,8 +20367,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_116 = {
 
 asn_TYPE_member_t asn_MBR_CompletedCellsInEAI_NR_Item_ExtIEs_113[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInEAI_NR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_114, &asn_PER_memb_id_constr_114,  memb_id_constraint_113 },
@@ -20348,8 +20376,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInEAI_NR_Item_ExtIEs_113[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInEAI_NR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_115, &asn_PER_memb_criticality_constr_115,  memb_criticality_constraint_113 },
@@ -20357,8 +20385,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInEAI_NR_Item_ExtIEs_113[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInEAI_NR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_116,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_116, &asn_PER_memb_extensionValue_constr_116,  memb_extensionValue_constraint_113 },
@@ -20370,14 +20398,15 @@ static const ber_tlv_tag_t asn_DEF_CompletedCellsInEAI_NR_Item_ExtIEs_tags_113[]
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CompletedCellsInEAI_NR_Item_ExtIEs_tag2el_113[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CompletedCellsInEAI_NR_Item_ExtIEs_specs_113 = {
 	sizeof(struct CompletedCellsInEAI_NR_Item_ExtIEs),
 	offsetof(struct CompletedCellsInEAI_NR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CompletedCellsInEAI_NR_Item_ExtIEs_tag2el_113,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20423,8 +20452,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_120 = {
 
 asn_TYPE_member_t asn_MBR_CompletedCellsInTAI_EUTRA_Item_ExtIEs_117[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInTAI_EUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_118, &asn_PER_memb_id_constr_118,  memb_id_constraint_117 },
@@ -20432,8 +20461,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInTAI_EUTRA_Item_ExtIEs_117[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInTAI_EUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_119, &asn_PER_memb_criticality_constr_119,  memb_criticality_constraint_117 },
@@ -20441,8 +20470,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInTAI_EUTRA_Item_ExtIEs_117[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInTAI_EUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_120,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_120, &asn_PER_memb_extensionValue_constr_120,  memb_extensionValue_constraint_117 },
@@ -20454,14 +20483,15 @@ static const ber_tlv_tag_t asn_DEF_CompletedCellsInTAI_EUTRA_Item_ExtIEs_tags_11
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs_tag2el_117[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CompletedCellsInTAI_EUTRA_Item_ExtIEs_specs_117 = {
 	sizeof(struct CompletedCellsInTAI_EUTRA_Item_ExtIEs),
 	offsetof(struct CompletedCellsInTAI_EUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CompletedCellsInTAI_EUTRA_Item_ExtIEs_tag2el_117,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20507,8 +20537,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_124 = {
 
 asn_TYPE_member_t asn_MBR_CompletedCellsInTAI_NR_Item_ExtIEs_121[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInTAI_NR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_122, &asn_PER_memb_id_constr_122,  memb_id_constraint_121 },
@@ -20516,8 +20546,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInTAI_NR_Item_ExtIEs_121[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInTAI_NR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_123, &asn_PER_memb_criticality_constr_123,  memb_criticality_constraint_121 },
@@ -20525,8 +20555,8 @@ asn_TYPE_member_t asn_MBR_CompletedCellsInTAI_NR_Item_ExtIEs_121[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CompletedCellsInTAI_NR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_124,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_124, &asn_PER_memb_extensionValue_constr_124,  memb_extensionValue_constraint_121 },
@@ -20538,14 +20568,15 @@ static const ber_tlv_tag_t asn_DEF_CompletedCellsInTAI_NR_Item_ExtIEs_tags_121[]
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CompletedCellsInTAI_NR_Item_ExtIEs_tag2el_121[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CompletedCellsInTAI_NR_Item_ExtIEs_specs_121 = {
 	sizeof(struct CompletedCellsInTAI_NR_Item_ExtIEs),
 	offsetof(struct CompletedCellsInTAI_NR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CompletedCellsInTAI_NR_Item_ExtIEs_tag2el_121,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20591,8 +20622,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_128 = {
 
 asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_ExtIEs_125[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CoreNetworkAssistanceInformationForInactive_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_126, &asn_PER_memb_id_constr_126,  memb_id_constraint_125 },
@@ -20600,8 +20631,8 @@ asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_ExtIEs_125
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CoreNetworkAssistanceInformationForInactive_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_127, &asn_PER_memb_criticality_constr_127,  memb_criticality_constraint_125 },
@@ -20609,8 +20640,8 @@ asn_TYPE_member_t asn_MBR_CoreNetworkAssistanceInformationForInactive_ExtIEs_125
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CoreNetworkAssistanceInformationForInactive_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_128,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_128, &asn_PER_memb_extensionValue_constr_128,  memb_extensionValue_constraint_125 },
@@ -20622,14 +20653,15 @@ static const ber_tlv_tag_t asn_DEF_CoreNetworkAssistanceInformationForInactive_E
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CoreNetworkAssistanceInformationForInactive_ExtIEs_tag2el_125[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CoreNetworkAssistanceInformationForInactive_ExtIEs_specs_125 = {
 	sizeof(struct CoreNetworkAssistanceInformationForInactive_ExtIEs),
 	offsetof(struct CoreNetworkAssistanceInformationForInactive_ExtIEs, _asn_ctx),
 	asn_MAP_CoreNetworkAssistanceInformationForInactive_ExtIEs_tag2el_125,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20675,8 +20707,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_132 = {
 
 asn_TYPE_member_t asn_MBR_COUNTValueForPDCP_SN12_ExtIEs_129[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct COUNTValueForPDCP_SN12_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_130, &asn_PER_memb_id_constr_130,  memb_id_constraint_129 },
@@ -20684,8 +20716,8 @@ asn_TYPE_member_t asn_MBR_COUNTValueForPDCP_SN12_ExtIEs_129[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct COUNTValueForPDCP_SN12_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_131, &asn_PER_memb_criticality_constr_131,  memb_criticality_constraint_129 },
@@ -20693,8 +20725,8 @@ asn_TYPE_member_t asn_MBR_COUNTValueForPDCP_SN12_ExtIEs_129[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct COUNTValueForPDCP_SN12_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_132,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_132, &asn_PER_memb_extensionValue_constr_132,  memb_extensionValue_constraint_129 },
@@ -20706,14 +20738,15 @@ static const ber_tlv_tag_t asn_DEF_COUNTValueForPDCP_SN12_ExtIEs_tags_129[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_COUNTValueForPDCP_SN12_ExtIEs_tag2el_129[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_COUNTValueForPDCP_SN12_ExtIEs_specs_129 = {
 	sizeof(struct COUNTValueForPDCP_SN12_ExtIEs),
 	offsetof(struct COUNTValueForPDCP_SN12_ExtIEs, _asn_ctx),
 	asn_MAP_COUNTValueForPDCP_SN12_ExtIEs_tag2el_129,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20759,8 +20792,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_136 = {
 
 asn_TYPE_member_t asn_MBR_COUNTValueForPDCP_SN18_ExtIEs_133[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct COUNTValueForPDCP_SN18_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_134, &asn_PER_memb_id_constr_134,  memb_id_constraint_133 },
@@ -20768,8 +20801,8 @@ asn_TYPE_member_t asn_MBR_COUNTValueForPDCP_SN18_ExtIEs_133[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct COUNTValueForPDCP_SN18_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_135, &asn_PER_memb_criticality_constr_135,  memb_criticality_constraint_133 },
@@ -20777,8 +20810,8 @@ asn_TYPE_member_t asn_MBR_COUNTValueForPDCP_SN18_ExtIEs_133[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct COUNTValueForPDCP_SN18_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_136,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_136, &asn_PER_memb_extensionValue_constr_136,  memb_extensionValue_constraint_133 },
@@ -20790,14 +20823,15 @@ static const ber_tlv_tag_t asn_DEF_COUNTValueForPDCP_SN18_ExtIEs_tags_133[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_COUNTValueForPDCP_SN18_ExtIEs_tag2el_133[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_COUNTValueForPDCP_SN18_ExtIEs_specs_133 = {
 	sizeof(struct COUNTValueForPDCP_SN18_ExtIEs),
 	offsetof(struct COUNTValueForPDCP_SN18_ExtIEs, _asn_ctx),
 	asn_MAP_COUNTValueForPDCP_SN18_ExtIEs_tag2el_133,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20843,8 +20877,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_140 = {
 
 asn_TYPE_member_t asn_MBR_CriticalityDiagnostics_ExtIEs_137[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CriticalityDiagnostics_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_138, &asn_PER_memb_id_constr_138,  memb_id_constraint_137 },
@@ -20852,8 +20886,8 @@ asn_TYPE_member_t asn_MBR_CriticalityDiagnostics_ExtIEs_137[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CriticalityDiagnostics_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_139, &asn_PER_memb_criticality_constr_139,  memb_criticality_constraint_137 },
@@ -20861,8 +20895,8 @@ asn_TYPE_member_t asn_MBR_CriticalityDiagnostics_ExtIEs_137[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CriticalityDiagnostics_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_140,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_140, &asn_PER_memb_extensionValue_constr_140,  memb_extensionValue_constraint_137 },
@@ -20874,14 +20908,15 @@ static const ber_tlv_tag_t asn_DEF_CriticalityDiagnostics_ExtIEs_tags_137[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CriticalityDiagnostics_ExtIEs_tag2el_137[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CriticalityDiagnostics_ExtIEs_specs_137 = {
 	sizeof(struct CriticalityDiagnostics_ExtIEs),
 	offsetof(struct CriticalityDiagnostics_ExtIEs, _asn_ctx),
 	asn_MAP_CriticalityDiagnostics_ExtIEs_tag2el_137,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -20927,8 +20962,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_144 = {
 
 asn_TYPE_member_t asn_MBR_CriticalityDiagnostics_IE_Item_ExtIEs_141[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct CriticalityDiagnostics_IE_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_142, &asn_PER_memb_id_constr_142,  memb_id_constraint_141 },
@@ -20936,8 +20971,8 @@ asn_TYPE_member_t asn_MBR_CriticalityDiagnostics_IE_Item_ExtIEs_141[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct CriticalityDiagnostics_IE_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_143, &asn_PER_memb_criticality_constr_143,  memb_criticality_constraint_141 },
@@ -20945,8 +20980,8 @@ asn_TYPE_member_t asn_MBR_CriticalityDiagnostics_IE_Item_ExtIEs_141[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct CriticalityDiagnostics_IE_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_144,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_144, &asn_PER_memb_extensionValue_constr_144,  memb_extensionValue_constraint_141 },
@@ -20958,14 +20993,15 @@ static const ber_tlv_tag_t asn_DEF_CriticalityDiagnostics_IE_Item_ExtIEs_tags_14
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_CriticalityDiagnostics_IE_Item_ExtIEs_tag2el_141[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_CriticalityDiagnostics_IE_Item_ExtIEs_specs_141 = {
 	sizeof(struct CriticalityDiagnostics_IE_Item_ExtIEs),
 	offsetof(struct CriticalityDiagnostics_IE_Item_ExtIEs, _asn_ctx),
 	asn_MAP_CriticalityDiagnostics_IE_Item_ExtIEs_tag2el_141,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21011,8 +21047,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_148 = {
 
 asn_TYPE_member_t asn_MBR_DataForwardingResponseDRBItem_ExtIEs_145[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DataForwardingResponseDRBItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_146, &asn_PER_memb_id_constr_146,  memb_id_constraint_145 },
@@ -21020,8 +21056,8 @@ asn_TYPE_member_t asn_MBR_DataForwardingResponseDRBItem_ExtIEs_145[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct DataForwardingResponseDRBItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_147, &asn_PER_memb_criticality_constr_147,  memb_criticality_constraint_145 },
@@ -21029,8 +21065,8 @@ asn_TYPE_member_t asn_MBR_DataForwardingResponseDRBItem_ExtIEs_145[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct DataForwardingResponseDRBItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_148,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_148, &asn_PER_memb_extensionValue_constr_148,  memb_extensionValue_constraint_145 },
@@ -21042,14 +21078,15 @@ static const ber_tlv_tag_t asn_DEF_DataForwardingResponseDRBItem_ExtIEs_tags_145
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_DataForwardingResponseDRBItem_ExtIEs_tag2el_145[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_DataForwardingResponseDRBItem_ExtIEs_specs_145 = {
 	sizeof(struct DataForwardingResponseDRBItem_ExtIEs),
 	offsetof(struct DataForwardingResponseDRBItem_ExtIEs, _asn_ctx),
 	asn_MAP_DataForwardingResponseDRBItem_ExtIEs_tag2el_145,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21110,8 +21147,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_152 = {
 
 asn_TYPE_member_t asn_MBR_DRBsSubjectToStatusTransferItem_ExtIEs_149[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBsSubjectToStatusTransferItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_150, &asn_PER_memb_id_constr_150,  memb_id_constraint_149 },
@@ -21119,8 +21156,8 @@ asn_TYPE_member_t asn_MBR_DRBsSubjectToStatusTransferItem_ExtIEs_149[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBsSubjectToStatusTransferItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_DRBsSubjectToStatusTransferItem_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_151, &asn_PER_memb_criticality_constr_151,  memb_criticality_constraint_149 },
@@ -21128,8 +21165,8 @@ asn_TYPE_member_t asn_MBR_DRBsSubjectToStatusTransferItem_ExtIEs_149[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct DRBsSubjectToStatusTransferItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_152,
 		select_DRBsSubjectToStatusTransferItem_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_152, &asn_PER_memb_extensionValue_constr_152,  memb_extensionValue_constraint_149 },
@@ -21141,14 +21178,15 @@ static const ber_tlv_tag_t asn_DEF_DRBsSubjectToStatusTransferItem_ExtIEs_tags_1
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_DRBsSubjectToStatusTransferItem_ExtIEs_tag2el_149[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_DRBsSubjectToStatusTransferItem_ExtIEs_specs_149 = {
 	sizeof(struct DRBsSubjectToStatusTransferItem_ExtIEs),
 	offsetof(struct DRBsSubjectToStatusTransferItem_ExtIEs, _asn_ctx),
 	asn_MAP_DRBsSubjectToStatusTransferItem_ExtIEs_tag2el_149,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21194,8 +21232,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_156 = {
 
 asn_TYPE_member_t asn_MBR_DRBStatusDL12_ExtIEs_153[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusDL12_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_154, &asn_PER_memb_id_constr_154,  memb_id_constraint_153 },
@@ -21203,8 +21241,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusDL12_ExtIEs_153[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusDL12_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_155, &asn_PER_memb_criticality_constr_155,  memb_criticality_constraint_153 },
@@ -21212,8 +21250,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusDL12_ExtIEs_153[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct DRBStatusDL12_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_156,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_156, &asn_PER_memb_extensionValue_constr_156,  memb_extensionValue_constraint_153 },
@@ -21225,14 +21263,15 @@ static const ber_tlv_tag_t asn_DEF_DRBStatusDL12_ExtIEs_tags_153[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_DRBStatusDL12_ExtIEs_tag2el_153[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_DRBStatusDL12_ExtIEs_specs_153 = {
 	sizeof(struct DRBStatusDL12_ExtIEs),
 	offsetof(struct DRBStatusDL12_ExtIEs, _asn_ctx),
 	asn_MAP_DRBStatusDL12_ExtIEs_tag2el_153,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21278,8 +21317,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_160 = {
 
 asn_TYPE_member_t asn_MBR_DRBStatusDL18_ExtIEs_157[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusDL18_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_158, &asn_PER_memb_id_constr_158,  memb_id_constraint_157 },
@@ -21287,8 +21326,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusDL18_ExtIEs_157[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusDL18_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_159, &asn_PER_memb_criticality_constr_159,  memb_criticality_constraint_157 },
@@ -21296,8 +21335,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusDL18_ExtIEs_157[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct DRBStatusDL18_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_160,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_160, &asn_PER_memb_extensionValue_constr_160,  memb_extensionValue_constraint_157 },
@@ -21309,14 +21348,15 @@ static const ber_tlv_tag_t asn_DEF_DRBStatusDL18_ExtIEs_tags_157[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_DRBStatusDL18_ExtIEs_tag2el_157[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_DRBStatusDL18_ExtIEs_specs_157 = {
 	sizeof(struct DRBStatusDL18_ExtIEs),
 	offsetof(struct DRBStatusDL18_ExtIEs, _asn_ctx),
 	asn_MAP_DRBStatusDL18_ExtIEs_tag2el_157,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21362,8 +21402,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_164 = {
 
 asn_TYPE_member_t asn_MBR_DRBStatusUL12_ExtIEs_161[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusUL12_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_162, &asn_PER_memb_id_constr_162,  memb_id_constraint_161 },
@@ -21371,8 +21411,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusUL12_ExtIEs_161[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusUL12_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_163, &asn_PER_memb_criticality_constr_163,  memb_criticality_constraint_161 },
@@ -21380,8 +21420,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusUL12_ExtIEs_161[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct DRBStatusUL12_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_164,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_164, &asn_PER_memb_extensionValue_constr_164,  memb_extensionValue_constraint_161 },
@@ -21393,14 +21433,15 @@ static const ber_tlv_tag_t asn_DEF_DRBStatusUL12_ExtIEs_tags_161[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_DRBStatusUL12_ExtIEs_tag2el_161[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_DRBStatusUL12_ExtIEs_specs_161 = {
 	sizeof(struct DRBStatusUL12_ExtIEs),
 	offsetof(struct DRBStatusUL12_ExtIEs, _asn_ctx),
 	asn_MAP_DRBStatusUL12_ExtIEs_tag2el_161,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21446,8 +21487,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_168 = {
 
 asn_TYPE_member_t asn_MBR_DRBStatusUL18_ExtIEs_165[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusUL18_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_166, &asn_PER_memb_id_constr_166,  memb_id_constraint_165 },
@@ -21455,8 +21496,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusUL18_ExtIEs_165[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBStatusUL18_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_167, &asn_PER_memb_criticality_constr_167,  memb_criticality_constraint_165 },
@@ -21464,8 +21505,8 @@ asn_TYPE_member_t asn_MBR_DRBStatusUL18_ExtIEs_165[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct DRBStatusUL18_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_168,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_168, &asn_PER_memb_extensionValue_constr_168,  memb_extensionValue_constraint_165 },
@@ -21477,14 +21518,15 @@ static const ber_tlv_tag_t asn_DEF_DRBStatusUL18_ExtIEs_tags_165[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_DRBStatusUL18_ExtIEs_tag2el_165[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_DRBStatusUL18_ExtIEs_specs_165 = {
 	sizeof(struct DRBStatusUL18_ExtIEs),
 	offsetof(struct DRBStatusUL18_ExtIEs, _asn_ctx),
 	asn_MAP_DRBStatusUL18_ExtIEs_tag2el_165,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21530,8 +21572,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_172 = {
 
 asn_TYPE_member_t asn_MBR_DRBsToQosFlowsMappingItem_ExtIEs_169[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBsToQosFlowsMappingItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_170, &asn_PER_memb_id_constr_170,  memb_id_constraint_169 },
@@ -21539,8 +21581,8 @@ asn_TYPE_member_t asn_MBR_DRBsToQosFlowsMappingItem_ExtIEs_169[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct DRBsToQosFlowsMappingItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_171, &asn_PER_memb_criticality_constr_171,  memb_criticality_constraint_169 },
@@ -21548,8 +21590,8 @@ asn_TYPE_member_t asn_MBR_DRBsToQosFlowsMappingItem_ExtIEs_169[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct DRBsToQosFlowsMappingItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_172,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_172, &asn_PER_memb_extensionValue_constr_172,  memb_extensionValue_constraint_169 },
@@ -21561,14 +21603,15 @@ static const ber_tlv_tag_t asn_DEF_DRBsToQosFlowsMappingItem_ExtIEs_tags_169[] =
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_DRBsToQosFlowsMappingItem_ExtIEs_tag2el_169[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_DRBsToQosFlowsMappingItem_ExtIEs_specs_169 = {
 	sizeof(struct DRBsToQosFlowsMappingItem_ExtIEs),
 	offsetof(struct DRBsToQosFlowsMappingItem_ExtIEs, _asn_ctx),
 	asn_MAP_DRBsToQosFlowsMappingItem_ExtIEs_tag2el_169,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21614,8 +21657,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_176 = {
 
 asn_TYPE_member_t asn_MBR_Dynamic5QIDescriptor_ExtIEs_173[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct Dynamic5QIDescriptor_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_174, &asn_PER_memb_id_constr_174,  memb_id_constraint_173 },
@@ -21623,8 +21666,8 @@ asn_TYPE_member_t asn_MBR_Dynamic5QIDescriptor_ExtIEs_173[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct Dynamic5QIDescriptor_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_175, &asn_PER_memb_criticality_constr_175,  memb_criticality_constraint_173 },
@@ -21632,8 +21675,8 @@ asn_TYPE_member_t asn_MBR_Dynamic5QIDescriptor_ExtIEs_173[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct Dynamic5QIDescriptor_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_176,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_176, &asn_PER_memb_extensionValue_constr_176,  memb_extensionValue_constraint_173 },
@@ -21645,14 +21688,15 @@ static const ber_tlv_tag_t asn_DEF_Dynamic5QIDescriptor_ExtIEs_tags_173[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_Dynamic5QIDescriptor_ExtIEs_tag2el_173[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_Dynamic5QIDescriptor_ExtIEs_specs_173 = {
 	sizeof(struct Dynamic5QIDescriptor_ExtIEs),
 	offsetof(struct Dynamic5QIDescriptor_ExtIEs, _asn_ctx),
 	asn_MAP_Dynamic5QIDescriptor_ExtIEs_tag2el_173,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21698,8 +21742,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_180 = {
 
 asn_TYPE_member_t asn_MBR_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_177[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_178, &asn_PER_memb_id_constr_178,  memb_id_constraint_177 },
@@ -21707,8 +21751,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_177[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_179, &asn_PER_memb_criticality_constr_179,  memb_criticality_constraint_177 },
@@ -21716,8 +21760,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_177[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_180,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_180, &asn_PER_memb_extensionValue_constr_180,  memb_extensionValue_constraint_177 },
@@ -21729,14 +21773,15 @@ static const ber_tlv_tag_t asn_DEF_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_tag
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_tag2el_177[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_specs_177 = {
 	sizeof(struct EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs),
 	offsetof(struct EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_EmergencyAreaIDBroadcastEUTRA_Item_ExtIEs_tag2el_177,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21782,8 +21827,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_184 = {
 
 asn_TYPE_member_t asn_MBR_EmergencyAreaIDBroadcastNR_Item_ExtIEs_181[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDBroadcastNR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_182, &asn_PER_memb_id_constr_182,  memb_id_constraint_181 },
@@ -21791,8 +21836,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDBroadcastNR_Item_ExtIEs_181[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDBroadcastNR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_183, &asn_PER_memb_criticality_constr_183,  memb_criticality_constraint_181 },
@@ -21800,8 +21845,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDBroadcastNR_Item_ExtIEs_181[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDBroadcastNR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_184,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_184, &asn_PER_memb_extensionValue_constr_184,  memb_extensionValue_constraint_181 },
@@ -21813,14 +21858,15 @@ static const ber_tlv_tag_t asn_DEF_EmergencyAreaIDBroadcastNR_Item_ExtIEs_tags_1
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs_tag2el_181[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_EmergencyAreaIDBroadcastNR_Item_ExtIEs_specs_181 = {
 	sizeof(struct EmergencyAreaIDBroadcastNR_Item_ExtIEs),
 	offsetof(struct EmergencyAreaIDBroadcastNR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_EmergencyAreaIDBroadcastNR_Item_ExtIEs_tag2el_181,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21866,8 +21912,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_188 = {
 
 asn_TYPE_member_t asn_MBR_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_185[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDCancelledEUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_186, &asn_PER_memb_id_constr_186,  memb_id_constraint_185 },
@@ -21875,8 +21921,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_185[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDCancelledEUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_187, &asn_PER_memb_criticality_constr_187,  memb_criticality_constraint_185 },
@@ -21884,8 +21930,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_185[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDCancelledEUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_188,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_188, &asn_PER_memb_extensionValue_constr_188,  memb_extensionValue_constraint_185 },
@@ -21897,14 +21943,15 @@ static const ber_tlv_tag_t asn_DEF_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_tag
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_tag2el_185[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_specs_185 = {
 	sizeof(struct EmergencyAreaIDCancelledEUTRA_Item_ExtIEs),
 	offsetof(struct EmergencyAreaIDCancelledEUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_EmergencyAreaIDCancelledEUTRA_Item_ExtIEs_tag2el_185,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -21950,8 +21997,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_192 = {
 
 asn_TYPE_member_t asn_MBR_EmergencyAreaIDCancelledNR_Item_ExtIEs_189[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDCancelledNR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_190, &asn_PER_memb_id_constr_190,  memb_id_constraint_189 },
@@ -21959,8 +22006,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDCancelledNR_Item_ExtIEs_189[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDCancelledNR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_191, &asn_PER_memb_criticality_constr_191,  memb_criticality_constraint_189 },
@@ -21968,8 +22015,8 @@ asn_TYPE_member_t asn_MBR_EmergencyAreaIDCancelledNR_Item_ExtIEs_189[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct EmergencyAreaIDCancelledNR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_192,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_192, &asn_PER_memb_extensionValue_constr_192,  memb_extensionValue_constraint_189 },
@@ -21981,14 +22028,15 @@ static const ber_tlv_tag_t asn_DEF_EmergencyAreaIDCancelledNR_Item_ExtIEs_tags_1
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_EmergencyAreaIDCancelledNR_Item_ExtIEs_tag2el_189[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_EmergencyAreaIDCancelledNR_Item_ExtIEs_specs_189 = {
 	sizeof(struct EmergencyAreaIDCancelledNR_Item_ExtIEs),
 	offsetof(struct EmergencyAreaIDCancelledNR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_EmergencyAreaIDCancelledNR_Item_ExtIEs_tag2el_189,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22034,8 +22082,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_196 = {
 
 asn_TYPE_member_t asn_MBR_EmergencyFallbackIndicator_ExtIEs_193[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyFallbackIndicator_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_194, &asn_PER_memb_id_constr_194,  memb_id_constraint_193 },
@@ -22043,8 +22091,8 @@ asn_TYPE_member_t asn_MBR_EmergencyFallbackIndicator_ExtIEs_193[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct EmergencyFallbackIndicator_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_195, &asn_PER_memb_criticality_constr_195,  memb_criticality_constraint_193 },
@@ -22052,8 +22100,8 @@ asn_TYPE_member_t asn_MBR_EmergencyFallbackIndicator_ExtIEs_193[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct EmergencyFallbackIndicator_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_196,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_196, &asn_PER_memb_extensionValue_constr_196,  memb_extensionValue_constraint_193 },
@@ -22065,14 +22113,15 @@ static const ber_tlv_tag_t asn_DEF_EmergencyFallbackIndicator_ExtIEs_tags_193[] 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_EmergencyFallbackIndicator_ExtIEs_tag2el_193[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_EmergencyFallbackIndicator_ExtIEs_specs_193 = {
 	sizeof(struct EmergencyFallbackIndicator_ExtIEs),
 	offsetof(struct EmergencyFallbackIndicator_ExtIEs, _asn_ctx),
 	asn_MAP_EmergencyFallbackIndicator_ExtIEs_tag2el_193,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22118,8 +22167,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_200 = {
 
 asn_TYPE_member_t asn_MBR_EPS_TAI_ExtIEs_197[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct EPS_TAI_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_198, &asn_PER_memb_id_constr_198,  memb_id_constraint_197 },
@@ -22127,8 +22176,8 @@ asn_TYPE_member_t asn_MBR_EPS_TAI_ExtIEs_197[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct EPS_TAI_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_199, &asn_PER_memb_criticality_constr_199,  memb_criticality_constraint_197 },
@@ -22136,8 +22185,8 @@ asn_TYPE_member_t asn_MBR_EPS_TAI_ExtIEs_197[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct EPS_TAI_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_200,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_200, &asn_PER_memb_extensionValue_constr_200,  memb_extensionValue_constraint_197 },
@@ -22149,14 +22198,15 @@ static const ber_tlv_tag_t asn_DEF_EPS_TAI_ExtIEs_tags_197[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_EPS_TAI_ExtIEs_tag2el_197[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_EPS_TAI_ExtIEs_specs_197 = {
 	sizeof(struct EPS_TAI_ExtIEs),
 	offsetof(struct EPS_TAI_ExtIEs, _asn_ctx),
 	asn_MAP_EPS_TAI_ExtIEs_tag2el_197,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22202,8 +22252,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_204 = {
 
 asn_TYPE_member_t asn_MBR_E_RABInformationItem_ExtIEs_201[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct E_RABInformationItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_202, &asn_PER_memb_id_constr_202,  memb_id_constraint_201 },
@@ -22211,8 +22261,8 @@ asn_TYPE_member_t asn_MBR_E_RABInformationItem_ExtIEs_201[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct E_RABInformationItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_203, &asn_PER_memb_criticality_constr_203,  memb_criticality_constraint_201 },
@@ -22220,8 +22270,8 @@ asn_TYPE_member_t asn_MBR_E_RABInformationItem_ExtIEs_201[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct E_RABInformationItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_204,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_204, &asn_PER_memb_extensionValue_constr_204,  memb_extensionValue_constraint_201 },
@@ -22233,14 +22283,15 @@ static const ber_tlv_tag_t asn_DEF_E_RABInformationItem_ExtIEs_tags_201[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_E_RABInformationItem_ExtIEs_tag2el_201[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_E_RABInformationItem_ExtIEs_specs_201 = {
 	sizeof(struct E_RABInformationItem_ExtIEs),
 	offsetof(struct E_RABInformationItem_ExtIEs, _asn_ctx),
 	asn_MAP_E_RABInformationItem_ExtIEs_tag2el_201,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22286,8 +22337,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_208 = {
 
 asn_TYPE_member_t asn_MBR_EUTRA_CGI_ExtIEs_205[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct EUTRA_CGI_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_206, &asn_PER_memb_id_constr_206,  memb_id_constraint_205 },
@@ -22295,8 +22346,8 @@ asn_TYPE_member_t asn_MBR_EUTRA_CGI_ExtIEs_205[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct EUTRA_CGI_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_207, &asn_PER_memb_criticality_constr_207,  memb_criticality_constraint_205 },
@@ -22304,8 +22355,8 @@ asn_TYPE_member_t asn_MBR_EUTRA_CGI_ExtIEs_205[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct EUTRA_CGI_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_208,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_208, &asn_PER_memb_extensionValue_constr_208,  memb_extensionValue_constraint_205 },
@@ -22317,14 +22368,15 @@ static const ber_tlv_tag_t asn_DEF_EUTRA_CGI_ExtIEs_tags_205[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_EUTRA_CGI_ExtIEs_tag2el_205[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_EUTRA_CGI_ExtIEs_specs_205 = {
 	sizeof(struct EUTRA_CGI_ExtIEs),
 	offsetof(struct EUTRA_CGI_ExtIEs, _asn_ctx),
 	asn_MAP_EUTRA_CGI_ExtIEs_tag2el_205,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22370,8 +22422,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_212 = {
 
 asn_TYPE_member_t asn_MBR_ExpectedUEActivityBehaviour_ExtIEs_209[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ExpectedUEActivityBehaviour_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_210, &asn_PER_memb_id_constr_210,  memb_id_constraint_209 },
@@ -22379,8 +22431,8 @@ asn_TYPE_member_t asn_MBR_ExpectedUEActivityBehaviour_ExtIEs_209[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ExpectedUEActivityBehaviour_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_211, &asn_PER_memb_criticality_constr_211,  memb_criticality_constraint_209 },
@@ -22388,8 +22440,8 @@ asn_TYPE_member_t asn_MBR_ExpectedUEActivityBehaviour_ExtIEs_209[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct ExpectedUEActivityBehaviour_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_212,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_212, &asn_PER_memb_extensionValue_constr_212,  memb_extensionValue_constraint_209 },
@@ -22401,14 +22453,15 @@ static const ber_tlv_tag_t asn_DEF_ExpectedUEActivityBehaviour_ExtIEs_tags_209[]
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_ExpectedUEActivityBehaviour_ExtIEs_tag2el_209[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_ExpectedUEActivityBehaviour_ExtIEs_specs_209 = {
 	sizeof(struct ExpectedUEActivityBehaviour_ExtIEs),
 	offsetof(struct ExpectedUEActivityBehaviour_ExtIEs, _asn_ctx),
 	asn_MAP_ExpectedUEActivityBehaviour_ExtIEs_tag2el_209,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22454,8 +22507,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_216 = {
 
 asn_TYPE_member_t asn_MBR_ExpectedUEBehaviour_ExtIEs_213[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ExpectedUEBehaviour_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_214, &asn_PER_memb_id_constr_214,  memb_id_constraint_213 },
@@ -22463,8 +22516,8 @@ asn_TYPE_member_t asn_MBR_ExpectedUEBehaviour_ExtIEs_213[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ExpectedUEBehaviour_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_215, &asn_PER_memb_criticality_constr_215,  memb_criticality_constraint_213 },
@@ -22472,8 +22525,8 @@ asn_TYPE_member_t asn_MBR_ExpectedUEBehaviour_ExtIEs_213[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct ExpectedUEBehaviour_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_216,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_216, &asn_PER_memb_extensionValue_constr_216,  memb_extensionValue_constraint_213 },
@@ -22485,14 +22538,15 @@ static const ber_tlv_tag_t asn_DEF_ExpectedUEBehaviour_ExtIEs_tags_213[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_ExpectedUEBehaviour_ExtIEs_tag2el_213[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_ExpectedUEBehaviour_ExtIEs_specs_213 = {
 	sizeof(struct ExpectedUEBehaviour_ExtIEs),
 	offsetof(struct ExpectedUEBehaviour_ExtIEs, _asn_ctx),
 	asn_MAP_ExpectedUEBehaviour_ExtIEs_tag2el_213,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22538,8 +22592,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_220 = {
 
 asn_TYPE_member_t asn_MBR_ExpectedUEMovingTrajectoryItem_ExtIEs_217[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ExpectedUEMovingTrajectoryItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_218, &asn_PER_memb_id_constr_218,  memb_id_constraint_217 },
@@ -22547,8 +22601,8 @@ asn_TYPE_member_t asn_MBR_ExpectedUEMovingTrajectoryItem_ExtIEs_217[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ExpectedUEMovingTrajectoryItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_219, &asn_PER_memb_criticality_constr_219,  memb_criticality_constraint_217 },
@@ -22556,8 +22610,8 @@ asn_TYPE_member_t asn_MBR_ExpectedUEMovingTrajectoryItem_ExtIEs_217[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct ExpectedUEMovingTrajectoryItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_220,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_220, &asn_PER_memb_extensionValue_constr_220,  memb_extensionValue_constraint_217 },
@@ -22569,14 +22623,15 @@ static const ber_tlv_tag_t asn_DEF_ExpectedUEMovingTrajectoryItem_ExtIEs_tags_21
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_ExpectedUEMovingTrajectoryItem_ExtIEs_tag2el_217[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_ExpectedUEMovingTrajectoryItem_ExtIEs_specs_217 = {
 	sizeof(struct ExpectedUEMovingTrajectoryItem_ExtIEs),
 	offsetof(struct ExpectedUEMovingTrajectoryItem_ExtIEs, _asn_ctx),
 	asn_MAP_ExpectedUEMovingTrajectoryItem_ExtIEs_tag2el_217,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22622,8 +22677,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_224 = {
 
 asn_TYPE_member_t asn_MBR_FiveG_S_TMSI_ExtIEs_221[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct FiveG_S_TMSI_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_222, &asn_PER_memb_id_constr_222,  memb_id_constraint_221 },
@@ -22631,8 +22686,8 @@ asn_TYPE_member_t asn_MBR_FiveG_S_TMSI_ExtIEs_221[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct FiveG_S_TMSI_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_223, &asn_PER_memb_criticality_constr_223,  memb_criticality_constraint_221 },
@@ -22640,8 +22695,8 @@ asn_TYPE_member_t asn_MBR_FiveG_S_TMSI_ExtIEs_221[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct FiveG_S_TMSI_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_224,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_224, &asn_PER_memb_extensionValue_constr_224,  memb_extensionValue_constraint_221 },
@@ -22653,14 +22708,15 @@ static const ber_tlv_tag_t asn_DEF_FiveG_S_TMSI_ExtIEs_tags_221[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_FiveG_S_TMSI_ExtIEs_tag2el_221[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_FiveG_S_TMSI_ExtIEs_specs_221 = {
 	sizeof(struct FiveG_S_TMSI_ExtIEs),
 	offsetof(struct FiveG_S_TMSI_ExtIEs, _asn_ctx),
 	asn_MAP_FiveG_S_TMSI_ExtIEs_tag2el_221,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22706,8 +22762,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_228 = {
 
 asn_TYPE_member_t asn_MBR_ForbiddenAreaInformation_Item_ExtIEs_225[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ForbiddenAreaInformation_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_226, &asn_PER_memb_id_constr_226,  memb_id_constraint_225 },
@@ -22715,8 +22771,8 @@ asn_TYPE_member_t asn_MBR_ForbiddenAreaInformation_Item_ExtIEs_225[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ForbiddenAreaInformation_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_227, &asn_PER_memb_criticality_constr_227,  memb_criticality_constraint_225 },
@@ -22724,8 +22780,8 @@ asn_TYPE_member_t asn_MBR_ForbiddenAreaInformation_Item_ExtIEs_225[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct ForbiddenAreaInformation_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_228,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_228, &asn_PER_memb_extensionValue_constr_228,  memb_extensionValue_constraint_225 },
@@ -22737,14 +22793,15 @@ static const ber_tlv_tag_t asn_DEF_ForbiddenAreaInformation_Item_ExtIEs_tags_225
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_ForbiddenAreaInformation_Item_ExtIEs_tag2el_225[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_ForbiddenAreaInformation_Item_ExtIEs_specs_225 = {
 	sizeof(struct ForbiddenAreaInformation_Item_ExtIEs),
 	offsetof(struct ForbiddenAreaInformation_Item_ExtIEs, _asn_ctx),
 	asn_MAP_ForbiddenAreaInformation_Item_ExtIEs_tag2el_225,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22790,8 +22847,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_232 = {
 
 asn_TYPE_member_t asn_MBR_GBR_QosInformation_ExtIEs_229[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct GBR_QosInformation_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_230, &asn_PER_memb_id_constr_230,  memb_id_constraint_229 },
@@ -22799,8 +22856,8 @@ asn_TYPE_member_t asn_MBR_GBR_QosInformation_ExtIEs_229[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct GBR_QosInformation_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_231, &asn_PER_memb_criticality_constr_231,  memb_criticality_constraint_229 },
@@ -22808,8 +22865,8 @@ asn_TYPE_member_t asn_MBR_GBR_QosInformation_ExtIEs_229[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct GBR_QosInformation_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_232,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_232, &asn_PER_memb_extensionValue_constr_232,  memb_extensionValue_constraint_229 },
@@ -22821,14 +22878,15 @@ static const ber_tlv_tag_t asn_DEF_GBR_QosInformation_ExtIEs_tags_229[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_GBR_QosInformation_ExtIEs_tag2el_229[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_GBR_QosInformation_ExtIEs_specs_229 = {
 	sizeof(struct GBR_QosInformation_ExtIEs),
 	offsetof(struct GBR_QosInformation_ExtIEs, _asn_ctx),
 	asn_MAP_GBR_QosInformation_ExtIEs_tag2el_229,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22874,8 +22932,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_236 = {
 
 asn_TYPE_member_t asn_MBR_GlobalGNB_ID_ExtIEs_233[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct GlobalGNB_ID_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_234, &asn_PER_memb_id_constr_234,  memb_id_constraint_233 },
@@ -22883,8 +22941,8 @@ asn_TYPE_member_t asn_MBR_GlobalGNB_ID_ExtIEs_233[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct GlobalGNB_ID_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_235, &asn_PER_memb_criticality_constr_235,  memb_criticality_constraint_233 },
@@ -22892,8 +22950,8 @@ asn_TYPE_member_t asn_MBR_GlobalGNB_ID_ExtIEs_233[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct GlobalGNB_ID_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_236,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_236, &asn_PER_memb_extensionValue_constr_236,  memb_extensionValue_constraint_233 },
@@ -22905,14 +22963,15 @@ static const ber_tlv_tag_t asn_DEF_GlobalGNB_ID_ExtIEs_tags_233[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_GlobalGNB_ID_ExtIEs_tag2el_233[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_GlobalGNB_ID_ExtIEs_specs_233 = {
 	sizeof(struct GlobalGNB_ID_ExtIEs),
 	offsetof(struct GlobalGNB_ID_ExtIEs, _asn_ctx),
 	asn_MAP_GlobalGNB_ID_ExtIEs_tag2el_233,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -22958,8 +23017,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_240 = {
 
 asn_TYPE_member_t asn_MBR_GlobalN3IWF_ID_ExtIEs_237[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct GlobalN3IWF_ID_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_238, &asn_PER_memb_id_constr_238,  memb_id_constraint_237 },
@@ -22967,8 +23026,8 @@ asn_TYPE_member_t asn_MBR_GlobalN3IWF_ID_ExtIEs_237[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct GlobalN3IWF_ID_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_239, &asn_PER_memb_criticality_constr_239,  memb_criticality_constraint_237 },
@@ -22976,8 +23035,8 @@ asn_TYPE_member_t asn_MBR_GlobalN3IWF_ID_ExtIEs_237[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct GlobalN3IWF_ID_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_240,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_240, &asn_PER_memb_extensionValue_constr_240,  memb_extensionValue_constraint_237 },
@@ -22989,14 +23048,15 @@ static const ber_tlv_tag_t asn_DEF_GlobalN3IWF_ID_ExtIEs_tags_237[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_GlobalN3IWF_ID_ExtIEs_tag2el_237[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_GlobalN3IWF_ID_ExtIEs_specs_237 = {
 	sizeof(struct GlobalN3IWF_ID_ExtIEs),
 	offsetof(struct GlobalN3IWF_ID_ExtIEs, _asn_ctx),
 	asn_MAP_GlobalN3IWF_ID_ExtIEs_tag2el_237,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23042,8 +23102,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_244 = {
 
 asn_TYPE_member_t asn_MBR_GlobalNgENB_ID_ExtIEs_241[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct GlobalNgENB_ID_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_242, &asn_PER_memb_id_constr_242,  memb_id_constraint_241 },
@@ -23051,8 +23111,8 @@ asn_TYPE_member_t asn_MBR_GlobalNgENB_ID_ExtIEs_241[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct GlobalNgENB_ID_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_243, &asn_PER_memb_criticality_constr_243,  memb_criticality_constraint_241 },
@@ -23060,8 +23120,8 @@ asn_TYPE_member_t asn_MBR_GlobalNgENB_ID_ExtIEs_241[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct GlobalNgENB_ID_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_244,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_244, &asn_PER_memb_extensionValue_constr_244,  memb_extensionValue_constraint_241 },
@@ -23073,14 +23133,15 @@ static const ber_tlv_tag_t asn_DEF_GlobalNgENB_ID_ExtIEs_tags_241[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_GlobalNgENB_ID_ExtIEs_tag2el_241[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_GlobalNgENB_ID_ExtIEs_specs_241 = {
 	sizeof(struct GlobalNgENB_ID_ExtIEs),
 	offsetof(struct GlobalNgENB_ID_ExtIEs, _asn_ctx),
 	asn_MAP_GlobalNgENB_ID_ExtIEs_tag2el_241,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23126,8 +23187,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_248 = {
 
 asn_TYPE_member_t asn_MBR_GTPTunnel_ExtIEs_245[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct GTPTunnel_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_246, &asn_PER_memb_id_constr_246,  memb_id_constraint_245 },
@@ -23135,8 +23196,8 @@ asn_TYPE_member_t asn_MBR_GTPTunnel_ExtIEs_245[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct GTPTunnel_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_247, &asn_PER_memb_criticality_constr_247,  memb_criticality_constraint_245 },
@@ -23144,8 +23205,8 @@ asn_TYPE_member_t asn_MBR_GTPTunnel_ExtIEs_245[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct GTPTunnel_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_248,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_248, &asn_PER_memb_extensionValue_constr_248,  memb_extensionValue_constraint_245 },
@@ -23157,14 +23218,15 @@ static const ber_tlv_tag_t asn_DEF_GTPTunnel_ExtIEs_tags_245[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_GTPTunnel_ExtIEs_tag2el_245[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_GTPTunnel_ExtIEs_specs_245 = {
 	sizeof(struct GTPTunnel_ExtIEs),
 	offsetof(struct GTPTunnel_ExtIEs, _asn_ctx),
 	asn_MAP_GTPTunnel_ExtIEs_tag2el_245,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23210,8 +23272,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_252 = {
 
 asn_TYPE_member_t asn_MBR_GUAMI_ExtIEs_249[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct GUAMI_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_250, &asn_PER_memb_id_constr_250,  memb_id_constraint_249 },
@@ -23219,8 +23281,8 @@ asn_TYPE_member_t asn_MBR_GUAMI_ExtIEs_249[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct GUAMI_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_251, &asn_PER_memb_criticality_constr_251,  memb_criticality_constraint_249 },
@@ -23228,8 +23290,8 @@ asn_TYPE_member_t asn_MBR_GUAMI_ExtIEs_249[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct GUAMI_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_252,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_252, &asn_PER_memb_extensionValue_constr_252,  memb_extensionValue_constraint_249 },
@@ -23241,14 +23303,15 @@ static const ber_tlv_tag_t asn_DEF_GUAMI_ExtIEs_tags_249[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_GUAMI_ExtIEs_tag2el_249[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_GUAMI_ExtIEs_specs_249 = {
 	sizeof(struct GUAMI_ExtIEs),
 	offsetof(struct GUAMI_ExtIEs, _asn_ctx),
 	asn_MAP_GUAMI_ExtIEs_tag2el_249,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23320,8 +23383,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_256 = {
 
 asn_TYPE_member_t asn_MBR_HandoverCommandTransfer_ExtIEs_253[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverCommandTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_254, &asn_PER_memb_id_constr_254,  memb_id_constraint_253 },
@@ -23329,8 +23392,8 @@ asn_TYPE_member_t asn_MBR_HandoverCommandTransfer_ExtIEs_253[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverCommandTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_HandoverCommandTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_255, &asn_PER_memb_criticality_constr_255,  memb_criticality_constraint_253 },
@@ -23338,8 +23401,8 @@ asn_TYPE_member_t asn_MBR_HandoverCommandTransfer_ExtIEs_253[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct HandoverCommandTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_256,
 		select_HandoverCommandTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_256, &asn_PER_memb_extensionValue_constr_256,  memb_extensionValue_constraint_253 },
@@ -23351,14 +23414,15 @@ static const ber_tlv_tag_t asn_DEF_HandoverCommandTransfer_ExtIEs_tags_253[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_HandoverCommandTransfer_ExtIEs_tag2el_253[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_HandoverCommandTransfer_ExtIEs_specs_253 = {
 	sizeof(struct HandoverCommandTransfer_ExtIEs),
 	offsetof(struct HandoverCommandTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_HandoverCommandTransfer_ExtIEs_tag2el_253,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23404,8 +23468,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_260 = {
 
 asn_TYPE_member_t asn_MBR_HandoverPreparationUnsuccessfulTransfer_ExtIEs_257[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverPreparationUnsuccessfulTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_258, &asn_PER_memb_id_constr_258,  memb_id_constraint_257 },
@@ -23413,8 +23477,8 @@ asn_TYPE_member_t asn_MBR_HandoverPreparationUnsuccessfulTransfer_ExtIEs_257[] =
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverPreparationUnsuccessfulTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_259, &asn_PER_memb_criticality_constr_259,  memb_criticality_constraint_257 },
@@ -23422,8 +23486,8 @@ asn_TYPE_member_t asn_MBR_HandoverPreparationUnsuccessfulTransfer_ExtIEs_257[] =
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct HandoverPreparationUnsuccessfulTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_260,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_260, &asn_PER_memb_extensionValue_constr_260,  memb_extensionValue_constraint_257 },
@@ -23435,14 +23499,15 @@ static const ber_tlv_tag_t asn_DEF_HandoverPreparationUnsuccessfulTransfer_ExtIE
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs_tag2el_257[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_HandoverPreparationUnsuccessfulTransfer_ExtIEs_specs_257 = {
 	sizeof(struct HandoverPreparationUnsuccessfulTransfer_ExtIEs),
 	offsetof(struct HandoverPreparationUnsuccessfulTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_HandoverPreparationUnsuccessfulTransfer_ExtIEs_tag2el_257,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23514,8 +23579,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_264 = {
 
 asn_TYPE_member_t asn_MBR_HandoverRequestAcknowledgeTransfer_ExtIEs_261[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverRequestAcknowledgeTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_262, &asn_PER_memb_id_constr_262,  memb_id_constraint_261 },
@@ -23523,8 +23588,8 @@ asn_TYPE_member_t asn_MBR_HandoverRequestAcknowledgeTransfer_ExtIEs_261[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverRequestAcknowledgeTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_HandoverRequestAcknowledgeTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_263, &asn_PER_memb_criticality_constr_263,  memb_criticality_constraint_261 },
@@ -23532,8 +23597,8 @@ asn_TYPE_member_t asn_MBR_HandoverRequestAcknowledgeTransfer_ExtIEs_261[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct HandoverRequestAcknowledgeTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_264,
 		select_HandoverRequestAcknowledgeTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_264, &asn_PER_memb_extensionValue_constr_264,  memb_extensionValue_constraint_261 },
@@ -23545,14 +23610,15 @@ static const ber_tlv_tag_t asn_DEF_HandoverRequestAcknowledgeTransfer_ExtIEs_tag
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_HandoverRequestAcknowledgeTransfer_ExtIEs_tag2el_261[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_HandoverRequestAcknowledgeTransfer_ExtIEs_specs_261 = {
 	sizeof(struct HandoverRequestAcknowledgeTransfer_ExtIEs),
 	offsetof(struct HandoverRequestAcknowledgeTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_HandoverRequestAcknowledgeTransfer_ExtIEs_tag2el_261,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23598,8 +23664,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_268 = {
 
 asn_TYPE_member_t asn_MBR_HandoverRequiredTransfer_ExtIEs_265[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverRequiredTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_266, &asn_PER_memb_id_constr_266,  memb_id_constraint_265 },
@@ -23607,8 +23673,8 @@ asn_TYPE_member_t asn_MBR_HandoverRequiredTransfer_ExtIEs_265[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverRequiredTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_267, &asn_PER_memb_criticality_constr_267,  memb_criticality_constraint_265 },
@@ -23616,8 +23682,8 @@ asn_TYPE_member_t asn_MBR_HandoverRequiredTransfer_ExtIEs_265[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct HandoverRequiredTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_268,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_268, &asn_PER_memb_extensionValue_constr_268,  memb_extensionValue_constraint_265 },
@@ -23629,14 +23695,15 @@ static const ber_tlv_tag_t asn_DEF_HandoverRequiredTransfer_ExtIEs_tags_265[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_HandoverRequiredTransfer_ExtIEs_tag2el_265[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_HandoverRequiredTransfer_ExtIEs_specs_265 = {
 	sizeof(struct HandoverRequiredTransfer_ExtIEs),
 	offsetof(struct HandoverRequiredTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_HandoverRequiredTransfer_ExtIEs_tag2el_265,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23682,8 +23749,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_272 = {
 
 asn_TYPE_member_t asn_MBR_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_269[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_270, &asn_PER_memb_id_constr_270,  memb_id_constraint_269 },
@@ -23691,8 +23758,8 @@ asn_TYPE_member_t asn_MBR_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_271, &asn_PER_memb_criticality_constr_271,  memb_criticality_constraint_269 },
@@ -23700,8 +23767,8 @@ asn_TYPE_member_t asn_MBR_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_272,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_272, &asn_PER_memb_extensionValue_constr_272,  memb_extensionValue_constraint_269 },
@@ -23713,14 +23780,15 @@ static const ber_tlv_tag_t asn_DEF_HandoverResourceAllocationUnsuccessfulTransfe
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_tag2el_269[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_specs_269 = {
 	sizeof(struct HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs),
 	offsetof(struct HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_HandoverResourceAllocationUnsuccessfulTransfer_ExtIEs_tag2el_269,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23766,8 +23834,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_276 = {
 
 asn_TYPE_member_t asn_MBR_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_273[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_274, &asn_PER_memb_id_constr_274,  memb_id_constraint_273 },
@@ -23775,8 +23843,8 @@ asn_TYPE_member_t asn_MBR_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_273[
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_275, &asn_PER_memb_criticality_constr_275,  memb_criticality_constraint_273 },
@@ -23784,8 +23852,8 @@ asn_TYPE_member_t asn_MBR_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_273[
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_276,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_276, &asn_PER_memb_extensionValue_constr_276,  memb_extensionValue_constraint_273 },
@@ -23797,14 +23865,15 @@ static const ber_tlv_tag_t asn_DEF_InfoOnRecommendedCellsAndRANNodesForPaging_Ex
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_tag2el_273[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_specs_273 = {
 	sizeof(struct InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs),
 	offsetof(struct InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs, _asn_ctx),
 	asn_MAP_InfoOnRecommendedCellsAndRANNodesForPaging_ExtIEs_tag2el_273,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23850,8 +23919,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_280 = {
 
 asn_TYPE_member_t asn_MBR_LastVisitedCellItem_ExtIEs_277[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct LastVisitedCellItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_278, &asn_PER_memb_id_constr_278,  memb_id_constraint_277 },
@@ -23859,8 +23928,8 @@ asn_TYPE_member_t asn_MBR_LastVisitedCellItem_ExtIEs_277[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct LastVisitedCellItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_279, &asn_PER_memb_criticality_constr_279,  memb_criticality_constraint_277 },
@@ -23868,8 +23937,8 @@ asn_TYPE_member_t asn_MBR_LastVisitedCellItem_ExtIEs_277[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct LastVisitedCellItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_280,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_280, &asn_PER_memb_extensionValue_constr_280,  memb_extensionValue_constraint_277 },
@@ -23881,14 +23950,15 @@ static const ber_tlv_tag_t asn_DEF_LastVisitedCellItem_ExtIEs_tags_277[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_LastVisitedCellItem_ExtIEs_tag2el_277[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_LastVisitedCellItem_ExtIEs_specs_277 = {
 	sizeof(struct LastVisitedCellItem_ExtIEs),
 	offsetof(struct LastVisitedCellItem_ExtIEs, _asn_ctx),
 	asn_MAP_LastVisitedCellItem_ExtIEs_tag2el_277,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -23934,8 +24004,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_284 = {
 
 asn_TYPE_member_t asn_MBR_LastVisitedNGRANCellInformation_ExtIEs_281[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct LastVisitedNGRANCellInformation_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_282, &asn_PER_memb_id_constr_282,  memb_id_constraint_281 },
@@ -23943,8 +24013,8 @@ asn_TYPE_member_t asn_MBR_LastVisitedNGRANCellInformation_ExtIEs_281[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct LastVisitedNGRANCellInformation_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_283, &asn_PER_memb_criticality_constr_283,  memb_criticality_constraint_281 },
@@ -23952,8 +24022,8 @@ asn_TYPE_member_t asn_MBR_LastVisitedNGRANCellInformation_ExtIEs_281[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct LastVisitedNGRANCellInformation_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_284,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_284, &asn_PER_memb_extensionValue_constr_284,  memb_extensionValue_constraint_281 },
@@ -23965,14 +24035,15 @@ static const ber_tlv_tag_t asn_DEF_LastVisitedNGRANCellInformation_ExtIEs_tags_2
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_LastVisitedNGRANCellInformation_ExtIEs_tag2el_281[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_LastVisitedNGRANCellInformation_ExtIEs_specs_281 = {
 	sizeof(struct LastVisitedNGRANCellInformation_ExtIEs),
 	offsetof(struct LastVisitedNGRANCellInformation_ExtIEs, _asn_ctx),
 	asn_MAP_LastVisitedNGRANCellInformation_ExtIEs_tag2el_281,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24018,8 +24089,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_288 = {
 
 asn_TYPE_member_t asn_MBR_LocationReportingRequestType_ExtIEs_285[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct LocationReportingRequestType_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_286, &asn_PER_memb_id_constr_286,  memb_id_constraint_285 },
@@ -24027,8 +24098,8 @@ asn_TYPE_member_t asn_MBR_LocationReportingRequestType_ExtIEs_285[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct LocationReportingRequestType_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_287, &asn_PER_memb_criticality_constr_287,  memb_criticality_constraint_285 },
@@ -24036,8 +24107,8 @@ asn_TYPE_member_t asn_MBR_LocationReportingRequestType_ExtIEs_285[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct LocationReportingRequestType_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_288,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_288, &asn_PER_memb_extensionValue_constr_288,  memb_extensionValue_constraint_285 },
@@ -24049,14 +24120,15 @@ static const ber_tlv_tag_t asn_DEF_LocationReportingRequestType_ExtIEs_tags_285[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_LocationReportingRequestType_ExtIEs_tag2el_285[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_LocationReportingRequestType_ExtIEs_specs_285 = {
 	sizeof(struct LocationReportingRequestType_ExtIEs),
 	offsetof(struct LocationReportingRequestType_ExtIEs, _asn_ctx),
 	asn_MAP_LocationReportingRequestType_ExtIEs_tag2el_285,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24137,8 +24209,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_292 = {
 
 asn_TYPE_member_t asn_MBR_MobilityRestrictionList_ExtIEs_289[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct MobilityRestrictionList_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_290, &asn_PER_memb_id_constr_290,  memb_id_constraint_289 },
@@ -24146,8 +24218,8 @@ asn_TYPE_member_t asn_MBR_MobilityRestrictionList_ExtIEs_289[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct MobilityRestrictionList_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_MobilityRestrictionList_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_291, &asn_PER_memb_criticality_constr_291,  memb_criticality_constraint_289 },
@@ -24155,8 +24227,8 @@ asn_TYPE_member_t asn_MBR_MobilityRestrictionList_ExtIEs_289[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct MobilityRestrictionList_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_292,
 		select_MobilityRestrictionList_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_292, &asn_PER_memb_extensionValue_constr_292,  memb_extensionValue_constraint_289 },
@@ -24168,14 +24240,15 @@ static const ber_tlv_tag_t asn_DEF_MobilityRestrictionList_ExtIEs_tags_289[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_MobilityRestrictionList_ExtIEs_tag2el_289[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_MobilityRestrictionList_ExtIEs_specs_289 = {
 	sizeof(struct MobilityRestrictionList_ExtIEs),
 	offsetof(struct MobilityRestrictionList_ExtIEs, _asn_ctx),
 	asn_MAP_MobilityRestrictionList_ExtIEs_tag2el_289,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24221,8 +24294,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_296 = {
 
 asn_TYPE_member_t asn_MBR_NonDynamic5QIDescriptor_ExtIEs_293[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct NonDynamic5QIDescriptor_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_294, &asn_PER_memb_id_constr_294,  memb_id_constraint_293 },
@@ -24230,8 +24303,8 @@ asn_TYPE_member_t asn_MBR_NonDynamic5QIDescriptor_ExtIEs_293[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct NonDynamic5QIDescriptor_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_295, &asn_PER_memb_criticality_constr_295,  memb_criticality_constraint_293 },
@@ -24239,8 +24312,8 @@ asn_TYPE_member_t asn_MBR_NonDynamic5QIDescriptor_ExtIEs_293[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct NonDynamic5QIDescriptor_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_296,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_296, &asn_PER_memb_extensionValue_constr_296,  memb_extensionValue_constraint_293 },
@@ -24252,14 +24325,15 @@ static const ber_tlv_tag_t asn_DEF_NonDynamic5QIDescriptor_ExtIEs_tags_293[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_NonDynamic5QIDescriptor_ExtIEs_tag2el_293[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_NonDynamic5QIDescriptor_ExtIEs_specs_293 = {
 	sizeof(struct NonDynamic5QIDescriptor_ExtIEs),
 	offsetof(struct NonDynamic5QIDescriptor_ExtIEs, _asn_ctx),
 	asn_MAP_NonDynamic5QIDescriptor_ExtIEs_tag2el_293,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24305,8 +24379,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_300 = {
 
 asn_TYPE_member_t asn_MBR_NR_CGI_ExtIEs_297[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct NR_CGI_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_298, &asn_PER_memb_id_constr_298,  memb_id_constraint_297 },
@@ -24314,8 +24388,8 @@ asn_TYPE_member_t asn_MBR_NR_CGI_ExtIEs_297[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct NR_CGI_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_299, &asn_PER_memb_criticality_constr_299,  memb_criticality_constraint_297 },
@@ -24323,8 +24397,8 @@ asn_TYPE_member_t asn_MBR_NR_CGI_ExtIEs_297[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct NR_CGI_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_300,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_300, &asn_PER_memb_extensionValue_constr_300,  memb_extensionValue_constraint_297 },
@@ -24336,14 +24410,15 @@ static const ber_tlv_tag_t asn_DEF_NR_CGI_ExtIEs_tags_297[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_NR_CGI_ExtIEs_tag2el_297[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_NR_CGI_ExtIEs_specs_297 = {
 	sizeof(struct NR_CGI_ExtIEs),
 	offsetof(struct NR_CGI_ExtIEs, _asn_ctx),
 	asn_MAP_NR_CGI_ExtIEs_tag2el_297,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24389,8 +24464,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_304 = {
 
 asn_TYPE_member_t asn_MBR_OverloadStartNSSAIItem_ExtIEs_301[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct OverloadStartNSSAIItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_302, &asn_PER_memb_id_constr_302,  memb_id_constraint_301 },
@@ -24398,8 +24473,8 @@ asn_TYPE_member_t asn_MBR_OverloadStartNSSAIItem_ExtIEs_301[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct OverloadStartNSSAIItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_303, &asn_PER_memb_criticality_constr_303,  memb_criticality_constraint_301 },
@@ -24407,8 +24482,8 @@ asn_TYPE_member_t asn_MBR_OverloadStartNSSAIItem_ExtIEs_301[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct OverloadStartNSSAIItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_304,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_304, &asn_PER_memb_extensionValue_constr_304,  memb_extensionValue_constraint_301 },
@@ -24420,14 +24495,15 @@ static const ber_tlv_tag_t asn_DEF_OverloadStartNSSAIItem_ExtIEs_tags_301[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_OverloadStartNSSAIItem_ExtIEs_tag2el_301[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_OverloadStartNSSAIItem_ExtIEs_specs_301 = {
 	sizeof(struct OverloadStartNSSAIItem_ExtIEs),
 	offsetof(struct OverloadStartNSSAIItem_ExtIEs, _asn_ctx),
 	asn_MAP_OverloadStartNSSAIItem_ExtIEs_tag2el_301,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24473,8 +24549,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_308 = {
 
 asn_TYPE_member_t asn_MBR_PacketErrorRate_ExtIEs_305[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PacketErrorRate_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_306, &asn_PER_memb_id_constr_306,  memb_id_constraint_305 },
@@ -24482,8 +24558,8 @@ asn_TYPE_member_t asn_MBR_PacketErrorRate_ExtIEs_305[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PacketErrorRate_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_307, &asn_PER_memb_criticality_constr_307,  memb_criticality_constraint_305 },
@@ -24491,8 +24567,8 @@ asn_TYPE_member_t asn_MBR_PacketErrorRate_ExtIEs_305[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PacketErrorRate_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_308,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_308, &asn_PER_memb_extensionValue_constr_308,  memb_extensionValue_constraint_305 },
@@ -24504,14 +24580,15 @@ static const ber_tlv_tag_t asn_DEF_PacketErrorRate_ExtIEs_tags_305[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PacketErrorRate_ExtIEs_tag2el_305[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PacketErrorRate_ExtIEs_specs_305 = {
 	sizeof(struct PacketErrorRate_ExtIEs),
 	offsetof(struct PacketErrorRate_ExtIEs, _asn_ctx),
 	asn_MAP_PacketErrorRate_ExtIEs_tag2el_305,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24557,8 +24634,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_312 = {
 
 asn_TYPE_member_t asn_MBR_PagingAttemptInformation_ExtIEs_309[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PagingAttemptInformation_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_310, &asn_PER_memb_id_constr_310,  memb_id_constraint_309 },
@@ -24566,8 +24643,8 @@ asn_TYPE_member_t asn_MBR_PagingAttemptInformation_ExtIEs_309[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PagingAttemptInformation_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_311, &asn_PER_memb_criticality_constr_311,  memb_criticality_constraint_309 },
@@ -24575,8 +24652,8 @@ asn_TYPE_member_t asn_MBR_PagingAttemptInformation_ExtIEs_309[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PagingAttemptInformation_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_312,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_312, &asn_PER_memb_extensionValue_constr_312,  memb_extensionValue_constraint_309 },
@@ -24588,14 +24665,15 @@ static const ber_tlv_tag_t asn_DEF_PagingAttemptInformation_ExtIEs_tags_309[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PagingAttemptInformation_ExtIEs_tag2el_309[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PagingAttemptInformation_ExtIEs_specs_309 = {
 	sizeof(struct PagingAttemptInformation_ExtIEs),
 	offsetof(struct PagingAttemptInformation_ExtIEs, _asn_ctx),
 	asn_MAP_PagingAttemptInformation_ExtIEs_tag2el_309,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24656,8 +24734,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_316 = {
 
 asn_TYPE_member_t asn_MBR_PathSwitchRequestAcknowledgeTransfer_ExtIEs_313[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestAcknowledgeTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_314, &asn_PER_memb_id_constr_314,  memb_id_constraint_313 },
@@ -24665,8 +24743,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestAcknowledgeTransfer_ExtIEs_313[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestAcknowledgeTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PathSwitchRequestAcknowledgeTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_315, &asn_PER_memb_criticality_constr_315,  memb_criticality_constraint_313 },
@@ -24674,8 +24752,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestAcknowledgeTransfer_ExtIEs_313[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestAcknowledgeTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_316,
 		select_PathSwitchRequestAcknowledgeTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_316, &asn_PER_memb_extensionValue_constr_316,  memb_extensionValue_constraint_313 },
@@ -24687,14 +24765,15 @@ static const ber_tlv_tag_t asn_DEF_PathSwitchRequestAcknowledgeTransfer_ExtIEs_t
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_tag2el_313[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestAcknowledgeTransfer_ExtIEs_specs_313 = {
 	sizeof(struct PathSwitchRequestAcknowledgeTransfer_ExtIEs),
 	offsetof(struct PathSwitchRequestAcknowledgeTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PathSwitchRequestAcknowledgeTransfer_ExtIEs_tag2el_313,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24740,8 +24819,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_320 = {
 
 asn_TYPE_member_t asn_MBR_PathSwitchRequestSetupFailedTransfer_ExtIEs_317[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestSetupFailedTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_318, &asn_PER_memb_id_constr_318,  memb_id_constraint_317 },
@@ -24749,8 +24828,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestSetupFailedTransfer_ExtIEs_317[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestSetupFailedTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_319, &asn_PER_memb_criticality_constr_319,  memb_criticality_constraint_317 },
@@ -24758,8 +24837,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestSetupFailedTransfer_ExtIEs_317[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestSetupFailedTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_320,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_320, &asn_PER_memb_extensionValue_constr_320,  memb_extensionValue_constraint_317 },
@@ -24771,14 +24850,15 @@ static const ber_tlv_tag_t asn_DEF_PathSwitchRequestSetupFailedTransfer_ExtIEs_t
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PathSwitchRequestSetupFailedTransfer_ExtIEs_tag2el_317[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestSetupFailedTransfer_ExtIEs_specs_317 = {
 	sizeof(struct PathSwitchRequestSetupFailedTransfer_ExtIEs),
 	offsetof(struct PathSwitchRequestSetupFailedTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PathSwitchRequestSetupFailedTransfer_ExtIEs_tag2el_317,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24839,8 +24919,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_324 = {
 
 asn_TYPE_member_t asn_MBR_PathSwitchRequestTransfer_ExtIEs_321[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_322, &asn_PER_memb_id_constr_322,  memb_id_constraint_321 },
@@ -24848,8 +24928,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestTransfer_ExtIEs_321[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PathSwitchRequestTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_323, &asn_PER_memb_criticality_constr_323,  memb_criticality_constraint_321 },
@@ -24857,8 +24937,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestTransfer_ExtIEs_321[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_324,
 		select_PathSwitchRequestTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_324, &asn_PER_memb_extensionValue_constr_324,  memb_extensionValue_constraint_321 },
@@ -24870,14 +24950,15 @@ static const ber_tlv_tag_t asn_DEF_PathSwitchRequestTransfer_ExtIEs_tags_321[] =
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PathSwitchRequestTransfer_ExtIEs_tag2el_321[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestTransfer_ExtIEs_specs_321 = {
 	sizeof(struct PathSwitchRequestTransfer_ExtIEs),
 	offsetof(struct PathSwitchRequestTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PathSwitchRequestTransfer_ExtIEs_tag2el_321,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -24923,8 +25004,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_328 = {
 
 asn_TYPE_member_t asn_MBR_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_325[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestUnsuccessfulTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_326, &asn_PER_memb_id_constr_326,  memb_id_constraint_325 },
@@ -24932,8 +25013,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_325[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestUnsuccessfulTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_327, &asn_PER_memb_criticality_constr_327,  memb_criticality_constraint_325 },
@@ -24941,8 +25022,8 @@ asn_TYPE_member_t asn_MBR_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_325[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PathSwitchRequestUnsuccessfulTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_328,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_328, &asn_PER_memb_extensionValue_constr_328,  memb_extensionValue_constraint_325 },
@@ -24954,14 +25035,15 @@ static const ber_tlv_tag_t asn_DEF_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_tag2el_325[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_specs_325 = {
 	sizeof(struct PathSwitchRequestUnsuccessfulTransfer_ExtIEs),
 	offsetof(struct PathSwitchRequestUnsuccessfulTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PathSwitchRequestUnsuccessfulTransfer_ExtIEs_tag2el_325,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25007,8 +25089,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_332 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionAggregateMaximumBitRate_ExtIEs_329[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionAggregateMaximumBitRate_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_330, &asn_PER_memb_id_constr_330,  memb_id_constraint_329 },
@@ -25016,8 +25098,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionAggregateMaximumBitRate_ExtIEs_329[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionAggregateMaximumBitRate_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_331, &asn_PER_memb_criticality_constr_331,  memb_criticality_constraint_329 },
@@ -25025,8 +25107,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionAggregateMaximumBitRate_ExtIEs_329[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionAggregateMaximumBitRate_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_332,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_332, &asn_PER_memb_extensionValue_constr_332,  memb_extensionValue_constraint_329 },
@@ -25038,14 +25120,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionAggregateMaximumBitRate_ExtIEs_tags
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionAggregateMaximumBitRate_ExtIEs_tag2el_329[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionAggregateMaximumBitRate_ExtIEs_specs_329 = {
 	sizeof(struct PDUSessionAggregateMaximumBitRate_ExtIEs),
 	offsetof(struct PDUSessionAggregateMaximumBitRate_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionAggregateMaximumBitRate_ExtIEs_tag2el_329,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25091,8 +25174,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_336 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceAdmittedItem_ExtIEs_333[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceAdmittedItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_334, &asn_PER_memb_id_constr_334,  memb_id_constraint_333 },
@@ -25100,8 +25183,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceAdmittedItem_ExtIEs_333[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceAdmittedItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_335, &asn_PER_memb_criticality_constr_335,  memb_criticality_constraint_333 },
@@ -25109,8 +25192,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceAdmittedItem_ExtIEs_333[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceAdmittedItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_336,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_336, &asn_PER_memb_extensionValue_constr_336,  memb_extensionValue_constraint_333 },
@@ -25122,14 +25205,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceAdmittedItem_ExtIEs_tags_33
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceAdmittedItem_ExtIEs_tag2el_333[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceAdmittedItem_ExtIEs_specs_333 = {
 	sizeof(struct PDUSessionResourceAdmittedItem_ExtIEs),
 	offsetof(struct PDUSessionResourceAdmittedItem_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceAdmittedItem_ExtIEs_tag2el_333,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25175,8 +25259,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_340 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_337[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToModifyItemModCfm_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_338, &asn_PER_memb_id_constr_338,  memb_id_constraint_337 },
@@ -25184,8 +25268,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_337[
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToModifyItemModCfm_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_339, &asn_PER_memb_criticality_constr_339,  memb_criticality_constraint_337 },
@@ -25193,8 +25277,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_337[
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToModifyItemModCfm_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_340,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_340, &asn_PER_memb_extensionValue_constr_340,  memb_extensionValue_constraint_337 },
@@ -25206,14 +25290,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToModifyItemModCfm_Ex
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_tag2el_337[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_specs_337 = {
 	sizeof(struct PDUSessionResourceFailedToModifyItemModCfm_ExtIEs),
 	offsetof(struct PDUSessionResourceFailedToModifyItemModCfm_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceFailedToModifyItemModCfm_ExtIEs_tag2el_337,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25259,8 +25344,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_344 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_341[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToModifyItemModRes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_342, &asn_PER_memb_id_constr_342,  memb_id_constraint_341 },
@@ -25268,8 +25353,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_341[
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToModifyItemModRes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_343, &asn_PER_memb_criticality_constr_343,  memb_criticality_constraint_341 },
@@ -25277,8 +25362,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_341[
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToModifyItemModRes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_344,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_344, &asn_PER_memb_extensionValue_constr_344,  memb_extensionValue_constraint_341 },
@@ -25290,14 +25375,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToModifyItemModRes_Ex
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_tag2el_341[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_specs_341 = {
 	sizeof(struct PDUSessionResourceFailedToModifyItemModRes_ExtIEs),
 	offsetof(struct PDUSessionResourceFailedToModifyItemModRes_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceFailedToModifyItemModRes_ExtIEs_tag2el_341,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25343,8 +25429,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_348 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_345[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_346, &asn_PER_memb_id_constr_346,  memb_id_constraint_345 },
@@ -25352,8 +25438,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_345[
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_347, &asn_PER_memb_criticality_constr_347,  memb_criticality_constraint_345 },
@@ -25361,8 +25447,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_345[
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_348,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_348, &asn_PER_memb_extensionValue_constr_348,  memb_extensionValue_constraint_345 },
@@ -25374,14 +25460,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToSetupItemCxtFail_Ex
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_tag2el_345[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_specs_345 = {
 	sizeof(struct PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs),
 	offsetof(struct PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceFailedToSetupItemCxtFail_ExtIEs_tag2el_345,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25427,8 +25514,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_352 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_349[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_350, &asn_PER_memb_id_constr_350,  memb_id_constraint_349 },
@@ -25436,8 +25523,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_349[]
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_351, &asn_PER_memb_criticality_constr_351,  memb_criticality_constraint_349 },
@@ -25445,8 +25532,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_349[]
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_352,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_352, &asn_PER_memb_extensionValue_constr_352,  memb_extensionValue_constraint_349 },
@@ -25458,14 +25545,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToSetupItemCxtRes_Ext
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_tag2el_349[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_specs_349 = {
 	sizeof(struct PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs),
 	offsetof(struct PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceFailedToSetupItemCxtRes_ExtIEs_tag2el_349,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25511,8 +25599,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_356 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_353[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemHOAck_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_354, &asn_PER_memb_id_constr_354,  memb_id_constraint_353 },
@@ -25520,8 +25608,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_353[] 
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemHOAck_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_355, &asn_PER_memb_criticality_constr_355,  memb_criticality_constraint_353 },
@@ -25529,8 +25617,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_353[] 
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemHOAck_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_356,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_356, &asn_PER_memb_extensionValue_constr_356,  memb_extensionValue_constraint_353 },
@@ -25542,14 +25630,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToSetupItemHOAck_ExtI
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_tag2el_353[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_specs_353 = {
 	sizeof(struct PDUSessionResourceFailedToSetupItemHOAck_ExtIEs),
 	offsetof(struct PDUSessionResourceFailedToSetupItemHOAck_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceFailedToSetupItemHOAck_ExtIEs_tag2el_353,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25595,8 +25684,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_360 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_357[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemPSReq_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_358, &asn_PER_memb_id_constr_358,  memb_id_constraint_357 },
@@ -25604,8 +25693,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_357[] 
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemPSReq_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_359, &asn_PER_memb_criticality_constr_359,  memb_criticality_constraint_357 },
@@ -25613,8 +25702,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_357[] 
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemPSReq_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_360,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_360, &asn_PER_memb_extensionValue_constr_360,  memb_extensionValue_constraint_357 },
@@ -25626,14 +25715,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToSetupItemPSReq_ExtI
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_tag2el_357[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_specs_357 = {
 	sizeof(struct PDUSessionResourceFailedToSetupItemPSReq_ExtIEs),
 	offsetof(struct PDUSessionResourceFailedToSetupItemPSReq_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceFailedToSetupItemPSReq_ExtIEs_tag2el_357,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25679,8 +25769,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_364 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_361[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemSURes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_362, &asn_PER_memb_id_constr_362,  memb_id_constraint_361 },
@@ -25688,8 +25778,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_361[] 
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemSURes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_363, &asn_PER_memb_criticality_constr_363,  memb_criticality_constraint_361 },
@@ -25697,8 +25787,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_361[] 
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceFailedToSetupItemSURes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_364,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_364, &asn_PER_memb_extensionValue_constr_364,  memb_extensionValue_constraint_361 },
@@ -25710,14 +25800,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceFailedToSetupItemSURes_ExtI
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_tag2el_361[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_specs_361 = {
 	sizeof(struct PDUSessionResourceFailedToSetupItemSURes_ExtIEs),
 	offsetof(struct PDUSessionResourceFailedToSetupItemSURes_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceFailedToSetupItemSURes_ExtIEs_tag2el_361,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25763,8 +25854,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_368 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceHandoverItem_ExtIEs_365[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceHandoverItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_366, &asn_PER_memb_id_constr_366,  memb_id_constraint_365 },
@@ -25772,8 +25863,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceHandoverItem_ExtIEs_365[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceHandoverItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_367, &asn_PER_memb_criticality_constr_367,  memb_criticality_constraint_365 },
@@ -25781,8 +25872,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceHandoverItem_ExtIEs_365[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceHandoverItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_368,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_368, &asn_PER_memb_extensionValue_constr_368,  memb_extensionValue_constraint_365 },
@@ -25794,14 +25885,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceHandoverItem_ExtIEs_tags_36
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceHandoverItem_ExtIEs_tag2el_365[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceHandoverItem_ExtIEs_specs_365 = {
 	sizeof(struct PDUSessionResourceHandoverItem_ExtIEs),
 	offsetof(struct PDUSessionResourceHandoverItem_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceHandoverItem_ExtIEs_tag2el_365,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25847,8 +25939,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_372 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceInformationItem_ExtIEs_369[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceInformationItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_370, &asn_PER_memb_id_constr_370,  memb_id_constraint_369 },
@@ -25856,8 +25948,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceInformationItem_ExtIEs_369[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceInformationItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_371, &asn_PER_memb_criticality_constr_371,  memb_criticality_constraint_369 },
@@ -25865,8 +25957,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceInformationItem_ExtIEs_369[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceInformationItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_372,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_372, &asn_PER_memb_extensionValue_constr_372,  memb_extensionValue_constraint_369 },
@@ -25878,14 +25970,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceInformationItem_ExtIEs_tags
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceInformationItem_ExtIEs_tag2el_369[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceInformationItem_ExtIEs_specs_369 = {
 	sizeof(struct PDUSessionResourceInformationItem_ExtIEs),
 	offsetof(struct PDUSessionResourceInformationItem_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceInformationItem_ExtIEs_tag2el_369,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -25911,7 +26004,7 @@ static asn_TYPE_member_t asn_MBR_extensionValue_376[] = {
 		0,
 		&asn_DEF_OCTET_STRING,
 		0,
-		{ &asn_OER_memb_OCTET_STRING_CONTAINING_PDUSessionResourceReleaseResponseTransfer__constr_11, &asn_PER_memb_OCTET_STRING_CONTAINING_PDUSessionResourceReleaseResponseTransfer__constr_11,  memb_OCTET_STRING_CONTAINING_PDUSessionResourceReleaseResponseTransfer__constraint_376 },
+		{ 0, 0,  memb_OCTET_STRING_CONTAINING_PDUSessionResourceReleaseResponseTransfer__constraint_376 },
 		0, 0, /* No default value */
 		"OCTET STRING (CONTAINING PDUSessionResourceReleaseResponseTransfer)"
 		},
@@ -25946,8 +26039,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_376 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceItemCxtRelCpl_ExtIEs_373[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemCxtRelCpl_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_374, &asn_PER_memb_id_constr_374,  memb_id_constraint_373 },
@@ -25955,8 +26048,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceItemCxtRelCpl_ExtIEs_373[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemCxtRelCpl_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PDUSessionResourceItemCxtRelCpl_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_375, &asn_PER_memb_criticality_constr_375,  memb_criticality_constraint_373 },
@@ -25964,8 +26057,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceItemCxtRelCpl_ExtIEs_373[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemCxtRelCpl_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_376,
 		select_PDUSessionResourceItemCxtRelCpl_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_376, &asn_PER_memb_extensionValue_constr_376,  memb_extensionValue_constraint_373 },
@@ -25977,14 +26070,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceItemCxtRelCpl_ExtIEs_tags_3
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_tag2el_373[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceItemCxtRelCpl_ExtIEs_specs_373 = {
 	sizeof(struct PDUSessionResourceItemCxtRelCpl_ExtIEs),
 	offsetof(struct PDUSessionResourceItemCxtRelCpl_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceItemCxtRelCpl_ExtIEs_tag2el_373,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26030,8 +26124,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_380 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceItemCxtRelReq_ExtIEs_377[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemCxtRelReq_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_378, &asn_PER_memb_id_constr_378,  memb_id_constraint_377 },
@@ -26039,8 +26133,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceItemCxtRelReq_ExtIEs_377[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemCxtRelReq_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_379, &asn_PER_memb_criticality_constr_379,  memb_criticality_constraint_377 },
@@ -26048,8 +26142,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceItemCxtRelReq_ExtIEs_377[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemCxtRelReq_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_380,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_380, &asn_PER_memb_extensionValue_constr_380,  memb_extensionValue_constraint_377 },
@@ -26061,14 +26155,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceItemCxtRelReq_ExtIEs_tags_3
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceItemCxtRelReq_ExtIEs_tag2el_377[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceItemCxtRelReq_ExtIEs_specs_377 = {
 	sizeof(struct PDUSessionResourceItemCxtRelReq_ExtIEs),
 	offsetof(struct PDUSessionResourceItemCxtRelReq_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceItemCxtRelReq_ExtIEs_tag2el_377,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26114,8 +26209,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_384 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceItemHORqd_ExtIEs_381[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemHORqd_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_382, &asn_PER_memb_id_constr_382,  memb_id_constraint_381 },
@@ -26123,8 +26218,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceItemHORqd_ExtIEs_381[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemHORqd_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_383, &asn_PER_memb_criticality_constr_383,  memb_criticality_constraint_381 },
@@ -26132,8 +26227,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceItemHORqd_ExtIEs_381[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceItemHORqd_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_384,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_384, &asn_PER_memb_extensionValue_constr_384,  memb_extensionValue_constraint_381 },
@@ -26145,14 +26240,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceItemHORqd_ExtIEs_tags_381[]
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceItemHORqd_ExtIEs_tag2el_381[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceItemHORqd_ExtIEs_specs_381 = {
 	sizeof(struct PDUSessionResourceItemHORqd_ExtIEs),
 	offsetof(struct PDUSessionResourceItemHORqd_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceItemHORqd_ExtIEs_tag2el_381,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26198,8 +26294,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_388 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyConfirmTransfer_ExtIEs_385[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyConfirmTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_386, &asn_PER_memb_id_constr_386,  memb_id_constraint_385 },
@@ -26207,8 +26303,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyConfirmTransfer_ExtIEs_385[] =
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyConfirmTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_387, &asn_PER_memb_criticality_constr_387,  memb_criticality_constraint_385 },
@@ -26216,8 +26312,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyConfirmTransfer_ExtIEs_385[] =
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyConfirmTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_388,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_388, &asn_PER_memb_extensionValue_constr_388,  memb_extensionValue_constraint_385 },
@@ -26229,14 +26325,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyConfirmTransfer_ExtIE
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs_tag2el_385[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyConfirmTransfer_ExtIEs_specs_385 = {
 	sizeof(struct PDUSessionResourceModifyConfirmTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyConfirmTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyConfirmTransfer_ExtIEs_tag2el_385,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26282,8 +26379,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_392 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_389[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_390, &asn_PER_memb_id_constr_390,  memb_id_constraint_389 },
@@ -26291,8 +26388,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndicationUnsuccessfulTransfer
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_391, &asn_PER_memb_criticality_constr_391,  memb_criticality_constraint_389 },
@@ -26300,8 +26397,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndicationUnsuccessfulTransfer
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_392,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_392, &asn_PER_memb_extensionValue_constr_392,  memb_extensionValue_constraint_389 },
@@ -26313,14 +26410,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyIndicationUnsuccessfu
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_tag2el_389[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_specs_389 = {
 	sizeof(struct PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyIndicationUnsuccessfulTransfer_ExtIEs_tag2el_389,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26381,8 +26479,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_396 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyResponseTransfer_ExtIEs_393[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyResponseTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_394, &asn_PER_memb_id_constr_394,  memb_id_constraint_393 },
@@ -26390,8 +26488,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyResponseTransfer_ExtIEs_393[] 
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyResponseTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PDUSessionResourceModifyResponseTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_395, &asn_PER_memb_criticality_constr_395,  memb_criticality_constraint_393 },
@@ -26399,8 +26497,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyResponseTransfer_ExtIEs_393[] 
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyResponseTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_396,
 		select_PDUSessionResourceModifyResponseTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_396, &asn_PER_memb_extensionValue_constr_396,  memb_extensionValue_constraint_393 },
@@ -26412,14 +26510,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyResponseTransfer_ExtI
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_tag2el_393[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyResponseTransfer_ExtIEs_specs_393 = {
 	sizeof(struct PDUSessionResourceModifyResponseTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyResponseTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyResponseTransfer_ExtIEs_tag2el_393,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26490,8 +26589,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_400 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndicationTransfer_ExtIEs_397[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyIndicationTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_398, &asn_PER_memb_id_constr_398,  memb_id_constraint_397 },
@@ -26499,8 +26598,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndicationTransfer_ExtIEs_397[
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyIndicationTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PDUSessionResourceModifyIndicationTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_399, &asn_PER_memb_criticality_constr_399,  memb_criticality_constraint_397 },
@@ -26508,8 +26607,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyIndicationTransfer_ExtIEs_397[
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyIndicationTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_400,
 		select_PDUSessionResourceModifyIndicationTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_400, &asn_PER_memb_extensionValue_constr_400,  memb_extensionValue_constraint_397 },
@@ -26521,14 +26620,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyIndicationTransfer_Ex
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_tag2el_397[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyIndicationTransfer_ExtIEs_specs_397 = {
 	sizeof(struct PDUSessionResourceModifyIndicationTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyIndicationTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyIndicationTransfer_ExtIEs_tag2el_397,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26574,8 +26674,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_404 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModCfm_ExtIEs_401[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModCfm_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_402, &asn_PER_memb_id_constr_402,  memb_id_constraint_401 },
@@ -26583,8 +26683,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModCfm_ExtIEs_401[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModCfm_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_403, &asn_PER_memb_criticality_constr_403,  memb_criticality_constraint_401 },
@@ -26592,8 +26692,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModCfm_ExtIEs_401[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModCfm_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_404,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_404, &asn_PER_memb_extensionValue_constr_404,  memb_extensionValue_constraint_401 },
@@ -26605,14 +26705,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyItemModCfm_ExtIEs_tag
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyItemModCfm_ExtIEs_tag2el_401[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyItemModCfm_ExtIEs_specs_401 = {
 	sizeof(struct PDUSessionResourceModifyItemModCfm_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyItemModCfm_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyItemModCfm_ExtIEs_tag2el_401,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26658,8 +26759,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_408 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModInd_ExtIEs_405[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModInd_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_406, &asn_PER_memb_id_constr_406,  memb_id_constraint_405 },
@@ -26667,8 +26768,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModInd_ExtIEs_405[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModInd_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_407, &asn_PER_memb_criticality_constr_407,  memb_criticality_constraint_405 },
@@ -26676,8 +26777,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModInd_ExtIEs_405[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModInd_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_408,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_408, &asn_PER_memb_extensionValue_constr_408,  memb_extensionValue_constraint_405 },
@@ -26689,14 +26790,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyItemModInd_ExtIEs_tag
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyItemModInd_ExtIEs_tag2el_405[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyItemModInd_ExtIEs_specs_405 = {
 	sizeof(struct PDUSessionResourceModifyItemModInd_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyItemModInd_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyItemModInd_ExtIEs_tag2el_405,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26757,8 +26859,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_412 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModReq_ExtIEs_409[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModReq_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_410, &asn_PER_memb_id_constr_410,  memb_id_constraint_409 },
@@ -26766,8 +26868,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModReq_ExtIEs_409[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModReq_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PDUSessionResourceModifyItemModReq_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_411, &asn_PER_memb_criticality_constr_411,  memb_criticality_constraint_409 },
@@ -26775,8 +26877,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModReq_ExtIEs_409[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModReq_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_412,
 		select_PDUSessionResourceModifyItemModReq_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_412, &asn_PER_memb_extensionValue_constr_412,  memb_extensionValue_constraint_409 },
@@ -26788,14 +26890,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyItemModReq_ExtIEs_tag
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyItemModReq_ExtIEs_tag2el_409[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyItemModReq_ExtIEs_specs_409 = {
 	sizeof(struct PDUSessionResourceModifyItemModReq_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyItemModReq_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyItemModReq_ExtIEs_tag2el_409,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26841,8 +26944,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_416 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModRes_ExtIEs_413[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModRes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_414, &asn_PER_memb_id_constr_414,  memb_id_constraint_413 },
@@ -26850,8 +26953,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModRes_ExtIEs_413[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModRes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_415, &asn_PER_memb_criticality_constr_415,  memb_criticality_constraint_413 },
@@ -26859,8 +26962,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyItemModRes_ExtIEs_413[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyItemModRes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_416,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_416, &asn_PER_memb_extensionValue_constr_416,  memb_extensionValue_constraint_413 },
@@ -26872,14 +26975,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyItemModRes_ExtIEs_tag
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyItemModRes_ExtIEs_tag2el_413[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyItemModRes_ExtIEs_specs_413 = {
 	sizeof(struct PDUSessionResourceModifyItemModRes_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyItemModRes_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyItemModRes_ExtIEs_tag2el_413,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -26925,8 +27029,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_420 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_417[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_418, &asn_PER_memb_id_constr_418,  memb_id_constraint_417 },
@@ -26934,8 +27038,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_41
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_419, &asn_PER_memb_criticality_constr_419,  memb_criticality_constraint_417 },
@@ -26943,8 +27047,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_41
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_420,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_420, &asn_PER_memb_extensionValue_constr_420,  memb_extensionValue_constraint_417 },
@@ -26956,14 +27060,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceModifyUnsuccessfulTransfer_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_tag2el_417[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_specs_417 = {
 	sizeof(struct PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceModifyUnsuccessfulTransfer_ExtIEs_tag2el_417,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27009,8 +27114,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_424 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyItem_ExtIEs_421[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_422, &asn_PER_memb_id_constr_422,  memb_id_constraint_421 },
@@ -27018,8 +27123,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyItem_ExtIEs_421[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_423, &asn_PER_memb_criticality_constr_423,  memb_criticality_constraint_421 },
@@ -27027,8 +27132,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyItem_ExtIEs_421[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_424,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_424, &asn_PER_memb_extensionValue_constr_424,  memb_extensionValue_constraint_421 },
@@ -27040,14 +27145,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceNotifyItem_ExtIEs_tags_421[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceNotifyItem_ExtIEs_tag2el_421[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceNotifyItem_ExtIEs_specs_421 = {
 	sizeof(struct PDUSessionResourceNotifyItem_ExtIEs),
 	offsetof(struct PDUSessionResourceNotifyItem_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceNotifyItem_ExtIEs_tag2el_421,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27108,8 +27214,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_428 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_425[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyReleasedTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_426, &asn_PER_memb_id_constr_426,  memb_id_constraint_425 },
@@ -27117,8 +27223,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_425[] 
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyReleasedTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_427, &asn_PER_memb_criticality_constr_427,  memb_criticality_constraint_425 },
@@ -27126,8 +27232,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_425[] 
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyReleasedTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_428,
 		select_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_428, &asn_PER_memb_extensionValue_constr_428,  memb_extensionValue_constraint_425 },
@@ -27139,14 +27245,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceNotifyReleasedTransfer_ExtI
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_tag2el_425[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_specs_425 = {
 	sizeof(struct PDUSessionResourceNotifyReleasedTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceNotifyReleasedTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceNotifyReleasedTransfer_ExtIEs_tag2el_425,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27207,8 +27314,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_432 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyTransfer_ExtIEs_429[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_430, &asn_PER_memb_id_constr_430,  memb_id_constraint_429 },
@@ -27216,8 +27323,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyTransfer_ExtIEs_429[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PDUSessionResourceNotifyTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_431, &asn_PER_memb_criticality_constr_431,  memb_criticality_constraint_429 },
@@ -27225,8 +27332,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceNotifyTransfer_ExtIEs_429[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceNotifyTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_432,
 		select_PDUSessionResourceNotifyTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_432, &asn_PER_memb_extensionValue_constr_432,  memb_extensionValue_constraint_429 },
@@ -27238,14 +27345,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceNotifyTransfer_ExtIEs_tags_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceNotifyTransfer_ExtIEs_tag2el_429[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceNotifyTransfer_ExtIEs_specs_429 = {
 	sizeof(struct PDUSessionResourceNotifyTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceNotifyTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceNotifyTransfer_ExtIEs_tag2el_429,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27291,8 +27399,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_436 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseCommandTransfer_ExtIEs_433[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleaseCommandTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_434, &asn_PER_memb_id_constr_434,  memb_id_constraint_433 },
@@ -27300,8 +27408,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseCommandTransfer_ExtIEs_433[] 
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleaseCommandTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_435, &asn_PER_memb_criticality_constr_435,  memb_criticality_constraint_433 },
@@ -27309,8 +27417,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseCommandTransfer_ExtIEs_433[] 
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleaseCommandTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_436,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_436, &asn_PER_memb_extensionValue_constr_436,  memb_extensionValue_constraint_433 },
@@ -27322,14 +27430,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceReleaseCommandTransfer_ExtI
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs_tag2el_433[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleaseCommandTransfer_ExtIEs_specs_433 = {
 	sizeof(struct PDUSessionResourceReleaseCommandTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceReleaseCommandTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceReleaseCommandTransfer_ExtIEs_tag2el_433,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27375,8 +27484,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_440 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemNot_ExtIEs_437[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemNot_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_438, &asn_PER_memb_id_constr_438,  memb_id_constraint_437 },
@@ -27384,8 +27493,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemNot_ExtIEs_437[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemNot_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_439, &asn_PER_memb_criticality_constr_439,  memb_criticality_constraint_437 },
@@ -27393,8 +27502,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemNot_ExtIEs_437[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemNot_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_440,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_440, &asn_PER_memb_extensionValue_constr_440,  memb_extensionValue_constraint_437 },
@@ -27406,14 +27515,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceReleasedItemNot_ExtIEs_tags
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceReleasedItemNot_ExtIEs_tag2el_437[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleasedItemNot_ExtIEs_specs_437 = {
 	sizeof(struct PDUSessionResourceReleasedItemNot_ExtIEs),
 	offsetof(struct PDUSessionResourceReleasedItemNot_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceReleasedItemNot_ExtIEs_tag2el_437,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27459,8 +27569,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_444 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemPSAck_ExtIEs_441[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemPSAck_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_442, &asn_PER_memb_id_constr_442,  memb_id_constraint_441 },
@@ -27468,8 +27578,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemPSAck_ExtIEs_441[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemPSAck_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_443, &asn_PER_memb_criticality_constr_443,  memb_criticality_constraint_441 },
@@ -27477,8 +27587,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemPSAck_ExtIEs_441[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemPSAck_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_444,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_444, &asn_PER_memb_extensionValue_constr_444,  memb_extensionValue_constraint_441 },
@@ -27490,14 +27600,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceReleasedItemPSAck_ExtIEs_ta
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceReleasedItemPSAck_ExtIEs_tag2el_441[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleasedItemPSAck_ExtIEs_specs_441 = {
 	sizeof(struct PDUSessionResourceReleasedItemPSAck_ExtIEs),
 	offsetof(struct PDUSessionResourceReleasedItemPSAck_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceReleasedItemPSAck_ExtIEs_tag2el_441,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27543,8 +27654,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_448 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemPSFail_ExtIEs_445[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemPSFail_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_446, &asn_PER_memb_id_constr_446,  memb_id_constraint_445 },
@@ -27552,8 +27663,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemPSFail_ExtIEs_445[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemPSFail_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_447, &asn_PER_memb_criticality_constr_447,  memb_criticality_constraint_445 },
@@ -27561,8 +27672,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemPSFail_ExtIEs_445[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemPSFail_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_448,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_448, &asn_PER_memb_extensionValue_constr_448,  memb_extensionValue_constraint_445 },
@@ -27574,14 +27685,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceReleasedItemPSFail_ExtIEs_t
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceReleasedItemPSFail_ExtIEs_tag2el_445[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleasedItemPSFail_ExtIEs_specs_445 = {
 	sizeof(struct PDUSessionResourceReleasedItemPSFail_ExtIEs),
 	offsetof(struct PDUSessionResourceReleasedItemPSFail_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceReleasedItemPSFail_ExtIEs_tag2el_445,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27627,8 +27739,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_452 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemRelRes_ExtIEs_449[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemRelRes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_450, &asn_PER_memb_id_constr_450,  memb_id_constraint_449 },
@@ -27636,8 +27748,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemRelRes_ExtIEs_449[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemRelRes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_451, &asn_PER_memb_criticality_constr_451,  memb_criticality_constraint_449 },
@@ -27645,8 +27757,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleasedItemRelRes_ExtIEs_449[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleasedItemRelRes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_452,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_452, &asn_PER_memb_extensionValue_constr_452,  memb_extensionValue_constraint_449 },
@@ -27658,14 +27770,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceReleasedItemRelRes_ExtIEs_t
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceReleasedItemRelRes_ExtIEs_tag2el_449[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleasedItemRelRes_ExtIEs_specs_449 = {
 	sizeof(struct PDUSessionResourceReleasedItemRelRes_ExtIEs),
 	offsetof(struct PDUSessionResourceReleasedItemRelRes_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceReleasedItemRelRes_ExtIEs_tag2el_449,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27726,8 +27839,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_456 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseResponseTransfer_ExtIEs_453[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleaseResponseTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_454, &asn_PER_memb_id_constr_454,  memb_id_constraint_453 },
@@ -27735,8 +27848,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseResponseTransfer_ExtIEs_453[]
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleaseResponseTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_PDUSessionResourceReleaseResponseTransfer_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_455, &asn_PER_memb_criticality_constr_455,  memb_criticality_constraint_453 },
@@ -27744,8 +27857,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceReleaseResponseTransfer_ExtIEs_453[]
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceReleaseResponseTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_456,
 		select_PDUSessionResourceReleaseResponseTransfer_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_456, &asn_PER_memb_extensionValue_constr_456,  memb_extensionValue_constraint_453 },
@@ -27757,14 +27870,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceReleaseResponseTransfer_Ext
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_tag2el_453[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceReleaseResponseTransfer_ExtIEs_specs_453 = {
 	sizeof(struct PDUSessionResourceReleaseResponseTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceReleaseResponseTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceReleaseResponseTransfer_ExtIEs_tag2el_453,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27810,8 +27924,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_460 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_457[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSecondaryRATUsageItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_458, &asn_PER_memb_id_constr_458,  memb_id_constraint_457 },
@@ -27819,8 +27933,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_457[] =
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSecondaryRATUsageItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_459, &asn_PER_memb_criticality_constr_459,  memb_criticality_constraint_457 },
@@ -27828,8 +27942,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_457[] =
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSecondaryRATUsageItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_460,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_460, &asn_PER_memb_extensionValue_constr_460,  memb_extensionValue_constraint_457 },
@@ -27841,14 +27955,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSecondaryRATUsageItem_ExtIE
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_tag2el_457[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_specs_457 = {
 	sizeof(struct PDUSessionResourceSecondaryRATUsageItem_ExtIEs),
 	offsetof(struct PDUSessionResourceSecondaryRATUsageItem_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSecondaryRATUsageItem_ExtIEs_tag2el_457,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27894,8 +28009,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_464 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemCxtReq_ExtIEs_461[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemCxtReq_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_462, &asn_PER_memb_id_constr_462,  memb_id_constraint_461 },
@@ -27903,8 +28018,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemCxtReq_ExtIEs_461[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemCxtReq_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_463, &asn_PER_memb_criticality_constr_463,  memb_criticality_constraint_461 },
@@ -27912,8 +28027,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemCxtReq_ExtIEs_461[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemCxtReq_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_464,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_464, &asn_PER_memb_extensionValue_constr_464,  memb_extensionValue_constraint_461 },
@@ -27925,14 +28040,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSetupItemCxtReq_ExtIEs_tags
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSetupItemCxtReq_ExtIEs_tag2el_461[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupItemCxtReq_ExtIEs_specs_461 = {
 	sizeof(struct PDUSessionResourceSetupItemCxtReq_ExtIEs),
 	offsetof(struct PDUSessionResourceSetupItemCxtReq_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSetupItemCxtReq_ExtIEs_tag2el_461,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -27978,8 +28094,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_468 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemCxtRes_ExtIEs_465[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemCxtRes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_466, &asn_PER_memb_id_constr_466,  memb_id_constraint_465 },
@@ -27987,8 +28103,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemCxtRes_ExtIEs_465[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemCxtRes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_467, &asn_PER_memb_criticality_constr_467,  memb_criticality_constraint_465 },
@@ -27996,8 +28112,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemCxtRes_ExtIEs_465[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemCxtRes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_468,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_468, &asn_PER_memb_extensionValue_constr_468,  memb_extensionValue_constraint_465 },
@@ -28009,14 +28125,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSetupItemCxtRes_ExtIEs_tags
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSetupItemCxtRes_ExtIEs_tag2el_465[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupItemCxtRes_ExtIEs_specs_465 = {
 	sizeof(struct PDUSessionResourceSetupItemCxtRes_ExtIEs),
 	offsetof(struct PDUSessionResourceSetupItemCxtRes_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSetupItemCxtRes_ExtIEs_tag2el_465,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28062,8 +28179,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_472 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemHOReq_ExtIEs_469[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemHOReq_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_470, &asn_PER_memb_id_constr_470,  memb_id_constraint_469 },
@@ -28071,8 +28188,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemHOReq_ExtIEs_469[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemHOReq_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_471, &asn_PER_memb_criticality_constr_471,  memb_criticality_constraint_469 },
@@ -28080,8 +28197,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemHOReq_ExtIEs_469[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemHOReq_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_472,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_472, &asn_PER_memb_extensionValue_constr_472,  memb_extensionValue_constraint_469 },
@@ -28093,14 +28210,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSetupItemHOReq_ExtIEs_tags_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSetupItemHOReq_ExtIEs_tag2el_469[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupItemHOReq_ExtIEs_specs_469 = {
 	sizeof(struct PDUSessionResourceSetupItemHOReq_ExtIEs),
 	offsetof(struct PDUSessionResourceSetupItemHOReq_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSetupItemHOReq_ExtIEs_tag2el_469,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28146,8 +28264,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_476 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemSUReq_ExtIEs_473[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemSUReq_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_474, &asn_PER_memb_id_constr_474,  memb_id_constraint_473 },
@@ -28155,8 +28273,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemSUReq_ExtIEs_473[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemSUReq_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_475, &asn_PER_memb_criticality_constr_475,  memb_criticality_constraint_473 },
@@ -28164,8 +28282,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemSUReq_ExtIEs_473[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemSUReq_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_476,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_476, &asn_PER_memb_extensionValue_constr_476,  memb_extensionValue_constraint_473 },
@@ -28177,14 +28295,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSetupItemSUReq_ExtIEs_tags_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSetupItemSUReq_ExtIEs_tag2el_473[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupItemSUReq_ExtIEs_specs_473 = {
 	sizeof(struct PDUSessionResourceSetupItemSUReq_ExtIEs),
 	offsetof(struct PDUSessionResourceSetupItemSUReq_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSetupItemSUReq_ExtIEs_tag2el_473,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28230,8 +28349,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_480 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemSURes_ExtIEs_477[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemSURes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_478, &asn_PER_memb_id_constr_478,  memb_id_constraint_477 },
@@ -28239,8 +28358,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemSURes_ExtIEs_477[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemSURes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_479, &asn_PER_memb_criticality_constr_479,  memb_criticality_constraint_477 },
@@ -28248,8 +28367,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupItemSURes_ExtIEs_477[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupItemSURes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_480,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_480, &asn_PER_memb_extensionValue_constr_480,  memb_extensionValue_constraint_477 },
@@ -28261,14 +28380,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSetupItemSURes_ExtIEs_tags_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSetupItemSURes_ExtIEs_tag2el_477[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupItemSURes_ExtIEs_specs_477 = {
 	sizeof(struct PDUSessionResourceSetupItemSURes_ExtIEs),
 	offsetof(struct PDUSessionResourceSetupItemSURes_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSetupItemSURes_ExtIEs_tag2el_477,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28314,8 +28434,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_484 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupResponseTransfer_ExtIEs_481[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupResponseTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_482, &asn_PER_memb_id_constr_482,  memb_id_constraint_481 },
@@ -28323,8 +28443,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupResponseTransfer_ExtIEs_481[] =
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupResponseTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_483, &asn_PER_memb_criticality_constr_483,  memb_criticality_constraint_481 },
@@ -28332,8 +28452,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupResponseTransfer_ExtIEs_481[] =
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupResponseTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_484,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_484, &asn_PER_memb_extensionValue_constr_484,  memb_extensionValue_constraint_481 },
@@ -28345,14 +28465,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSetupResponseTransfer_ExtIE
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSetupResponseTransfer_ExtIEs_tag2el_481[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupResponseTransfer_ExtIEs_specs_481 = {
 	sizeof(struct PDUSessionResourceSetupResponseTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceSetupResponseTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSetupResponseTransfer_ExtIEs_tag2el_481,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28398,8 +28519,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_488 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_485[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_486, &asn_PER_memb_id_constr_486,  memb_id_constraint_485 },
@@ -28407,8 +28528,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_485
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_487, &asn_PER_memb_criticality_constr_487,  memb_criticality_constraint_485 },
@@ -28416,8 +28537,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_485
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_488,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_488, &asn_PER_memb_extensionValue_constr_488,  memb_extensionValue_constraint_485 },
@@ -28429,14 +28550,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSetupUnsuccessfulTransfer_E
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_tag2el_485[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_specs_485 = {
 	sizeof(struct PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs),
 	offsetof(struct PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSetupUnsuccessfulTransfer_ExtIEs_tag2el_485,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28482,8 +28604,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_492 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceSwitchedItem_ExtIEs_489[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSwitchedItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_490, &asn_PER_memb_id_constr_490,  memb_id_constraint_489 },
@@ -28491,8 +28613,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSwitchedItem_ExtIEs_489[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSwitchedItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_491, &asn_PER_memb_criticality_constr_491,  memb_criticality_constraint_489 },
@@ -28500,8 +28622,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceSwitchedItem_ExtIEs_489[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceSwitchedItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_492,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_492, &asn_PER_memb_extensionValue_constr_492,  memb_extensionValue_constraint_489 },
@@ -28513,14 +28635,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceSwitchedItem_ExtIEs_tags_48
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceSwitchedItem_ExtIEs_tag2el_489[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceSwitchedItem_ExtIEs_specs_489 = {
 	sizeof(struct PDUSessionResourceSwitchedItem_ExtIEs),
 	offsetof(struct PDUSessionResourceSwitchedItem_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceSwitchedItem_ExtIEs_tag2el_489,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28566,8 +28689,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_496 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_493[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToBeSwitchedDLItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_494, &asn_PER_memb_id_constr_494,  memb_id_constraint_493 },
@@ -28575,8 +28698,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_493[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToBeSwitchedDLItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_495, &asn_PER_memb_criticality_constr_495,  memb_criticality_constraint_493 },
@@ -28584,8 +28707,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_493[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToBeSwitchedDLItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_496,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_496, &asn_PER_memb_extensionValue_constr_496,  memb_extensionValue_constraint_493 },
@@ -28597,14 +28720,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_t
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_tag2el_493[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_specs_493 = {
 	sizeof(struct PDUSessionResourceToBeSwitchedDLItem_ExtIEs),
 	offsetof(struct PDUSessionResourceToBeSwitchedDLItem_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceToBeSwitchedDLItem_ExtIEs_tag2el_493,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28650,8 +28774,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_500 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_497[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToReleaseItemHOCmd_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_498, &asn_PER_memb_id_constr_498,  memb_id_constraint_497 },
@@ -28659,8 +28783,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_497[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToReleaseItemHOCmd_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_499, &asn_PER_memb_criticality_constr_499,  memb_criticality_constraint_497 },
@@ -28668,8 +28792,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_497[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToReleaseItemHOCmd_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_500,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_500, &asn_PER_memb_extensionValue_constr_500,  memb_extensionValue_constraint_497 },
@@ -28681,14 +28805,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_t
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_tag2el_497[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_specs_497 = {
 	sizeof(struct PDUSessionResourceToReleaseItemHOCmd_ExtIEs),
 	offsetof(struct PDUSessionResourceToReleaseItemHOCmd_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceToReleaseItemHOCmd_ExtIEs_tag2el_497,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28734,8 +28859,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_504 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_501[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToReleaseItemRelCmd_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_502, &asn_PER_memb_id_constr_502,  memb_id_constraint_501 },
@@ -28743,8 +28868,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_501[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToReleaseItemRelCmd_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_503, &asn_PER_memb_criticality_constr_503,  memb_criticality_constraint_501 },
@@ -28752,8 +28877,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_501[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionResourceToReleaseItemRelCmd_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_504,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_504, &asn_PER_memb_extensionValue_constr_504,  memb_extensionValue_constraint_501 },
@@ -28765,14 +28890,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_tag2el_501[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_specs_501 = {
 	sizeof(struct PDUSessionResourceToReleaseItemRelCmd_ExtIEs),
 	offsetof(struct PDUSessionResourceToReleaseItemRelCmd_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionResourceToReleaseItemRelCmd_ExtIEs_tag2el_501,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28818,8 +28944,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_508 = {
 
 asn_TYPE_member_t asn_MBR_PDUSessionUsageReport_ExtIEs_505[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionUsageReport_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_506, &asn_PER_memb_id_constr_506,  memb_id_constraint_505 },
@@ -28827,8 +28953,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionUsageReport_ExtIEs_505[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PDUSessionUsageReport_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_507, &asn_PER_memb_criticality_constr_507,  memb_criticality_constraint_505 },
@@ -28836,8 +28962,8 @@ asn_TYPE_member_t asn_MBR_PDUSessionUsageReport_ExtIEs_505[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PDUSessionUsageReport_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_508,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_508, &asn_PER_memb_extensionValue_constr_508,  memb_extensionValue_constraint_505 },
@@ -28849,14 +28975,15 @@ static const ber_tlv_tag_t asn_DEF_PDUSessionUsageReport_ExtIEs_tags_505[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PDUSessionUsageReport_ExtIEs_tag2el_505[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PDUSessionUsageReport_ExtIEs_specs_505 = {
 	sizeof(struct PDUSessionUsageReport_ExtIEs),
 	offsetof(struct PDUSessionUsageReport_ExtIEs, _asn_ctx),
 	asn_MAP_PDUSessionUsageReport_ExtIEs_tag2el_505,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28902,8 +29029,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_512 = {
 
 asn_TYPE_member_t asn_MBR_PLMNSupportItem_ExtIEs_509[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct PLMNSupportItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_510, &asn_PER_memb_id_constr_510,  memb_id_constraint_509 },
@@ -28911,8 +29038,8 @@ asn_TYPE_member_t asn_MBR_PLMNSupportItem_ExtIEs_509[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct PLMNSupportItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_511, &asn_PER_memb_criticality_constr_511,  memb_criticality_constraint_509 },
@@ -28920,8 +29047,8 @@ asn_TYPE_member_t asn_MBR_PLMNSupportItem_ExtIEs_509[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct PLMNSupportItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_512,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_512, &asn_PER_memb_extensionValue_constr_512,  memb_extensionValue_constraint_509 },
@@ -28933,14 +29060,15 @@ static const ber_tlv_tag_t asn_DEF_PLMNSupportItem_ExtIEs_tags_509[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_PLMNSupportItem_ExtIEs_tag2el_509[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_PLMNSupportItem_ExtIEs_specs_509 = {
 	sizeof(struct PLMNSupportItem_ExtIEs),
 	offsetof(struct PLMNSupportItem_ExtIEs, _asn_ctx),
 	asn_MAP_PLMNSupportItem_ExtIEs_tag2el_509,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -28986,8 +29114,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_516 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowAcceptedItem_ExtIEs_513[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowAcceptedItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_514, &asn_PER_memb_id_constr_514,  memb_id_constraint_513 },
@@ -28995,8 +29123,8 @@ asn_TYPE_member_t asn_MBR_QosFlowAcceptedItem_ExtIEs_513[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowAcceptedItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_515, &asn_PER_memb_criticality_constr_515,  memb_criticality_constraint_513 },
@@ -29004,8 +29132,8 @@ asn_TYPE_member_t asn_MBR_QosFlowAcceptedItem_ExtIEs_513[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowAcceptedItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_516,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_516, &asn_PER_memb_extensionValue_constr_516,  memb_extensionValue_constraint_513 },
@@ -29017,14 +29145,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowAcceptedItem_ExtIEs_tags_513[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowAcceptedItem_ExtIEs_tag2el_513[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowAcceptedItem_ExtIEs_specs_513 = {
 	sizeof(struct QosFlowAcceptedItem_ExtIEs),
 	offsetof(struct QosFlowAcceptedItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowAcceptedItem_ExtIEs_tag2el_513,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29070,8 +29199,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_520 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowAddOrModifyRequestItem_ExtIEs_517[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowAddOrModifyRequestItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_518, &asn_PER_memb_id_constr_518,  memb_id_constraint_517 },
@@ -29079,8 +29208,8 @@ asn_TYPE_member_t asn_MBR_QosFlowAddOrModifyRequestItem_ExtIEs_517[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowAddOrModifyRequestItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_519, &asn_PER_memb_criticality_constr_519,  memb_criticality_constraint_517 },
@@ -29088,8 +29217,8 @@ asn_TYPE_member_t asn_MBR_QosFlowAddOrModifyRequestItem_ExtIEs_517[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowAddOrModifyRequestItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_520,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_520, &asn_PER_memb_extensionValue_constr_520,  memb_extensionValue_constraint_517 },
@@ -29101,14 +29230,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowAddOrModifyRequestItem_ExtIEs_tags_517
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowAddOrModifyRequestItem_ExtIEs_tag2el_517[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowAddOrModifyRequestItem_ExtIEs_specs_517 = {
 	sizeof(struct QosFlowAddOrModifyRequestItem_ExtIEs),
 	offsetof(struct QosFlowAddOrModifyRequestItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowAddOrModifyRequestItem_ExtIEs_tag2el_517,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29154,8 +29284,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_524 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowAddOrModifyResponseItem_ExtIEs_521[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowAddOrModifyResponseItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_522, &asn_PER_memb_id_constr_522,  memb_id_constraint_521 },
@@ -29163,8 +29293,8 @@ asn_TYPE_member_t asn_MBR_QosFlowAddOrModifyResponseItem_ExtIEs_521[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowAddOrModifyResponseItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_523, &asn_PER_memb_criticality_constr_523,  memb_criticality_constraint_521 },
@@ -29172,8 +29302,8 @@ asn_TYPE_member_t asn_MBR_QosFlowAddOrModifyResponseItem_ExtIEs_521[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowAddOrModifyResponseItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_524,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_524, &asn_PER_memb_extensionValue_constr_524,  memb_extensionValue_constraint_521 },
@@ -29185,14 +29315,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowAddOrModifyResponseItem_ExtIEs_tags_52
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowAddOrModifyResponseItem_ExtIEs_tag2el_521[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowAddOrModifyResponseItem_ExtIEs_specs_521 = {
 	sizeof(struct QosFlowAddOrModifyResponseItem_ExtIEs),
 	offsetof(struct QosFlowAddOrModifyResponseItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowAddOrModifyResponseItem_ExtIEs_tag2el_521,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29253,8 +29384,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_528 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowInformationItem_ExtIEs_525[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowInformationItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_526, &asn_PER_memb_id_constr_526,  memb_id_constraint_525 },
@@ -29262,8 +29393,8 @@ asn_TYPE_member_t asn_MBR_QosFlowInformationItem_ExtIEs_525[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowInformationItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_QosFlowInformationItem_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_527, &asn_PER_memb_criticality_constr_527,  memb_criticality_constraint_525 },
@@ -29271,8 +29402,8 @@ asn_TYPE_member_t asn_MBR_QosFlowInformationItem_ExtIEs_525[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowInformationItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_528,
 		select_QosFlowInformationItem_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_528, &asn_PER_memb_extensionValue_constr_528,  memb_extensionValue_constraint_525 },
@@ -29284,14 +29415,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowInformationItem_ExtIEs_tags_525[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowInformationItem_ExtIEs_tag2el_525[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowInformationItem_ExtIEs_specs_525 = {
 	sizeof(struct QosFlowInformationItem_ExtIEs),
 	offsetof(struct QosFlowInformationItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowInformationItem_ExtIEs_tag2el_525,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29337,8 +29469,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_532 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowLevelQosParameters_ExtIEs_529[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowLevelQosParameters_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_530, &asn_PER_memb_id_constr_530,  memb_id_constraint_529 },
@@ -29346,8 +29478,8 @@ asn_TYPE_member_t asn_MBR_QosFlowLevelQosParameters_ExtIEs_529[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowLevelQosParameters_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_531, &asn_PER_memb_criticality_constr_531,  memb_criticality_constraint_529 },
@@ -29355,8 +29487,8 @@ asn_TYPE_member_t asn_MBR_QosFlowLevelQosParameters_ExtIEs_529[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowLevelQosParameters_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_532,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_532, &asn_PER_memb_extensionValue_constr_532,  memb_extensionValue_constraint_529 },
@@ -29368,14 +29500,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowLevelQosParameters_ExtIEs_tags_529[] =
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowLevelQosParameters_ExtIEs_tag2el_529[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowLevelQosParameters_ExtIEs_specs_529 = {
 	sizeof(struct QosFlowLevelQosParameters_ExtIEs),
 	offsetof(struct QosFlowLevelQosParameters_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowLevelQosParameters_ExtIEs_tag2el_529,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29421,8 +29554,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_536 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowWithCauseItem_ExtIEs_533[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowWithCauseItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_534, &asn_PER_memb_id_constr_534,  memb_id_constraint_533 },
@@ -29430,8 +29563,8 @@ asn_TYPE_member_t asn_MBR_QosFlowWithCauseItem_ExtIEs_533[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowWithCauseItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_535, &asn_PER_memb_criticality_constr_535,  memb_criticality_constraint_533 },
@@ -29439,8 +29572,8 @@ asn_TYPE_member_t asn_MBR_QosFlowWithCauseItem_ExtIEs_533[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowWithCauseItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_536,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_536, &asn_PER_memb_extensionValue_constr_536,  memb_extensionValue_constraint_533 },
@@ -29452,14 +29585,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowWithCauseItem_ExtIEs_tags_533[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowWithCauseItem_ExtIEs_tag2el_533[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowWithCauseItem_ExtIEs_specs_533 = {
 	sizeof(struct QosFlowWithCauseItem_ExtIEs),
 	offsetof(struct QosFlowWithCauseItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowWithCauseItem_ExtIEs_tag2el_533,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29505,8 +29639,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_540 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowModifyConfirmItem_ExtIEs_537[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowModifyConfirmItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_538, &asn_PER_memb_id_constr_538,  memb_id_constraint_537 },
@@ -29514,8 +29648,8 @@ asn_TYPE_member_t asn_MBR_QosFlowModifyConfirmItem_ExtIEs_537[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowModifyConfirmItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_539, &asn_PER_memb_criticality_constr_539,  memb_criticality_constraint_537 },
@@ -29523,8 +29657,8 @@ asn_TYPE_member_t asn_MBR_QosFlowModifyConfirmItem_ExtIEs_537[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowModifyConfirmItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_540,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_540, &asn_PER_memb_extensionValue_constr_540,  memb_extensionValue_constraint_537 },
@@ -29536,14 +29670,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowModifyConfirmItem_ExtIEs_tags_537[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowModifyConfirmItem_ExtIEs_tag2el_537[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowModifyConfirmItem_ExtIEs_specs_537 = {
 	sizeof(struct QosFlowModifyConfirmItem_ExtIEs),
 	offsetof(struct QosFlowModifyConfirmItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowModifyConfirmItem_ExtIEs_tag2el_537,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29589,8 +29724,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_544 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowNotifyItem_ExtIEs_541[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowNotifyItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_542, &asn_PER_memb_id_constr_542,  memb_id_constraint_541 },
@@ -29598,8 +29733,8 @@ asn_TYPE_member_t asn_MBR_QosFlowNotifyItem_ExtIEs_541[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowNotifyItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_543, &asn_PER_memb_criticality_constr_543,  memb_criticality_constraint_541 },
@@ -29607,8 +29742,8 @@ asn_TYPE_member_t asn_MBR_QosFlowNotifyItem_ExtIEs_541[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowNotifyItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_544,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_544, &asn_PER_memb_extensionValue_constr_544,  memb_extensionValue_constraint_541 },
@@ -29620,14 +29755,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowNotifyItem_ExtIEs_tags_541[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowNotifyItem_ExtIEs_tag2el_541[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowNotifyItem_ExtIEs_specs_541 = {
 	sizeof(struct QosFlowNotifyItem_ExtIEs),
 	offsetof(struct QosFlowNotifyItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowNotifyItem_ExtIEs_tag2el_541,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29673,8 +29809,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_548 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowPerTNLInformation_ExtIEs_545[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowPerTNLInformation_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_546, &asn_PER_memb_id_constr_546,  memb_id_constraint_545 },
@@ -29682,8 +29818,8 @@ asn_TYPE_member_t asn_MBR_QosFlowPerTNLInformation_ExtIEs_545[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowPerTNLInformation_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_547, &asn_PER_memb_criticality_constr_547,  memb_criticality_constraint_545 },
@@ -29691,8 +29827,8 @@ asn_TYPE_member_t asn_MBR_QosFlowPerTNLInformation_ExtIEs_545[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowPerTNLInformation_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_548,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_548, &asn_PER_memb_extensionValue_constr_548,  memb_extensionValue_constraint_545 },
@@ -29704,14 +29840,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowPerTNLInformation_ExtIEs_tags_545[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowPerTNLInformation_ExtIEs_tag2el_545[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowPerTNLInformation_ExtIEs_specs_545 = {
 	sizeof(struct QosFlowPerTNLInformation_ExtIEs),
 	offsetof(struct QosFlowPerTNLInformation_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowPerTNLInformation_ExtIEs_tag2el_545,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29757,8 +29894,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_552 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowPerTNLInformationItem_ExtIEs_549[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowPerTNLInformationItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_550, &asn_PER_memb_id_constr_550,  memb_id_constraint_549 },
@@ -29766,8 +29903,8 @@ asn_TYPE_member_t asn_MBR_QosFlowPerTNLInformationItem_ExtIEs_549[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowPerTNLInformationItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_551, &asn_PER_memb_criticality_constr_551,  memb_criticality_constraint_549 },
@@ -29775,8 +29912,8 @@ asn_TYPE_member_t asn_MBR_QosFlowPerTNLInformationItem_ExtIEs_549[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowPerTNLInformationItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_552,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_552, &asn_PER_memb_extensionValue_constr_552,  memb_extensionValue_constraint_549 },
@@ -29788,14 +29925,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowPerTNLInformationItem_ExtIEs_tags_549[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowPerTNLInformationItem_ExtIEs_tag2el_549[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowPerTNLInformationItem_ExtIEs_specs_549 = {
 	sizeof(struct QosFlowPerTNLInformationItem_ExtIEs),
 	offsetof(struct QosFlowPerTNLInformationItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowPerTNLInformationItem_ExtIEs_tag2el_549,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29841,8 +29979,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_556 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowSetupRequestItem_ExtIEs_553[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowSetupRequestItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_554, &asn_PER_memb_id_constr_554,  memb_id_constraint_553 },
@@ -29850,8 +29988,8 @@ asn_TYPE_member_t asn_MBR_QosFlowSetupRequestItem_ExtIEs_553[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowSetupRequestItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_555, &asn_PER_memb_criticality_constr_555,  memb_criticality_constraint_553 },
@@ -29859,8 +29997,8 @@ asn_TYPE_member_t asn_MBR_QosFlowSetupRequestItem_ExtIEs_553[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowSetupRequestItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_556,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_556, &asn_PER_memb_extensionValue_constr_556,  memb_extensionValue_constraint_553 },
@@ -29872,14 +30010,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowSetupRequestItem_ExtIEs_tags_553[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowSetupRequestItem_ExtIEs_tag2el_553[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowSetupRequestItem_ExtIEs_specs_553 = {
 	sizeof(struct QosFlowSetupRequestItem_ExtIEs),
 	offsetof(struct QosFlowSetupRequestItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowSetupRequestItem_ExtIEs_tag2el_553,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -29925,8 +30064,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_560 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowItemWithDataForwarding_ExtIEs_557[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowItemWithDataForwarding_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_558, &asn_PER_memb_id_constr_558,  memb_id_constraint_557 },
@@ -29934,8 +30073,8 @@ asn_TYPE_member_t asn_MBR_QosFlowItemWithDataForwarding_ExtIEs_557[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowItemWithDataForwarding_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_559, &asn_PER_memb_criticality_constr_559,  memb_criticality_constraint_557 },
@@ -29943,8 +30082,8 @@ asn_TYPE_member_t asn_MBR_QosFlowItemWithDataForwarding_ExtIEs_557[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowItemWithDataForwarding_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_560,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_560, &asn_PER_memb_extensionValue_constr_560,  memb_extensionValue_constraint_557 },
@@ -29956,14 +30095,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowItemWithDataForwarding_ExtIEs_tags_557
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowItemWithDataForwarding_ExtIEs_tag2el_557[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowItemWithDataForwarding_ExtIEs_specs_557 = {
 	sizeof(struct QosFlowItemWithDataForwarding_ExtIEs),
 	offsetof(struct QosFlowItemWithDataForwarding_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowItemWithDataForwarding_ExtIEs_tag2el_557,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30009,8 +30149,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_564 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowSetupResponseItemSURes_ExtIEs_561[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowSetupResponseItemSURes_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_562, &asn_PER_memb_id_constr_562,  memb_id_constraint_561 },
@@ -30018,8 +30158,8 @@ asn_TYPE_member_t asn_MBR_QosFlowSetupResponseItemSURes_ExtIEs_561[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowSetupResponseItemSURes_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_563, &asn_PER_memb_criticality_constr_563,  memb_criticality_constraint_561 },
@@ -30027,8 +30167,8 @@ asn_TYPE_member_t asn_MBR_QosFlowSetupResponseItemSURes_ExtIEs_561[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowSetupResponseItemSURes_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_564,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_564, &asn_PER_memb_extensionValue_constr_564,  memb_extensionValue_constraint_561 },
@@ -30040,14 +30180,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowSetupResponseItemSURes_ExtIEs_tags_561
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowSetupResponseItemSURes_ExtIEs_tag2el_561[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowSetupResponseItemSURes_ExtIEs_specs_561 = {
 	sizeof(struct QosFlowSetupResponseItemSURes_ExtIEs),
 	offsetof(struct QosFlowSetupResponseItemSURes_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowSetupResponseItemSURes_ExtIEs_tag2el_561,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30093,8 +30234,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_568 = {
 
 asn_TYPE_member_t asn_MBR_QosFlowToBeForwardedItem_ExtIEs_565[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowToBeForwardedItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_566, &asn_PER_memb_id_constr_566,  memb_id_constraint_565 },
@@ -30102,8 +30243,8 @@ asn_TYPE_member_t asn_MBR_QosFlowToBeForwardedItem_ExtIEs_565[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QosFlowToBeForwardedItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_567, &asn_PER_memb_criticality_constr_567,  memb_criticality_constraint_565 },
@@ -30111,8 +30252,8 @@ asn_TYPE_member_t asn_MBR_QosFlowToBeForwardedItem_ExtIEs_565[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QosFlowToBeForwardedItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_568,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_568, &asn_PER_memb_extensionValue_constr_568,  memb_extensionValue_constraint_565 },
@@ -30124,14 +30265,15 @@ static const ber_tlv_tag_t asn_DEF_QosFlowToBeForwardedItem_ExtIEs_tags_565[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QosFlowToBeForwardedItem_ExtIEs_tag2el_565[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QosFlowToBeForwardedItem_ExtIEs_specs_565 = {
 	sizeof(struct QosFlowToBeForwardedItem_ExtIEs),
 	offsetof(struct QosFlowToBeForwardedItem_ExtIEs, _asn_ctx),
 	asn_MAP_QosFlowToBeForwardedItem_ExtIEs_tag2el_565,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30177,8 +30319,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_572 = {
 
 asn_TYPE_member_t asn_MBR_QoSFlowsUsageReport_Item_ExtIEs_569[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct QoSFlowsUsageReport_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_570, &asn_PER_memb_id_constr_570,  memb_id_constraint_569 },
@@ -30186,8 +30328,8 @@ asn_TYPE_member_t asn_MBR_QoSFlowsUsageReport_Item_ExtIEs_569[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct QoSFlowsUsageReport_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_571, &asn_PER_memb_criticality_constr_571,  memb_criticality_constraint_569 },
@@ -30195,8 +30337,8 @@ asn_TYPE_member_t asn_MBR_QoSFlowsUsageReport_Item_ExtIEs_569[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct QoSFlowsUsageReport_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_572,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_572, &asn_PER_memb_extensionValue_constr_572,  memb_extensionValue_constraint_569 },
@@ -30208,14 +30350,15 @@ static const ber_tlv_tag_t asn_DEF_QoSFlowsUsageReport_Item_ExtIEs_tags_569[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_QoSFlowsUsageReport_Item_ExtIEs_tag2el_569[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_QoSFlowsUsageReport_Item_ExtIEs_specs_569 = {
 	sizeof(struct QoSFlowsUsageReport_Item_ExtIEs),
 	offsetof(struct QoSFlowsUsageReport_Item_ExtIEs, _asn_ctx),
 	asn_MAP_QoSFlowsUsageReport_Item_ExtIEs_tag2el_569,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30261,8 +30404,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_576 = {
 
 asn_TYPE_member_t asn_MBR_RANStatusTransfer_TransparentContainer_ExtIEs_573[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct RANStatusTransfer_TransparentContainer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_574, &asn_PER_memb_id_constr_574,  memb_id_constraint_573 },
@@ -30270,8 +30413,8 @@ asn_TYPE_member_t asn_MBR_RANStatusTransfer_TransparentContainer_ExtIEs_573[] = 
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct RANStatusTransfer_TransparentContainer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_575, &asn_PER_memb_criticality_constr_575,  memb_criticality_constraint_573 },
@@ -30279,8 +30422,8 @@ asn_TYPE_member_t asn_MBR_RANStatusTransfer_TransparentContainer_ExtIEs_573[] = 
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct RANStatusTransfer_TransparentContainer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_576,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_576, &asn_PER_memb_extensionValue_constr_576,  memb_extensionValue_constraint_573 },
@@ -30292,14 +30435,15 @@ static const ber_tlv_tag_t asn_DEF_RANStatusTransfer_TransparentContainer_ExtIEs
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_RANStatusTransfer_TransparentContainer_ExtIEs_tag2el_573[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_RANStatusTransfer_TransparentContainer_ExtIEs_specs_573 = {
 	sizeof(struct RANStatusTransfer_TransparentContainer_ExtIEs),
 	offsetof(struct RANStatusTransfer_TransparentContainer_ExtIEs, _asn_ctx),
 	asn_MAP_RANStatusTransfer_TransparentContainer_ExtIEs_tag2el_573,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30345,8 +30489,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_580 = {
 
 asn_TYPE_member_t asn_MBR_RATRestrictions_Item_ExtIEs_577[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct RATRestrictions_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_578, &asn_PER_memb_id_constr_578,  memb_id_constraint_577 },
@@ -30354,8 +30498,8 @@ asn_TYPE_member_t asn_MBR_RATRestrictions_Item_ExtIEs_577[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct RATRestrictions_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_579, &asn_PER_memb_criticality_constr_579,  memb_criticality_constraint_577 },
@@ -30363,8 +30507,8 @@ asn_TYPE_member_t asn_MBR_RATRestrictions_Item_ExtIEs_577[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct RATRestrictions_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_580,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_580, &asn_PER_memb_extensionValue_constr_580,  memb_extensionValue_constraint_577 },
@@ -30376,14 +30520,15 @@ static const ber_tlv_tag_t asn_DEF_RATRestrictions_Item_ExtIEs_tags_577[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_RATRestrictions_Item_ExtIEs_tag2el_577[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_RATRestrictions_Item_ExtIEs_specs_577 = {
 	sizeof(struct RATRestrictions_Item_ExtIEs),
 	offsetof(struct RATRestrictions_Item_ExtIEs, _asn_ctx),
 	asn_MAP_RATRestrictions_Item_ExtIEs_tag2el_577,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30429,8 +30574,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_584 = {
 
 asn_TYPE_member_t asn_MBR_RecommendedCellsForPaging_ExtIEs_581[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedCellsForPaging_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_582, &asn_PER_memb_id_constr_582,  memb_id_constraint_581 },
@@ -30438,8 +30583,8 @@ asn_TYPE_member_t asn_MBR_RecommendedCellsForPaging_ExtIEs_581[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedCellsForPaging_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_583, &asn_PER_memb_criticality_constr_583,  memb_criticality_constraint_581 },
@@ -30447,8 +30592,8 @@ asn_TYPE_member_t asn_MBR_RecommendedCellsForPaging_ExtIEs_581[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct RecommendedCellsForPaging_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_584,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_584, &asn_PER_memb_extensionValue_constr_584,  memb_extensionValue_constraint_581 },
@@ -30460,14 +30605,15 @@ static const ber_tlv_tag_t asn_DEF_RecommendedCellsForPaging_ExtIEs_tags_581[] =
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_RecommendedCellsForPaging_ExtIEs_tag2el_581[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_RecommendedCellsForPaging_ExtIEs_specs_581 = {
 	sizeof(struct RecommendedCellsForPaging_ExtIEs),
 	offsetof(struct RecommendedCellsForPaging_ExtIEs, _asn_ctx),
 	asn_MAP_RecommendedCellsForPaging_ExtIEs_tag2el_581,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30513,8 +30659,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_588 = {
 
 asn_TYPE_member_t asn_MBR_RecommendedCellItem_ExtIEs_585[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedCellItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_586, &asn_PER_memb_id_constr_586,  memb_id_constraint_585 },
@@ -30522,8 +30668,8 @@ asn_TYPE_member_t asn_MBR_RecommendedCellItem_ExtIEs_585[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedCellItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_587, &asn_PER_memb_criticality_constr_587,  memb_criticality_constraint_585 },
@@ -30531,8 +30677,8 @@ asn_TYPE_member_t asn_MBR_RecommendedCellItem_ExtIEs_585[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct RecommendedCellItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_588,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_588, &asn_PER_memb_extensionValue_constr_588,  memb_extensionValue_constraint_585 },
@@ -30544,14 +30690,15 @@ static const ber_tlv_tag_t asn_DEF_RecommendedCellItem_ExtIEs_tags_585[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_RecommendedCellItem_ExtIEs_tag2el_585[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_RecommendedCellItem_ExtIEs_specs_585 = {
 	sizeof(struct RecommendedCellItem_ExtIEs),
 	offsetof(struct RecommendedCellItem_ExtIEs, _asn_ctx),
 	asn_MAP_RecommendedCellItem_ExtIEs_tag2el_585,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30597,8 +30744,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_592 = {
 
 asn_TYPE_member_t asn_MBR_RecommendedRANNodesForPaging_ExtIEs_589[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedRANNodesForPaging_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_590, &asn_PER_memb_id_constr_590,  memb_id_constraint_589 },
@@ -30606,8 +30753,8 @@ asn_TYPE_member_t asn_MBR_RecommendedRANNodesForPaging_ExtIEs_589[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedRANNodesForPaging_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_591, &asn_PER_memb_criticality_constr_591,  memb_criticality_constraint_589 },
@@ -30615,8 +30762,8 @@ asn_TYPE_member_t asn_MBR_RecommendedRANNodesForPaging_ExtIEs_589[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct RecommendedRANNodesForPaging_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_592,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_592, &asn_PER_memb_extensionValue_constr_592,  memb_extensionValue_constraint_589 },
@@ -30628,14 +30775,15 @@ static const ber_tlv_tag_t asn_DEF_RecommendedRANNodesForPaging_ExtIEs_tags_589[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_RecommendedRANNodesForPaging_ExtIEs_tag2el_589[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_RecommendedRANNodesForPaging_ExtIEs_specs_589 = {
 	sizeof(struct RecommendedRANNodesForPaging_ExtIEs),
 	offsetof(struct RecommendedRANNodesForPaging_ExtIEs, _asn_ctx),
 	asn_MAP_RecommendedRANNodesForPaging_ExtIEs_tag2el_589,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30681,8 +30829,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_596 = {
 
 asn_TYPE_member_t asn_MBR_RecommendedRANNodeItem_ExtIEs_593[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedRANNodeItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_594, &asn_PER_memb_id_constr_594,  memb_id_constraint_593 },
@@ -30690,8 +30838,8 @@ asn_TYPE_member_t asn_MBR_RecommendedRANNodeItem_ExtIEs_593[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct RecommendedRANNodeItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_595, &asn_PER_memb_criticality_constr_595,  memb_criticality_constraint_593 },
@@ -30699,8 +30847,8 @@ asn_TYPE_member_t asn_MBR_RecommendedRANNodeItem_ExtIEs_593[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct RecommendedRANNodeItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_596,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_596, &asn_PER_memb_extensionValue_constr_596,  memb_extensionValue_constraint_593 },
@@ -30712,14 +30860,15 @@ static const ber_tlv_tag_t asn_DEF_RecommendedRANNodeItem_ExtIEs_tags_593[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_RecommendedRANNodeItem_ExtIEs_tag2el_593[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_RecommendedRANNodeItem_ExtIEs_specs_593 = {
 	sizeof(struct RecommendedRANNodeItem_ExtIEs),
 	offsetof(struct RecommendedRANNodeItem_ExtIEs, _asn_ctx),
 	asn_MAP_RecommendedRANNodeItem_ExtIEs_tag2el_593,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30765,8 +30914,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_600 = {
 
 asn_TYPE_member_t asn_MBR_SecondaryRATUsageInformation_ExtIEs_597[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SecondaryRATUsageInformation_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_598, &asn_PER_memb_id_constr_598,  memb_id_constraint_597 },
@@ -30774,8 +30923,8 @@ asn_TYPE_member_t asn_MBR_SecondaryRATUsageInformation_ExtIEs_597[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SecondaryRATUsageInformation_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_599, &asn_PER_memb_criticality_constr_599,  memb_criticality_constraint_597 },
@@ -30783,8 +30932,8 @@ asn_TYPE_member_t asn_MBR_SecondaryRATUsageInformation_ExtIEs_597[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SecondaryRATUsageInformation_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_600,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_600, &asn_PER_memb_extensionValue_constr_600,  memb_extensionValue_constraint_597 },
@@ -30796,14 +30945,15 @@ static const ber_tlv_tag_t asn_DEF_SecondaryRATUsageInformation_ExtIEs_tags_597[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SecondaryRATUsageInformation_ExtIEs_tag2el_597[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SecondaryRATUsageInformation_ExtIEs_specs_597 = {
 	sizeof(struct SecondaryRATUsageInformation_ExtIEs),
 	offsetof(struct SecondaryRATUsageInformation_ExtIEs, _asn_ctx),
 	asn_MAP_SecondaryRATUsageInformation_ExtIEs_tag2el_597,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30849,8 +30999,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_604 = {
 
 asn_TYPE_member_t asn_MBR_SecondaryRATDataUsageReportTransfer_ExtIEs_601[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SecondaryRATDataUsageReportTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_602, &asn_PER_memb_id_constr_602,  memb_id_constraint_601 },
@@ -30858,8 +31008,8 @@ asn_TYPE_member_t asn_MBR_SecondaryRATDataUsageReportTransfer_ExtIEs_601[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SecondaryRATDataUsageReportTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_603, &asn_PER_memb_criticality_constr_603,  memb_criticality_constraint_601 },
@@ -30867,8 +31017,8 @@ asn_TYPE_member_t asn_MBR_SecondaryRATDataUsageReportTransfer_ExtIEs_601[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SecondaryRATDataUsageReportTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_604,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_604, &asn_PER_memb_extensionValue_constr_604,  memb_extensionValue_constraint_601 },
@@ -30880,14 +31030,15 @@ static const ber_tlv_tag_t asn_DEF_SecondaryRATDataUsageReportTransfer_ExtIEs_ta
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SecondaryRATDataUsageReportTransfer_ExtIEs_tag2el_601[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SecondaryRATDataUsageReportTransfer_ExtIEs_specs_601 = {
 	sizeof(struct SecondaryRATDataUsageReportTransfer_ExtIEs),
 	offsetof(struct SecondaryRATDataUsageReportTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_SecondaryRATDataUsageReportTransfer_ExtIEs_tag2el_601,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -30933,8 +31084,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_608 = {
 
 asn_TYPE_member_t asn_MBR_SecurityContext_ExtIEs_605[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SecurityContext_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_606, &asn_PER_memb_id_constr_606,  memb_id_constraint_605 },
@@ -30942,8 +31093,8 @@ asn_TYPE_member_t asn_MBR_SecurityContext_ExtIEs_605[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SecurityContext_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_607, &asn_PER_memb_criticality_constr_607,  memb_criticality_constraint_605 },
@@ -30951,8 +31102,8 @@ asn_TYPE_member_t asn_MBR_SecurityContext_ExtIEs_605[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SecurityContext_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_608,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_608, &asn_PER_memb_extensionValue_constr_608,  memb_extensionValue_constraint_605 },
@@ -30964,14 +31115,15 @@ static const ber_tlv_tag_t asn_DEF_SecurityContext_ExtIEs_tags_605[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SecurityContext_ExtIEs_tag2el_605[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SecurityContext_ExtIEs_specs_605 = {
 	sizeof(struct SecurityContext_ExtIEs),
 	offsetof(struct SecurityContext_ExtIEs, _asn_ctx),
 	asn_MAP_SecurityContext_ExtIEs_tag2el_605,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31032,8 +31184,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_612 = {
 
 asn_TYPE_member_t asn_MBR_SecurityIndication_ExtIEs_609[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SecurityIndication_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_610, &asn_PER_memb_id_constr_610,  memb_id_constraint_609 },
@@ -31041,8 +31193,8 @@ asn_TYPE_member_t asn_MBR_SecurityIndication_ExtIEs_609[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SecurityIndication_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_SecurityIndication_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_611, &asn_PER_memb_criticality_constr_611,  memb_criticality_constraint_609 },
@@ -31050,8 +31202,8 @@ asn_TYPE_member_t asn_MBR_SecurityIndication_ExtIEs_609[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SecurityIndication_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_612,
 		select_SecurityIndication_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_612, &asn_PER_memb_extensionValue_constr_612,  memb_extensionValue_constraint_609 },
@@ -31063,14 +31215,15 @@ static const ber_tlv_tag_t asn_DEF_SecurityIndication_ExtIEs_tags_609[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SecurityIndication_ExtIEs_tag2el_609[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SecurityIndication_ExtIEs_specs_609 = {
 	sizeof(struct SecurityIndication_ExtIEs),
 	offsetof(struct SecurityIndication_ExtIEs, _asn_ctx),
 	asn_MAP_SecurityIndication_ExtIEs_tag2el_609,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31116,8 +31269,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_616 = {
 
 asn_TYPE_member_t asn_MBR_SecurityResult_ExtIEs_613[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SecurityResult_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_614, &asn_PER_memb_id_constr_614,  memb_id_constraint_613 },
@@ -31125,8 +31278,8 @@ asn_TYPE_member_t asn_MBR_SecurityResult_ExtIEs_613[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SecurityResult_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_615, &asn_PER_memb_criticality_constr_615,  memb_criticality_constraint_613 },
@@ -31134,8 +31287,8 @@ asn_TYPE_member_t asn_MBR_SecurityResult_ExtIEs_613[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SecurityResult_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_616,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_616, &asn_PER_memb_extensionValue_constr_616,  memb_extensionValue_constraint_613 },
@@ -31147,14 +31300,15 @@ static const ber_tlv_tag_t asn_DEF_SecurityResult_ExtIEs_tags_613[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SecurityResult_ExtIEs_tag2el_613[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SecurityResult_ExtIEs_specs_613 = {
 	sizeof(struct SecurityResult_ExtIEs),
 	offsetof(struct SecurityResult_ExtIEs, _asn_ctx),
 	asn_MAP_SecurityResult_ExtIEs_tag2el_613,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31200,8 +31354,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_620 = {
 
 asn_TYPE_member_t asn_MBR_ServedGUAMIItem_ExtIEs_617[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ServedGUAMIItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_618, &asn_PER_memb_id_constr_618,  memb_id_constraint_617 },
@@ -31209,8 +31363,8 @@ asn_TYPE_member_t asn_MBR_ServedGUAMIItem_ExtIEs_617[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ServedGUAMIItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_619, &asn_PER_memb_criticality_constr_619,  memb_criticality_constraint_617 },
@@ -31218,8 +31372,8 @@ asn_TYPE_member_t asn_MBR_ServedGUAMIItem_ExtIEs_617[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct ServedGUAMIItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_620,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_620, &asn_PER_memb_extensionValue_constr_620,  memb_extensionValue_constraint_617 },
@@ -31231,14 +31385,15 @@ static const ber_tlv_tag_t asn_DEF_ServedGUAMIItem_ExtIEs_tags_617[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_ServedGUAMIItem_ExtIEs_tag2el_617[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_ServedGUAMIItem_ExtIEs_specs_617 = {
 	sizeof(struct ServedGUAMIItem_ExtIEs),
 	offsetof(struct ServedGUAMIItem_ExtIEs, _asn_ctx),
 	asn_MAP_ServedGUAMIItem_ExtIEs_tag2el_617,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31284,8 +31439,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_624 = {
 
 asn_TYPE_member_t asn_MBR_ServiceAreaInformation_Item_ExtIEs_621[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ServiceAreaInformation_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_622, &asn_PER_memb_id_constr_622,  memb_id_constraint_621 },
@@ -31293,8 +31448,8 @@ asn_TYPE_member_t asn_MBR_ServiceAreaInformation_Item_ExtIEs_621[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ServiceAreaInformation_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_623, &asn_PER_memb_criticality_constr_623,  memb_criticality_constraint_621 },
@@ -31302,8 +31457,8 @@ asn_TYPE_member_t asn_MBR_ServiceAreaInformation_Item_ExtIEs_621[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct ServiceAreaInformation_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_624,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_624, &asn_PER_memb_extensionValue_constr_624,  memb_extensionValue_constraint_621 },
@@ -31315,14 +31470,15 @@ static const ber_tlv_tag_t asn_DEF_ServiceAreaInformation_Item_ExtIEs_tags_621[]
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_ServiceAreaInformation_Item_ExtIEs_tag2el_621[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_ServiceAreaInformation_Item_ExtIEs_specs_621 = {
 	sizeof(struct ServiceAreaInformation_Item_ExtIEs),
 	offsetof(struct ServiceAreaInformation_Item_ExtIEs, _asn_ctx),
 	asn_MAP_ServiceAreaInformation_Item_ExtIEs_tag2el_621,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31368,8 +31524,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_628 = {
 
 asn_TYPE_member_t asn_MBR_SliceOverloadItem_ExtIEs_625[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SliceOverloadItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_626, &asn_PER_memb_id_constr_626,  memb_id_constraint_625 },
@@ -31377,8 +31533,8 @@ asn_TYPE_member_t asn_MBR_SliceOverloadItem_ExtIEs_625[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SliceOverloadItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_627, &asn_PER_memb_criticality_constr_627,  memb_criticality_constraint_625 },
@@ -31386,8 +31542,8 @@ asn_TYPE_member_t asn_MBR_SliceOverloadItem_ExtIEs_625[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SliceOverloadItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_628,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_628, &asn_PER_memb_extensionValue_constr_628,  memb_extensionValue_constraint_625 },
@@ -31399,14 +31555,15 @@ static const ber_tlv_tag_t asn_DEF_SliceOverloadItem_ExtIEs_tags_625[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SliceOverloadItem_ExtIEs_tag2el_625[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SliceOverloadItem_ExtIEs_specs_625 = {
 	sizeof(struct SliceOverloadItem_ExtIEs),
 	offsetof(struct SliceOverloadItem_ExtIEs, _asn_ctx),
 	asn_MAP_SliceOverloadItem_ExtIEs_tag2el_625,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31452,8 +31609,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_632 = {
 
 asn_TYPE_member_t asn_MBR_SliceSupportItem_ExtIEs_629[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SliceSupportItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_630, &asn_PER_memb_id_constr_630,  memb_id_constraint_629 },
@@ -31461,8 +31618,8 @@ asn_TYPE_member_t asn_MBR_SliceSupportItem_ExtIEs_629[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SliceSupportItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_631, &asn_PER_memb_criticality_constr_631,  memb_criticality_constraint_629 },
@@ -31470,8 +31627,8 @@ asn_TYPE_member_t asn_MBR_SliceSupportItem_ExtIEs_629[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SliceSupportItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_632,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_632, &asn_PER_memb_extensionValue_constr_632,  memb_extensionValue_constraint_629 },
@@ -31483,14 +31640,15 @@ static const ber_tlv_tag_t asn_DEF_SliceSupportItem_ExtIEs_tags_629[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SliceSupportItem_ExtIEs_tag2el_629[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SliceSupportItem_ExtIEs_specs_629 = {
 	sizeof(struct SliceSupportItem_ExtIEs),
 	offsetof(struct SliceSupportItem_ExtIEs, _asn_ctx),
 	asn_MAP_SliceSupportItem_ExtIEs_tag2el_629,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31536,8 +31694,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_636 = {
 
 asn_TYPE_member_t asn_MBR_S_NSSAI_ExtIEs_633[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct S_NSSAI_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_634, &asn_PER_memb_id_constr_634,  memb_id_constraint_633 },
@@ -31545,8 +31703,8 @@ asn_TYPE_member_t asn_MBR_S_NSSAI_ExtIEs_633[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct S_NSSAI_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_635, &asn_PER_memb_criticality_constr_635,  memb_criticality_constraint_633 },
@@ -31554,8 +31712,8 @@ asn_TYPE_member_t asn_MBR_S_NSSAI_ExtIEs_633[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct S_NSSAI_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_636,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_636, &asn_PER_memb_extensionValue_constr_636,  memb_extensionValue_constraint_633 },
@@ -31567,14 +31725,15 @@ static const ber_tlv_tag_t asn_DEF_S_NSSAI_ExtIEs_tags_633[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_S_NSSAI_ExtIEs_tag2el_633[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_S_NSSAI_ExtIEs_specs_633 = {
 	sizeof(struct S_NSSAI_ExtIEs),
 	offsetof(struct S_NSSAI_ExtIEs, _asn_ctx),
 	asn_MAP_S_NSSAI_ExtIEs_tag2el_633,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31620,8 +31779,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_640 = {
 
 asn_TYPE_member_t asn_MBR_SONConfigurationTransfer_ExtIEs_637[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SONConfigurationTransfer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_638, &asn_PER_memb_id_constr_638,  memb_id_constraint_637 },
@@ -31629,8 +31788,8 @@ asn_TYPE_member_t asn_MBR_SONConfigurationTransfer_ExtIEs_637[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SONConfigurationTransfer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_639, &asn_PER_memb_criticality_constr_639,  memb_criticality_constraint_637 },
@@ -31638,8 +31797,8 @@ asn_TYPE_member_t asn_MBR_SONConfigurationTransfer_ExtIEs_637[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SONConfigurationTransfer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_640,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_640, &asn_PER_memb_extensionValue_constr_640,  memb_extensionValue_constraint_637 },
@@ -31651,14 +31810,15 @@ static const ber_tlv_tag_t asn_DEF_SONConfigurationTransfer_ExtIEs_tags_637[] = 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SONConfigurationTransfer_ExtIEs_tag2el_637[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SONConfigurationTransfer_ExtIEs_specs_637 = {
 	sizeof(struct SONConfigurationTransfer_ExtIEs),
 	offsetof(struct SONConfigurationTransfer_ExtIEs, _asn_ctx),
 	asn_MAP_SONConfigurationTransfer_ExtIEs_tag2el_637,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31704,8 +31864,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_644 = {
 
 asn_TYPE_member_t asn_MBR_SONInformationReply_ExtIEs_641[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SONInformationReply_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_642, &asn_PER_memb_id_constr_642,  memb_id_constraint_641 },
@@ -31713,8 +31873,8 @@ asn_TYPE_member_t asn_MBR_SONInformationReply_ExtIEs_641[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SONInformationReply_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_643, &asn_PER_memb_criticality_constr_643,  memb_criticality_constraint_641 },
@@ -31722,8 +31882,8 @@ asn_TYPE_member_t asn_MBR_SONInformationReply_ExtIEs_641[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SONInformationReply_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_644,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_644, &asn_PER_memb_extensionValue_constr_644,  memb_extensionValue_constraint_641 },
@@ -31735,14 +31895,15 @@ static const ber_tlv_tag_t asn_DEF_SONInformationReply_ExtIEs_tags_641[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SONInformationReply_ExtIEs_tag2el_641[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SONInformationReply_ExtIEs_specs_641 = {
 	sizeof(struct SONInformationReply_ExtIEs),
 	offsetof(struct SONInformationReply_ExtIEs, _asn_ctx),
 	asn_MAP_SONInformationReply_ExtIEs_tag2el_641,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31788,8 +31949,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_648 = {
 
 asn_TYPE_member_t asn_MBR_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_645[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_646, &asn_PER_memb_id_constr_646,  memb_id_constraint_645 },
@@ -31797,8 +31958,8 @@ asn_TYPE_member_t asn_MBR_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_647, &asn_PER_memb_criticality_constr_647,  memb_criticality_constraint_645 },
@@ -31806,8 +31967,8 @@ asn_TYPE_member_t asn_MBR_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_648,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_648, &asn_PER_memb_extensionValue_constr_648,  memb_extensionValue_constraint_645 },
@@ -31819,14 +31980,15 @@ static const ber_tlv_tag_t asn_DEF_SourceNGRANNode_ToTargetNGRANNode_Transparent
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_tag2el_645[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_specs_645 = {
 	sizeof(struct SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs),
 	offsetof(struct SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs, _asn_ctx),
 	asn_MAP_SourceNGRANNode_ToTargetNGRANNode_TransparentContainer_ExtIEs_tag2el_645,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31872,8 +32034,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_652 = {
 
 asn_TYPE_member_t asn_MBR_SourceRANNodeID_ExtIEs_649[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SourceRANNodeID_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_650, &asn_PER_memb_id_constr_650,  memb_id_constraint_649 },
@@ -31881,8 +32043,8 @@ asn_TYPE_member_t asn_MBR_SourceRANNodeID_ExtIEs_649[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SourceRANNodeID_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_651, &asn_PER_memb_criticality_constr_651,  memb_criticality_constraint_649 },
@@ -31890,8 +32052,8 @@ asn_TYPE_member_t asn_MBR_SourceRANNodeID_ExtIEs_649[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SourceRANNodeID_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_652,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_652, &asn_PER_memb_extensionValue_constr_652,  memb_extensionValue_constraint_649 },
@@ -31903,14 +32065,15 @@ static const ber_tlv_tag_t asn_DEF_SourceRANNodeID_ExtIEs_tags_649[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SourceRANNodeID_ExtIEs_tag2el_649[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SourceRANNodeID_ExtIEs_specs_649 = {
 	sizeof(struct SourceRANNodeID_ExtIEs),
 	offsetof(struct SourceRANNodeID_ExtIEs, _asn_ctx),
 	asn_MAP_SourceRANNodeID_ExtIEs_tag2el_649,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -31956,8 +32119,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_656 = {
 
 asn_TYPE_member_t asn_MBR_SupportedTAItem_ExtIEs_653[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct SupportedTAItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_654, &asn_PER_memb_id_constr_654,  memb_id_constraint_653 },
@@ -31965,8 +32128,8 @@ asn_TYPE_member_t asn_MBR_SupportedTAItem_ExtIEs_653[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct SupportedTAItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_655, &asn_PER_memb_criticality_constr_655,  memb_criticality_constraint_653 },
@@ -31974,8 +32137,8 @@ asn_TYPE_member_t asn_MBR_SupportedTAItem_ExtIEs_653[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct SupportedTAItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_656,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_656, &asn_PER_memb_extensionValue_constr_656,  memb_extensionValue_constraint_653 },
@@ -31987,14 +32150,15 @@ static const ber_tlv_tag_t asn_DEF_SupportedTAItem_ExtIEs_tags_653[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_SupportedTAItem_ExtIEs_tag2el_653[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_SupportedTAItem_ExtIEs_specs_653 = {
 	sizeof(struct SupportedTAItem_ExtIEs),
 	offsetof(struct SupportedTAItem_ExtIEs, _asn_ctx),
 	asn_MAP_SupportedTAItem_ExtIEs_tag2el_653,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32040,8 +32204,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_660 = {
 
 asn_TYPE_member_t asn_MBR_TAI_ExtIEs_657[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TAI_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_658, &asn_PER_memb_id_constr_658,  memb_id_constraint_657 },
@@ -32049,8 +32213,8 @@ asn_TYPE_member_t asn_MBR_TAI_ExtIEs_657[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TAI_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_659, &asn_PER_memb_criticality_constr_659,  memb_criticality_constraint_657 },
@@ -32058,8 +32222,8 @@ asn_TYPE_member_t asn_MBR_TAI_ExtIEs_657[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TAI_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_660,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_660, &asn_PER_memb_extensionValue_constr_660,  memb_extensionValue_constraint_657 },
@@ -32071,14 +32235,15 @@ static const ber_tlv_tag_t asn_DEF_TAI_ExtIEs_tags_657[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TAI_ExtIEs_tag2el_657[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TAI_ExtIEs_specs_657 = {
 	sizeof(struct TAI_ExtIEs),
 	offsetof(struct TAI_ExtIEs, _asn_ctx),
 	asn_MAP_TAI_ExtIEs_tag2el_657,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32124,8 +32289,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_664 = {
 
 asn_TYPE_member_t asn_MBR_TAIBroadcastEUTRA_Item_ExtIEs_661[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIBroadcastEUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_662, &asn_PER_memb_id_constr_662,  memb_id_constraint_661 },
@@ -32133,8 +32298,8 @@ asn_TYPE_member_t asn_MBR_TAIBroadcastEUTRA_Item_ExtIEs_661[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIBroadcastEUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_663, &asn_PER_memb_criticality_constr_663,  memb_criticality_constraint_661 },
@@ -32142,8 +32307,8 @@ asn_TYPE_member_t asn_MBR_TAIBroadcastEUTRA_Item_ExtIEs_661[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TAIBroadcastEUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_664,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_664, &asn_PER_memb_extensionValue_constr_664,  memb_extensionValue_constraint_661 },
@@ -32155,14 +32320,15 @@ static const ber_tlv_tag_t asn_DEF_TAIBroadcastEUTRA_Item_ExtIEs_tags_661[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TAIBroadcastEUTRA_Item_ExtIEs_tag2el_661[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TAIBroadcastEUTRA_Item_ExtIEs_specs_661 = {
 	sizeof(struct TAIBroadcastEUTRA_Item_ExtIEs),
 	offsetof(struct TAIBroadcastEUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_TAIBroadcastEUTRA_Item_ExtIEs_tag2el_661,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32208,8 +32374,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_668 = {
 
 asn_TYPE_member_t asn_MBR_TAIBroadcastNR_Item_ExtIEs_665[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIBroadcastNR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_666, &asn_PER_memb_id_constr_666,  memb_id_constraint_665 },
@@ -32217,8 +32383,8 @@ asn_TYPE_member_t asn_MBR_TAIBroadcastNR_Item_ExtIEs_665[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIBroadcastNR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_667, &asn_PER_memb_criticality_constr_667,  memb_criticality_constraint_665 },
@@ -32226,8 +32392,8 @@ asn_TYPE_member_t asn_MBR_TAIBroadcastNR_Item_ExtIEs_665[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TAIBroadcastNR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_668,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_668, &asn_PER_memb_extensionValue_constr_668,  memb_extensionValue_constraint_665 },
@@ -32239,14 +32405,15 @@ static const ber_tlv_tag_t asn_DEF_TAIBroadcastNR_Item_ExtIEs_tags_665[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TAIBroadcastNR_Item_ExtIEs_tag2el_665[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TAIBroadcastNR_Item_ExtIEs_specs_665 = {
 	sizeof(struct TAIBroadcastNR_Item_ExtIEs),
 	offsetof(struct TAIBroadcastNR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_TAIBroadcastNR_Item_ExtIEs_tag2el_665,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32292,8 +32459,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_672 = {
 
 asn_TYPE_member_t asn_MBR_TAICancelledEUTRA_Item_ExtIEs_669[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TAICancelledEUTRA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_670, &asn_PER_memb_id_constr_670,  memb_id_constraint_669 },
@@ -32301,8 +32468,8 @@ asn_TYPE_member_t asn_MBR_TAICancelledEUTRA_Item_ExtIEs_669[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TAICancelledEUTRA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_671, &asn_PER_memb_criticality_constr_671,  memb_criticality_constraint_669 },
@@ -32310,8 +32477,8 @@ asn_TYPE_member_t asn_MBR_TAICancelledEUTRA_Item_ExtIEs_669[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TAICancelledEUTRA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_672,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_672, &asn_PER_memb_extensionValue_constr_672,  memb_extensionValue_constraint_669 },
@@ -32323,14 +32490,15 @@ static const ber_tlv_tag_t asn_DEF_TAICancelledEUTRA_Item_ExtIEs_tags_669[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TAICancelledEUTRA_Item_ExtIEs_tag2el_669[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TAICancelledEUTRA_Item_ExtIEs_specs_669 = {
 	sizeof(struct TAICancelledEUTRA_Item_ExtIEs),
 	offsetof(struct TAICancelledEUTRA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_TAICancelledEUTRA_Item_ExtIEs_tag2el_669,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32376,8 +32544,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_676 = {
 
 asn_TYPE_member_t asn_MBR_TAICancelledNR_Item_ExtIEs_673[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TAICancelledNR_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_674, &asn_PER_memb_id_constr_674,  memb_id_constraint_673 },
@@ -32385,8 +32553,8 @@ asn_TYPE_member_t asn_MBR_TAICancelledNR_Item_ExtIEs_673[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TAICancelledNR_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_675, &asn_PER_memb_criticality_constr_675,  memb_criticality_constraint_673 },
@@ -32394,8 +32562,8 @@ asn_TYPE_member_t asn_MBR_TAICancelledNR_Item_ExtIEs_673[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TAICancelledNR_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_676,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_676, &asn_PER_memb_extensionValue_constr_676,  memb_extensionValue_constraint_673 },
@@ -32407,14 +32575,15 @@ static const ber_tlv_tag_t asn_DEF_TAICancelledNR_Item_ExtIEs_tags_673[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TAICancelledNR_Item_ExtIEs_tag2el_673[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TAICancelledNR_Item_ExtIEs_specs_673 = {
 	sizeof(struct TAICancelledNR_Item_ExtIEs),
 	offsetof(struct TAICancelledNR_Item_ExtIEs, _asn_ctx),
 	asn_MAP_TAICancelledNR_Item_ExtIEs_tag2el_673,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32460,8 +32629,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_680 = {
 
 asn_TYPE_member_t asn_MBR_TAIListForInactiveItem_ExtIEs_677[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIListForInactiveItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_678, &asn_PER_memb_id_constr_678,  memb_id_constraint_677 },
@@ -32469,8 +32638,8 @@ asn_TYPE_member_t asn_MBR_TAIListForInactiveItem_ExtIEs_677[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIListForInactiveItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_679, &asn_PER_memb_criticality_constr_679,  memb_criticality_constraint_677 },
@@ -32478,8 +32647,8 @@ asn_TYPE_member_t asn_MBR_TAIListForInactiveItem_ExtIEs_677[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TAIListForInactiveItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_680,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_680, &asn_PER_memb_extensionValue_constr_680,  memb_extensionValue_constraint_677 },
@@ -32491,14 +32660,15 @@ static const ber_tlv_tag_t asn_DEF_TAIListForInactiveItem_ExtIEs_tags_677[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TAIListForInactiveItem_ExtIEs_tag2el_677[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TAIListForInactiveItem_ExtIEs_specs_677 = {
 	sizeof(struct TAIListForInactiveItem_ExtIEs),
 	offsetof(struct TAIListForInactiveItem_ExtIEs, _asn_ctx),
 	asn_MAP_TAIListForInactiveItem_ExtIEs_tag2el_677,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32544,8 +32714,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_684 = {
 
 asn_TYPE_member_t asn_MBR_TAIListForPagingItem_ExtIEs_681[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIListForPagingItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_682, &asn_PER_memb_id_constr_682,  memb_id_constraint_681 },
@@ -32553,8 +32723,8 @@ asn_TYPE_member_t asn_MBR_TAIListForPagingItem_ExtIEs_681[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TAIListForPagingItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_683, &asn_PER_memb_criticality_constr_683,  memb_criticality_constraint_681 },
@@ -32562,8 +32732,8 @@ asn_TYPE_member_t asn_MBR_TAIListForPagingItem_ExtIEs_681[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TAIListForPagingItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_684,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_684, &asn_PER_memb_extensionValue_constr_684,  memb_extensionValue_constraint_681 },
@@ -32575,14 +32745,15 @@ static const ber_tlv_tag_t asn_DEF_TAIListForPagingItem_ExtIEs_tags_681[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TAIListForPagingItem_ExtIEs_tag2el_681[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TAIListForPagingItem_ExtIEs_specs_681 = {
 	sizeof(struct TAIListForPagingItem_ExtIEs),
 	offsetof(struct TAIListForPagingItem_ExtIEs, _asn_ctx),
 	asn_MAP_TAIListForPagingItem_ExtIEs_tag2el_681,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32628,8 +32799,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_688 = {
 
 asn_TYPE_member_t asn_MBR_TargeteNB_ID_ExtIEs_685[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TargeteNB_ID_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_686, &asn_PER_memb_id_constr_686,  memb_id_constraint_685 },
@@ -32637,8 +32808,8 @@ asn_TYPE_member_t asn_MBR_TargeteNB_ID_ExtIEs_685[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TargeteNB_ID_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_687, &asn_PER_memb_criticality_constr_687,  memb_criticality_constraint_685 },
@@ -32646,8 +32817,8 @@ asn_TYPE_member_t asn_MBR_TargeteNB_ID_ExtIEs_685[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TargeteNB_ID_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_688,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_688, &asn_PER_memb_extensionValue_constr_688,  memb_extensionValue_constraint_685 },
@@ -32659,14 +32830,15 @@ static const ber_tlv_tag_t asn_DEF_TargeteNB_ID_ExtIEs_tags_685[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TargeteNB_ID_ExtIEs_tag2el_685[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TargeteNB_ID_ExtIEs_specs_685 = {
 	sizeof(struct TargeteNB_ID_ExtIEs),
 	offsetof(struct TargeteNB_ID_ExtIEs, _asn_ctx),
 	asn_MAP_TargeteNB_ID_ExtIEs_tag2el_685,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32712,8 +32884,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_692 = {
 
 asn_TYPE_member_t asn_MBR_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_689[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_690, &asn_PER_memb_id_constr_690,  memb_id_constraint_689 },
@@ -32721,8 +32893,8 @@ asn_TYPE_member_t asn_MBR_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_691, &asn_PER_memb_criticality_constr_691,  memb_criticality_constraint_689 },
@@ -32730,8 +32902,8 @@ asn_TYPE_member_t asn_MBR_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_692,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_692, &asn_PER_memb_extensionValue_constr_692,  memb_extensionValue_constraint_689 },
@@ -32743,14 +32915,15 @@ static const ber_tlv_tag_t asn_DEF_TargetNGRANNode_ToSourceNGRANNode_Transparent
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_tag2el_689[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_specs_689 = {
 	sizeof(struct TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs),
 	offsetof(struct TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs, _asn_ctx),
 	asn_MAP_TargetNGRANNode_ToSourceNGRANNode_TransparentContainer_ExtIEs_tag2el_689,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32796,8 +32969,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_696 = {
 
 asn_TYPE_member_t asn_MBR_TargetRANNodeID_ExtIEs_693[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TargetRANNodeID_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_694, &asn_PER_memb_id_constr_694,  memb_id_constraint_693 },
@@ -32805,8 +32978,8 @@ asn_TYPE_member_t asn_MBR_TargetRANNodeID_ExtIEs_693[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TargetRANNodeID_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_695, &asn_PER_memb_criticality_constr_695,  memb_criticality_constraint_693 },
@@ -32814,8 +32987,8 @@ asn_TYPE_member_t asn_MBR_TargetRANNodeID_ExtIEs_693[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TargetRANNodeID_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_696,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_696, &asn_PER_memb_extensionValue_constr_696,  memb_extensionValue_constraint_693 },
@@ -32827,14 +33000,15 @@ static const ber_tlv_tag_t asn_DEF_TargetRANNodeID_ExtIEs_tags_693[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TargetRANNodeID_ExtIEs_tag2el_693[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TargetRANNodeID_ExtIEs_specs_693 = {
 	sizeof(struct TargetRANNodeID_ExtIEs),
 	offsetof(struct TargetRANNodeID_ExtIEs, _asn_ctx),
 	asn_MAP_TargetRANNodeID_ExtIEs_tag2el_693,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32880,8 +33054,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_700 = {
 
 asn_TYPE_member_t asn_MBR_TNLAssociationItem_ExtIEs_697[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TNLAssociationItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_698, &asn_PER_memb_id_constr_698,  memb_id_constraint_697 },
@@ -32889,8 +33063,8 @@ asn_TYPE_member_t asn_MBR_TNLAssociationItem_ExtIEs_697[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TNLAssociationItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_699, &asn_PER_memb_criticality_constr_699,  memb_criticality_constraint_697 },
@@ -32898,8 +33072,8 @@ asn_TYPE_member_t asn_MBR_TNLAssociationItem_ExtIEs_697[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TNLAssociationItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_700,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_700, &asn_PER_memb_extensionValue_constr_700,  memb_extensionValue_constraint_697 },
@@ -32911,14 +33085,15 @@ static const ber_tlv_tag_t asn_DEF_TNLAssociationItem_ExtIEs_tags_697[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TNLAssociationItem_ExtIEs_tag2el_697[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TNLAssociationItem_ExtIEs_specs_697 = {
 	sizeof(struct TNLAssociationItem_ExtIEs),
 	offsetof(struct TNLAssociationItem_ExtIEs, _asn_ctx),
 	asn_MAP_TNLAssociationItem_ExtIEs_tag2el_697,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -32964,8 +33139,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_704 = {
 
 asn_TYPE_member_t asn_MBR_TraceActivation_ExtIEs_701[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct TraceActivation_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_702, &asn_PER_memb_id_constr_702,  memb_id_constraint_701 },
@@ -32973,8 +33148,8 @@ asn_TYPE_member_t asn_MBR_TraceActivation_ExtIEs_701[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct TraceActivation_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_703, &asn_PER_memb_criticality_constr_703,  memb_criticality_constraint_701 },
@@ -32982,8 +33157,8 @@ asn_TYPE_member_t asn_MBR_TraceActivation_ExtIEs_701[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct TraceActivation_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_704,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_704, &asn_PER_memb_extensionValue_constr_704,  memb_extensionValue_constraint_701 },
@@ -32995,14 +33170,15 @@ static const ber_tlv_tag_t asn_DEF_TraceActivation_ExtIEs_tags_701[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_TraceActivation_ExtIEs_tag2el_701[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_TraceActivation_ExtIEs_specs_701 = {
 	sizeof(struct TraceActivation_ExtIEs),
 	offsetof(struct TraceActivation_ExtIEs, _asn_ctx),
 	asn_MAP_TraceActivation_ExtIEs_tag2el_701,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33048,8 +33224,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_708 = {
 
 asn_TYPE_member_t asn_MBR_UEAggregateMaximumBitRate_ExtIEs_705[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UEAggregateMaximumBitRate_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_706, &asn_PER_memb_id_constr_706,  memb_id_constraint_705 },
@@ -33057,8 +33233,8 @@ asn_TYPE_member_t asn_MBR_UEAggregateMaximumBitRate_ExtIEs_705[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UEAggregateMaximumBitRate_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_707, &asn_PER_memb_criticality_constr_707,  memb_criticality_constraint_705 },
@@ -33066,8 +33242,8 @@ asn_TYPE_member_t asn_MBR_UEAggregateMaximumBitRate_ExtIEs_705[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UEAggregateMaximumBitRate_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_708,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_708, &asn_PER_memb_extensionValue_constr_708,  memb_extensionValue_constraint_705 },
@@ -33079,14 +33255,15 @@ static const ber_tlv_tag_t asn_DEF_UEAggregateMaximumBitRate_ExtIEs_tags_705[] =
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UEAggregateMaximumBitRate_ExtIEs_tag2el_705[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UEAggregateMaximumBitRate_ExtIEs_specs_705 = {
 	sizeof(struct UEAggregateMaximumBitRate_ExtIEs),
 	offsetof(struct UEAggregateMaximumBitRate_ExtIEs, _asn_ctx),
 	asn_MAP_UEAggregateMaximumBitRate_ExtIEs_tag2el_705,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33132,8 +33309,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_712 = {
 
 asn_TYPE_member_t asn_MBR_UE_associatedLogicalNG_connectionItem_ExtIEs_709[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UE_associatedLogicalNG_connectionItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_710, &asn_PER_memb_id_constr_710,  memb_id_constraint_709 },
@@ -33141,8 +33318,8 @@ asn_TYPE_member_t asn_MBR_UE_associatedLogicalNG_connectionItem_ExtIEs_709[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UE_associatedLogicalNG_connectionItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_711, &asn_PER_memb_criticality_constr_711,  memb_criticality_constraint_709 },
@@ -33150,8 +33327,8 @@ asn_TYPE_member_t asn_MBR_UE_associatedLogicalNG_connectionItem_ExtIEs_709[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UE_associatedLogicalNG_connectionItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_712,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_712, &asn_PER_memb_extensionValue_constr_712,  memb_extensionValue_constraint_709 },
@@ -33163,14 +33340,15 @@ static const ber_tlv_tag_t asn_DEF_UE_associatedLogicalNG_connectionItem_ExtIEs_
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UE_associatedLogicalNG_connectionItem_ExtIEs_tag2el_709[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UE_associatedLogicalNG_connectionItem_ExtIEs_specs_709 = {
 	sizeof(struct UE_associatedLogicalNG_connectionItem_ExtIEs),
 	offsetof(struct UE_associatedLogicalNG_connectionItem_ExtIEs, _asn_ctx),
 	asn_MAP_UE_associatedLogicalNG_connectionItem_ExtIEs_tag2el_709,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33216,8 +33394,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_716 = {
 
 asn_TYPE_member_t asn_MBR_UE_NGAP_ID_pair_ExtIEs_713[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UE_NGAP_ID_pair_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_714, &asn_PER_memb_id_constr_714,  memb_id_constraint_713 },
@@ -33225,8 +33403,8 @@ asn_TYPE_member_t asn_MBR_UE_NGAP_ID_pair_ExtIEs_713[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UE_NGAP_ID_pair_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_715, &asn_PER_memb_criticality_constr_715,  memb_criticality_constraint_713 },
@@ -33234,8 +33412,8 @@ asn_TYPE_member_t asn_MBR_UE_NGAP_ID_pair_ExtIEs_713[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UE_NGAP_ID_pair_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_716,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_716, &asn_PER_memb_extensionValue_constr_716,  memb_extensionValue_constraint_713 },
@@ -33247,14 +33425,15 @@ static const ber_tlv_tag_t asn_DEF_UE_NGAP_ID_pair_ExtIEs_tags_713[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UE_NGAP_ID_pair_ExtIEs_tag2el_713[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UE_NGAP_ID_pair_ExtIEs_specs_713 = {
 	sizeof(struct UE_NGAP_ID_pair_ExtIEs),
 	offsetof(struct UE_NGAP_ID_pair_ExtIEs, _asn_ctx),
 	asn_MAP_UE_NGAP_ID_pair_ExtIEs_tag2el_713,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33300,8 +33479,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_720 = {
 
 asn_TYPE_member_t asn_MBR_UEPresenceInAreaOfInterestItem_ExtIEs_717[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UEPresenceInAreaOfInterestItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_718, &asn_PER_memb_id_constr_718,  memb_id_constraint_717 },
@@ -33309,8 +33488,8 @@ asn_TYPE_member_t asn_MBR_UEPresenceInAreaOfInterestItem_ExtIEs_717[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UEPresenceInAreaOfInterestItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_719, &asn_PER_memb_criticality_constr_719,  memb_criticality_constraint_717 },
@@ -33318,8 +33497,8 @@ asn_TYPE_member_t asn_MBR_UEPresenceInAreaOfInterestItem_ExtIEs_717[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UEPresenceInAreaOfInterestItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_720,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_720, &asn_PER_memb_extensionValue_constr_720,  memb_extensionValue_constraint_717 },
@@ -33331,14 +33510,15 @@ static const ber_tlv_tag_t asn_DEF_UEPresenceInAreaOfInterestItem_ExtIEs_tags_71
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UEPresenceInAreaOfInterestItem_ExtIEs_tag2el_717[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UEPresenceInAreaOfInterestItem_ExtIEs_specs_717 = {
 	sizeof(struct UEPresenceInAreaOfInterestItem_ExtIEs),
 	offsetof(struct UEPresenceInAreaOfInterestItem_ExtIEs, _asn_ctx),
 	asn_MAP_UEPresenceInAreaOfInterestItem_ExtIEs_tag2el_717,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33384,8 +33564,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_724 = {
 
 asn_TYPE_member_t asn_MBR_UERadioCapabilityForPaging_ExtIEs_721[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UERadioCapabilityForPaging_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_722, &asn_PER_memb_id_constr_722,  memb_id_constraint_721 },
@@ -33393,8 +33573,8 @@ asn_TYPE_member_t asn_MBR_UERadioCapabilityForPaging_ExtIEs_721[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UERadioCapabilityForPaging_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_723, &asn_PER_memb_criticality_constr_723,  memb_criticality_constraint_721 },
@@ -33402,8 +33582,8 @@ asn_TYPE_member_t asn_MBR_UERadioCapabilityForPaging_ExtIEs_721[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UERadioCapabilityForPaging_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_724,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_724, &asn_PER_memb_extensionValue_constr_724,  memb_extensionValue_constraint_721 },
@@ -33415,14 +33595,15 @@ static const ber_tlv_tag_t asn_DEF_UERadioCapabilityForPaging_ExtIEs_tags_721[] 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UERadioCapabilityForPaging_ExtIEs_tag2el_721[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UERadioCapabilityForPaging_ExtIEs_specs_721 = {
 	sizeof(struct UERadioCapabilityForPaging_ExtIEs),
 	offsetof(struct UERadioCapabilityForPaging_ExtIEs, _asn_ctx),
 	asn_MAP_UERadioCapabilityForPaging_ExtIEs_tag2el_721,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33468,8 +33649,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_728 = {
 
 asn_TYPE_member_t asn_MBR_UESecurityCapabilities_ExtIEs_725[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UESecurityCapabilities_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_726, &asn_PER_memb_id_constr_726,  memb_id_constraint_725 },
@@ -33477,8 +33658,8 @@ asn_TYPE_member_t asn_MBR_UESecurityCapabilities_ExtIEs_725[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UESecurityCapabilities_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_727, &asn_PER_memb_criticality_constr_727,  memb_criticality_constraint_725 },
@@ -33486,8 +33667,8 @@ asn_TYPE_member_t asn_MBR_UESecurityCapabilities_ExtIEs_725[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UESecurityCapabilities_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_728,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_728, &asn_PER_memb_extensionValue_constr_728,  memb_extensionValue_constraint_725 },
@@ -33499,14 +33680,15 @@ static const ber_tlv_tag_t asn_DEF_UESecurityCapabilities_ExtIEs_tags_725[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UESecurityCapabilities_ExtIEs_tag2el_725[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UESecurityCapabilities_ExtIEs_specs_725 = {
 	sizeof(struct UESecurityCapabilities_ExtIEs),
 	offsetof(struct UESecurityCapabilities_ExtIEs, _asn_ctx),
 	asn_MAP_UESecurityCapabilities_ExtIEs_tag2el_725,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33552,8 +33734,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_732 = {
 
 asn_TYPE_member_t asn_MBR_UL_NGU_UP_TNLModifyItem_ExtIEs_729[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UL_NGU_UP_TNLModifyItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_730, &asn_PER_memb_id_constr_730,  memb_id_constraint_729 },
@@ -33561,8 +33743,8 @@ asn_TYPE_member_t asn_MBR_UL_NGU_UP_TNLModifyItem_ExtIEs_729[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UL_NGU_UP_TNLModifyItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_731, &asn_PER_memb_criticality_constr_731,  memb_criticality_constraint_729 },
@@ -33570,8 +33752,8 @@ asn_TYPE_member_t asn_MBR_UL_NGU_UP_TNLModifyItem_ExtIEs_729[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UL_NGU_UP_TNLModifyItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_732,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_732, &asn_PER_memb_extensionValue_constr_732,  memb_extensionValue_constraint_729 },
@@ -33583,14 +33765,15 @@ static const ber_tlv_tag_t asn_DEF_UL_NGU_UP_TNLModifyItem_ExtIEs_tags_729[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UL_NGU_UP_TNLModifyItem_ExtIEs_tag2el_729[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UL_NGU_UP_TNLModifyItem_ExtIEs_specs_729 = {
 	sizeof(struct UL_NGU_UP_TNLModifyItem_ExtIEs),
 	offsetof(struct UL_NGU_UP_TNLModifyItem_ExtIEs, _asn_ctx),
 	asn_MAP_UL_NGU_UP_TNLModifyItem_ExtIEs_tag2el_729,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33636,8 +33819,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_736 = {
 
 asn_TYPE_member_t asn_MBR_UnavailableGUAMIItem_ExtIEs_733[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UnavailableGUAMIItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_734, &asn_PER_memb_id_constr_734,  memb_id_constraint_733 },
@@ -33645,8 +33828,8 @@ asn_TYPE_member_t asn_MBR_UnavailableGUAMIItem_ExtIEs_733[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UnavailableGUAMIItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_735, &asn_PER_memb_criticality_constr_735,  memb_criticality_constraint_733 },
@@ -33654,8 +33837,8 @@ asn_TYPE_member_t asn_MBR_UnavailableGUAMIItem_ExtIEs_733[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UnavailableGUAMIItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_736,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_736, &asn_PER_memb_extensionValue_constr_736,  memb_extensionValue_constraint_733 },
@@ -33667,14 +33850,15 @@ static const ber_tlv_tag_t asn_DEF_UnavailableGUAMIItem_ExtIEs_tags_733[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UnavailableGUAMIItem_ExtIEs_tag2el_733[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UnavailableGUAMIItem_ExtIEs_specs_733 = {
 	sizeof(struct UnavailableGUAMIItem_ExtIEs),
 	offsetof(struct UnavailableGUAMIItem_ExtIEs, _asn_ctx),
 	asn_MAP_UnavailableGUAMIItem_ExtIEs_tag2el_733,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33720,8 +33904,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_740 = {
 
 asn_TYPE_member_t asn_MBR_UPTransportLayerInformationItem_ExtIEs_737[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UPTransportLayerInformationItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_738, &asn_PER_memb_id_constr_738,  memb_id_constraint_737 },
@@ -33729,8 +33913,8 @@ asn_TYPE_member_t asn_MBR_UPTransportLayerInformationItem_ExtIEs_737[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UPTransportLayerInformationItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_739, &asn_PER_memb_criticality_constr_739,  memb_criticality_constraint_737 },
@@ -33738,8 +33922,8 @@ asn_TYPE_member_t asn_MBR_UPTransportLayerInformationItem_ExtIEs_737[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UPTransportLayerInformationItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_740,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_740, &asn_PER_memb_extensionValue_constr_740,  memb_extensionValue_constraint_737 },
@@ -33751,14 +33935,15 @@ static const ber_tlv_tag_t asn_DEF_UPTransportLayerInformationItem_ExtIEs_tags_7
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UPTransportLayerInformationItem_ExtIEs_tag2el_737[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UPTransportLayerInformationItem_ExtIEs_specs_737 = {
 	sizeof(struct UPTransportLayerInformationItem_ExtIEs),
 	offsetof(struct UPTransportLayerInformationItem_ExtIEs, _asn_ctx),
 	asn_MAP_UPTransportLayerInformationItem_ExtIEs_tag2el_737,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33804,8 +33989,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_744 = {
 
 asn_TYPE_member_t asn_MBR_UPTransportLayerInformationPairItem_ExtIEs_741[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UPTransportLayerInformationPairItem_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_742, &asn_PER_memb_id_constr_742,  memb_id_constraint_741 },
@@ -33813,8 +33998,8 @@ asn_TYPE_member_t asn_MBR_UPTransportLayerInformationPairItem_ExtIEs_741[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UPTransportLayerInformationPairItem_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_743, &asn_PER_memb_criticality_constr_743,  memb_criticality_constraint_741 },
@@ -33822,8 +34007,8 @@ asn_TYPE_member_t asn_MBR_UPTransportLayerInformationPairItem_ExtIEs_741[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UPTransportLayerInformationPairItem_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_744,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_744, &asn_PER_memb_extensionValue_constr_744,  memb_extensionValue_constraint_741 },
@@ -33835,14 +34020,15 @@ static const ber_tlv_tag_t asn_DEF_UPTransportLayerInformationPairItem_ExtIEs_ta
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UPTransportLayerInformationPairItem_ExtIEs_tag2el_741[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UPTransportLayerInformationPairItem_ExtIEs_specs_741 = {
 	sizeof(struct UPTransportLayerInformationPairItem_ExtIEs),
 	offsetof(struct UPTransportLayerInformationPairItem_ExtIEs, _asn_ctx),
 	asn_MAP_UPTransportLayerInformationPairItem_ExtIEs_tag2el_741,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33905,8 +34091,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_748 = {
 
 asn_TYPE_member_t asn_MBR_UserLocationInformationEUTRA_ExtIEs_745[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationEUTRA_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_746, &asn_PER_memb_id_constr_746,  memb_id_constraint_745 },
@@ -33914,8 +34100,8 @@ asn_TYPE_member_t asn_MBR_UserLocationInformationEUTRA_ExtIEs_745[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationEUTRA_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_UserLocationInformationEUTRA_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_747, &asn_PER_memb_criticality_constr_747,  memb_criticality_constraint_745 },
@@ -33923,8 +34109,8 @@ asn_TYPE_member_t asn_MBR_UserLocationInformationEUTRA_ExtIEs_745[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationEUTRA_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_748,
 		select_UserLocationInformationEUTRA_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_748, &asn_PER_memb_extensionValue_constr_748,  memb_extensionValue_constraint_745 },
@@ -33936,14 +34122,15 @@ static const ber_tlv_tag_t asn_DEF_UserLocationInformationEUTRA_ExtIEs_tags_745[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UserLocationInformationEUTRA_ExtIEs_tag2el_745[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UserLocationInformationEUTRA_ExtIEs_specs_745 = {
 	sizeof(struct UserLocationInformationEUTRA_ExtIEs),
 	offsetof(struct UserLocationInformationEUTRA_ExtIEs, _asn_ctx),
 	asn_MAP_UserLocationInformationEUTRA_ExtIEs_tag2el_745,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -33989,8 +34176,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_752 = {
 
 asn_TYPE_member_t asn_MBR_UserLocationInformationN3IWF_ExtIEs_749[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationN3IWF_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_750, &asn_PER_memb_id_constr_750,  memb_id_constraint_749 },
@@ -33998,8 +34185,8 @@ asn_TYPE_member_t asn_MBR_UserLocationInformationN3IWF_ExtIEs_749[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationN3IWF_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_751, &asn_PER_memb_criticality_constr_751,  memb_criticality_constraint_749 },
@@ -34007,8 +34194,8 @@ asn_TYPE_member_t asn_MBR_UserLocationInformationN3IWF_ExtIEs_749[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationN3IWF_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_752,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_752, &asn_PER_memb_extensionValue_constr_752,  memb_extensionValue_constraint_749 },
@@ -34020,14 +34207,15 @@ static const ber_tlv_tag_t asn_DEF_UserLocationInformationN3IWF_ExtIEs_tags_749[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UserLocationInformationN3IWF_ExtIEs_tag2el_749[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UserLocationInformationN3IWF_ExtIEs_specs_749 = {
 	sizeof(struct UserLocationInformationN3IWF_ExtIEs),
 	offsetof(struct UserLocationInformationN3IWF_ExtIEs, _asn_ctx),
 	asn_MAP_UserLocationInformationN3IWF_ExtIEs_tag2el_749,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -34090,8 +34278,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_756 = {
 
 asn_TYPE_member_t asn_MBR_UserLocationInformationNR_ExtIEs_753[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationNR_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_754, &asn_PER_memb_id_constr_754,  memb_id_constraint_753 },
@@ -34099,8 +34287,8 @@ asn_TYPE_member_t asn_MBR_UserLocationInformationNR_ExtIEs_753[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationNR_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		select_UserLocationInformationNR_ExtIEs_criticality_type,
 		{ &asn_OER_memb_criticality_constr_755, &asn_PER_memb_criticality_constr_755,  memb_criticality_constraint_753 },
@@ -34108,8 +34296,8 @@ asn_TYPE_member_t asn_MBR_UserLocationInformationNR_ExtIEs_753[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UserLocationInformationNR_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_756,
 		select_UserLocationInformationNR_ExtIEs_extensionValue_type,
 		{ &asn_OER_memb_extensionValue_constr_756, &asn_PER_memb_extensionValue_constr_756,  memb_extensionValue_constraint_753 },
@@ -34121,14 +34309,15 @@ static const ber_tlv_tag_t asn_DEF_UserLocationInformationNR_ExtIEs_tags_753[] =
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UserLocationInformationNR_ExtIEs_tag2el_753[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UserLocationInformationNR_ExtIEs_specs_753 = {
 	sizeof(struct UserLocationInformationNR_ExtIEs),
 	offsetof(struct UserLocationInformationNR_ExtIEs, _asn_ctx),
 	asn_MAP_UserLocationInformationNR_ExtIEs_tag2el_753,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -34174,8 +34363,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_760 = {
 
 asn_TYPE_member_t asn_MBR_UserPlaneSecurityInformation_ExtIEs_757[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct UserPlaneSecurityInformation_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_758, &asn_PER_memb_id_constr_758,  memb_id_constraint_757 },
@@ -34183,8 +34372,8 @@ asn_TYPE_member_t asn_MBR_UserPlaneSecurityInformation_ExtIEs_757[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct UserPlaneSecurityInformation_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_759, &asn_PER_memb_criticality_constr_759,  memb_criticality_constraint_757 },
@@ -34192,8 +34381,8 @@ asn_TYPE_member_t asn_MBR_UserPlaneSecurityInformation_ExtIEs_757[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct UserPlaneSecurityInformation_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_760,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_760, &asn_PER_memb_extensionValue_constr_760,  memb_extensionValue_constraint_757 },
@@ -34205,14 +34394,15 @@ static const ber_tlv_tag_t asn_DEF_UserPlaneSecurityInformation_ExtIEs_tags_757[
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_UserPlaneSecurityInformation_ExtIEs_tag2el_757[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_UserPlaneSecurityInformation_ExtIEs_specs_757 = {
 	sizeof(struct UserPlaneSecurityInformation_ExtIEs),
 	offsetof(struct UserPlaneSecurityInformation_ExtIEs, _asn_ctx),
 	asn_MAP_UserPlaneSecurityInformation_ExtIEs_tag2el_757,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -34258,8 +34448,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_764 = {
 
 asn_TYPE_member_t asn_MBR_VolumeTimedReport_Item_ExtIEs_761[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct VolumeTimedReport_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_762, &asn_PER_memb_id_constr_762,  memb_id_constraint_761 },
@@ -34267,8 +34457,8 @@ asn_TYPE_member_t asn_MBR_VolumeTimedReport_Item_ExtIEs_761[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct VolumeTimedReport_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_763, &asn_PER_memb_criticality_constr_763,  memb_criticality_constraint_761 },
@@ -34276,8 +34466,8 @@ asn_TYPE_member_t asn_MBR_VolumeTimedReport_Item_ExtIEs_761[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct VolumeTimedReport_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_764,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_764, &asn_PER_memb_extensionValue_constr_764,  memb_extensionValue_constraint_761 },
@@ -34289,14 +34479,15 @@ static const ber_tlv_tag_t asn_DEF_VolumeTimedReport_Item_ExtIEs_tags_761[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_VolumeTimedReport_Item_ExtIEs_tag2el_761[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_VolumeTimedReport_Item_ExtIEs_specs_761 = {
 	sizeof(struct VolumeTimedReport_Item_ExtIEs),
 	offsetof(struct VolumeTimedReport_Item_ExtIEs, _asn_ctx),
 	asn_MAP_VolumeTimedReport_Item_ExtIEs_tag2el_761,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -34342,8 +34533,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_768 = {
 
 asn_TYPE_member_t asn_MBR_XnExtTLA_Item_ExtIEs_765[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct XnExtTLA_Item_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_766, &asn_PER_memb_id_constr_766,  memb_id_constraint_765 },
@@ -34351,8 +34542,8 @@ asn_TYPE_member_t asn_MBR_XnExtTLA_Item_ExtIEs_765[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct XnExtTLA_Item_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_767, &asn_PER_memb_criticality_constr_767,  memb_criticality_constraint_765 },
@@ -34360,8 +34551,8 @@ asn_TYPE_member_t asn_MBR_XnExtTLA_Item_ExtIEs_765[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct XnExtTLA_Item_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_768,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_768, &asn_PER_memb_extensionValue_constr_768,  memb_extensionValue_constraint_765 },
@@ -34373,14 +34564,15 @@ static const ber_tlv_tag_t asn_DEF_XnExtTLA_Item_ExtIEs_tags_765[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_XnExtTLA_Item_ExtIEs_tag2el_765[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_XnExtTLA_Item_ExtIEs_specs_765 = {
 	sizeof(struct XnExtTLA_Item_ExtIEs),
 	offsetof(struct XnExtTLA_Item_ExtIEs, _asn_ctx),
 	asn_MAP_XnExtTLA_Item_ExtIEs_tag2el_765,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };
@@ -34426,8 +34618,8 @@ asn_TYPE_descriptor_t asn_DEF_extensionValue_772 = {
 
 asn_TYPE_member_t asn_MBR_XnTNLConfigurationInfo_ExtIEs_769[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct XnTNLConfigurationInfo_ExtIEs, id),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_ProtocolExtensionID,
 		0,
 		{ &asn_OER_memb_id_constr_770, &asn_PER_memb_id_constr_770,  memb_id_constraint_769 },
@@ -34435,8 +34627,8 @@ asn_TYPE_member_t asn_MBR_XnTNLConfigurationInfo_ExtIEs_769[] = {
 		"id"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct XnTNLConfigurationInfo_ExtIEs, criticality),
-		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_Criticality,
 		0,
 		{ &asn_OER_memb_criticality_constr_771, &asn_PER_memb_criticality_constr_771,  memb_criticality_constraint_769 },
@@ -34444,8 +34636,8 @@ asn_TYPE_member_t asn_MBR_XnTNLConfigurationInfo_ExtIEs_769[] = {
 		"criticality"
 		},
 	{ ATF_OPEN_TYPE | ATF_NOFLAGS, 0, offsetof(struct XnTNLConfigurationInfo_ExtIEs, extensionValue),
-		-1 /* Ambiguous tag (ANY?) */,
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_extensionValue_772,
 		0,
 		{ &asn_OER_memb_extensionValue_constr_772, &asn_PER_memb_extensionValue_constr_772,  memb_extensionValue_constraint_769 },
@@ -34457,14 +34649,15 @@ static const ber_tlv_tag_t asn_DEF_XnTNLConfigurationInfo_ExtIEs_tags_769[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_XnTNLConfigurationInfo_ExtIEs_tag2el_769[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* id */
-    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 } /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* id */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* criticality */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* extensionValue */
 };
 asn_SEQUENCE_specifics_t asn_SPC_XnTNLConfigurationInfo_ExtIEs_specs_769 = {
 	sizeof(struct XnTNLConfigurationInfo_ExtIEs),
 	offsetof(struct XnTNLConfigurationInfo_ExtIEs, _asn_ctx),
 	asn_MAP_XnTNLConfigurationInfo_ExtIEs_tag2el_769,
-	2,	/* Count of tags in the map */
+	3,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* First extension addition */
 };

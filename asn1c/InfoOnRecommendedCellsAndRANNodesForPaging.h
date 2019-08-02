@@ -39,8 +39,6 @@ typedef struct InfoOnRecommendedCellsAndRANNodesForPaging {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_InfoOnRecommendedCellsAndRANNodesForPaging;
-extern asn_SEQUENCE_specifics_t asn_SPC_InfoOnRecommendedCellsAndRANNodesForPaging_specs_1;
-extern asn_TYPE_member_t asn_MBR_InfoOnRecommendedCellsAndRANNodesForPaging_1[3];
 
 #ifdef __cplusplus
 }

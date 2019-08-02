@@ -32,9 +32,6 @@ typedef struct PDUSessionResourceFailedToModifyListModRes {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_PDUSessionResourceFailedToModifyListModRes;
-extern asn_SET_OF_specifics_t asn_SPC_PDUSessionResourceFailedToModifyListModRes_specs_1;
-extern asn_TYPE_member_t asn_MBR_PDUSessionResourceFailedToModifyListModRes_1[1];
-extern asn_per_constraints_t asn_PER_type_PDUSessionResourceFailedToModifyListModRes_constr_1;
 
 #ifdef __cplusplus
 }

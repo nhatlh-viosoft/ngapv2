@@ -43,8 +43,6 @@ typedef struct LocationReportingRequestType {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_LocationReportingRequestType;
-extern asn_SEQUENCE_specifics_t asn_SPC_LocationReportingRequestType_specs_1;
-extern asn_TYPE_member_t asn_MBR_LocationReportingRequestType_1[5];
 
 #ifdef __cplusplus
 }

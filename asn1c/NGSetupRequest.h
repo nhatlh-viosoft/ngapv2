@@ -21,7 +21,7 @@ extern "C" {
 
 /* NGSetupRequest */
 typedef struct NGSetupRequest {
-	ProtocolIE_Container_127P41_t	 protocolIEs;
+	ProtocolIE_Container_127P39_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct NGSetupRequest {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_NGSetupRequest;
+extern asn_SEQUENCE_specifics_t asn_SPC_NGSetupRequest_specs_1;
+extern asn_TYPE_member_t asn_MBR_NGSetupRequest_1[1];
 
 #ifdef __cplusplus
 }

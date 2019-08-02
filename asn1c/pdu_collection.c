@@ -4,13 +4,89 @@
 
 struct asn_TYPE_descriptor_s;	/* Forward declaration */
 
-extern struct asn_TYPE_descriptor_s asn_DEF_Criticality;
-extern struct asn_TYPE_descriptor_s asn_DEF_Presence;
-extern struct asn_TYPE_descriptor_s asn_DEF_PrivateIE_ID;
-extern struct asn_TYPE_descriptor_s asn_DEF_ProcedureCode;
-extern struct asn_TYPE_descriptor_s asn_DEF_ProtocolExtensionID;
-extern struct asn_TYPE_descriptor_s asn_DEF_ProtocolIE_ID;
-extern struct asn_TYPE_descriptor_s asn_DEF_TriggeringMessage;
+extern struct asn_TYPE_descriptor_s asn_DEF_NGAP_PDU;
+extern struct asn_TYPE_descriptor_s asn_DEF_InitiatingMessage;
+extern struct asn_TYPE_descriptor_s asn_DEF_SuccessfulOutcome;
+extern struct asn_TYPE_descriptor_s asn_DEF_UnsuccessfulOutcome;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceSetupRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceSetupResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceReleaseCommand;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceReleaseResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceNotify;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyConfirm;
+extern struct asn_TYPE_descriptor_s asn_DEF_InitialContextSetupRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_InitialContextSetupResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_InitialContextSetupFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_UEContextReleaseRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_UEContextReleaseCommand;
+extern struct asn_TYPE_descriptor_s asn_DEF_UEContextReleaseComplete;
+extern struct asn_TYPE_descriptor_s asn_DEF_UEContextModificationRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_UEContextModificationResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_UEContextModificationFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_RRCInactiveTransitionReport;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverRequired;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverCommand;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverPreparationFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverRequestAcknowledge;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverNotify;
+extern struct asn_TYPE_descriptor_s asn_DEF_PathSwitchRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_PathSwitchRequestAcknowledge;
+extern struct asn_TYPE_descriptor_s asn_DEF_PathSwitchRequestFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverCancel;
+extern struct asn_TYPE_descriptor_s asn_DEF_HandoverCancelAcknowledge;
+extern struct asn_TYPE_descriptor_s asn_DEF_UplinkRANStatusTransfer;
+extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkRANStatusTransfer;
+extern struct asn_TYPE_descriptor_s asn_DEF_Paging;
+extern struct asn_TYPE_descriptor_s asn_DEF_InitialUEMessage;
+extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkNASTransport;
+extern struct asn_TYPE_descriptor_s asn_DEF_UplinkNASTransport;
+extern struct asn_TYPE_descriptor_s asn_DEF_NASNonDeliveryIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_RerouteNASRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_NGSetupRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_NGSetupResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_NGSetupFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_RANConfigurationUpdate;
+extern struct asn_TYPE_descriptor_s asn_DEF_RANConfigurationUpdateAcknowledge;
+extern struct asn_TYPE_descriptor_s asn_DEF_RANConfigurationUpdateFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_AMFConfigurationUpdate;
+extern struct asn_TYPE_descriptor_s asn_DEF_AMFConfigurationUpdateAcknowledge;
+extern struct asn_TYPE_descriptor_s asn_DEF_AMFConfigurationUpdateFailure;
+extern struct asn_TYPE_descriptor_s asn_DEF_AMFStatusIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_NGReset;
+extern struct asn_TYPE_descriptor_s asn_DEF_NGResetAcknowledge;
+extern struct asn_TYPE_descriptor_s asn_DEF_ErrorIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_OverloadStart;
+extern struct asn_TYPE_descriptor_s asn_DEF_OverloadStop;
+extern struct asn_TYPE_descriptor_s asn_DEF_UplinkRANConfigurationTransfer;
+extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkRANConfigurationTransfer;
+extern struct asn_TYPE_descriptor_s asn_DEF_WriteReplaceWarningRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_WriteReplaceWarningResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_PWSCancelRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_PWSCancelResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_PWSRestartIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_PWSFailureIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkUEAssociatedNRPPaTransport;
+extern struct asn_TYPE_descriptor_s asn_DEF_UplinkUEAssociatedNRPPaTransport;
+extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkNonUEAssociatedNRPPaTransport;
+extern struct asn_TYPE_descriptor_s asn_DEF_UplinkNonUEAssociatedNRPPaTransport;
+extern struct asn_TYPE_descriptor_s asn_DEF_TraceStart;
+extern struct asn_TYPE_descriptor_s asn_DEF_TraceFailureIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_DeactivateTrace;
+extern struct asn_TYPE_descriptor_s asn_DEF_CellTrafficTrace;
+extern struct asn_TYPE_descriptor_s asn_DEF_LocationReportingControl;
+extern struct asn_TYPE_descriptor_s asn_DEF_LocationReportingFailureIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_LocationReport;
+extern struct asn_TYPE_descriptor_s asn_DEF_UETNLABindingReleaseRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_UERadioCapabilityInfoIndication;
+extern struct asn_TYPE_descriptor_s asn_DEF_UERadioCapabilityCheckRequest;
+extern struct asn_TYPE_descriptor_s asn_DEF_UERadioCapabilityCheckResponse;
+extern struct asn_TYPE_descriptor_s asn_DEF_PrivateMessage;
+extern struct asn_TYPE_descriptor_s asn_DEF_SecondaryRATDataUsageReport;
 extern struct asn_TYPE_descriptor_s asn_DEF_AdditionalDLUPTNLInformationForHOList;
 extern struct asn_TYPE_descriptor_s asn_DEF_AdditionalDLUPTNLInformationForHOItem;
 extern struct asn_TYPE_descriptor_s asn_DEF_AdditionalQosFlowInformation;
@@ -494,100 +570,101 @@ extern struct asn_TYPE_descriptor_s asn_DEF_XnExtTLA_Item;
 extern struct asn_TYPE_descriptor_s asn_DEF_XnGTP_TLAs;
 extern struct asn_TYPE_descriptor_s asn_DEF_XnTLAs;
 extern struct asn_TYPE_descriptor_s asn_DEF_XnTNLConfigurationInfo;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceSetupRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceSetupResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceReleaseCommand;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceReleaseResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceNotify;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_PDUSessionResourceModifyConfirm;
-extern struct asn_TYPE_descriptor_s asn_DEF_InitialContextSetupRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_InitialContextSetupResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_InitialContextSetupFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_UEContextReleaseRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_UEContextReleaseCommand;
-extern struct asn_TYPE_descriptor_s asn_DEF_UEContextReleaseComplete;
-extern struct asn_TYPE_descriptor_s asn_DEF_UEContextModificationRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_UEContextModificationResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_UEContextModificationFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_RRCInactiveTransitionReport;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverRequired;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverCommand;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverPreparationFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverRequestAcknowledge;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverNotify;
-extern struct asn_TYPE_descriptor_s asn_DEF_PathSwitchRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_PathSwitchRequestAcknowledge;
-extern struct asn_TYPE_descriptor_s asn_DEF_PathSwitchRequestFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverCancel;
-extern struct asn_TYPE_descriptor_s asn_DEF_HandoverCancelAcknowledge;
-extern struct asn_TYPE_descriptor_s asn_DEF_UplinkRANStatusTransfer;
-extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkRANStatusTransfer;
-extern struct asn_TYPE_descriptor_s asn_DEF_Paging;
-extern struct asn_TYPE_descriptor_s asn_DEF_InitialUEMessage;
-extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkNASTransport;
-extern struct asn_TYPE_descriptor_s asn_DEF_UplinkNASTransport;
-extern struct asn_TYPE_descriptor_s asn_DEF_NASNonDeliveryIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_RerouteNASRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_NGSetupRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_NGSetupResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_NGSetupFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_RANConfigurationUpdate;
-extern struct asn_TYPE_descriptor_s asn_DEF_RANConfigurationUpdateAcknowledge;
-extern struct asn_TYPE_descriptor_s asn_DEF_RANConfigurationUpdateFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_AMFConfigurationUpdate;
-extern struct asn_TYPE_descriptor_s asn_DEF_AMFConfigurationUpdateAcknowledge;
-extern struct asn_TYPE_descriptor_s asn_DEF_AMFConfigurationUpdateFailure;
-extern struct asn_TYPE_descriptor_s asn_DEF_AMFStatusIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_NGReset;
-extern struct asn_TYPE_descriptor_s asn_DEF_NGResetAcknowledge;
-extern struct asn_TYPE_descriptor_s asn_DEF_ErrorIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_OverloadStart;
-extern struct asn_TYPE_descriptor_s asn_DEF_OverloadStop;
-extern struct asn_TYPE_descriptor_s asn_DEF_UplinkRANConfigurationTransfer;
-extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkRANConfigurationTransfer;
-extern struct asn_TYPE_descriptor_s asn_DEF_WriteReplaceWarningRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_WriteReplaceWarningResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_PWSCancelRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_PWSCancelResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_PWSRestartIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_PWSFailureIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkUEAssociatedNRPPaTransport;
-extern struct asn_TYPE_descriptor_s asn_DEF_UplinkUEAssociatedNRPPaTransport;
-extern struct asn_TYPE_descriptor_s asn_DEF_DownlinkNonUEAssociatedNRPPaTransport;
-extern struct asn_TYPE_descriptor_s asn_DEF_UplinkNonUEAssociatedNRPPaTransport;
-extern struct asn_TYPE_descriptor_s asn_DEF_TraceStart;
-extern struct asn_TYPE_descriptor_s asn_DEF_TraceFailureIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_DeactivateTrace;
-extern struct asn_TYPE_descriptor_s asn_DEF_CellTrafficTrace;
-extern struct asn_TYPE_descriptor_s asn_DEF_LocationReportingControl;
-extern struct asn_TYPE_descriptor_s asn_DEF_LocationReportingFailureIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_LocationReport;
-extern struct asn_TYPE_descriptor_s asn_DEF_UETNLABindingReleaseRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_UERadioCapabilityInfoIndication;
-extern struct asn_TYPE_descriptor_s asn_DEF_UERadioCapabilityCheckRequest;
-extern struct asn_TYPE_descriptor_s asn_DEF_UERadioCapabilityCheckResponse;
-extern struct asn_TYPE_descriptor_s asn_DEF_PrivateMessage;
-extern struct asn_TYPE_descriptor_s asn_DEF_SecondaryRATDataUsageReport;
-extern struct asn_TYPE_descriptor_s asn_DEF_NGAP_PDU;
-extern struct asn_TYPE_descriptor_s asn_DEF_InitiatingMessage;
-extern struct asn_TYPE_descriptor_s asn_DEF_SuccessfulOutcome;
-extern struct asn_TYPE_descriptor_s asn_DEF_UnsuccessfulOutcome;
+extern struct asn_TYPE_descriptor_s asn_DEF_Criticality;
+extern struct asn_TYPE_descriptor_s asn_DEF_Presence;
+extern struct asn_TYPE_descriptor_s asn_DEF_PrivateIE_ID;
+extern struct asn_TYPE_descriptor_s asn_DEF_ProcedureCode;
+extern struct asn_TYPE_descriptor_s asn_DEF_ProtocolExtensionID;
+extern struct asn_TYPE_descriptor_s asn_DEF_ProtocolIE_ID;
+extern struct asn_TYPE_descriptor_s asn_DEF_TriggeringMessage;
 
 
 struct asn_TYPE_descriptor_s *asn_pdu_collection[] = {
-	/* From module NGAP-CommonDataTypes in ../NGAP-CommonDataTypes.asn */
-	&asn_DEF_Criticality,	
-	&asn_DEF_Presence,	
-	&asn_DEF_PrivateIE_ID,	
-	&asn_DEF_ProcedureCode,	
-	&asn_DEF_ProtocolExtensionID,	
-	&asn_DEF_ProtocolIE_ID,	
-	&asn_DEF_TriggeringMessage,	
+	/* From module NGAP-PDU-Descriptions in ../NGAP-PDU-Descriptions.asn */
+	&asn_DEF_NGAP_PDU,	
+	&asn_DEF_InitiatingMessage,	
+	&asn_DEF_SuccessfulOutcome,	
+	&asn_DEF_UnsuccessfulOutcome,	
+	/* From module NGAP-PDU-Contents in ../NGAP-PDU-Contents.asn */
+	&asn_DEF_PDUSessionResourceSetupRequest,	
+	&asn_DEF_PDUSessionResourceSetupResponse,	
+	&asn_DEF_PDUSessionResourceReleaseCommand,	
+	&asn_DEF_PDUSessionResourceReleaseResponse,	
+	&asn_DEF_PDUSessionResourceModifyRequest,	
+	&asn_DEF_PDUSessionResourceModifyResponse,	
+	&asn_DEF_PDUSessionResourceNotify,	
+	&asn_DEF_PDUSessionResourceModifyIndication,	
+	&asn_DEF_PDUSessionResourceModifyConfirm,	
+	&asn_DEF_InitialContextSetupRequest,	
+	&asn_DEF_InitialContextSetupResponse,	
+	&asn_DEF_InitialContextSetupFailure,	
+	&asn_DEF_UEContextReleaseRequest,	
+	&asn_DEF_UEContextReleaseCommand,	
+	&asn_DEF_UEContextReleaseComplete,	
+	&asn_DEF_UEContextModificationRequest,	
+	&asn_DEF_UEContextModificationResponse,	
+	&asn_DEF_UEContextModificationFailure,	
+	&asn_DEF_RRCInactiveTransitionReport,	
+	&asn_DEF_HandoverRequired,	
+	&asn_DEF_HandoverCommand,	
+	&asn_DEF_HandoverPreparationFailure,	
+	&asn_DEF_HandoverRequest,	
+	&asn_DEF_HandoverRequestAcknowledge,	
+	&asn_DEF_HandoverFailure,	
+	&asn_DEF_HandoverNotify,	
+	&asn_DEF_PathSwitchRequest,	
+	&asn_DEF_PathSwitchRequestAcknowledge,	
+	&asn_DEF_PathSwitchRequestFailure,	
+	&asn_DEF_HandoverCancel,	
+	&asn_DEF_HandoverCancelAcknowledge,	
+	&asn_DEF_UplinkRANStatusTransfer,	
+	&asn_DEF_DownlinkRANStatusTransfer,	
+	&asn_DEF_Paging,	
+	&asn_DEF_InitialUEMessage,	
+	&asn_DEF_DownlinkNASTransport,	
+	&asn_DEF_UplinkNASTransport,	
+	&asn_DEF_NASNonDeliveryIndication,	
+	&asn_DEF_RerouteNASRequest,	
+	&asn_DEF_NGSetupRequest,	
+	&asn_DEF_NGSetupResponse,	
+	&asn_DEF_NGSetupFailure,	
+	&asn_DEF_RANConfigurationUpdate,	
+	&asn_DEF_RANConfigurationUpdateAcknowledge,	
+	&asn_DEF_RANConfigurationUpdateFailure,	
+	&asn_DEF_AMFConfigurationUpdate,	
+	&asn_DEF_AMFConfigurationUpdateAcknowledge,	
+	&asn_DEF_AMFConfigurationUpdateFailure,	
+	&asn_DEF_AMFStatusIndication,	
+	&asn_DEF_NGReset,	
+	&asn_DEF_NGResetAcknowledge,	
+	&asn_DEF_ErrorIndication,	
+	&asn_DEF_OverloadStart,	
+	&asn_DEF_OverloadStop,	
+	&asn_DEF_UplinkRANConfigurationTransfer,	
+	&asn_DEF_DownlinkRANConfigurationTransfer,	
+	&asn_DEF_WriteReplaceWarningRequest,	
+	&asn_DEF_WriteReplaceWarningResponse,	
+	&asn_DEF_PWSCancelRequest,	
+	&asn_DEF_PWSCancelResponse,	
+	&asn_DEF_PWSRestartIndication,	
+	&asn_DEF_PWSFailureIndication,	
+	&asn_DEF_DownlinkUEAssociatedNRPPaTransport,	
+	&asn_DEF_UplinkUEAssociatedNRPPaTransport,	
+	&asn_DEF_DownlinkNonUEAssociatedNRPPaTransport,	
+	&asn_DEF_UplinkNonUEAssociatedNRPPaTransport,	
+	&asn_DEF_TraceStart,	
+	&asn_DEF_TraceFailureIndication,	
+	&asn_DEF_DeactivateTrace,	
+	&asn_DEF_CellTrafficTrace,	
+	&asn_DEF_LocationReportingControl,	
+	&asn_DEF_LocationReportingFailureIndication,	
+	&asn_DEF_LocationReport,	
+	&asn_DEF_UETNLABindingReleaseRequest,	
+	&asn_DEF_UERadioCapabilityInfoIndication,	
+	&asn_DEF_UERadioCapabilityCheckRequest,	
+	&asn_DEF_UERadioCapabilityCheckResponse,	
+	&asn_DEF_PrivateMessage,	
+	&asn_DEF_SecondaryRATDataUsageReport,	
 	/* From module NGAP-IEs in ../NGAP-IEs.asn */
 	&asn_DEF_AdditionalDLUPTNLInformationForHOList,	
 	&asn_DEF_AdditionalDLUPTNLInformationForHOItem,	
@@ -1072,91 +1149,14 @@ struct asn_TYPE_descriptor_s *asn_pdu_collection[] = {
 	&asn_DEF_XnGTP_TLAs,	
 	&asn_DEF_XnTLAs,	
 	&asn_DEF_XnTNLConfigurationInfo,	
-	/* From module NGAP-PDU-Contents in ../NGAP-PDU-Contents.asn */
-	&asn_DEF_PDUSessionResourceSetupRequest,	
-	&asn_DEF_PDUSessionResourceSetupResponse,	
-	&asn_DEF_PDUSessionResourceReleaseCommand,	
-	&asn_DEF_PDUSessionResourceReleaseResponse,	
-	&asn_DEF_PDUSessionResourceModifyRequest,	
-	&asn_DEF_PDUSessionResourceModifyResponse,	
-	&asn_DEF_PDUSessionResourceNotify,	
-	&asn_DEF_PDUSessionResourceModifyIndication,	
-	&asn_DEF_PDUSessionResourceModifyConfirm,	
-	&asn_DEF_InitialContextSetupRequest,	
-	&asn_DEF_InitialContextSetupResponse,	
-	&asn_DEF_InitialContextSetupFailure,	
-	&asn_DEF_UEContextReleaseRequest,	
-	&asn_DEF_UEContextReleaseCommand,	
-	&asn_DEF_UEContextReleaseComplete,	
-	&asn_DEF_UEContextModificationRequest,	
-	&asn_DEF_UEContextModificationResponse,	
-	&asn_DEF_UEContextModificationFailure,	
-	&asn_DEF_RRCInactiveTransitionReport,	
-	&asn_DEF_HandoverRequired,	
-	&asn_DEF_HandoverCommand,	
-	&asn_DEF_HandoverPreparationFailure,	
-	&asn_DEF_HandoverRequest,	
-	&asn_DEF_HandoverRequestAcknowledge,	
-	&asn_DEF_HandoverFailure,	
-	&asn_DEF_HandoverNotify,	
-	&asn_DEF_PathSwitchRequest,	
-	&asn_DEF_PathSwitchRequestAcknowledge,	
-	&asn_DEF_PathSwitchRequestFailure,	
-	&asn_DEF_HandoverCancel,	
-	&asn_DEF_HandoverCancelAcknowledge,	
-	&asn_DEF_UplinkRANStatusTransfer,	
-	&asn_DEF_DownlinkRANStatusTransfer,	
-	&asn_DEF_Paging,	
-	&asn_DEF_InitialUEMessage,	
-	&asn_DEF_DownlinkNASTransport,	
-	&asn_DEF_UplinkNASTransport,	
-	&asn_DEF_NASNonDeliveryIndication,	
-	&asn_DEF_RerouteNASRequest,	
-	&asn_DEF_NGSetupRequest,	
-	&asn_DEF_NGSetupResponse,	
-	&asn_DEF_NGSetupFailure,	
-	&asn_DEF_RANConfigurationUpdate,	
-	&asn_DEF_RANConfigurationUpdateAcknowledge,	
-	&asn_DEF_RANConfigurationUpdateFailure,	
-	&asn_DEF_AMFConfigurationUpdate,	
-	&asn_DEF_AMFConfigurationUpdateAcknowledge,	
-	&asn_DEF_AMFConfigurationUpdateFailure,	
-	&asn_DEF_AMFStatusIndication,	
-	&asn_DEF_NGReset,	
-	&asn_DEF_NGResetAcknowledge,	
-	&asn_DEF_ErrorIndication,	
-	&asn_DEF_OverloadStart,	
-	&asn_DEF_OverloadStop,	
-	&asn_DEF_UplinkRANConfigurationTransfer,	
-	&asn_DEF_DownlinkRANConfigurationTransfer,	
-	&asn_DEF_WriteReplaceWarningRequest,	
-	&asn_DEF_WriteReplaceWarningResponse,	
-	&asn_DEF_PWSCancelRequest,	
-	&asn_DEF_PWSCancelResponse,	
-	&asn_DEF_PWSRestartIndication,	
-	&asn_DEF_PWSFailureIndication,	
-	&asn_DEF_DownlinkUEAssociatedNRPPaTransport,	
-	&asn_DEF_UplinkUEAssociatedNRPPaTransport,	
-	&asn_DEF_DownlinkNonUEAssociatedNRPPaTransport,	
-	&asn_DEF_UplinkNonUEAssociatedNRPPaTransport,	
-	&asn_DEF_TraceStart,	
-	&asn_DEF_TraceFailureIndication,	
-	&asn_DEF_DeactivateTrace,	
-	&asn_DEF_CellTrafficTrace,	
-	&asn_DEF_LocationReportingControl,	
-	&asn_DEF_LocationReportingFailureIndication,	
-	&asn_DEF_LocationReport,	
-	&asn_DEF_UETNLABindingReleaseRequest,	
-	&asn_DEF_UERadioCapabilityInfoIndication,	
-	&asn_DEF_UERadioCapabilityCheckRequest,	
-	&asn_DEF_UERadioCapabilityCheckResponse,	
-	&asn_DEF_PrivateMessage,	
-	&asn_DEF_SecondaryRATDataUsageReport,	
-	/* From module NGAP-PDU-Descriptions in ../NGAP-PDU-Descriptions.asn */
-	&asn_DEF_NGAP_PDU,	
-	&asn_DEF_InitiatingMessage,	
-	&asn_DEF_SuccessfulOutcome,	
-	&asn_DEF_UnsuccessfulOutcome,	
+	/* From module NGAP-CommonDataTypes in ../NGAP-CommonDataTypes.asn */
+	&asn_DEF_Criticality,	
+	&asn_DEF_Presence,	
+	&asn_DEF_PrivateIE_ID,	
+	&asn_DEF_ProcedureCode,	
+	&asn_DEF_ProtocolExtensionID,	
+	&asn_DEF_ProtocolIE_ID,	
+	&asn_DEF_TriggeringMessage,	
 	0
 };
 

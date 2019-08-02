@@ -21,7 +21,7 @@ extern "C" {
 
 /* HandoverRequestAcknowledge */
 typedef struct HandoverRequestAcknowledge {
-	ProtocolIE_Container_127P25_t	 protocolIEs;
+	ProtocolIE_Container_127P23_t	 protocolIEs;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.
@@ -33,6 +33,8 @@ typedef struct HandoverRequestAcknowledge {
 
 /* Implementation */
 extern asn_TYPE_descriptor_t asn_DEF_HandoverRequestAcknowledge;
+extern asn_SEQUENCE_specifics_t asn_SPC_HandoverRequestAcknowledge_specs_1;
+extern asn_TYPE_member_t asn_MBR_HandoverRequestAcknowledge_1[1];
 
 #ifdef __cplusplus
 }
