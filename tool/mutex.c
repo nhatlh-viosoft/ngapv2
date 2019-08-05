@@ -26,45 +26,45 @@ int mutex_final(void)
 
 int mutex_create(mutex_id *id, unsigned int flags)
 {
-    // mutex_t *new_mutex;
-    // int rv;
+    mutex_t *new_mutex;
+    int rv;
 
-    // pool_alloc_node(&mutex_pool, &new_mutex);
-    // // d_assert(new_mutex, return CORE_ENOMEM, 
-    // //         "mutex_pool(%d) is not enough"
-    // //         "(new_mutex=%p, mut:%p, avail:%d,size:%d,head:%d,tail:%d \n",
-    // //         MAX_NUM_OF_MUTEX,
-    // //         new_mutex, mutex_pool.mut, 
-    // //         mutex_pool.avail, mutex_pool.size,
-    // //         mutex_pool.head, mutex_pool.tail);
+    pool_alloc_node(&mutex_pool, &new_mutex);
+    // d_assert(new_mutex, return CORE_ENOMEM, 
+    //         "mutex_pool(%d) is not enough"
+    //         "(new_mutex=%p, mut:%p, avail:%d,size:%d,head:%d,tail:%d \n",
+    //         MAX_NUM_OF_MUTEX,
+    //         new_mutex, mutex_pool.mut, 
+    //         mutex_pool.avail, mutex_pool.size,
+    //         mutex_pool.head, mutex_pool.tail);
 
-    // if (flags & MUTEX_NESTED)
-    // {
-    //     pthread_mutexattr_t mattr;
+    if (flags & MUTEX_NESTED)
+    {
+        pthread_mutexattr_t mattr;
 
-    //     rv = pthread_mutexattr_init(&mattr);
-    //     if (rv) return rv;
+        rv = pthread_mutexattr_init(&mattr);
+        if (rv) return rv;
 
-    //     rv = pthread_mutexattr_settype(&mattr, PTHREAD_MUTEX_RECURSIVE);
-    //     if (rv)
-    //     {
-    //         pthread_mutexattr_destroy(&mattr);
-    //         return rv;
-    //     }
+        rv = pthread_mutexattr_settype(&mattr, PTHREAD_MUTEX_RECURSIVE);
+        if (rv)
+        {
+            pthread_mutexattr_destroy(&mattr);
+            return rv;
+        }
 
-    //     rv = pthread_mutex_init(&new_mutex->mutex, &mattr);
+        rv = pthread_mutex_init(&new_mutex->mutex, &mattr);
 
-    //     pthread_mutexattr_destroy(&mattr);
-    // } else
-    //     rv = pthread_mutex_init(&new_mutex->mutex, NULL);
+        pthread_mutexattr_destroy(&mattr);
+    } else
+        rv = pthread_mutex_init(&new_mutex->mutex, NULL);
 
-    // if (rv)
-    // {
-    //     return rv;
-    // }
+    if (rv)
+    {
+        return rv;
+    }
 
-    // *id = (mutex_id)new_mutex;
-    // return 1;
+    *id = (mutex_id)new_mutex;
+    return 1;
 }
 
 int mutex_lock(mutex_id id)
@@ -78,14 +78,15 @@ int mutex_lock(mutex_id id)
 
 int mutex_trylock(mutex_id id)
 {
-    // int rv;
-    // mutex_t *mutex = (mutex_t *)id;
+    int rv;
+    mutex_t *mutex = (mutex_t *)id;
 
-    // rv = pthread_mutex_trylock(&mutex->mutex);
-    // if (rv)
-    // {
-    //     return (rv == EBUSY) ? CORE_EBUSY : rv;
-    // }
+    rv = pthread_mutex_trylock(&mutex->mutex);
+    if (rv)
+    {
+        // return (rv == EBUSY) ? CORE_EBUSY : rv;
+        return -1;
+    }
 
     return 1;
 }

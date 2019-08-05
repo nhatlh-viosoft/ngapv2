@@ -4,7 +4,8 @@
 #include "3gpp_types.h"
 #include "core.h"
 #include "pkbuf.h"
-#include "tool/debug.h"
+#include "debug.h"
+#include "core_mutex.h"
 
 
 
@@ -15,6 +16,10 @@ int ngap_encode_pdu(pkbuf_t **pkbuf, ngap_message_t *message);
 int ngap_free_pdu(ngap_message_t *message);
 void amf_context_init();
 
+int pkbuf_alloct(c_uint16_t headroom, c_uint16_t length)
+{
+	printf("headroom: %d and length:%d\n", headroom, length);
+}
 
 int ngap_build_setup_rsp(pkbuf_t **pkbuf);
 
@@ -50,6 +55,8 @@ int ngap_decode_pdu(ngap_message_t *message, pkbuf_t *pkbuf)
 int ngap_encode_pdu(pkbuf_t **pkbuf, ngap_message_t *message)
 {
 	asn_enc_rval_t enc_ret = {0};
+	pkbuf_t *buf = NULL;
+	// printf("*pkbuf = %d\n", *pkbuf);
 
      d_assert(message, return -1, " ");
 
@@ -57,8 +64,10 @@ int ngap_encode_pdu(pkbuf_t **pkbuf, ngap_message_t *message)
     	printf("***************Input Message***************\n");
         asn_fprint(stdout, &asn_DEF_NGAP_PDU, message);
 
-    *pkbuf = pkbuf_alloc(0, MAX_SDU_LEN);
-     d_assert(*pkbuf, return -1, "");
+    buf = pkbuf_alloc(0, MAX_SDU_LEN);
+    printf("buf = %d\n", buf);
+    *pkbuf = NULL;
+    d_assert(*pkbuf, return -1, "canot allocate pkbuf");
 
     enc_ret = aper_encode_to_buffer(&asn_DEF_NGAP_PDU, NULL,
                     message, (*pkbuf)->payload, MAX_SDU_LEN);
@@ -105,6 +114,16 @@ void amf_context_init()
 
 
 /** 
+ *  Direction NG-RAN Node -> AMF
+ **/
+int ngap_build_setup_req(pkbuf_t **pkbuf)
+{
+
+	return 1;
+}
+
+
+/** 
  *  Direction AMF -> NG-RAN Node
  **/
 int ngap_build_setup_rsp(pkbuf_t **pkbuf)
@@ -112,9 +131,9 @@ int ngap_build_setup_rsp(pkbuf_t **pkbuf)
     int rv;
     int i = 0;
     int j = 0;
-    ngap_message_t *decode_output;
+    ngap_message_t *decode_output = NULL;
 
-    NGAP_PDU_t pdu;
+    NGAP_PDU_t pdu = {0};
     SuccessfulOutcome_t *successfulOutcome = NULL;
     NGSetupResponse_t *NGSetupResponse = calloc(1, sizeof(NGSetupResponse_t));//NULL;
         NGSetupResponseIEs_t *ie = NULL;
@@ -250,11 +269,92 @@ int ngap_build_setup_rsp(pkbuf_t **pkbuf)
     return 1;
 }
 
+
+/** 
+ *  Direction AMF -> NG-RAN Node
+ **/
+status_t ngap_build_setup_failure(pkbuf_t **pkbuf, Cause_t *cause, long time_to_wait)
+{
+	ngap_message_t *decode_output = NULL;
+
+	NGAP_PDU_t pdu = {0};
+	UnsuccessfulOutcome_t *unsuccessfulOutcom = NULL; 
+	NGSetupFailure_t *NGSetupFailure = calloc(1, sizeof(NGSetupFailure_t));
+		NGSetupFailureIEs_t *ie = NULL;
+		Cause_t	*Cause = NULL;
+		TimeToWait_t *TimeToWait = NULL;
+
+	memset(&pdu, 0, sizeof(NGAP_PDU_t));
+	pdu.present = NGAP_PDU_PR_unsuccessfulOutcome;
+	pdu.choice.unsuccessfulOutcome = calloc(1, sizeof(UnsuccessfulOutcome_t));
+
+	unsuccessfulOutcom = pdu.choice.unsuccessfulOutcom;
+	unsuccessfulOutcom->procedureCode = ProcedureCode_id_NGSetup;
+	unsuccessfulOutcom->criticality = Criticality_reject;
+	unsuccessfulOutcom->value.present = UnsuccessfulOutcome__value_PR_NGSetupFailure;
+	NGSetupFailure = unsuccessfulOutcom->value.choice.NGSetupFailure;
+
+	//Add 'Cause' IE to message
+	ie = calloc(1, sizeof(NGSetupFailureIEs_t));
+	ASN_SEQUENCE_ADD(&NGSetupFailure->protocolIEs, ie);
+	ie->id = ProtocolIE_ID_id_Cause;
+	ie->criticality = Criticality_ignore;
+	ie->value.present = NGSetupFailureIEs__value_PR_Cause;
+	Cause = ie->value.choice.Cause;
+
+	//Add 'Time To Wait' IE to message
+	ie = calloc(1, sizeof(NGSetupFailureIEs_t));
+	ASN_SEQUENCE_ADD(&NGSetupFailure->protocolIEs, ie);
+	ie->id = ProtocolIE_ID_id_TimeToWait;
+	ie->criticality = Criticality_ignore;
+	ie->value.present = NGSetupFailureIEs__value_PR_TimeToWait;
+	TimeToWait = ie->value.choice.TimeToWait;
+
+	//Assign value to 'Cause'
+	*Cause = *cause;
+
+	//Assign value to 'Time To Wait'
+	*TimeToWait = time_to_wait;
+
+
+	int rv = ngap_encode_pdu(pkbuf, &pdu);
+    ngap_free_pdu(&pdu);
+
+    if (rv < 0)
+    {
+        printf("ngap_encode_pdu() failed");
+        return -1;
+    }
+
+    rv = ngap_decode_pdu(decode_output, pkbuf);
+
+    if (rv < 0)
+    {
+    	printf("ngap_decode_pdu() failed");
+    	return -1;
+    }
+    
+    return 1;
+}
+
+void terminate()
+{
+	pkbuf_final();
+	mutex_final();
+
+	return;
+}
+
 int main()
 {
-	pkbuf_t **ngap_msg_buf;
+	pkbuf_t **ngap_msg_buf = NULL;
+
+	mutex_init();
+	pkbuf_init();
 
 	amf_context_init();
+
+	atexit(terminate);
 	ngap_build_setup_rsp(ngap_msg_buf);
 	return 1;
 }

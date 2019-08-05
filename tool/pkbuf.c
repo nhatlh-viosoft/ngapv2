@@ -46,7 +46,7 @@ static mutex_id mutex;
 
 int pkbuf_init(void)
 {
-    // mutex_create(&mutex, MUTEX_DEFAULT);
+    mutex_create(&mutex, MUTEX_DEFAULT);
 
     pool_init(&clbuf_pool, MAX_NUM_OF_CLBUF);
     pool_init(&pkbuf_pool, MAX_NUM_OF_PKBUF);
@@ -234,6 +234,7 @@ pkbuf_t* pkbuf_alloc(c_uint16_t headroom, c_uint16_t length)
             MAX_SIZEOF_HEADROOM, headroom);
         return NULL;
     }
+    printf("go to here\n");
 
 
     clbuf = clbuf_alloc(length);
@@ -338,9 +339,9 @@ void pkbuf_free(pkbuf_t *pkbuf)
 
         q = p->next;
 
-        // mutex_lock(mutex);
+        mutex_lock(mutex);
         p->clbuf->ref--;
-        // mutex_unlock(mutex);
+        mutex_unlock(mutex);
 
         if (p->clbuf->ref == 0)
             clbuf_free(p->clbuf);
