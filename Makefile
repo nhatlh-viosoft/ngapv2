@@ -1,4 +1,4 @@
-SOURCE = ngap_test.c 3gpp_types.c asn1c/*.c  tool/pkbuf.c tool/mutex.c#tool/*.c
+SOURCE = ngap_test.c ngap_conv.c 3gpp_types.c asn1c/*.c  tool/pkbuf.c tool/mutex.c#tool/*.c
 
 CC = gcc
 CFLAGS = -I asn1c -I tool

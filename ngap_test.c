@@ -11,15 +11,37 @@
 
 static amf_context_t amf;
 
+
+/*Temporary data*/
+#define GNB_MAX_NUMBER_OF_TACS	1
+
+
+typedef struct {
+	/* Used to identify gNB within 5GC 
+	*/
+	uint32_t gnb_id;
+
+	/* Support multiple TA
+	*/
+	uint16_t no_of_TACs;
+	uint8_t no_of_broadcastPLMN[GNB_MAX_NUMBER_OF_TACS];
+
+	/* Tracking area code */
+  	uint16_t tac[GNB_MAX_NUMBER_OF_TACS];
+
+	/* PLMN Identity
+	*/
+  	plmn_id_t plmn_id[GNB_MAX_NUMBER_OF_TACS][maxnoofBPLMNs];
+} ngap_gnb_instance_t;	
+
+
+//*End of Temporary data*/
+
 int ngap_decode_pdu(ngap_message_t *message, pkbuf_t *pkbuf);
 int ngap_encode_pdu(pkbuf_t **pkbuf, ngap_message_t *message);
 int ngap_free_pdu(ngap_message_t *message);
 void amf_context_init();
 
-int pkbuf_alloct(c_uint16_t headroom, c_uint16_t length)
-{
-	printf("headroom: %d and length:%d\n", headroom, length);
-}
 
 int ngap_build_setup_rsp(pkbuf_t **pkbuf);
 
@@ -97,16 +119,6 @@ int ngap_free_pdu(ngap_message_t *message)
 }
 
 
-void ngap_buffer_to_OCTET_STRING( 
-        void *buf, int size, OCTET_STRING_t *octet_string) // S1AP is TBCD-STRING
-{
-    octet_string->size = size;
-    octet_string->buf = calloc(octet_string->size, sizeof(c_uint8_t));
-
-    memcpy(octet_string->buf, buf, size);
-}
-
-
 void amf_context_init()
 {
 	amf.relative_capacity = 0xff;
@@ -116,8 +128,100 @@ void amf_context_init()
 /** 
  *  Direction NG-RAN Node -> AMF
  **/
-int ngap_build_setup_req(pkbuf_t **pkbuf)
+int ngap_build_setup_req(pkbuf_t **pkbuf, void *node_instance, NG_RAN_version ng_ran_version)
 {
+	int i;
+	int j;
+	ngap_message_t *decode_output = NULL;
+
+	NGAP_PDU_t pdu = {0};
+	InitiatingMessage_t *initiatingMessage = NULL;
+	NGSetupRequest_t *NGSetupRequest = calloc(1, sizeof(NGSetupRequest_t));
+		NGSetupRequestIEs_t	*ie = NULL;
+		GlobalRANNodeID_t *GlobalRANNodeID = NULL;
+		SupportedTAList_t *SupportedTAList = NULL;
+		PagingDRX_t *DefaultPagingDRX = NULL;
+
+	memset(&pdu, 0, sizeof(NGAP_PDU_t)); //?is this necessary?	
+	pdu.present = NGAP_PDU_PR_initiatingMessage;
+	pdu.choice.initiatingMessage = calloc(1, sizeof(InitiatingMessage_t));
+
+	initiatingMessage = pdu.choice.initiatingMessage;
+	initiatingMessage->procedureCode = ProcedureCode_id_NGSetup;
+	initiatingMessage->criticality = Criticality_reject;
+	initiatingMessage->value.present = InitiatingMessage__value_PR_NGSetupRequest;
+
+	NGSetupRequest = initiatingMessage->value.choice.NGSetupRequest;
+
+	//Add 'Global RAN Node ID' IE to message
+	ie = calloc(1, sizeof(NGSetupRequestIEs_t));
+	ASN_SEQUENCE_ADD(&NGSetupRequest->protocolIEs, ie);
+	ie->id = ProtocolIE_ID_id_GlobalRANNodeID;
+	ie->criticality = Criticality_reject;
+	ie->value.present = NGSetupRequestIEs__value_PR_GlobalRANNodeID;
+	GlobalRANNodeID = ie->value.choice.GlobalRANNodeID;
+
+	//Add 'Supported TA List' IE to messgae
+	ie = calloc(1, sizeof(NGSetupRequestIEs_t));
+	ASN_SEQUENCE_ADD(&NGSetupRequest->protocolIEs, ie);
+	ie->id = ProtocolIE_ID_id_SupportedTAList;
+	ie->criticality = Criticality_reject;
+	ie->value.present = NGSetupRequestIEs__value_PR_SupportedTAList;
+	SupportedTAList = ie->value.choice.SupportedTAList;
+
+	//Add 'Default Paging DRX' IE to message
+
+
+	switch(ng_ran_version)
+	{
+		case N3IWF:
+			N3IWF_ID_t *N3IWF_ID = NULL;
+			//todo: complete
+			break;
+
+		case ng_eNB:
+			NgENB_ID_t *NgENB_ID = NULL;
+			//todo: complete
+			break;
+
+		case gNB: 
+			ngap_gnb_instance_t *ngap_node_instance = (* ngap_gnb_instance_t) node_instance;
+
+			//Assign value to 'Global RAN Node ID' IE
+			GNB_ID_t *GNB_ID = NULL;
+
+			GlobalRANNodeID->present = GlobalRANNodeID_PR_globalGNB_ID;
+			GNB_ID = GlobalRANNodeID->choice.globalGNB_ID;
+			ngap_uint32_to_GNB_ID(GNB_ID_PR_gNB_ID, ngap_node_instance->gnb_id, GNB_ID);	
+
+			//Assign value to 'Supported TA List' IE
+			for (i = 0; i < ngap_node_instance->no_of_TACs; i++)
+			{
+				SupportedTAItem_t *SupportedTAITem = calloc(1, sizeof(SupportedTAItem_t));
+
+				ngap_uint16_to_OCTET_STRING(tac[i], SupportedTAITem->tAC);
+
+				BroadcastPLMNList_t *BroadcastPLMNList = calloc(1, sizeof(BroadcastPLMNList_t));
+
+				for (j = 0; j < ngap_node_instance->no_of_broadcastPLMN[i]; j++)
+				{
+					BroadcastPLMNItem_t *BroadcastPLMNItem = calloc(1, sizeof(BroadcastPLMNItem_t));
+					BroadcastPLMNItem->pLMNIdentity = ngap_node_instance->plmn_id[i][j]
+
+				}
+
+				ASN_SEQUENCE_ADD(&SupportedTAList->list, SupportedTAITem);
+			}
+			break;
+		default:
+			printf("Unknown NG-RAN type");		
+			return -1;
+	}
+
+
+
+
+	//Assign value to 'Default Paging DRX' IE
 
 	return 1;
 }
@@ -333,7 +437,7 @@ status_t ngap_build_setup_failure(pkbuf_t **pkbuf, Cause_t *cause, long time_to_
     	printf("ngap_decode_pdu() failed");
     	return -1;
     }
-    
+
     return 1;
 }
 

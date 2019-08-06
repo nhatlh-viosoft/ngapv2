@@ -8,6 +8,14 @@ extern "C" {
 
 #include "core.h"
 
+
+typedef enum NG_RAN_version
+{
+    gNB,
+    ng_eNB,
+    N3IWF
+}NG_RAN_version;
+
 #define S1AP_SCTP_PORT              36412
 #define NGAP_SCTP_PORT              38412
 #define GTPV2_C_UDP_PORT            2123
